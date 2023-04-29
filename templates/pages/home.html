@@ -1,1443 +1,1958 @@
 {% extends 'base.html' %}
 
-{% block slider %}
-<div class="banner-style-4 rn-section-gapTop">
+{% block bg_hero %}
+<div class="hero__3">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6 col-md-12 order-2 order-lg-1 mt_md--40 mt_sm--40">
-                <div class="sldier-content">
-                    <span class="title-badge" data-sal="slide-up" data-sal-delay="150" data-sal-duration="800">{{settings.DOMAIN_NAME}} Marketplace</span>
-                    <h2 class="title" data-sal="slide-up" data-sal-delay="200" data-sal-duration="800">Search your rare NFT's by world <br> class artists</h2>
-                    <p class="banner-disc-one" data-sal="slide-up" data-sal-delay="250" data-sal-duration="800">Where Bitcoin was hailed as the digital answer to currency, NFTs
-                        <br> are now being touted as the digital answer to collectibles.
+      <div class="row align-items-center mb-50 md:space-y-20">
+        <div class="col-lg-6">
+          <h1 class="hero__title">
+            <span class="color_brand">Discover</span> rare digital art and
+            collect NFTs
+          </h1>
+        </div>
+        <div class="col-lg-6">
+          <p class="hero__text color_black">
+            {{settings.DOMAIN_NAME}} is a shared liquidity NFT market smart
+            contract which is used by multiple websites to provide the users
+            the best possible experience.
+          </p>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card__item two">
+              <div class="card_body space-y-10">
+                <!-- ???? =============== -->
+                <div class="card_head">
+                  <img src="/static/assets/img/items/item_5.png" alt="" />
+                  <div class="block_timer">
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <div class="item">
+                        <div class="number txt hours">46<span></span></div>
+                      </div>
+                      <div class="dots">:</div>
+                      <div class="item">
+                        <div class="number txt minutes">
+                          35<span></span>
+                        </div>
+                      </div>
+                      <div class="dots">:</div>
+                      <div class="item">
+                        <div class="number txt seconds">
+                          03<span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="details d-flex justify-content-between">
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 80%"
+                        aria-valuenow="80"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ???? =============== -->
+                <h6 class="card_title">
+                  <a class="color_black" href="Item-details.html">
+                    Colorful Abstract Painting
+                  </a>
+                </h6>
+                <div class="hr"></div>
+                <div class="card_footer justify-content-between">
+                  <a href="Profile.html" class="creators space-x-10">
+                    <div class="avatars -space-x-20">
+                      <img
+                        src="/static/assets/img/avatars/avatar_1.png"
+                        alt="Avatar"
+                        class="avatar avatar-sm"
+                      />
+                      <img
+                        src="/static/assets/img/avatars/avatar_2.png"
+                        alt="Avatar"
+                        class="avatar avatar-sm"
+                      />
+                    </div>
+                    <p class="avatars_name txt_sm">@xander_hall...</p>
+                  </a>
+                  <a href="#" class="space-x-3">
+                    <p class="color_green txt_sm">0,054 ETH</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card__item two">
+              <div class="card_body space-y-10">
+                <!-- ???? =============== -->
+                <div class="card_head">
+                  <img src="/static/assets/img/items/item_7.png" alt="" />
+                  <div class="block_timer">
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <div class="item">
+                        <div class="number txt hours">23<span></span></div>
+                      </div>
+                      <div class="dots">:</div>
+                      <div class="item">
+                        <div class="number txt minutes">
+                          53<span></span>
+                        </div>
+                      </div>
+                      <div class="dots">:</div>
+                      <div class="item">
+                        <div class="number txt seconds">
+                          23<span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="details d-flex justify-content-between">
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 80%"
+                        aria-valuenow="80"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ???? =============== -->
+                <h6 class="card_title">
+                  <a class="color_black" href="Item-details.html">
+                    Spider Eyes Modern Art
+                  </a>
+                </h6>
+                <div class="hr"></div>
+                <div class="card_footer justify-content-between">
+                  <a href="Profile.html" class="creators space-x-10">
+                    <div class="avatars -space-x-20">
+                      <img
+                        src="/static/assets/img/avatars/avatar_4.png"
+                        alt="Avatar"
+                        class="avatar avatar-sm"
+                      />
+                      <img
+                        src="/static/assets/img/avatars/avatar_3.png"
+                        alt="Avatar"
+                        class="avatar avatar-sm"
+                      />
+                    </div>
+                    <p class="avatars_name txt_sm">@nathan_wall...</p>
+                  </a>
+                  <a href="#" class="space-x-3">
+                    <p class="color_green txt_sm">0,006 ETH</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card__item five">
+              <div class="card_body space-y-10 space-x-10 d-flex">
+                <!-- ???? =============== -->
+                <div class="card_head">
+                  <img src="/static/assets/img/items/item_6.png" alt="" />
+                  <div class="details d-flex justify-content-between">
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 80%"
+                        aria-valuenow="80"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ???? =============== -->
+                <div
+                  class="d-flex flex-column justify-content-center w-100 space-y-10"
+                >
+                  <h6>
+                    <a class="color_black" href="Item-details.html">
+                      Colorful Abstract Painting
+                    </a>
+                  </h6>
+                  <div class="hr"></div>
+                  <div class="card_footer d-block space-y-10">
+                    <a href="Profile.html" class="creators space-x-10">
+                      <div class="avatars">
+                        <img
+                          src="/static/assets/img/avatars/avatar_4.png"
+                          alt="Avatar"
+                          class="avatar avatar-sm"
+                        />
+                      </div>
+                      <p class="avatars_name txt_sm">@krista_bryan...</p>
+                    </a>
+                    <div
+                      class="d-flex align-items-center space-x-10 justify-content-between"
+                    >
+                      <a
+                        class="btn btn-sm btn-primary"
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#popup_bid"
+                        >Place Bid</a
+                      >
+                      <span class="color_green txt_sm text-right"
+                        >4,906 ETH</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card__item five">
+              <div class="card_body space-y-10 space-x-10 d-flex">
+                <!-- ???? =============== -->
+                <div class="card_head">
+                  <img src="/static/assets/img/items/item_5.png" alt="" />
+                  <div class="details d-flex justify-content-between">
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 80%"
+                        aria-valuenow="80"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ???? =============== -->
+                <div
+                  class="d-flex flex-column justify-content-center w-100 space-y-10"
+                >
+                  <h6>
+                    <a class="color_black" href="Item-details.html">
+                      Synthwave Modern Painting
+                    </a>
+                  </h6>
+                  <div class="hr"></div>
+                  <div class="card_footer d-block space-y-10">
+                    <a href="Profile.html" class="creators space-x-10">
+                      <div class="avatars">
+                        <img
+                          src="/static/assets/img/avatars/avatar_6.png"
+                          alt="Avatar"
+                          class="avatar avatar-sm"
+                        />
+                      </div>
+                      <p class="avatars_name txt_sm">@makinzi_beck...</p>
+                    </a>
+                    <div
+                      class="d-flex align-items-center space-x-10 justify-content-between"
+                    >
+                      <a
+                        class="btn btn-sm btn-primary"
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#popup_bid"
+                        >Place Bid</a
+                      >
+                      <span class="color_green txt_sm text-right"
+                        >3,003 ETH</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center mb-30">
+              <a href="404-6.html" class="btn btn-md btn-dark">
+                View all
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock bg_hero %}
+
+
+{% block content %}
+<div class="section__artists mt-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 space-y-30">
+          <div
+            class="section_head d-flex justify-content-between align-items-center"
+          >
+            <h2 class="section__title">Hot Sellers</h2>
+            <div class="dropdown">
+              <button
+                class="btn btn-white btn-sm dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Recent Active
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="space-y-10">
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_1.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">1</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @xander_hall...
+                          </p>
+                        </a>
+                        <span class="price color_green">13.02 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_2.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">2</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @hamza_pitts...
+                          </p>
+                        </a>
+                        <span class="price color_green">38.23 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_3.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">3</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @nathan_walls...
+                          </p>
+                        </a>
+                        <span class="price color_green">11.34 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_4.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">4</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @kelton_collier...
+                          </p>
+                        </a>
+                        <span class="price color_green">23.24 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="space-y-10">
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_12.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">5</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @cade_glover...
+                          </p>
+                        </a>
+                        <span class="price color_green">12.45 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_6.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">6</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @teagan_poole...
+                          </p>
+                        </a>
+                        <span class="price color_green">7.99 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_7.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">7</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @austin_rivera...
+                          </p>
+                        </a>
+                        <span class="price color_green">12.34 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_8.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">8</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @jeremy_shah...
+                          </p>
+                        </a>
+                        <span class="price color_green">18.82 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 space-y-30">
+          <div
+            class="section_head d-flex justify-content-between align-items-center"
+          >
+            <h3 class="section__title">Hot Buyers</h3>
+            <div class="dropdown">
+              <button
+                class="btn btn-white btn-sm dropdown-toggle"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Recent Active
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="space-y-10">
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_9.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">1</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @joel_reese...
+                          </p>
+                        </a>
+                        <span class="price color_green">12.22 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_10.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">2</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @anton_wright...
+                          </p>
+                        </a>
+                        <span class="price color_green">6.03 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_11.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">3</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @eli_tyler...
+                          </p>
+                        </a>
+                        <span class="price color_green">16.73 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_12.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">4</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @alonzo_knight...
+                          </p>
+                        </a>
+                        <span class="price color_green">7.24 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="space-y-10">
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_13.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">5</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @cannon_stark...
+                          </p>
+                        </a>
+                        <span class="price color_green">12.03 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_14.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">6</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @kolten_hart...
+                          </p>
+                        </a>
+                        <span class="price color_green">7.65 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_15.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">7</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @ethan_cain...
+                          </p>
+                        </a>
+                        <span class="price color_green">12.63 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="creator_item space-x-10">
+                    <div class="avatars space-x-10">
+                      <div class="media">
+                        <a href="Profile.html">
+                          <img
+                            src="/static/assets/img/avatars/avatar_4.png"
+                            alt="Avatar"
+                            class="avatar avatar-md"
+                          />
+                        </a>
+                        <div class="has_number">8</div>
+                      </div>
+                      <div>
+                        <a href="Profile.html">
+                          <p class="avatars_name color_black">
+                            @waylon_ford...
+                          </p>
+                        </a>
+                        <span class="price color_green">23.42 ETH</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal fade popup"
+    id="popup_bid_success"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body space-y-20 p-40">
+          <h3 class="text-center">Your Bidding Successfuly Added</h3>
+          <p class="text-center">
+            your bid <span class="color_text txt _bold">(16ETH) </span> has
+            been listing to our database
+          </p>
+
+          <a href="#" class="btn btn-dark w-full"> Watch the listings</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal fade popup"
+    id="popup_bid"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body space-y-20 p-40">
+          <h3>Place a Bid</h3>
+          <p>
+            You must bid at least <span class="color_black">15 ETH</span>
+          </p>
+          <input type="text" class="form-control" placeholder="00.00 ETH" />
+
+          <p>
+            Enter quantity. <span class="color_green">5 available</span>
+          </p>
+          <input type="text" class="form-control" value="1" />
+          <div class="hr"></div>
+          <div class="d-flex justify-content-between">
+            <p>You must bid at least:</p>
+            <p class="text-right color_black txt _bold">67,000 ETH</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p>service free:</p>
+            <p class="text-right color_black txt _bold">0,901 ETH</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p>Total bid amount:</p>
+            <p class="text-right color_black txt _bold">56,031 ETH</p>
+          </div>
+          <a
+            href="#"
+            class="btn btn-primary w-full"
+            data-toggle="modal"
+            data-target="#popup_bid_success"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            Place a bid</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal fade popup"
+    id="popup_history"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body space-y-20 p-40">
+          <h4>History</h4>
+          <div class="creator_item creator_card space-x-10">
+            <div class="avatars space-x-10">
+              <div class="media">
+                <div class="badge">
+                  <img src="/static/assets/img/icons/Badge.svg" alt="" />
+                </div>
+                <a href="Profile.html">
+                  <img
+                    src="/static/assets/img/avatars/avatar_1.png"
+                    alt="Avatar"
+                    class="avatar avatar-md"
+                  />
+                </a>
+              </div>
+              <div>
+                <p class="color_black">
+                  Bid accepted <span class="color_brand">1 ETH</span> by
+                  <a class="color_black txt _bold" href="Profile.html"
+                    >ayoub</a
+                  >
+                </p>
+                <span class="date color_text">28/06/2021, 12:08</span>
+              </div>
+            </div>
+          </div>
+          <div class="creator_item creator_card space-x-10">
+            <div class="avatars space-x-10">
+              <div class="media">
+                <div class="badge">
+                  <img src="/static/assets/img/icons/Badge.svg" alt="" />
+                </div>
+                <a href="Profile.html">
+                  <img
+                    src="/static/assets/img/avatars/avatar_2.png"
+                    alt="Avatar"
+                    class="avatar avatar-md"
+                  />
+                </a>
+              </div>
+              <div>
+                <p class="color_black">
+                  Bid accepted <span class="color_brand">3 ETH</span> by
+                  <a class="color_black txt _bold" href="Profile.html"
+                    >monir</a
+                  >
+                </p>
+                <span class="date color_text">22/05/2021, 12:08</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section mt-100">
+    <div class="container">
+      <div class="section__head">
+        <div
+          class="d-flex justify-content-between sm-column align-items-center mb-20"
+        >
+          <h2 class="section__title">Recently Listed</h2>
+          <a href="Collections.html" class="btn btn-dark btn-sm">
+            View All</a
+          >
+        </div>
+        <div class="d-flex">
+          <span
+            class="color_text txt_sm d-none d-sm-block mr-10"
+            style="min-width: max-content"
+          >
+            FILTER BY:
+          </span>
+          <ul class="menu_categories">
+            <li class="d-flex switch_item">
+              <input type="checkbox" id="switch1" checked="" /><label
+                for="switch1"
+                class="ml-0"
+                >Toggle</label
+              >
+              <span class="ml-10"> Has list price </span>
+            </li>
+            <li class="d-flex switch_item">
+              <input type="checkbox" id="switch2" /><label
+                for="switch2"
+                class="ml-0"
+                >Toggle</label
+              >
+              <span class="ml-10"> Has open offer </span>
+            </li>
+            <li class="d-flex space-x-10 switch_item">
+              <input type="checkbox" id="switch3" /><label
+                for="switch3"
+                class="ml-0"
+                >Toggle</label
+              >
+              <span class="ml-10"> Has sold </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+          <div class="card__item four">
+            <div class="card_body space-y-10">
+              <!-- =============== -->
+              <div class="creators space-x-10">
+                <div class="avatars space-x-3">
+                  <a href="Profile.html">
+                    <img
+                      src="/static/assets/img/avatars/avatar_1.png"
+                      alt="Avatar"
+                      class="avatar avatar-sm"
+                    />
+                  </a>
+                  <a href="Profile.html">
+                    <p class="avatars_name txt_xs">@mickel_fenn</p>
+                  </a>
+                </div>
+                <div class="avatars space-x-3">
+                  <a href="Profile.html">
+                    <img
+                      src="/static/assets/img/avatars/avatar_2.png"
+                      alt="Avatar"
+                      class="avatar avatar-sm"
+                    />
+                  </a>
+                  <a href="Profile.html">
+                    <p class="avatars_name txt_xs">@danil_pan</p>
+                  </a>
+                </div>
+              </div>
+              <div class="card_head">
+                <a href="Item-details.html">
+                  <img src="/static/assets/img/items/item_1.png" alt="" />
+                </a>
+
+                <a href="#" class="likes space-x-3">
+                  <i class="ri-heart-3-fill"></i>
+                  <span class="txt_sm">1.2k</span>
+                </a>
+              </div>
+              <!-- =============== -->
+              <h6 class="card_title">
+                <a class="color_black" href="Item-details.html">
+                  Colorful Abstract Painting
+                </a>
+              </h6>
+
+              <div class="card_footer d-block space-y-10">
+                <div class="card_footer justify-content-between">
+                  <div class="creators">
+                    <p class="txt_sm">4 in stock</p>
+                  </div>
+                  <a href="#" class="">
+                    <p class="txt_sm">
+                      Price:
+                      <span class="color_green txt_sm">2.45 ETH</span>
                     </p>
-                    <div class="button-group">
-                        <a class="btn btn-large btn-primary" data-sal="slide-up" data-sal-delay="300" data-sal-duration="800" href="{% url 'register' %}">Get Started</a>
-                        <a class="btn btn-large btn-primary-alta" data-sal="slide-up" data-sal-delay="300" data-sal-duration="800" href="{% url 'create-nft' %}">Create</a>
-                    </div>
+                  </a>
                 </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 order-1 order-lg-2">
-                <div class="slider slick-activation-04">
-                    <div class="slider-thumbnail thumbnail-overlay">
-                        <a href="javascript:void(0)"><img src="static/assets/images/banner/banner-04.jpg" alt="NFT_portfolio"></a>
-                        <div class="read-wrapper">
-                            <h5>Sukanli</h5>
-                            <span>Bordcast</span>
-                        </div>
-                    </div>
-
-                    <div class="slider-thumbnail thumbnail-overlay">
-                        <a href="javascript:void(0)"><img src="static/assets/images/banner/banner-01.jpg" alt="NFT_portfolio"></a>
-                        <div class="read-wrapper">
-                            <h5><a href="javascript:void(0)">HasLivbe</a></h5>
-                            <span>Md. Master</span>
-                        </div>
-                    </div>
-
-                    <div class="slider-thumbnail thumbnail-overlay">
-                        <a href="javascript:void(0)"><img src="static/assets/images/banner/banner-02.jpg" alt="NFT_portfolio"></a>
-                        <div class="read-wrapper">
-                            <h5><a href="javascript:void(0)">Ladicon Mos</a></h5>
-                            <span>John Lee</span>
-                        </div>
-                    </div>
-
-                    <div class="slider-thumbnail thumbnail-overlay">
-                        <a href="javascript:void(0)"><img src="static/assets/images/banner/banner-03.jpg" alt="NFT_portfolio"></a>
-                        <div class="read-wrapper">
-                            <h5>Masters</h5>
-                            <span>Keenlee</span>
-                        </div>
-                    </div>
+                <div class="hr"></div>
+                <div
+                  class="d-flex align-items-center space-x-10 justify-content-between"
+                >
+                  <div class="d-flex align-items-center space-x-10">
+                    <i class="ri-history-line"></i>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#popup_history"
+                    >
+                      <p class="color_text txt_sm" style="width: auto">
+                        View History
+                      </p>
+                    </a>
+                  </div>
+                  <a
+                    class="btn btn-sm btn-primary"
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#popup_bid"
+                    >Place Bid</a
+                  >
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+          <div class="card__item four">
+            <div class="card_body space-y-10">
+              <!-- =============== -->
+              <div class="creators space-x-10">
+                <div class="avatars space-x-3">
+                  <a href="Profile.html">
+                    <img
+                      src="/static/assets/img/avatars/avatar_3.png"
+                      alt="Avatar"
+                      class="avatar avatar-sm"
+                    />
+                  </a>
+                  <a href="Profile.html">
+                    <p class="avatars_name txt_xs">@mazanov_sky</p>
+                  </a>
+                </div>
+                <div class="avatars space-x-3">
+                  <a href="Profile.html">
+                    <img
+                      src="/static/assets/img/avatars/avatar_4.png"
+                      alt="Avatar"
+                      class="avatar avatar-sm"
+                    />
+                  </a>
+                  <a href="Profile.html">
+                    <p class="avatars_name txt_xs">@mucky_art</p>
+                  </a>
+                </div>
+              </div>
+              <div class="card_head">
+                <a href="Item-details.html">
+                  <img src="/static/assets/img/items/item_2.png" alt="" />
+                </a>
+
+                <a href="#" class="likes space-x-3">
+                  <i class="ri-heart-3-fill"></i>
+                  <span class="txt_sm">13.2k</span>
+                </a>
+              </div>
+              <!-- =============== -->
+              <h6 class="card_title">
+                <a class="color_black" href="Item-details.html">
+                  Colorful Abstract Painting
+                </a>
+              </h6>
+
+              <div class="card_footer d-block space-y-10">
+                <div class="card_footer justify-content-between">
+                  <div class="creators">
+                    <p class="txt_sm">12 in stock</p>
+                  </div>
+                  <a href="#" class="">
+                    <p class="txt_sm">
+                      Price:
+                      <span class="color_green txt_sm">2.55 ETH</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hr"></div>
+                <div
+                  class="d-flex align-items-center space-x-10 justify-content-between"
+                >
+                  <div class="d-flex align-items-center space-x-10">
+                    <i class="ri-history-line"></i>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#popup_history"
+                    >
+                      <p class="color_text txt_sm" style="width: auto">
+                        View History
+                      </p>
+                    </a>
+                  </div>
+                  <a
+                    class="btn btn-sm btn-primary"
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#popup_bid"
+                    >Place Bid</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+          <div class="card__item four">
+            <div class="card_body space-y-10">
+              <!-- =============== -->
+              <div class="creators space-x-10">
+                <div class="avatars space-x-3">
+                  <a href="Profile.html">
+                    <img
+                      src="/static/assets/img/avatars/avatar_5.png"
+                      alt="Avatar"
+                      class="avatar avatar-sm"
+                    />
+                  </a>
+                  <a href="Profile.html">
+                    <p class="avatars_name txt_xs">@jimmy_dom</p>
+                  </a>
+                </div>
+                <div class="avatars space-x-3">
+                  <a href="Profile.html">
+                    <img
+                      src="/static/assets/img/avatars/avatar_6.png"
+                      alt="Avatar"
+                      class="avatar avatar-sm"
+                    />
+                  </a>
+                  <a href="Profile.html">
+                    <p class="avatars_name txt_xs">@kristian_fel</p>
+                  </a>
+                </div>
+              </div>
+              <div class="card_head">
+                <a href="Item-details.html">
+                  <img src="/static/assets/img/items/item_3.png" alt="" />
+                </a>
+
+                <a href="#" class="likes space-x-3">
+                  <i class="ri-heart-3-fill"></i>
+                  <span class="txt_sm">1.2k</span>
+                </a>
+              </div>
+              <!-- =============== -->
+              <h6 class="card_title">
+                <a class="color_black" href="Item-details.html">
+                  Colorful Abstract Painting
+                </a>
+              </h6>
+
+              <div class="card_footer d-block space-y-10">
+                <div class="card_footer justify-content-between">
+                  <div class="creators">
+                    <p class="txt_sm">6 in stock</p>
+                  </div>
+                  <a href="#" class="">
+                    <p class="txt_sm">
+                      Price:
+                      <span class="color_green txt_sm">2.45 ETH</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hr"></div>
+                <div
+                  class="d-flex align-items-center space-x-10 justify-content-between"
+                >
+                  <div class="d-flex align-items-center space-x-10">
+                    <i class="ri-history-line"></i>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#popup_history"
+                    >
+                      <p class="color_text txt_sm" style="width: auto">
+                        View History
+                      </p>
+                    </a>
+                  </div>
+                  <a
+                    class="btn btn-sm btn-primary"
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#popup_bid"
+                    >Place Bid</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+          <div class="card__item four">
+            <div class="card_body space-y-10">
+              <!-- =============== -->
+              <div class="creators space-x-10">
+                <div class="avatars space-x-3">
+                  <a href="Profile.html">
+                    <img
+                      src="/static/assets/img/avatars/avatar_1.png"
+                      alt="Avatar"
+                      class="avatar avatar-sm"
+                    />
+                  </a>
+                  <a href="Profile.html">
+                    <p class="avatars_name txt_xs">@Alvin_nov</p>
+                  </a>
+                </div>
+                <div class="avatars space-x-3">
+                  <a href="Profile.html">
+                    <img
+                      src="/static/assets/img/avatars/avatar_7.png"
+                      alt="Avatar"
+                      class="avatar avatar-sm"
+                    />
+                  </a>
+                  <a href="Profile.html">
+                    <p class="avatars_name txt_xs">@mucky_art</p>
+                  </a>
+                </div>
+              </div>
+              <div class="card_head">
+                <a href="Item-details.html">
+                  <img src="/static/assets/img/items/item_4.png" alt="" />
+                </a>
+
+                <a href="#" class="likes space-x-3">
+                  <i class="ri-heart-3-fill"></i>
+                  <span class="txt_sm">4.1k</span>
+                </a>
+              </div>
+              <!-- =============== -->
+              <h6 class="card_title">
+                <a class="color_black" href="Item-details.html">
+                  Colorful Abstract Painting
+                </a>
+              </h6>
+
+              <div class="card_footer d-block space-y-10">
+                <div class="card_footer justify-content-between">
+                  <div class="creators">
+                    <p class="txt_sm">34 in stock</p>
+                  </div>
+                  <a href="#" class="">
+                    <p class="txt_sm">
+                      Price:
+                      <span class="color_green txt_sm">0.55 ETH</span>
+                    </p>
+                  </a>
+                </div>
+                <div class="hr"></div>
+                <div
+                  class="d-flex align-items-center space-x-10 justify-content-between"
+                >
+                  <div class="d-flex align-items-center space-x-10">
+                    <i class="ri-history-line"></i>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#popup_history"
+                    >
+                      <p class="color_text txt_sm" style="width: auto">
+                        View History
+                      </p>
+                    </a>
+                  </div>
+                  <a
+                    class="btn btn-sm btn-primary"
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#popup_bid"
+                    >Place Bid</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  <div
+    class="modal fade popup"
+    id="popup_bid_success"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body space-y-20 p-40">
+          <h3 class="text-center">Your Bidding Successfuly Added</h3>
+          <p class="text-center">
+            your bid <span class="color_text txt _bold">(16ETH) </span> has
+            been listing to our database
+          </p>
+
+          <a href="#" class="btn btn-dark w-full"> Watch the listings</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal fade popup"
+    id="popup_bid"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body space-y-20 p-40">
+          <h3>Place a Bid</h3>
+          <p>
+            You must bid at least <span class="color_black">15 ETH</span>
+          </p>
+          <input type="text" class="form-control" placeholder="00.00 ETH" />
+
+          <p>
+            Enter quantity. <span class="color_green">5 available</span>
+          </p>
+          <input type="text" class="form-control" value="1" />
+          <div class="hr"></div>
+          <div class="d-flex justify-content-between">
+            <p>You must bid at least:</p>
+            <p class="text-right color_black txt _bold">67,000 ETH</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p>service free:</p>
+            <p class="text-right color_black txt _bold">0,901 ETH</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p>Total bid amount:</p>
+            <p class="text-right color_black txt _bold">56,031 ETH</p>
+          </div>
+          <a
+            href="#"
+            class="btn btn-primary w-full"
+            data-toggle="modal"
+            data-target="#popup_bid_success"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            Place a bid</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-100">
+    <div class="container">
+      <div class="section__head">
+        <div
+          class="d-flex flex-md-wrap justify-content-between align-items-center mb-20"
+        >
+          <h2 class="section__title">Top artworks</h2>
+          <div class="dropdown">
+            <button
+              class="btn btn-dark btn-sm dropdown-toggle"
+              type="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Recent Active
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <span
+            class="color_text txt_sm d-none d-sm-block mr-10"
+            style="min-width: max-content"
+          >
+            FILTER BY:
+          </span>
+          <ul class="menu_categories">
+            <li class="d-flex switch_item">
+              <input type="checkbox" id="switch5" /><label
+                for="switch5"
+                class="ml-0"
+                >Toggle</label
+              >
+              <span class="ml-20"> Has list price </span>
+            </li>
+            <li class="d-flex switch_item">
+              <input type="checkbox" id="switch6" checked /><label
+                for="switch6"
+                class="ml-0"
+                >Toggle</label
+              >
+              <span class="ml-20"> Has open offer </span>
+            </li>
+            <li class="d-flex switch_item">
+              <input type="checkbox" id="switch7" /><label
+                for="switch7"
+                class="ml-0"
+                >Toggle</label
+              >
+              <span class="ml-20"> Owned by creator </span>
+            </li>
+            <li class="d-flex switch_item">
+              <input type="checkbox" id="switch8" /><label
+                for="switch8"
+                class="ml-0"
+                >Toggle</label
+              >
+              <span class="ml-20"> Has sold </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card__item three">
+            <div class="card_body space-y-10">
+              <!-- =============== -->
+              <div class="card_head">
+                <a href="Item-details.html">
+                  <img
+                    src="/static/assets/img/items/item_4.png"
+                    alt="..."
+                  />
+                </a>
+
+                <a href="#" class="likes space-x-3">
+                  <i class="ri-heart-3-fill"></i>
+                  <span class="txt_sm">23.1k</span>
+                </a>
+                <div class="action">
+                  <a
+                    href="#"
+                    class="btn btn-primary btn_card"
+                    data-toggle="modal"
+                    data-target="#popup_bid"
+                  >
+                    <i class="ri-pie-chart-line color_white"></i>
+                    Place Your Bid
+                  </a>
+                </div>
+              </div>
+              <!-- =============== -->
+              <h6 class="card_title">
+                <a class="color_black" href="Item-details.html">
+                  Colorful Abstract Painting
+                </a>
+              </h6>
+
+              <div class="card_footer d-block space-y-10">
+                <div class="d-flex justify-content-between">
+                  <div class="creators space-x-10">
+                    <div class="avatars -space-x-20">
+                      <a href="Profile.html">
+                        <img
+                          src="/static/assets/img/avatars/avatar_3.png"
+                          alt="Avatar"
+                          class="avatar avatar-sm"
+                        />
+                      </a>
+                      <a href="Profile.html">
+                        <img
+                          src="/static/assets/img/avatars/avatar_2.png"
+                          alt="Avatar"
+                          class="avatar avatar-sm"
+                        />
+                      </a>
+                    </div>
+                    <a href="Profile.html">
+                      <p class="avatars_name txt_sm">@makinzi_jamy...</p>
+                    </a>
+                  </div>
+                  <a href="#" class="space-x-3">
+                    <span class="color_green txt_sm">0.001 ETH</span>
+                  </a>
+                </div>
+                <div class="hr"></div>
+                <a href="#" class="d-flex align-items-center space-x-10">
+                  <i class="ri-vip-crown-line"></i>
+                  <p class="color_text txt_sm" style="width: auto">
+                    Highest bid
+                  </p>
+                  <span class="color_black txt_sm">0.0022 ETH</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card__item five">
+            <div class="card_body space-y-10 space-x-10 d-flex">
+              <!-- ???? =============== -->
+              <div class="card_head">
+                <a href="Item-details.html">
+                  <img src="/static/assets/img/items/item_1.png" alt="" />
+                </a>
+
+                <div class="details d-flex justify-content-between">
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 80%"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <!-- ???? =============== -->
+              <div
+                class="d-flex flex-column justify-content-center w-100 space-y-10"
+              >
+                <h6 class="card_title">Colorful Abstract Painting</h6>
+                <div class="hr"></div>
+                <div class="card_footer d-block space-y-10">
+                  <div class="creators space-x-10">
+                    <div class="avatars">
+                      <a href="Profile.html">
+                        <img
+                          src="/static/assets/img/avatars/avatar_4.png"
+                          alt="Avatar"
+                          class="avatar avatar-sm"
+                        />
+                      </a>
+                    </div>
+                    <a href="Profile.html">
+                      <p class="avatars_name txt_sm">@krista_bryan...</p>
+                    </a>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between space-x-3"
+                  >
+                    <a
+                      class="btn btn-sm btn-primary"
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#popup_bid"
+                      >Place Bid</a
+                    >
+                    <span class="color_green txt_sm text-right"
+                      >4,906 ETH</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card__item five">
+            <div class="card_body space-y-10 space-x-10 d-flex">
+              <!-- ???? =============== -->
+              <div class="card_head">
+                <a href="Item-details.html">
+                  <img src="/static/assets/img/items/item_2.png" alt="" />
+                </a>
+
+                <div class="details d-flex justify-content-between">
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 80%"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <!-- ???? =============== -->
+              <div
+                class="d-flex flex-column justify-content-center w-100 space-y-10"
+              >
+                <h6 class="card_title">Synthwave Modern Painting</h6>
+                <div class="hr"></div>
+                <div class="card_footer d-block space-y-10">
+                  <div class="creators space-x-10">
+                    <div class="avatars">
+                      <a href="Profile.html">
+                        <img
+                          src="/static/assets/img/avatars/avatar_6.png"
+                          alt="Avatar"
+                          class="avatar avatar-sm"
+                        />
+                      </a>
+                    </div>
+                    <a href="Profile.html">
+                      <p class="avatars_name txt_sm">@makinzi_beck...</p>
+                    </a>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between space-x-3"
+                  >
+                    <a
+                      class="btn btn-sm btn-primary"
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#popup_bid"
+                      >Place Bid</a
+                    >
+                    <span class="color_green txt_sm text-right"
+                      >3,003 ETH</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card__item five">
+            <div class="card_body space-y-10 space-x-10 d-flex">
+              <!-- ???? =============== -->
+              <div class="card_head">
+                <a href="Item-details.html">
+                  <img src="/static/assets/img/items/item_3.png" alt="" />
+                </a>
+
+                <div class="details d-flex justify-content-between">
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 80%"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <!-- ???? =============== -->
+              <div
+                class="d-flex flex-column justify-content-center w-100 space-y-10"
+              >
+                <h6 class="card_title">Synthwave Modern Painting</h6>
+                <div class="hr"></div>
+                <div class="card_footer d-block space-y-10">
+                  <div class="creators space-x-10">
+                    <div class="avatars">
+                      <a href="Profile.html">
+                        <img
+                          src="/static/assets/img/avatars/avatar_3.png"
+                          alt="Avatar"
+                          class="avatar avatar-sm"
+                        />
+                      </a>
+                    </div>
+                    <a href="Profile.html">
+                      <p class="avatars_name txt_sm">@alonzo_knight...</p>
+                    </a>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between space-x-3"
+                  >
+                    <a
+                      class="btn btn-sm btn-primary"
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#popup_bid"
+                      >Place Bid</a
+                    >
+                    <span class="color_green txt_sm text-right"
+                      >5,044 ETH</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card__item five">
+            <div class="card_body space-y-10 space-x-10 d-flex">
+              <!-- ???? =============== -->
+              <div class="card_head">
+                <a href="Item-details.html">
+                  <img src="/static/assets/img/items/item_5.png" alt="" />
+                </a>
+
+                <div class="details d-flex justify-content-between">
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 80%"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <!-- ???? =============== -->
+              <div
+                class="d-flex flex-column justify-content-center w-100 space-y-10"
+              >
+                <h6 class="card_title">Colorful Abstract Painting</h6>
+                <div class="hr"></div>
+                <div class="card_footer d-block space-y-10">
+                  <div class="creators space-x-10">
+                    <div class="avatars">
+                      <a href="Profile.html">
+                        <img
+                          src="/static/assets/img/avatars/avatar_1.png"
+                          alt="Avatar"
+                          class="avatar avatar-sm"
+                        />
+                      </a>
+                    </div>
+                    <a href="Profile.html">
+                      <p class="avatars_name txt_sm">@cannon_stark...</p>
+                    </a>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between space-x-3"
+                  >
+                    <a
+                      class="btn btn-sm btn-primary"
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#popup_bid"
+                      >Place Bid</a
+                    >
+                    <span class="color_green txt_sm text-right"
+                      >2,937 ETH</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card__item five">
+            <div class="card_body space-y-10 space-x-10 d-flex">
+              <!-- ???? =============== -->
+              <div class="card_head">
+                <a href="Item-details.html">
+                  <img src="/static/assets/img/items/item_6.png" alt="" />
+                </a>
+
+                <div class="details d-flex justify-content-between">
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 80%"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <!-- ???? =============== -->
+              <div
+                class="d-flex flex-column justify-content-center w-100 space-y-10"
+              >
+                <h6 class="card_title">Synthwave Modern Painting</h6>
+                <div class="hr"></div>
+                <div class="card_footer d-block space-y-10">
+                  <div class="creators space-x-10">
+                    <div class="avatars">
+                      <a href="Profile.html">
+                        <img
+                          src="/static/assets/img/avatars/avatar_8.png"
+                          alt="Avatar"
+                          class="avatar avatar-sm"
+                        />
+                      </a>
+                    </div>
+                    <a href="Profile.html">
+                      <p class="avatars_name txt_sm">@jimena_stark...</p>
+                    </a>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between space-x-3"
+                  >
+                    <a
+                      class="btn btn-sm btn-primary"
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#popup_bid"
+                      >Place Bid</a
+                    >
+                    <span class="color_green txt_sm text-right"
+                      >7,004 ETH</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card__item five">
+            <div class="card_body space-y-10 space-x-10 d-flex">
+              <!-- ???? =============== -->
+              <div class="card_head">
+                <a href="Item-details.html">
+                  <img src="/static/assets/img/items/item_7.png" alt="" />
+                </a>
+
+                <div class="details d-flex justify-content-between">
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 80%"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <!-- ???? =============== -->
+              <div
+                class="d-flex flex-column justify-content-center w-100 space-y-10"
+              >
+                <h6 class="card_title">Synthwave Modern Painting</h6>
+                <div class="hr"></div>
+                <div class="card_footer d-block space-y-10">
+                  <div class="creators space-x-10">
+                    <div class="avatars">
+                      <a href="Profile.html">
+                        <img
+                          src="/static/assets/img/avatars/avatar_5.png"
+                          alt="Avatar"
+                          class="avatar avatar-sm"
+                        />
+                      </a>
+                    </div>
+                    <a href="Profile.html">
+                      <p class="avatars_name txt_sm">@eli_tyle...</p>
+                    </a>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between space-x-3"
+                  >
+                    <a
+                      class="btn btn-sm btn-primary"
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#popup_bid"
+                      >Place Bid</a
+                    >
+                    <span class="color_green txt_sm text-right"
+                      >1,043 ETH</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="call2action is__light">
+    <div class="container">
+      <div
+        class="row justify-content-between align-items-center sm:space-y-20"
+      >
+        <div class="col-md-6">
+          <div class="space-y-20">
+            <h1>Start your own collection today</h1>
+            <p class="color_text section__text">
+              {{settings.DOMAIN_NAME}} is a shared liquidity NFT market
+              smart contract which is used by multiple websites to provide
+              the users the best possible experience.
+            </p>
+            <a href="Connect-wallet.html" class="btn btn-primary"
+              >Start Collecting</a
+            >
+          </div>
+        </div>
+        <div class="col-md-auto">
+          <img
+            class="img-fluid img__logo"
+            src="/static/assets/img/logos/Logo_illustrstion_white.png"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="community">
+      <div class="section__head space-y-20">
+        <h3 class="section__title text-center">Global community</h3>
+        <p class="section__text text-center">
+          Learn more about {{settings.DOMAIN_NAME}}, chat with the team,
+          other people in the community, and express your opinion on the
+          future development of {{settings.DOMAIN_NAME}}.
+        </p>
+      </div>
+
+      <div class="community__items">
+        <div class="row justify-content-center mb-20_reset">
+          <div class="col-md-3">
+            <div class="item space-y-10">
+              <div class="logo">
+                <img
+                  src="/static/assets/img/icons/github.svg"
+                  alt="logo_community"
+                />
+              </div>
+              <h5 class="text-center">Github</h5>
+              <p class="text-center">
+                Understand the progress of our code and project
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="item space-y-10">
+              <div class="logo is_twitter">
+                <img
+                  src="/static/assets/img/icons/twitter.svg"
+                  alt="logo_community"
+                />
+              </div>
+              <h5 class="text-center">Twitter</h5>
+              <p class="text-center">
+                Understand the progress of our code and project
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="item space-y-10">
+              <div class="logo is_discord">
+                <img
+                  src="/static/assets/img/icons/discord.svg"
+                  alt="logo_community"
+                />
+              </div>
+              <h5 class="text-center">Discord</h5>
+              <p class="text-center">
+                Understand the progress of our code and project
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
     
-{% endblock slider %}
-
-{% block auction %}
-{% comment %} <div class="rn-live-bidding-area rn-section-gapTop">
-    <div class="container">
-        <div class="row mb--50">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <h3 class="title mb--0 live-bidding-title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Live Bidding</h3>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="banner-one-slick slick-activation-03 slick-arrow-style-one rn-slick-dot-style slick-gutter-15">
-                    <!-- start single product -->
-                    <div class="single-slide-product">
-                        <div class="product-style-one">
-                            <div class="card-thumbnail">
-                                <a href="javascript:void(0)"><img src="static/assets/images/portfolio/portfolio-07.jpg" alt="NFT_portfolio"></a>
-                                <div class="countdown" data-date="2022-11-09">
-                                    <div class="countdown-container days">
-                                        <span class="countdown-value">87</span>
-                                        <span class="countdown-heading">D's</span>
-                                    </div>
-                                    <div class="countdown-container hours">
-                                        <span class="countdown-value">23</span>
-                                        <span class="countdown-heading">H's</span>
-                                    </div>
-                                    <div class="countdown-container minutes">
-                                        <span class="countdown-value">38</span>
-                                        <span class="countdown-heading">Min's</span>
-                                    </div>
-                                    <div class="countdown-container seconds">
-                                        <span class="countdown-value">27</span>
-                                        <span class="countdown-heading">Sec</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-share-wrapper">
-                                <div class="profile-share">
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Mark JOrdan"><img src="static/assets/images/client/client-2.png" alt="Nft_Profile"></a>
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Mark"><img src="static/assets/images/client/client-3.png" alt="Nft_Profile"></a>
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Jordan"><img src="static/assets/images/client/client-5.png" alt="Nft_Profile"></a>
-                                    <a class="more-author-text" href="#">20+ Place Bit.</a>
-                                </div>
-                                <div class="share-btn share-btn-activation dropdown">
-                                    <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                            Share
-                                        </button>
-                                        <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                            Report
-                                        </button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <a href="javascript:void(0)"><span class="product-name">Preatent</span></a>
-                            <span class="latest-bid">Highest bid 1/20</span>
-                            <div class="bid-react-area">
-                                <div class="last-bid">0.244ETH</div>
-                                <div class="react-area">
-                                    <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                        <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                                    </svg>
-                                    <span class="number"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end single product -->
-
-                    <!-- start single product -->
-                    <div class="single-slide-product">
-                        <div class="product-style-one">
-                            <div class="card-thumbnail">
-                                <a href="javascript:void(0)"><img src="static/assets/images/portfolio/portfolio-10.jpg" alt="NFT_portfolio"></a>
-                                <div class="countdown" data-date="2022-10-09">
-                                    <div class="countdown-container days">
-                                        <span class="countdown-value">87</span>
-                                        <span class="countdown-heading">D's</span>
-                                    </div>
-                                    <div class="countdown-container hours">
-                                        <span class="countdown-value">23</span>
-                                        <span class="countdown-heading">H's</span>
-                                    </div>
-                                    <div class="countdown-container minutes">
-                                        <span class="countdown-value">38</span>
-                                        <span class="countdown-heading">Min's</span>
-                                    </div>
-                                    <div class="countdown-container seconds">
-                                        <span class="countdown-value">27</span>
-                                        <span class="countdown-heading">Sec</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-share-wrapper">
-                                <div class="profile-share">
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Farik Shaikh"><img src="static/assets/images/client/client-1.png" alt="Nft_Profile"></a>
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Shaikh"><img src="static/assets/images/client/client-6.png" alt="Nft_Profile"></a>
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Farik"><img src="static/assets/images/client/client-8.png" alt="Nft_Profile"></a>
-                                    <a class="more-author-text" href="#">15+ Place Bit.</a>
-                                </div>
-
-                                <div class="share-btn share-btn-activation dropdown">
-                                    <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                            Share
-                                        </button>
-                                        <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                            Report
-                                        </button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <a href="javascript:void(0)"><span class="product-name">#21 The Wonder</span></a>
-                            <span class="latest-bid">Highest bid 1/20</span>
-                            <div class="bid-react-area">
-                                <div class="last-bid">0.244ETH</div>
-                                <div class="react-area">
-                                    <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                        <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                                    </svg>
-                                    <span class="number"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end single product -->
-
-                    <!-- start single product -->
-                    <div class="single-slide-product">
-                        <div class="product-style-one">
-                            <div class="card-thumbnail">
-                                <a href="javascript:void(0)"><img src="static/assets/images/portfolio/portfolio-03.jpg" alt="NFT_portfolio"></a>
-                                <div class="countdown" data-date="2023-12-09">
-                                    <div class="countdown-container days">
-                                        <span class="countdown-value">87</span>
-                                        <span class="countdown-heading">D's</span>
-                                    </div>
-                                    <div class="countdown-container hours">
-                                        <span class="countdown-value">23</span>
-                                        <span class="countdown-heading">H's</span>
-                                    </div>
-                                    <div class="countdown-container minutes">
-                                        <span class="countdown-value">38</span>
-                                        <span class="countdown-heading">Min's</span>
-                                    </div>
-                                    <div class="countdown-container seconds">
-                                        <span class="countdown-value">27</span>
-                                        <span class="countdown-heading">Sec</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-share-wrapper">
-                                <div class="profile-share">
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Mona Lisa"><img src="static/assets/images/client/client-8.png" alt="Nft_Profile"></a>
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Lisa"><img src="static/assets/images/client/client-4.png" alt="Nft_Profile"></a>
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Mona"><img src="static/assets/images/client/client-9.png" alt="Nft_Profile"></a>
-                                    <a class="more-author-text" href="#">12+ Place Bit.</a>
-                                </div>
-                                <div class="share-btn share-btn-activation dropdown">
-                                    <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                            Share
-                                        </button>
-                                        <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                            Report
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <a href="javascript:void(0)"><span class="product-name">OrBid6</span></a>
-                            <span class="latest-bid">Highest bid 2/31</span>
-                            <div class="bid-react-area">
-                                <div class="last-bid">0.2128ETH</div>
-                                <div class="react-area">
-                                    <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                        <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                                    </svg>
-                                    <span class="number">12</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end single product -->
-
-                    <!-- start single product -->
-                    <div class="single-slide-product">
-                        <div class="product-style-one">
-                            <div class="card-thumbnail">
-                                <a href="javascript:void(0)"><img src="static/assets/images/portfolio/portfolio-04.jpg" alt="NFT_portfolio"></a>
-                                <div class="countdown" data-date="2024-10-08">
-                                    <div class="countdown-container days">
-                                        <span class="countdown-value">87</span>
-                                        <span class="countdown-heading">D's</span>
-                                    </div>
-                                    <div class="countdown-container hours">
-                                        <span class="countdown-value">23</span>
-                                        <span class="countdown-heading">H's</span>
-                                    </div>
-                                    <div class="countdown-container minutes">
-                                        <span class="countdown-value">38</span>
-                                        <span class="countdown-heading">Min's</span>
-                                    </div>
-                                    <div class="countdown-container seconds">
-                                        <span class="countdown-value">27</span>
-                                        <span class="countdown-heading">Sec</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-share-wrapper">
-                                <div class="profile-share">
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Falak Sabbir"><img src="static/assets/images/client/client-2.png" alt="Nft_Profile"></a>
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Sabbir"><img src="static/assets/images/client/client-1.png" alt="Nft_Profile"></a>
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Falak"><img src="static/assets/images/client/client-11.png" alt="Nft_Profile"></a>
-                                    <a class="more-author-text" href="#">16+ Place Bit.</a>
-                                </div>
-                                <div class="share-btn share-btn-activation dropdown">
-                                    <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                            Share
-                                        </button>
-                                        <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                            Report
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <a href="javascript:void(0)"><span class="product-name">Morgan11</span></a>
-                            <span class="latest-bid">Highest bid 3/16</span>
-                            <div class="bid-react-area">
-                                <div class="last-bid">0.265ETH</div>
-                                <div class="react-area">
-                                    <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                        <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                                    </svg>
-                                    <span class="number">20</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end single product -->
-
-                    <!-- start single product -->
-                    <div class="single-slide-product">
-                        <div class="product-style-one">
-                            <div class="card-thumbnail">
-                                <a href="javascript:void(0)"><img src="static/assets/images/portfolio/portfolio-06.jpg" alt="NFT_portfolio"></a>
-                                <div class="countdown" data-date="2023-11-08">
-                                    <div class="countdown-container days">
-                                        <span class="countdown-value">87</span>
-                                        <span class="countdown-heading">D's</span>
-                                    </div>
-                                    <div class="countdown-container hours">
-                                        <span class="countdown-value">23</span>
-                                        <span class="countdown-heading">H's</span>
-                                    </div>
-                                    <div class="countdown-container minutes">
-                                        <span class="countdown-value">38</span>
-                                        <span class="countdown-heading">Min's</span>
-                                    </div>
-                                    <div class="countdown-container seconds">
-                                        <span class="countdown-value">27</span>
-                                        <span class="countdown-heading">Sec</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-share-wrapper">
-                                <div class="profile-share">
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Oram Kasin"><img src="static/assets/images/client/client-8.png" alt="Nft_Profile"></a>
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Kasin"><img src="static/assets/images/client/client-2.png" alt="Nft_Profile"></a>
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Oram"><img src="static/assets/images/client/client-1.png" alt="Nft_Profile"></a>
-                                    <a class="more-author-text" href="#">10+ Place Bit.</a>
-                                </div>
-                                <div class="share-btn share-btn-activation dropdown">
-                                    <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                            Share
-                                        </button>
-                                        <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                            Report
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <a href="javascript:void(0)"><span class="product-name">mAtal8</span></a>
-                            <span class="latest-bid">Highest bid 6/50</span>
-                            <div class="bid-react-area">
-                                <div class="last-bid">0.244ETH</div>
-                                <div class="react-area">
-                                    <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                        <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                                    </svg>
-                                    <span class="number">205</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end single product -->
-                    <!-- start single product -->
-                    <div class="single-slide-product">
-                        <div class="product-style-one">
-                            <div class="card-thumbnail">
-                                <a href="javascript:void(0)"><img src="static/assets/images/portfolio/portfolio-10.jpg" alt="NFT_portfolio"></a>
-                                <div class="countdown" data-date="2023-11-08">
-                                    <div class="countdown-container days">
-                                        <span class="countdown-value">87</span>
-                                        <span class="countdown-heading">D's</span>
-                                    </div>
-                                    <div class="countdown-container hours">
-                                        <span class="countdown-value">23</span>
-                                        <span class="countdown-heading">H's</span>
-                                    </div>
-                                    <div class="countdown-container minutes">
-                                        <span class="countdown-value">38</span>
-                                        <span class="countdown-heading">Min's</span>
-                                    </div>
-                                    <div class="countdown-container seconds">
-                                        <span class="countdown-value">27</span>
-                                        <span class="countdown-heading">Sec</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-share-wrapper">
-                                <div class="profile-share">
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Oram Kasin"><img src="static/assets/images/client/client-10.png" alt="Nft_Profile"></a>
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Kasin"><img src="static/assets/images/client/client-6.png" alt="Nft_Profile"></a>
-                                    <a href="javascript:void(0)" class="avatar" data-tooltip="Oram"><img src="static/assets/images/client/client-1.png" alt="Nft_Profile"></a>
-                                    <a class="more-author-text" href="#">11+ Place Bit.</a>
-                                </div>
-                                <div class="share-btn share-btn-activation dropdown">
-                                    <button class="icon" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                        <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                            Share
-                                        </button>
-                                        <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                            Report
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <a href="javascript:void(0)"><span class="product-name">Delta25</span></a>
-                            <span class="latest-bid">Highest bid 6/30</span>
-                            <div class="bid-react-area">
-                                <div class="last-bid">0.234ETH</div>
-                                <div class="react-area">
-                                    <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                        <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                                    </svg>
-                                    <span class="number">205</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end single product -->
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div> {% endcomment %}
-{% endblock auction %}
-    
-{% block explore %}
-<div class="rn-product-area rn-section-gapTop">
-    <div class="container">
-        <div class="row mb--30 align-items-center">
-            <div class="col-12">
-                <h3 class="title mb--0" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Explore
-                    Product</h3>
-            </div>
-        </div>
-
-        <div class="default-exp-wrapper">
-            <div class="inner">
-                <div class="filter-select-option">
-                    <label class="filter-leble">LIKES</label>
-                    <select>
-                        <option data-display="Most liked">Most liked</option>
-                        <option value="1">Least liked</option>
-                    </select>
-                </div>
-                <div class="filter-select-option">
-                    <label class="filter-leble">Category</label>
-                    <select>
-                        <option data-display="Category">Category</option>
-                        <option value="1">Art</option>
-                        <option value="1">Photograph</option>
-                        <option value="2">Metaverses</option>
-                        <option value="4">Potato</option>
-                        <option value="4">Photos</option>
-                    </select>
-                </div>
-
-                <div class="filter-select-option">
-                    <label class="filter-leble">Collections</label>
-                    <select>
-                        <option data-display="Collections">Collections</option>
-                        <option value="1">BoredApeYachtClub</option>
-                        <option value="2">MutantApeYachtClub</option>
-                        <option value="4">Art Blocks Factory</option>
-                    </select>
-                </div>
-
-                <div class="filter-select-option">
-                    <label class="filter-leble">Sale type</label>
-                    <select>
-                        <option data-display="Sale type">Sale type</option>
-                        <option value="1">Fixed price</option>
-                        <option value="2">Timed auction</option>
-                        <option value="4">Not for sale</option>
-                        <option value="4">Open for offers</option>
-                    </select>
-                </div>
-
-                <div class="filter-select-option">
-                    <label class="filter-leble">Price Range</label>
-                    <div class="price_filter s-filter clear">
-                        <form action="#" method="GET">
-                            <div id="slider-range"></div>
-                            <div class="slider__range--output">
-                                <div class="price__output--wrap">
-                                    <div class="price--output">
-                                        <span>Price :</span><input type="text" id="amount" readonly>
-                                    </div>
-                                    <div class="price--filter">
-                                        <a class="btn btn-primary btn-small" href="#">Filter</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row g-5 mt_dec--30">
-            <!-- start single product -->
-            <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="150" data-sal-duration="800">
-                <div class="product-style-one no-overlay with-placeBid">
-                    <div class="card-thumbnail">
-                        <a href="javascript:void(0)">
-                            <img src="static/assets/images/portfolio/portfolio-01.jpg" alt="NFT_portfolio">
-                        </a>
-                        <!-- <a href="javascript:void(0)" class="btn btn-primary">Place Bid</a> -->
-                    </div>
-                    <div class="product-share-wrapper">
-                        <div class="profile-share">
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-2.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-3.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-4.png" alt="Nft_Profile"></a>
-                            <a class="more-author-text" href="#">9+ Place Bit.</a>
-                        </div>
-                        <div class="share-btn share-btn-activation dropdown">
-                            <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                </svg>
-                            </button>
-
-                            <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                    Share
-                                </button>
-                                <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                    Report
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)"><span class="product-name">Diamond Dog</span></a>
-                    <span class="latest-bid">Highest bid 1/20</span>
-                    <div class="bid-react-area">
-                        <div class="last-bid">0.244ETH</div>
-                        <div class="react-area">
-                            <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                            </svg>
-                            <span class="number"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end single product -->
-            <!-- start single product -->
-            <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="200" data-sal-duration="800">
-                <div class="product-style-one no-overlay with-placeBid">
-                    <div class="card-thumbnail">
-                        <a href="javascript:void(0)">
-                            <img src="static/assets/images/portfolio/portfolio-02.jpg" alt="NFT_portfolio">
-                        </a>
-                        <!-- <a href="javascript:void(0)" class="btn btn-primary">Place Bid</a> -->
-                    </div>
-                    <div class="product-share-wrapper">
-                        <div class="profile-share">
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-1.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-10.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-11.png" alt="Nft_Profile"></a>
-                            <a class="more-author-text" href="#">10+ Place Bit.</a>
-                        </div>
-                        <div class="share-btn share-btn-activation dropdown">
-                            <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                </svg>
-                            </button>
-
-                            <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                    Share
-                                </button>
-                                <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                    Report
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)"><span class="product-name">OrBid6</span></a>
-                    <span class="latest-bid">Highest bid 1/20</span>
-                    <div class="bid-react-area">
-                        <div class="last-bid">0.244ETH</div>
-                        <div class="react-area">
-                            <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                            </svg>
-                            <span class="number"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end single product -->
-            <!-- start single product -->
-            <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="250" data-sal-duration="800">
-                <div class="product-style-one no-overlay with-placeBid">
-                    <div class="card-thumbnail">
-                        <a href="javascript:void(0)">
-                            <img src="static/assets/images/portfolio/portfolio-03.jpg" alt="NFT_portfolio">
-                        </a>
-                        <!-- <a href="javascript:void(0)" class="btn btn-primary">Place Bid</a> -->
-                    </div>
-                    <div class="product-share-wrapper">
-                        <div class="profile-share">
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-1.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-10.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-11.png" alt="Nft_Profile"></a>
-                            <a class="more-author-text" href="#">10+ Place Bit.</a>
-                        </div>
-                        <div class="share-btn share-btn-activation dropdown">
-                            <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                </svg>
-                            </button>
-
-                            <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                    Share
-                                </button>
-                                <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                    Report
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)"><span class="product-name">Morgan11</span></a>
-                    <span class="latest-bid">Highest bid 1/20</span>
-                    <div class="bid-react-area">
-                        <div class="last-bid">0.244ETH</div>
-                        <div class="react-area">
-                            <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                            </svg>
-                            <span class="number"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end single product -->
-            <!-- start single product -->
-            <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="300" data-sal-duration="800">
-                <div class="product-style-one no-overlay with-placeBid">
-                    <div class="card-thumbnail">
-                        <a href="javascript:void(0)">
-                            <img src="static/assets/images/portfolio/portfolio-04.jpg" alt="NFT_portfolio">
-                        </a>
-                        <!-- <a href="javascript:void(0)" class="btn btn-primary">Place Bid</a> -->
-                    </div>
-                    <div class="product-share-wrapper">
-                        <div class="profile-share">
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-1.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-10.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-9.png" alt="Nft_Profile"></a>
-                            <a class="more-author-text" href="#">21+ Place Bit.</a>
-                        </div>
-                        <div class="share-btn share-btn-activation dropdown">
-                            <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                </svg>
-                            </button>
-
-                            <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                    Share
-                                </button>
-                                <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                    Report
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)"><span class="product-name">mAtal8</span></a>
-                    <span class="latest-bid">Highest bid 1/20</span>
-                    <div class="bid-react-area">
-                        <div class="last-bid">0.244ETH</div>
-                        <div class="react-area">
-                            <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                            </svg>
-                            <span class="number"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end single product -->
-            <!-- start single product -->
-            <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="350" data-sal-duration="800">
-                <div class="product-style-one no-overlay with-placeBid">
-                    <div class="card-thumbnail">
-                        <a href="javascript:void(0)">
-                            <img src="static/assets/images/portfolio/portfolio-05.jpg" alt="NFT_portfolio">
-                        </a>
-                        <!-- <a href="javascript:void(0)" class="btn btn-primary">Place Bid</a> -->
-                    </div>
-                    <div class="product-share-wrapper">
-                        <div class="profile-share">
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-10.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-11.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-9.png" alt="Nft_Profile"></a>
-                            <a class="more-author-text" href="#">12+ Place Bit.</a>
-                        </div>
-                        <div class="share-btn share-btn-activation dropdown">
-                            <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                </svg>
-                            </button>
-
-                            <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                    Share
-                                </button>
-                                <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                    Report
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)"><span class="product-name">PlatOrgan</span></a>
-                    <span class="latest-bid">Highest bid 1/20</span>
-                    <div class="bid-react-area">
-                        <div class="last-bid">0.244ETH</div>
-                        <div class="react-area">
-                            <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                            </svg>
-                            <span class="number"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end single product -->
-            <!-- start single product -->
-            <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="400" data-sal-duration="800">
-                <div class="product-style-one no-overlay with-placeBid">
-                    <div class="card-thumbnail">
-                        <a href="javascript:void(0)">
-                            <img src="static/assets/images/portfolio/portfolio-06.jpg" alt="NFT_portfolio">
-                        </a>
-                        <!-- <a href="javascript:void(0)" class="btn btn-primary">Place Bid</a> -->
-                    </div>
-                    <div class="product-share-wrapper">
-                        <div class="profile-share">
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-1.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-10.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-11.png" alt="Nft_Profile"></a>
-                            <a class="more-author-text" href="#">5+ Place Bit.</a>
-                        </div>
-                        <div class="share-btn share-btn-activation dropdown">
-                            <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                </svg>
-                            </button>
-
-                            <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                    Share
-                                </button>
-                                <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                    Report
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)"><span class="product-name">Orthogon#720</span></a>
-                    <span class="latest-bid">Highest bid 1/20</span>
-                    <div class="bid-react-area">
-                        <div class="last-bid">0.244ETH</div>
-                        <div class="react-area">
-                            <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                            </svg>
-                            <span class="number"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end single product -->
-            <!-- start single product -->
-            <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="450" data-sal-duration="800">
-                <div class="product-style-one no-overlay with-placeBid">
-                    <div class="card-thumbnail">
-                        <a href="javascript:void(0)">
-                            <img src="static/assets/images/portfolio/portfolio-07.jpg" alt="NFT_portfolio">
-                        </a>
-                        <!-- <a href="javascript:void(0)" class="btn btn-primary">Place Bid</a> -->
-                    </div>
-                    <div class="product-share-wrapper">
-                        <div class="profile-share">
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-6.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-5.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-10.png" alt="Nft_Profile"></a>
-                            <a class="more-author-text" href="#">9+ Place Bit.</a>
-                        </div>
-                        <div class="share-btn share-btn-activation dropdown">
-                            <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                </svg>
-                            </button>
-
-                            <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                    Share
-                                </button>
-                                <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                    Report
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)"><span class="product-name">Orgajis</span></a>
-                    <span class="latest-bid">Highest bid 1/20</span>
-                    <div class="bid-react-area">
-                        <div class="last-bid">0.244ETH</div>
-                        <div class="react-area">
-                            <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                            </svg>
-                            <span class="number"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end single product -->
-            <!-- start single product -->
-            <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="500" data-sal-duration="800">
-                <div class="product-style-one no-overlay with-placeBid">
-                    <div class="card-thumbnail">
-                        <a href="javascript:void(0)">
-                            <img src="static/assets/images/portfolio/portfolio-05.jpg" alt="NFT_portfolio">
-                        </a>
-                        <!-- <a href="javascript:void(0)" class="btn btn-primary">Place Bid</a> -->
-                    </div>
-                    <div class="product-share-wrapper">
-                        <div class="profile-share">
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-1.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-10.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-11.png" alt="Nft_Profile"></a>
-                            <a class="more-author-text" href="#">16+ Place Bit.</a>
-                        </div>
-                        <div class="share-btn share-btn-activation dropdown">
-                            <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                </svg>
-                            </button>
-
-                            <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                    Share
-                                </button>
-                                <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                    Report
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)"><span class="product-name">Preatent</span></a>
-                    <span class="latest-bid">Highest bid 1/20</span>
-                    <div class="bid-react-area">
-                        <div class="last-bid">0.244ETH</div>
-                        <div class="react-area">
-                            <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                            </svg>
-                            <span class="number"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end single product -->
-            <!-- start single product -->
-            <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="550" data-sal-duration="800">
-                <div class="product-style-one no-overlay with-placeBid">
-                    <div class="card-thumbnail">
-                        <a href="javascript:void(0)">
-                            <img src="static/assets/images/portfolio/portfolio-09.jpg" alt="NFT_portfolio">
-                        </a>
-                        <!-- <a href="javascript:void(0)" class="btn btn-primary">Place Bid</a> -->
-                    </div>
-                    <div class="product-share-wrapper">
-                        <div class="profile-share">
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-10.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-11.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-1.png" alt="Nft_Profile"></a>
-                            <a class="more-author-text" href="#">22+ Place Bit.</a>
-                        </div>
-                        <div class="share-btn share-btn-activation dropdown">
-                            <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                </svg>
-                            </button>
-
-                            <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                    Share
-                                </button>
-                                <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                    Report
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)"><span class="product-name">Preatent</span></a>
-                    <span class="latest-bid">Highest bid 1/20</span>
-                    <div class="bid-react-area">
-                        <div class="last-bid">0.244ETH</div>
-                        <div class="react-area">
-                            <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                            </svg>
-                            <span class="number"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end single product -->
-            <!-- start single product -->
-            <div class="col-5 col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-delay="600" data-sal-duration="800">
-                <div class="product-style-one no-overlay with-placeBid">
-                    <div class="card-thumbnail">
-                        <a href="javascript:void(0)">
-                            <img src="static/assets/images/portfolio/portfolio-10.jpg" alt="NFT_portfolio">
-                        </a>
-                        <!-- <a href="javascript:void(0)" class="btn btn-primary">Place Bid</a> -->
-                    </div>
-                    <div class="product-share-wrapper">
-                        <div class="profile-share">
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-4.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-5.png" alt="Nft_Profile"></a>
-                            <a href="javascript:void(0)" class="avatar" data-tooltip="Owener:Mr.Jone-lee"><img src="static/assets/images/client/client-8.png" alt="Nft_Profile"></a>
-                            <a class="more-author-text" href="#">13+ Place Bit.</a>
-                        </div>
-                        <div class="share-btn share-btn-activation dropdown">
-                            <button class="icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <svg viewBox="0 0 14 4" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN hOiKLt">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z" fill="currentColor"></path>
-                                </svg>
-                            </button>
-
-                            <div class="share-btn-setting dropdown-menu dropdown-menu-end">
-                                <button type="button" class="btn-setting-text share-text" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                    Share
-                                </button>
-                                <button type="button" class="btn-setting-text report-text" data-bs-toggle="modal" data-bs-target="#reportModal">
-                                    Report
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)"><span class="product-name">Preatent</span></a>
-                    <span class="latest-bid">Highest bid 1/20</span>
-                    <div class="bid-react-area">
-                        <div class="last-bid">0.244ETH</div>
-                        <div class="react-area">
-                            <svg viewBox="0 0 17 16" fill="none" width="16" height="16" class="sc-bdnxRM sc-hKFxyN kBvkOu">
-                                <path d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z" stroke="currentColor" stroke-width="2"></path>
-                            </svg>
-                            <span class="number"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end single product -->
-        </div>
-    </div>
-</div>
-{% endblock explore %}
-    
-
-{% block top_sellers %}
-<div class="rn-top-top-seller-area nice-selector-transparent rn-section-gapTop">
-    <div class="container">
-        <div class="row  mb--30">
-            <div class="col-12 justify-sm-center d-flex">
-                <h3 class="title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Top Seller in</h3>
-                <select>
-                    <option data-display="1 day"> 1 day</option>
-                    <option value="1">7 Day's</option>
-                    <option value="2">15 Day's</option>
-                    <option value="4">30 Day's</option>
-                </select>
-            </div>
-        </div>
-        <div class="row justify-sm-center g-5 top-seller-list-wrapper">
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail varified">
-                            <a href="javascript:void(0)"><img src="static/assets/images/client/client-12.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="javascript:void(0)">
-                                <h6 class="name">Brodband</h6>
-                            </a>
-                            {% comment %} <span class="count-number">
-                            $2500,000
-                        </span> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail">
-                            <a href="javascript:void(0)"><img src="static/assets/images/client/client-2.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="javascript:void(0)">
-                                <h6 class="name">Ms. Parkline</h6>
-                            </a>
-                            {% comment %} <span class="count-number">
-                            $2300,000
-                        </span> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail">
-                            <a href="javascript:void(0)"><img src="static/assets/images/client/client-3.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="javascript:void(0)">
-                                <h6 class="name">Methods</h6>
-                            </a>
-                            {% comment %} <span class="count-number">
-                            $2100,000
-                        </span> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail varified">
-                            <a href="javascript:void(0)"><img src="static/assets/images/client/client-4.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="javascript:void(0)">
-                                <h6 class="name">Jone sone</h6>
-                            </a>
-                            {% comment %} <span class="count-number">
-                            $2000,000
-                        </span> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail">
-                            <a href="javascript:void(0)"><img src="static/assets/images/client/client-5.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="javascript:void(0)">
-                                <h6 class="name">Siddhart</h6>
-                            </a>
-                            {% comment %} <span class="count-number">
-                            $200,000
-                        </span> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail varified">
-                            <a href="javascript:void(0)"><img src="static/assets/images/client/client-6.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="javascript:void(0)">
-                                <h6 class="name">Sobuj Mk</h6>
-                            </a>
-                            {% comment %} <span class="count-number">
-                            $2000,000
-                        </span> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail varified">
-                            <a href="javascript:void(0)"><img src="static/assets/images/client/client-7.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="javascript:void(0)">
-                                <h6 class="name">Trodband</h6>
-                            </a>
-                            {% comment %} <span class="count-number">
-                            $2500,000
-                        </span> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail">
-                            <a href="javascript:void(0)"><img src="static/assets/images/client/client-8.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="javascript:void(0)">
-                                <h6 class="name">Yash</h6>
-                            </a>
-                            {% comment %} <span class="count-number">
-                            $2500,000
-                        </span> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail">
-                            <a href="javascript:void(0)"><img src="static/assets/images/client/client-9.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="javascript:void(0)">
-                                <h6 class="name">YASHKIB</h6>
-                            </a>
-                            {% comment %} <span class="count-number">
-                            $2500,000
-                        </span> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-
-            <!-- start single top-seller -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="col-5 col-lg-3 col-md-4 col-sm-6 top-seller-list">
-                <div class="top-seller-inner-one">
-                    <div class="top-seller-wrapper">
-                        <div class="thumbnail varified">
-                            <a href="javascript:void(0)"><img src="static/assets/images/client/client-10.png" alt="Nft_Profile"></a>
-                        </div>
-                        <div class="top-seller-content">
-                            <a href="javascript:void(0)">
-                                <h6 class="name">Brodband</h6>
-                            </a>
-                            {% comment %} <span class="count-number">
-                            $2500,000
-                        </span> {% endcomment %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End single top-seller -->
-        </div>
-    </div>
-</div>
-{% endblock top_sellers %}
-
-{% block howto %}
-<div class="rn-service-area rn-section-gapTop">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 mb--50">
-                <h3 class="title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Create and sell your NFTs</h3>
-            </div>
-        </div>
-        <div class="row g-5">
-            <!-- start single service -->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="rn-service-one color-shape-7">
-                    <div class="inner">
-                        <div class="icon">
-                            <img src="static/assets/images/icons/shape-7.png" alt="Shape">
-                        </div>
-                        <div class="subtitle">Step-01</div>
-                        <div class="content">
-                            <h4 class="title"><a href="javascript:void(0)">Set up your wallet</a></h4>
-                            <p class="description">{{settings.DOMAIN_NAME}} requires a cryptocurrency wallet to store and manage NFTs. Popular options include MetaMask and Trust Wallet..</p>
-                            <a class="read-more-button" href="{% url 'register' %}"><i class="feather-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <a class="over-link" href="{% url 'register' %}"></a>
-                </div>
-            </div>
-            <!-- End single service -->
-            <!-- start single service -->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div data-sal="slide-up" data-sal-delay="200" data-sal-duration="800" class="rn-service-one color-shape-1">
-                    <div class="inner">
-                        <div class="icon">
-                            <img src="static/assets/images/icons/shape-1.png" alt="Shape">
-                        </div>
-                        <div class="subtitle">Step-02</div>
-                        <div class="content">
-                            <h4 class="title"><a href="javascript:void(0)">Fund your wallet</a></h4>
-                            <p class="description">To buy NFTs, you'll need to add cryptocurrency, such as Ethereum, to your wallet.</p>
-                            <a class="read-more-button" href="{% url 'register' %}"><i class="feather-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <a class="over-link" href="{% url 'register' %}"></a>
-                </div>
-            </div>
-            <!-- End single service -->
-            <!-- start single service -->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div data-sal="slide-up" data-sal-delay="250" data-sal-duration="800" class="rn-service-one color-shape-5">
-                    <div class="inner">
-                        <div class="icon">
-                            <img src="static/assets/images/icons/shape-5.png" alt="Shape">
-                        </div>
-                        <div class="subtitle">Step-03</div>
-                        <div class="content">
-                            <h4 class="title"><a href="javascript:void(0)">Add your NFT's</a></h4>
-                             <p class="description">Explore the marketplace and discover unique NFTs in various categories such as art, collectibles, and virtual real estate.</p> 
-                            <a class="read-more-button" href="{% url 'register' %}"><i class="feather-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <a class="over-link" href="{% url 'register' %}"></a>
-                </div>
-            </div>
-            <!-- End single service -->
-            <!-- start single service -->
-            <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div data-sal="slide-up" data-sal-delay="300" data-sal-duration="800" class="rn-service-one color-shape-6">
-                    <div class="inner">
-                        <div class="icon">
-                            <img src="static/assets/images/icons/shape-6.png" alt="Shape">
-                        </div>
-                        <div class="subtitle">Step-04</div>
-                        <div class="content">
-                            <h4 class="title"><a href="javascript:void(0)">Sell Your NFT's</a></h4>
-                            <p class="description">If you have your own NFTs, you can list them for sale on {{settings.DOMAIN_NAME}} and reach a wide audience of potential buyers.`</p>
-                            <a class="read-more-button" href="{% url 'register' %}"><i class="feather-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <a class="over-link" href="{% url 'register' %}"></a>
-                </div>
-            </div>
-            <!-- End single service -->
-        </div>
-    </div>
-</div>
-{% endblock howto %}
-
-{% block top_collection %}
-{% comment %} <div class="rn-collection-area rn-section-gapTop">
-    <div class="container">
-        <div class="row mb--50 align-items-center">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                <h3 class="title mb--0" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Top Collection</h3>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-12 mt_mobile--15">
-                <div class="view-more-btn text-start text-sm-end" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <a class="btn-transparent" href="#">VIEW ALL<i data-feather="arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row g-5">
-            <!-- start single collention -->
-            <div data-sal="slide-up" data-sal-delay="150" data-sal-duration="800" class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
-                <a href="javascript:void(0)" class="rn-collection-inner-one">
-                    <div class="collection-wrapper">
-                        <div class="collection-big-thumbnail">
-                            <img src="static/assets/images/collection/collection-lg-01.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collenction-small-thumbnail">
-                            <img src="static/assets/images/collection/collection-sm-01.jpg" alt="Nft_Profile">
-                            <img src="static/assets/images/collection/collection-sm-02.jpg" alt="Nft_Profile">
-                            <img src="static/assets/images/collection/collection-sm-03.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-profile">
-                            <img src="static/assets/images/client/client-15.png" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-deg">
-                            <h6 class="title">Cubic Trad</h6>
-                            <span class="items">27 Items</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- End single collention -->
-            <!-- start single collention -->
-            <div data-sal="slide-up" data-sal-delay="200" data-sal-duration="800" class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
-                <a href="javascript:void(0)" class="rn-collection-inner-one">
-                    <div class="collection-wrapper">
-                        <div class="collection-big-thumbnail">
-                            <img src="static/assets/images/collection/collection-lg-03.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collenction-small-thumbnail">
-                            <img src="static/assets/images/collection/collection-sm-04.jpg" alt="Nft_Profile">
-                            <img src="static/assets/images/collection/collection-sm-05.jpg" alt="Nft_Profile">
-                            <img src="static/assets/images/collection/collection-sm-06.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-profile">
-                            <img src="static/assets/images/client/client-12.png" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-deg">
-                            <h6 class="title">Diamond Dog</h6>
-                            <span class="items">20 Items</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- End single collention -->
-            <!-- start single collention -->
-            <div data-sal="slide-up" data-sal-delay="250" data-sal-duration="800" class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
-                <a href="javascript:void(0)" class="rn-collection-inner-one">
-                    <div class="collection-wrapper">
-                        <div class="collection-big-thumbnail">
-                            <img src="static/assets/images/collection/collection-lg-02.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collenction-small-thumbnail">
-                            <img src="static/assets/images/collection/collection-sm-07.jpg" alt="Nft_Profile">
-                            <img src="static/assets/images/collection/collection-sm-08.jpg" alt="Nft_Profile">
-                            <img src="static/assets/images/collection/collection-sm-09.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-profile">
-                            <img src="static/assets/images/client/client-13.png" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-deg">
-                            <h6 class="title">Morgan11</h6>
-                            <span class="items">15 Items</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- End single collention -->
-            <!-- start single collention -->
-            <div data-sal="slide-up" data-sal-delay="350" data-sal-duration="800" class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
-                <a href="javascript:void(0)" class="rn-collection-inner-one">
-                    <div class="collection-wrapper">
-                        <div class="collection-big-thumbnail">
-                            <img src="static/assets/images/collection/collection-lg-04.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collenction-small-thumbnail">
-                            <img src="static/assets/images/collection/collection-sm-10.jpg" alt="Nft_Profile">
-                            <img src="static/assets/images/collection/collection-sm-11.jpg" alt="Nft_Profile">
-                            <img src="static/assets/images/collection/collection-sm-12.jpg" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-profile">
-                            <img src="static/assets/images/client/client-14.png" alt="Nft_Profile">
-                        </div>
-                        <div class="collection-deg">
-                            <h6 class="title">Orthogon#720</h6>
-                            <span class="items">10 Items</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- End single collention -->
-        </div>
-    </div>
-</div> {% endcomment %}
-{% endblock top_collection %}
     

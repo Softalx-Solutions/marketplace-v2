@@ -1,127 +1,71 @@
 {% extends 'base.html' %}
-
-{% block slider %}
-<div class="rn-breadcrumb-inner ptb--30">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-12">
-                <h5 class="title text-center text-md-start">Contact With Us</h5>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-                <ul class="breadcrumb-list">
-                    <li class="item"><a href="index.html">Home</a></li>
-                    <li class="separator"><i class="feather-chevron-right"></i></li>
-                    <li class="item current">Contact With Us</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock slider %}
     
 {% block content %}
 
-<div class="rn-contact-top-area rn-section-gapTop bg_color--5">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-12 sal-animate" data-sal="slide-up" data-sal-delay="150" data-sal-duration="800">
-                <div class="section-title mb--30 text-center">
-                    <h2 class="title">Quick Contact Address</h2>
-                    <!-- <p class="description">There are many variations of passages of Lorem Ipsum available, <br> but
-                        the majority have suffered alteration.</p> -->
-                </div>
+<div class="contact">
+    <div class="row">
+        <div class="col-md-4 contact__img">
+            <div class="img__wrap">
+                <img src="/static/assets/img/bg/contact.png" alt="">
             </div>
         </div>
-        <div class="row g-5">
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-delay="150" data-sal-duration="800">
-                <div class="rn-address">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-headphones">
-                            <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-                            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z">
-                            </path>
-                        </svg>
+        <div class="col-md-8 contact__content">
+            <div class="container">
+                <div class="content__wrap space-y-20">
+                    <div class="space-y-20">
+                        <h1 class="text-left">Hi, 🖐 we are Raroin.</h1>
+                        <p class="contact__desc">We’re here to help and answer
+                            any question you might have. <br> We look forward to
+                            hearing from you 🙂</p>
                     </div>
-                    <div class="inner">
-                        <h4 class="title">Contact Phone Number</h4>
-                        <p><a href="tel:+{{settings.SITE_NUMBER}}">+{{settings.SITE_NUMBER}}</a></p>
-                        <!-- <p><a href="tel:+222222222333">+222 222 222 333</a></p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-delay="200" data-sal-duration="800">
-                <div class="rn-address">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                            </path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </div>
-                    <div class="inner">
-                        <h4 class="title">Our Email Address</h4>
-                        <p><a href="mailto:{{settings.SITE_EMAIL}}">{{settings.SITE_EMAIL}}</a></p>
-                        <!-- <p><a href="mailto:example@gmail.com">example@gmail.com</a></p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-delay="250" data-sal-duration="800">
-                <div class="rn-address">
-                    <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                    </div>
-                    <div class="inner">
-                        <h4 class="title">Our Location</h4>
-                        <p>{{settings.SITE_ADDRESS}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    
+                    <div class="box is__big">
+                        <div class="space-y-10 mb-0">
+                            <div class="row">
+                                <div class="col-sm-6 space-y-20">
+                                    <div class="space-y-10">
+                                        <span class="nameInput">Email address</span>
+                                        <input type="email" class="form-control" placeholder="contact@Creabik.com">
+                                    </div>
+                                    <div class="space-y-10">
+                                        <span class="nameInput">Select Country</span>
+                                        <select class="form-select
+                                            custom-select" aria-label="Default
+                                            select example">
+                                            <option>United States</option>
+                                            <option>Finland</option>
+                                            <option>Norway</option>
 
-<div class="login-area message-area rn-section-gapTop">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 sal-animate" data-sal="slide-up" data-sal-delay="150" data-sal-duration="800">
-                <div class="connect-thumbnail">
-                    <div class="left-image">
-                        <img src="/static/assets/images/contact/contact1.png" alt="Nft_Profile">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 space-y-20 mt-10">
+                                    <div class="space-y-10">
+                                        <span class="nameInput">Full Name</span>
+                                        <input type="text" class="form-control" placeholder="Creabik">
+                                    </div>
+                                    <div class="space-y-10">
+                                        <span class="nameInput">Select a Subject</span>
+                                        <select class="form-select
+                                            custom-select" aria-label="Default
+                                            select example">
+
+                                            <option>Service Request</option>
+                                            <option>NFT items</option>
+                                            <option>Wallet</option>
+                                            <option>Purchase</option>
+                                            <option>Support</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-20">
+                                    <div class="space-y-10">
+                                        <span class="nameInput">Message</span>
+                                        <textarea style="min-height: 110px" class="mb-0">			                                        </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-6 sal-animate" data-sal="slide-up" data-sal-delay="200" data-sal-duration="800">
-                {% include 'partials/messages.html' %}
-                <div class="form-wrapper-one registration-area">
-                    <h3 class="mb--30">Contact Us</h3>
-                    <form class="search-form-wrapper" method="post" action="{% url 'contact-us-mail' %}">
-                        {% csrf_token %}
-                        <div class="mb-5">
-                            <label for="contact-name" class="form-label">Your Name</label>
-                            <input name="name" id="contact-name" type="text">
-                        </div>
-                        <div class="mb-5">
-                            <label for="contact-email" class="form-label">Email</label>
-                            <input id="contact-email" name="email" type="email">
-                        </div>
-                        <div class="mb-5">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input id="subject" name="subject" type="text">
-                        </div>
-                        <div class="mb-5">
-                            <label for="contact-message" class="form-label">Write Message</label>
-                            <textarea name="message" id="contact-message" rows="3"></textarea>
-                        </div>
-                        <!-- <div class="mb-5 rn-check-box">
-                            <input id="condition" type="checkbox" class="rn-check-box-input">
-                            <label for="condition" class="rn-check-box-label">Allow to all tearms &amp; condition</label>
-                        </div> -->
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
                 </div>
             </div>
         </div>

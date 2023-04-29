@@ -1,113 +1,90 @@
 {% extends 'base.html' %}
 
-{% block slider %}
-<div class="rn-breadcrumb-inner ptb--30">
+
+{% block bg_hero %}
+<div class="hero_privacy">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-12">
-                <h5 class="title text-center text-md-start">Terms</h5>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-                <ul class="breadcrumb-list">
-                    <li class="item"><a href="/">Home</a></li>
-                    <li class="separator"><i class="feather-chevron-right"></i></li>
-                    <li class="item current">Terms & Condition</li>
-                </ul>
-            </div>
+        <div class="d-flex jusitify-content-center align-items-center space-x-10">
+            <h1 class="text-left">{{settings.DOMAIN_NAME}} Terms &amp Condition</h1>
+            <i class="ri-file-text-fill privacy__icon"></i>
         </div>
     </div>
 </div>
-{% endblock slider %}
+{% endblock bg_hero %}
+    
 
 {% block content %}
-<div class="rn-privacy-policy-area rn-section-gapTop">
+
+<div class="privacy__page">
     <div class="container">
-        <div class="row mb_dec--50">
-            <div class="offset-lg-2 col-lg-8 ">
-                <div class="privacy-wrapper">
-                    <!-- <h4>Welcome to {{settings.DOMAIN_NAME}} Privacy Policy</h4> -->
-                    <h2>Terms and Condition</h2>
-                    <p>Last Updated: December 31, 2021</p>
-                    <p>
-                        These terms and conditions (the "Terms") govern your use of [NFT Platform Name] (the "Platform"), including the purchase and sale of non-fungible tokens (NFTs) on the Platform. By using the Platform, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the Platform.
-                    </p>
-                    <!-- <ol>
-                        <li>Where Bitcoin was hailed as the digital answer to currency, NFTs are now being touted as
-                            the digital answer to collectables, but plenty of sceptics fear they're a bubble waiting
-                            to burst.</li>
-                        <li>It could be a house, or a painting such as the Mona Lisa, which is one of a kind. You
-                            can take a photo of the painting or buy a print but there will only ever be one original
-                            painting.</li>
-                        <li>Former Christie's auctioneer Charles Allsopp said the concept of buying NFTs made "no
-                            sense".
-
-                            "The idea of buying something which isn't there is just strange," he told the BBC.</li>
-                    </ol> -->
-
-                    <h4>Introduction</h4>
-                    
-                    <ol>
-                        <li>
-                            In order to use the Platform, you must create an account. You are responsible for maintaining the security of your account and for all activities that occur under your account. You agree to immediately notify us of any unauthorized use of your account.
-                        </li>
-                    </ol>
-                    <h4>NFT Listings and Transactions</h4>
-                   
-                    <ol>
-                        <li>
-                            The Platform allows you to list NFTs for sale and to purchase NFTs from other users. All transactions are subject to the terms and conditions of the Platform, including any applicable fees. You are responsible for ensuring that your listings and transactions comply with these Terms and any applicable laws.
-                        </li>
-                    </ol>
-                    <h4>Intellectual Property</h4>
-                    
-                    <ol>
-                        <li>The Platform and its content, including without limitation, the software, text, images, and graphics, are protected by intellectual property rights, including without limitation, copyright, trademark, and patent laws. You agree not to copy, modify, or distribute the Platform or its content without our prior written permission.</li>
-                    </ol>
-                    <h4>Disclaimer of Warranties</h4>
-                    
-                    <ol>
-                        <li>The Platform is provided "as is" without any warranties of any kind, either express or implied, including without limitation, warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the Platform will be available, accurate, error-free, or uninterrupted.</li>
-                    </ol>
-                    <h4>Limitation of Liability</h4>
-                    
-                    <ol>
-                        <li>In no event will we be liable for any damages of any kind, including without limitation, direct, indirect, incidental, or consequential damages, arising out of your use of the Platform or your purchase or sale of NFTs.</li>
-                    </ol>
-                    <h4>Indemnification</h4>
-                    
-                    <ol>
-                        <li>You agree to indemnify and hold us harmless from any claims, damages, and expenses, including without limitation, attorneys' fees, arising from your use of the Platform or your purchase or sale of NFTs.</li>
-                    </ol>
-                    <h4>Dispute Resolution</h4>
-                    
-                    <ol>
-                        <li>You agree to indemnify and hold us harmless from any claims, damages, and expenses, including without limitation, attorneys' fees, arising from your use of the Platform or your purchase or sale of NFTs.</li>
-                    </ol>
-                    <h4>Governing Law</h4>
-                    
-                    <p>These Terms will be governed by and construed in accordance with the laws of the [jurisdiction], without giving effect to any principles of conflicts of law.</p>
-                    
-                    <h4>Changes to the Terms</h4>
-                    
-                    <p>We may revise these Terms from time to time. If we make any material changes to these Terms, we will notify you by posting the revised Terms on the Platform. Your continued use of the Platform after any changes indicates your acceptance of the revised Terms.</p>
-                    
-                    <h4>Termination</h4>
-                    
-                    <p>We may terminate these Terms or your use of the Platform at any time, with or without cause, and without notice to you.</p>
-
-                    <h4>    Entire Agreement</h4>
-                    <p>These Terms constitute the entire agreement between you and us regarding your use of the Platform and supersede all prior agreements and understandings.
-
-                       <br> Effective as of [date].</p>
-                </div>
+        <div class="box space-y-30" style="padding: 60px 30px;">
+            <div class="space-y-20">
+                <h3>What information do we collect?</h3>
+                <p>
+                    We collect information from you when you register on our site and gather data when you
+                    participate in the forum by reading, writing, and evaluating the content shared here.
+                    <br>
+                    When registering on our site, you may be asked to enter your name and e-mail address. You
+                    may, however, visit our site without registering. Your e-mail address will be verified by an
+                    email containing a unique link. If that link is visited, we know that you control the e-mail
+                    address.
+                    <br>
+                    When registered and posting, we record the IP address that the post originated from. We also
+                    may retain server logs which include the IP address of every request to our server.
+                </p>
+            </div>
+            <div class="space-y-20">
+                <h3>What do we use your information for?</h3>
+                <p>
+                    Any of the information we collect from you may be used in one of the following ways:
+                    To personalize your experience — your information helps us to better respond to your
+                    individual needs.
+                    <br>
+                    To improve our site — we continually strive to improve our site offerings based on the
+                    information and feedback we receive from you.
+                    To improve customer service — your information helps us to more effectively respond to your
+                    customer service requests and support needs.
+                    To send periodic emails — The email address you provide may be used to send you information,
+                    notifications that you request about changes to topics or in response to your user name,
+                    respond to inquiries, and/or other requests or questions.
+                </p>
+            </div>
+            <div class="space-y-20">
+                <h3>How do we protect your information?</h3>
+                <p>
+                    We implement a variety of security measures to maintain the safety of your personal
+                    information when you enter, submit, or access your personal information.
+                </p>
+            </div>
+            <div class="space-y-20">
+                <h3>Do we use cookies?</h3>
+                <p>
+                    Yes. Cookies are small files that a site or its service provider transfers to your
+                    computer’s hard drive through your Web browser (if you allow). These cookies enable the site
+                    to recognize your browser and, if you have a registered account, associate it with your
+                    registered account.
+                    <br>
+                    We use cookies to understand and save your preferences for future visits and compile
+                    aggregate data about site traffic and site interaction so that we can offer better site
+                    experiences and tools in the future. We may contract with third-party service providers to
+                    assist us in better understanding our site visitors. These service providers are not
+                    permitted to use the information collected on our behalf except to help us conduct and
+                    improve our business.
+                </p>
+            </div>
+            <div class="space-y-20">
+                <h3>Do we disclose any information to outside parties?</h3>
+                <p>
+                    We do not sell, trade, or otherwise transfer to outside parties your personally identifiable
+                    information. This does not include trusted third parties who assist us in operating our
+                    site, conducting our business, or servicing you, so long as those parties agree to keep this
+                    information confidential. We may also release your information when we believe release is
+                    appropriate to comply with the law, enforce our site policies, or protect ours or others
+                    rights, property, or safety. However, non-personally identifiable visitor information may be
+                    provided to other parties for marketing, advertising, or other uses.
+                </p>
             </div>
         </div>
-        <!-- <div class="row mt--50">
-            <div class="offset-lg-2 col-lg-8">
-                <a href="#" class="btn btn-primary mr--15 ml--25">Accept</a>
-                <a href="#" class="btn btn-primary-alta">Decline</a>
-            </div>
-        </div> -->
     </div>
 </div>
 {% endblock content %}

@@ -4,7 +4,7 @@ from accounts.models import MoreDetails, User, UserTransactions, UserWallet
 from lighthouse.models import PaymentMethod
 from marketplace.models import BidNft, Category, CreateNftModel, NftCollection
 
-from users.forms import EditCollectionForm, EditMoreDetailsForm, EditNftForm, EditProfileForm, UploadNftForm, UserAddWalletForm
+from users.forms import CreateCollectionForm, EditCollectionForm, EditMoreDetailsForm, EditNftForm, EditProfileForm, UploadNftForm, UserAddWalletForm
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.contrib.auth import get_user_model
@@ -17,6 +17,7 @@ from django.db.models.functions import Coalesce
 from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.sites.shortcuts import get_current_site
+from django.http import JsonResponse
 # Create your views here.
 
 """Dashboard"""
@@ -43,6 +44,7 @@ class UsersDashboard(LoginRequiredMixin, TemplateView):
             'payments':payments,
             'total_purchases':total_purchases,
             'current_site':current_site,
+            'collection_items':collection_items,
         }
         return render(request, self.template_name, context)
     
@@ -63,9 +65,12 @@ class EditProfile(LoginRequiredMixin, TemplateView):
     
     def post(self, request):
         user = get_object_or_404(User, uuid=self.request.user.uuid)
+        more_details = get_object_or_404(MoreDetails, user_details=user)
         form = EditProfileForm(request.POST or None, request.FILES or None, instance=user)
-        if form.is_valid():
+        moredetailsform = EditMoreDetailsForm(request.POST, instance=more_details)
+        if form.is_valid() and moredetailsform.is_valid():
             form.save()
+            moredetailsform.save()
             messages.success(request, 'Profile Updated')
             return redirect(request.META.get('HTTP_REFERER'))
         else:
@@ -176,11 +181,12 @@ class UploadNft(LoginRequiredMixin, TemplateView):
                                                 nft_type=nft_type, 
                                                 collection_id=collection, 
                                                 royalties=royalties,
-                                                list_for_sale=list_for_sale,
+                                                list_for_sale=True,
                                                 bid=bid,
                                                 creator=self.request.user).save()
                     messages.success(request, 'Art successfully uploaded')
-                    return redirect('users')
+                    return JsonResponse({'message': 'File uploaded successfully!'})
+                    # return redirect('users')
                 else:
                     messages.error(request, 'Price must be set')
                     return redirect(request.META.get('HTTP_REFERER'))
@@ -307,8 +313,10 @@ class CreateCollection(LoginRequiredMixin, TemplateView):
     template_name = 'users/nft/create-collection.html'
     def get(self, request):
         categories = Category.objects.all()
+        form = CreateCollectionForm()
         context = {
             'categories':categories,
+            'form':form,
         }
         return render(request, self.template_name, context)
     

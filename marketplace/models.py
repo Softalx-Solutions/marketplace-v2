@@ -52,7 +52,7 @@ class CreateNftModel(TimeStampedModel):
     description = models.TextField()
     item_price = models.FloatField()
     size = models.CharField(blank=True, max_length=100)
-    upload_nft = models.FileField(blank=True, null=True, default='https://res.cloudinary.com/dbbfeegje/image/upload/v1674443265/coll-item-2_vqfk6q.jpg')
+    upload_nft = models.FileField(blank=True, null=True, default='')
     # upload_nft = CloudinaryField(resource_type='raw', folder = "/nft-items/", blank=True, default='https://res.cloudinary.com/dbbfeegje/image/upload/v1674443265/coll-item-2_vqfk6q.jpg')
     properties = models.CharField(max_length=255, blank=True)
     royalties = models.CharField(max_length=100, blank=True)

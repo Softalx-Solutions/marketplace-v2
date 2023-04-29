@@ -1,44 +1,52 @@
 {% extends 'base.html' %} 
 {% load crispy_forms_tags %}
-{% block slider %}
-<div class="rn-breadcrumb-inner ptb--30">
+{% block bg_hero %}
+<div class="hero__upload">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-12">
-                <h5 class="title text-center text-md-start">Edit NFT</h5>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-                <ul class="breadcrumb-list">
-                    <li class="item"><a href="{% url 'users' %}">My Profile</a></li>
-                    <li class="separator"><i class="feather-chevron-right"></i></li>
-                    <li class="item current">Edit {{nft.name}}</li>
-                </ul>
-            </div>
+        <div class="space-y-20">
+            <a href="{% url 'users' %}" class="btn btn-white btn-sm
+                switch">
+                Dashboard</a>
+            <h2 class="title">Edit NFT</h2>
+
         </div>
     </div>
 </div>
-{% endblock slider %} 
+{% endblock bg_hero %} 
 {% block content %} 
-<div class="create-area rn-section-gapTop">
-    <div class="container">
-        <div class="row g-5">
-            <form action="" method="post" class="row search-form-wrapper" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="">
+<div class="container">
+    <div class="box in__upload mb-120">
+        <div class="row">
+            
+            <div class="col-lg-12">
+                <div class="form-group space-y-10">
+                    <div class="space-y-20">
+                        <form action="" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{form|crispy}}
+                        
+                        <div class="space-y-10">
+                            <button type="submit" class="btn btn-primary btn-lg" >Update</button>
+                            <!-- <span class="variationInput">Choose collection</span>
+                            <div class="d-flex flex-column flex-md-row">
+                                <a href="#" class="choose_collection mb-10
+                                    mb-md-0 mr-0 mr-md-3">
+                                    <div class="icon">
 
-                    <div class="col-lg-12 form-wrapper-one mx-5 registration-area">
-                        {% include 'partials/messages.html' %}
-                        {{form|crispy}}
-                        <div class="button-area save-btn-edit">
-                            <button type="" class="btn btn-primary">Update</button>
-                            
+                                        <i class="ri-add-line"></i>
+                                    </div>
+                                    New collection</a>
+                                <a href="#" class="choose_collection is_brand">
+                                    <img src="assets/img/icons/raroin_icon.svg" alt="">
+                                    Raroin Collection </a>
+                            </div> -->
                         </div>
+                        </form>
+
                     </div>
                 </div>
-
-
                 
-            </form>
+            </div>
         </div>
     </div>
 </div>

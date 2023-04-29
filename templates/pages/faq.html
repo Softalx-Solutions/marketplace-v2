@@ -1,152 +1,147 @@
 {% extends 'base.html' %}
 
-{% block slider %}
-<div class="rn-breadcrumb-inner ptb--30">
+{% block bg_hero %}
+<div class="hero_questions bg_white">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-12">
-                <h5 class="title text-center text-md-start">Support Center</h5>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-                <ul class="breadcrumb-list">
-                    <li class="item"><a href="/">Home</a></li>
-                    <li class="separator"><i class="feather-chevron-right"></i></li>
-                    <li class="item current">Support Center</li>
-                </ul>
-            </div>
+        <div class="space-y-20">
+            <h1 class="text-center">Frequently asked questions</h1>
+            <p class="text-center">You can set preferred display name, create your profile URL and manage other personal settings.</p>
         </div>
     </div>
 </div>
-{% endblock slider %}
+{% endblock bg_hero %}
     
 {% block content %}
-<div class="rn-support-area rn-section-gapTop">
-    <div class="container">
-        <div class="row g-6">
-            <!-- <div class="col-lg-6">
-                <div class="rn-support-read">
-                    <div class="read-card">
-                        <h4>How to start as a seller?</h4>
-                        <div class="content">
-                            <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
-                                necessary, making this the first true generator on the Internet.</p>
-                            <p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-                                (injected humour and the like).</p>
+<div class="questions__page mt-100">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-4">
+                    <div class="box side">
+                        <div class="sidenav">
+                            <ul>
+                                <li class="d-flex align-items-center
+                                    space-x-10">
+                                    <i class="ri-home-2-line"></i>
+                                    <a class="text__reset" href="#General">General</a>
+                                </li>
+                                <li class="d-flex align-items-center
+                                    space-x-10">
+                                    <i class="ri-chat-1-line"></i>
+                                    <a class="text__reset" href="#Support">Support</a>
+                                </li>
+                                <li class="d-flex align-items-center
+                                    space-x-10">
+                                    <i class="ri-cloudy-line"></i>
+                                    <a class="text__reset" href="#Transaction">Transaction</a>
+                                </li>
+                                <li class="d-flex align-items-center
+                                    space-x-10">
+                                    <i class="ri-quill-pen-line"></i>
+                                    <a class="text__reset" href="#Fees">Fees</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="read-card">
-                        <h4>What happens when there are no orders?</h4>
-                        <div class="content">
-                            <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
-                                necessary, making this the first true generator on the Internet.</p>
-                            <p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-                                (injected humour and the like).</p>
-                        </div>
-                    </div>
-                    <div class="read-card">
-                        <h4>Why are you getting rejected shares?</h4>
-                        <div class="content">
-                            <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
-                                necessary, making this the first true generator on the Internet.
-                                Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-                                (injected humour and the like).</p>
-                        </div>
-                    </div>
-                    <a href="create.html" class="btn btn-primary mr--15">Create</a>
-                    <a href="contact.html" class="btn btn-primary-alta">Contact Us</a>
                 </div>
-            </div> -->
-            <div class="col-lg-12">
-                <div class="support-accordion">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    What is {{settings.DOMAIN_NAME}}?
-                                    <i class="feather-chevron-up"></i>
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    {{settings.DOMAIN_NAME}} is a marketplace for buying, selling, and discovering unique digital assets, such as non-fungible tokens (NFTs) such as collectibles, art, and virtual real estate.
+                <div class="col-lg-9 col-md-9 col-sm-8">
+                    <div class="questions__box space-y-30">
+                        <!-- Accordion card -->
+                        <div class="accordion" id="accordionEx parent" role="tablist" aria-multiselectable="true">
+                            <a href="#" id="General"></a>
+                            <!-- Card header -->
+                            <div class="accordion-header" role="tab" id="headingOne1">
+                                <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1" class="accordion-button collapsed">
+                                    What is an NFT?
+                                </a>
+                                <!-- Card body -->
+                                <div id="collapseOne1" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx" style="">
+                                    <div class="accordion-desc">
+                                        NFTs or non-fungible tokens, are
+                                        cryptographic assets on blockchain with
+                                        unique identification codes and metadata
+                                        that distinguish them from each other.
+                                        NFTs are unique and not mutually
+                                        interchangeable, which means no two NFTs
+                                        are the same. NFTs can be a unique
+                                        digital artwork, sneaker in a
+                                        limited-run fashion line, in-game item,
+                                        digital collectible etc.
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    What are NFTs?
-                                    <i class="feather-chevron-up"></i>
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    NFTs are digital assets that represent ownership of a unique item or piece of content, such as a piece of artwork or a collectible. They are stored on a blockchain and cannot be duplicated or divided.
+                        <!-- Accordion card -->
+                        <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                            <a href="#" id="Support"></a>
+                            <!-- Card header -->
+                            <div class="accordion-header" role="tab" id="headingOne2">
+                                <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2" class="accordion-button collapsed">
+                                    Customer support is available ?
+                                </a>
+                                <!-- Card body -->
+                                <div id="collapseOne2" class="collapse" role="tabpanel" aria-labelledby="headingOne2" data-parent="#accordionEx">
+                                    <div class="accordion-desc">
+                                        <div class="article-body"><p>You can
+                                                fill out a request for support
+                                                via email Please provide:</p>
+                                            <ul>
+                                                <li>Your email address</li>
+                                                <li>Your wallet address (if
+                                                    applicable)</li>
+                                                <li>Choose relevant categories</li>
+                                                <li>Provide detailed information
+                                                    regarding your inquiry.</li>
+                                            </ul></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    How does {{settings.DOMAIN_NAME}} work?
-                                    <i class="feather-chevron-up"></i>
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    {{settings.DOMAIN_NAME}} allows users to create and list their own NFTs for sale, or browse and purchase NFTs from other creators. Users can also discover and explore the growing library of NFTs available on the platform.
+                        <!-- Accordion card -->
+                        <div class="accordion" id="accordionEx parent" role="tablist" aria-multiselectable="true">
+                            <a href="#" id="Transaction"></a>
+                            <!-- Card header -->
+                            <div class="accordion-header" role="tab" id="headingOne3">
+                                <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne3" aria-expanded="false" aria-controls="collapseOne3" class="accordion-button collapsed">
+                                    How do I find my transaction hash?
+                                </a>
+                                <!-- Card body -->
+                                <div id="collapseOne3" class="collapse" role="tabpane3" aria-labelledby="headingOne3" data-parent="#accordionEx">
+                                    <div class="accordion-desc">
+                                        Raroin staff often requires a
+                                        "transaction hash" from Etherscan or
+                                        Polygonscan to troubleshoot support
+                                        issues.
+                                        <br>
+                                        Transaction hashes are unique IDs
+                                        recording each transaction on the
+                                        blockchain, this includes NFT purchases,
+                                        sales or even cancelling orders. All gas
+                                        fees paid will generate a transaction
+                                        hash.
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    What types of NFTs can I find on {{settings.DOMAIN_NAME}}?
-                                    <i class="feather-chevron-up"></i>
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    {{settings.DOMAIN_NAME}} has a wide range of NFTs, including but not limited to: art, collectibles, virtual real estate, gaming items, and more.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    How do I purchase NFTs on {{settings.DOMAIN_NAME}}?
-                                    <i class="feather-chevron-up"></i>
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    To purchase NFTs on {{settings.DOMAIN_NAME}}, users need to connect their wallet, such as MetaMask, to the platform. Once connected, they can browse and purchase NFTs using cryptocurrency, such as Ethereum.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingSix">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    Can I sell my own NFTs on {{settings.DOMAIN_NAME}}?
-                                    <i class="feather-chevron-up"></i>
-                                </button>
-                            </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Yes, {{settings.DOMAIN_NAME}} allows users to create and list their own NFTs for sale to the community.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingSeven">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSix">
-                                    How secure is {{settings.DOMAIN_NAME}} for buying and selling NFTs?
-                                    <i class="feather-chevron-up"></i>
-                                </button>
-                            </h2>
-                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    {{settings.DOMAIN_NAME}} uses blockchain technology to securely store NFTs and to ensure that transactions are secure and transparent. However, as with any platform that involves the exchange of valuable assets, it is important to exercise caution and to do proper research before making a purchase.
+                        <!-- Accordion card -->
+                        <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                            <a id="Fees" href="#"></a>
+                            <!-- Card header -->
+                            <div class="accordion-header" role="tab" id="headingOne4">
+                                <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne4" aria-expanded="false" aria-controls="collapseOne4" class="accordion-button collapsed">
+                                    What are gas fees on OpenSea?
+                                </a>
+                                <!-- Card body -->
+                                <div id="collapseOne4" class="collapse" role="tabpane4" aria-labelledby="headingOne4" data-parent="#accordionEx" style="">
+                                    <div class="accordion-desc">
+                                        Gas fees are like transaction fees on
+                                        the Ethereum blockchain. When you make
+                                        transactions, such as transfering crypto
+                                        to another wallet or purchasing an NFT
+                                        on Raroin, you'll need enough ETH in
+                                        your wallet for the initial transaction
+                                        and the associated gas fees.
+                                    </div>
                                 </div>
                             </div>
                         </div>

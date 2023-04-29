@@ -1,159 +1,91 @@
 {% extends 'base.html' %}
 
-{% block slider %}
-<!-- About banner area -->
-<div class="rn-about-banner-area rn-section-gapTop">
-    <div class="container mb--30">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="title about-title-m" data-sal="slide-up" data-sal-duration="800" data-sal-delay="150">Direct Teams. <br>For Your Dadicated Dreams</h2>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid about-fluidimg ">
-        <div class="row">
-            <div class="img-wrapper">
-                <div class="bg_image--22 bg_image">
 
-                </div>
-            </div>
-        </div>
-    </div>
+{% block bg_hero %}
+<div class="hero_privacy">
     <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6">
-                <div class="h--100">
-                    <div class="rn-about-card mt_dec--50 widge-wrapper rbt-sticky-top-adjust">
-                        <div class="inner">
-                            <h2 class="title" data-sal="slide-up" data-sal-duration="800" data-sal-delay="150">
-                                Why We Do This
-                            </h2>
-                            <p class="about-disc" data-sal="slide-up" data-sal-duration="800" data-sal-delay="150">
-                                {{settings.DOMAIN_NAME}} is a decentralized platform for buying, selling, and discovering unique digital assets, including collectible NFTs and in-game items. The company's mission is to provide a fair and accessible marketplace for these digital assets, empowering creators, collectors, and gamers to participate in the growing digital economy. {{settings.DOMAIN_NAME}}'s team is made up of experienced developers and entrepreneurs who believe in the transformative power of blockchain technology. On the "About Us" page of the {{settings.DOMAIN_NAME}} website, you can find more information on the company's history, values, and vision for the future.
-                            </p>
-                            <!-- <p class="about-disc" data-sal="slide-up" data-sal-duration="800" data-sal-delay="150">
-                                NFTs are virtual tokens that represent ownership of something inherently distinct and
-                                scarce, whether it be a physical or digital item, such as artwork, a soundtrack, a
-                                collectible, an in-game item or real estate. Unlike regular cryptocurrencies like
-                                bitcoin or fiat money like the U.S.
-                            </p> -->
-                            <!-- <a href="blog.html" class="btn btn-primary-alta btn-large sal-animate mt--20" data-sal="slide-up" data-sal-duration="800" data-sal-delay="150">See Our Blog</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="rn-about-card transparent-bg">
-                    <div class="inner">
-                        <h3 class="title" data-sal="slide-up" data-sal-duration="800" data-sal-delay="150">
-                            Helping You <br>Grow In Every Stage.
-                        </h3>
-                        <p class="about-disc mb--0" data-sal="slide-up" data-sal-duration="800" data-sal-delay="150">
-                            NFTs are virtual tokens that represent ownership of something inherently distinct and
-                            scarce, whether it be a physical or digital item, such as artwork, a soundtrack, a
-                            collectible, an in-game item or real estate. Unlike regular cryptocurrencies like
-                            bitcoin or fiat money like the U.S.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="d-flex jusitify-content-center align-items-center space-x-10">
+            <h1 class="text-left">{{settings.DOMAIN_NAME}} About Us</h1>
+            <i class="ri-file-text-fill privacy__icon"></i>
         </div>
     </div>
 </div>
-<!-- About banner area End -->
+{% endblock bg_hero %}
     
-{% endblock slider %}
 
 {% block content %}
-<div class="rn-about-Quote-area rn-section-gapTop">
-    <div class="container">
-        <div class="row g-5 d-flex align-items-center">
-            <div class="col-lg-6">
-                <div class="rn-about-title-wrapper">
-                    <h3 class="title" data-sal="slide-up" data-sal-duration="800" data-sal-delay="150">Create, Sell well & Collect your Wonderful NFTs at {{settings.DOMAIN_NAME}} Very Fast</h3>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="rn-about-wrapper" data-sal="slide-up" data-sal-duration="800" data-sal-delay="150">
-                    <p>The NFTs is a one-trick pony that climbed the ladders of success in recent years. The growth
-                        of NFTs is tremendous, and according to Pymnts.com, the total sales volume of NFTs has
-                        nearly crossed $2.5 billion in the last six months of . Surprisingly, the total sales
-                        volume of NFTs was $13.7 million in 2020. On comparing both the values,</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- rn stastic area -->
-<div class="rn-statistick-area rn-section-gapTop">
+<div class="privacy__page">
     <div class="container">
-        <div class="row mb--30">
-            <div class="col-12 text-center">
-                <h3>{{settings.DOMAIN_NAME}} Statistics</h3>
+        <div class="box space-y-30" style="padding: 60px 30px;">
+            <div class="space-y-20">
+                <h3>What information do we collect?</h3>
+                <p>
+                    We collect information from you when you register on our site and gather data when you
+                    participate in the forum by reading, writing, and evaluating the content shared here.
+                    <br>
+                    When registering on our site, you may be asked to enter your name and e-mail address. You
+                    may, however, visit our site without registering. Your e-mail address will be verified by an
+                    email containing a unique link. If that link is visited, we know that you control the e-mail
+                    address.
+                    <br>
+                    When registered and posting, we record the IP address that the post originated from. We also
+                    may retain server logs which include the IP address of every request to our server.
+                </p>
             </div>
-        </div>
-        <div class="row g-5">
-            <div class="offset-lg-2 col-lg-4 col-md-6">
-                <div class="single-counter-up text-center">
-                    <h3 class="counter"><span class="odometer" data-count="309">00</span>
-                    </h3>
-                    <div class="botton-title">{{settings.DOMAIN_NAME}} All NFT's</div>
-                </div>
+            <div class="space-y-20">
+                <h3>What do we use your information for?</h3>
+                <p>
+                    Any of the information we collect from you may be used in one of the following ways:
+                    To personalize your experience — your information helps us to better respond to your
+                    individual needs.
+                    <br>
+                    To improve our site — we continually strive to improve our site offerings based on the
+                    information and feedback we receive from you.
+                    To improve customer service — your information helps us to more effectively respond to your
+                    customer service requests and support needs.
+                    To send periodic emails — The email address you provide may be used to send you information,
+                    notifications that you request about changes to topics or in response to your user name,
+                    respond to inquiries, and/or other requests or questions.
+                </p>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-counter-up text-center">
-                    <h3 class="counter"><span class="odometer" data-count="508">00</span>
-                    </h3>
-                    <div class="botton-title">All Creators</div>
-                </div>
+            <div class="space-y-20">
+                <h3>How do we protect your information?</h3>
+                <p>
+                    We implement a variety of security measures to maintain the safety of your personal
+                    information when you enter, submit, or access your personal information.
+                </p>
             </div>
-            <div class="offset-lg-2 col-lg-4 col-md-6">
-                <div class="single-counter-up text-center">
-                    <h3 class="counter"><span class="odometer" data-count="1032">00</span>
-                    </h3>
-                    <div class="botton-title">{{settings.DOMAIN_NAME}} Earning</div>
-                </div>
+            <div class="space-y-20">
+                <h3>Do we use cookies?</h3>
+                <p>
+                    Yes. Cookies are small files that a site or its service provider transfers to your
+                    computer’s hard drive through your Web browser (if you allow). These cookies enable the site
+                    to recognize your browser and, if you have a registered account, associate it with your
+                    registered account.
+                    <br>
+                    We use cookies to understand and save your preferences for future visits and compile
+                    aggregate data about site traffic and site interaction so that we can offer better site
+                    experiences and tools in the future. We may contract with third-party service providers to
+                    assist us in better understanding our site visitors. These service providers are not
+                    permitted to use the information collected on our behalf except to help us conduct and
+                    improve our business.
+                </p>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-counter-up text-center">
-                    <h3 class="counter"><span class="odometer" data-count="650">00</span>
-                    </h3>
-                    <div class="botton-title">Level One Seller</div>
-                </div>
+            <div class="space-y-20">
+                <h3>Do we disclose any information to outside parties?</h3>
+                <p>
+                    We do not sell, trade, or otherwise transfer to outside parties your personally identifiable
+                    information. This does not include trusted third parties who assist us in operating our
+                    site, conducting our business, or servicing you, so long as those parties agree to keep this
+                    information confidential. We may also release your information when we believe release is
+                    appropriate to comply with the law, enforce our site policies, or protect ours or others
+                    rights, property, or safety. However, non-personally identifiable visitor information may be
+                    provided to other parties for marketing, advertising, or other uses.
+                </p>
             </div>
         </div>
     </div>
 </div>
-<!-- rn stastic area -->
-
-<!-- call to action area -->
-<div class="rn-callto-action rn-section-gapTop">
-    <div class="container-fluid about-fluidimg-cta">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="bg_image--6 bg_image bg-image-border" data-black-overlay="7">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="call-to-action-wrapper">
-                                <h3 data-sal="slide-up" data-sal-duration="800" data-sal-delay="150">Discover
-                                    rare digital art <br>
-                                    and collect NFTs</h3>
-                                <p data-sal="slide-up" data-sal-duration="800" data-sal-delay="150">The NFTs is a one-trick pony that climbed the recent years. The growth of NFTs is
-                                    tremendous, and according to Pymnts.com, the total sales volume </p>
-                                <div class="callto-action-btn-wrapper" data-sal="slide-up" data-sal-duration="800" data-sal-delay="150">
-                                    <a href="{% url 'create-nft' %}" class="btn btn-primary btn-large">Create</a>
-                                    <a href="{% url 'contact-us' %}" class="btn btn-primary-alta btn-large">Contact Us</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- call to action area End -->
-    
 {% endblock content %}
     
