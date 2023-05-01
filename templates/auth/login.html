@@ -5,6 +5,7 @@
 <div class="edit_profile register login">
     <div class="container">
         <div class="row">
+            {% include 'partials/messages.html' %}
             <div class="col-lg-7"></div>
             <div class="col-lg-5">
                 <div class="right_part space-y-20">
@@ -26,7 +27,7 @@
                                     <input type="password" name="password" class="form-control" placeholder="Enter your password">
                                 </div>
                             </div>
-                            <p class="color_black" >Forgot Password? <a href="{% url 'register' %}"> Click here </a>
+                            <p class="color_black" >Forgot Password? <a href="{% url 'password_reset' %}"> Click here </a>
                                                         <!-- <a href="{% url 'password_reset' %}" class="btn btn-white btn-sm color_green"> Forgot Password? </a> -->
                                 <button type="submit" class="btn btn-grad w-full btn-lg mt-3"> Login</button>
                                 <input type="hidden" name="next" value="{{ next }}">

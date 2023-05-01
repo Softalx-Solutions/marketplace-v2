@@ -6,21 +6,20 @@
 <div class="edit_profile register">
     <div class="container">
         <div class="row">
+            {% include 'partials/messages.html' %}
             <div class="col-lg-3"></div>
             <div class="col-lg-9">
                 <div class="right_part space-y-20">
                     <h1 class="color_white"> Register new account</h1>
-                    <!-- <p class="color_white" style="color: white !important">You can set preferred display name, create your profile URL and
-                        manage other personal settings.</p> -->
+                    <p class="color_white" >Already have an account? <a href="{% url 'login' %}">Click here to login</a></p>
                     <div class="box edit_box w-full space-y-20">
-                        <form action="{% url 'register' %}" method="">
+                        <form action="{% url 'register' %}" method="post">
                             {% csrf_token %}
                             {{form|crispy}}
                             <div class="hr"></div>
-                            <p class="color_black">Please take a few minutes to read and understand Stacks Terms of
-                                Service. To continue, you’ll need to accept the terms of services
-                                by checking the boxes.</p>
-                            <button type="submit" class="btn btn-grad">Register</button>
+                            <p class="color_black"> You agree to accept the terms of services
+                                by clicking register.</p>
+                            <button type="submit" class="btn btn-grad mt-1">Register</button>
                         </form>
                     </div>
                 </div>
