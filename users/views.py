@@ -116,7 +116,7 @@ class UpdateDetails(LoginRequiredMixin, TemplateView):
         
 """Change Password"""
 class ChangePassword(LoginRequiredMixin, TemplateView):
-    template_name = 'users/edit-profile.html'
+    template_name = 'users/change-password.html'
     def get(self, request):
         return render(request, self.template_name)
     
