@@ -1,82 +1,91 @@
 {% extends 'base.html' %}
 
-{% block slider %}
-<div class="rn-breadcrumb-inner ptb--30">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-12">
-                <h5 class="title text-center text-md-start">Deposit</h5>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-                <ul class="breadcrumb-list">
-                    <li class="item"><a href="{% url 'users' %}">My Profile</a></li>
-                    <li class="separator"><i class="feather-chevron-right"></i></li>
-                    <li class="item current">deposit {{wallet.coin_name}}</li>
-                </ul>
-            </div>
+{% block bg_hero %}
+<div class="mb-50">
+    <div class="hero__profile">
+        <div class="tabs">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb default mb-0">
+                    <li class="breadcrumb-item"><a href="{% url 'users' %}">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Deposit into {{wallet.coin_name}}</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="cover">
+            
+            <img src="/static/assets/img/bg/cover.jpg" alt="cover">
+
         </div>
     </div>
 </div>
-{% endblock slider %}
+{% endblock bg_hero %}
     
 
 {% block content %}
-<div class="create-area rn-section-gapTop">
-    <div style="" class="container d-flex justify-content-center">
-        <div style="" class="row g-5">
-            <form style="" action="{% url 'fund-account-details' wallet.id %}" method="post" class="row" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="form-wrapper-one col-lg-12" id="reportModal" tabindex="-1" aria-hidden="true">
+<div class="container">
+    <div class="mb-50">
+    <div>
+        
+        <div class="box edit_box col-lg-9 space-y-30 mx-auto">
+            <div class="row sm:space-y-20">
+                <div class="col-lg-12 account-info">
                     {% include 'partials/messages.html' %}
-                    <p class="text-center">Deposit into <strong class="text-white">{{wallet.coin_name|upper}} address</strong> </p>
-                    <div class="mb-3">
-                        <!-- <h6 class="title">Wallet Address</h6> -->
-                        
-                        <div class="d-flex justify-content-center">
-                            <div class="input-group mb-3">
-                                <!-- <span class="input-group-text">Wallet Address</span> -->
-                                <input type="text" class="form-control" id="walletAddy" placeholder="Wallet address" value="{{wallet.coin_address}}">
-                                <span type="button" onclick="myFunction()" class="input-group-text" id="basic-addon2">Click to copy</span>
-                            </div>
-
-                        </div>
-                        
-                    </div>
-                    <div class="card-thumbnail text-center">
-                        <img src="{{wallet.coin_qr_code.url}}" width="200" alt="">
-
-                    </div>
-                    <!-- <div class="cs-bid_input_group">
-                        <input type="text" class="cs-bid_value" id="walletAddy" value="{{wallet.coin_address}}">
-                        <button onclick="myFunction()" type="button" class="cs-btn cs-style1 cs-bid_quantity"><span>Copy</span></button>
-                       
-                    </div> -->
-                    
-                    
-
-                    <div class="report-form-box">
-                        <h6 class="title">Amount</h6>
-                        <span class="text-danger">Make sure amount deposited matches the amount you insert</span>
-                        <input type="number" name="amount" placeholder="insert amount deposited" class="mb-4 mt-4" min="0" step="0.01" pattern="^\d*(\.\d{0,2})?$">
-                        
-                        <div class="mb-3">
-                            <label for="formFileSm" class="form-label">Upload screenshot of payment</label>
-                            <input name="upload_proof" class="form-control form-control-sm" id="formFileSm" type="file">
-                          </div>
-
-                        <div class="report-button">
-                            <button type="submit" class="btn btn-danger mr--10 w-auto">Deposit</button>
-                            <a href="{% url 'fund-account' %}" class="btn btn-primary-alta w-auto">Back To Previous Page</a>
-                        </div>
-                    </div>
-
-                    
-                    
-                </div>
-
-
+                    <h3 class="mb-20">Deposit into {{wallet.coin_name}} address</h3>
+                    <div class="form-group space-y-10 mb-0">
+                        <form action="{% url 'fund-account-details' wallet.id %}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="space-y-40">
+                                <div class="space-y-10">
+                                    <span class="nameInput">Address</span>
+                                    <div class="input-group mb-3">
+                                        <!-- <span class="input-group-text">Wallet Address</span> -->
+                                        <input type="text" class="form-control" id="walletAddy" placeholder="Wallet address" value="{{wallet.coin_address}}">
+                                        <span type="button" onclick="myFunction()" class="input-group-text" id="basic-addon2">Click to copy</span>
+                                    </div>
+                                      
+                                </div>
+                                <div class="space-y-10">
+                                    
+                                    {% if wallet.coin_qr_code %}
+                                    <div class="card-thumbnail text-center">
+                                        <img src="{{wallet.coin_qr_code.url}}" width="200" alt="">
                 
-            </form>
+                                    </div>
+                                    {% else %}
+                                    <img src="#" alt="QR code">
+                                        
+                                    {% endif %}
+                                        
+                                </div>
+                                <div class="space-y-10">
+                                    <span class="nameInput text-danger">Make sure amount deposited matches the amount you insert</span>
+                                    <input type="number" name="amount" placeholder="insert amount deposited" class="form-control" min="0" step="0.01" pattern="^\d*(\.\d{0,2})?$">
+    
+                                </div>
+                                <div class="space-y-10">
+                                    <span class="nameInput ">Upload screenshot of payment</span>
+                                    </span>
+                                    <div class="confirm">
+                                        <input name="upload_proof" class="form-control form-control-sm" id="formFileSm" type="file">
+                                    </div>
+                                </div>
+    
+                                <button type="submit" class="btn btn-grad">Upload Deposit</button>
+                                <a href="{% url 'users' %}" class="btn btn-dark">Back to Dashboard</a>
+                                <!-- <div class="space-y-10">
+                                    <span class="nameInput">Bio</span>
+                                    <textarea style="min-height: 110px" placeholder="Add your bio">			
+                                    </textarea>
+                                </div> -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="hr"></div>
+            
+            <!-- <div><a href="#" class="btn btn-grad">Update Profile</a></div> -->
         </div>
     </div>
 </div>
