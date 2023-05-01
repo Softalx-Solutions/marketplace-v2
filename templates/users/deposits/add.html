@@ -1,150 +1,224 @@
 {% extends 'base.html' %}
 
-{% block slider %}
-<div class="rn-breadcrumb-inner ptb--30">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6 col-12">
-                <h5 class="title text-center text-md-start">Select Payment Method</h5>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-                <ul class="breadcrumb-list">
-                    <li class="item"><a href="{% url 'users' %}">My Profile</a></li>
-                    <li class="separator"><i class="feather-chevron-right"></i></li>
-                    <li class="item current">Deposit Funds</li>
-                </ul>
-            </div>
+{% block bg_hero %}
+<div class="mb-50">
+    <div class="hero__profile">
+        <div class="tabs">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb default mb-0">
+                    <li class="breadcrumb-item"><a href="{% url 'users' %}">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Deposit</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="cover">
+            
+            <img src="/static/assets/img/bg/cover.jpg" alt="cover">
+
         </div>
     </div>
 </div>
-{% endblock slider %}
+{% endblock bg_hero %}
 
 {% block content %}
-<div class="edit-profile-area rn-section-gapTop">
-    <div class="container">
-        <div class="row plr--70 padding-control-edit-wrapper pl_md--0 pr_md--0 pl_sm--0 pr_sm--0">
-            <div class="col-12 d-flex justify-content-between mb--30 align-items-center">
-                <h4 class="title-left">Fund Account</h4>
-                {% include 'partials/messages.html' %}
-                <a href="{% url 'users' %}" class="btn btn-primary ml--10"><i class="feather-eye mr--5"></i> Back to dashboard</a>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-7 order-md-0 order-1">
+            <div class="profile__sidebar">
+                <div class="space-y-40">
+                    <div class="space-y-10">
+                        <h5>Deposits Into wallet</h5>
+                        <div class="box space-y-20">
+                            <p>
+                                Deposits can be either for minting your artworks, payment fee for withdrawal or to fund account
+                            </p>
+                            <!-- <div class="row">
+                                <div class="col-6">
+                                    <span class="txt_sm color_text">Collections</span>
+                                    <h4>105</h4>
+                                </div>
+                                <div class="col-6">
+                                    <span class="txt_sm color_text">Creations</span>
+                                    <h4>406</h4>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- <p class="text-center txt_sm mt-20 color_text">Since 2021</p> -->
             </div>
         </div>
-        <div class="row plr--70 padding-control-edit-wrapper pl_md--0 pr_md--0 pl_sm--0 pr_sm--0">
-            <div class="col-lg-3 col-md-3 col-sm-12">
-                <!-- Start tabs area -->
-                <nav class="left-nav rbt-sticky-top-adjust-five" style="top: 100px;">
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="feather-edit"></i>Deposit Funds</button>
-                        <button class="nav-link" id="nav-home-tabs" data-bs-toggle="tab" data-bs-target="#nav-homes" type="button" role="tab" aria-controls="nav-homes" aria-selected="false"><i class="feather-clock"></i>Deposit History</button>
-                        
-                        <!-- <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="feather-bell"></i>Notification Setting</button> -->
-                    </div>
-                </nav>
-                <!-- End tabs area -->
-            </div>
-            <div class="col-lg-9 col-md-9 col-sm-12 mt_sm--30">
-                <div class="tab-content tab-content-edit-wrapepr" id="nav-tabContent">
+        <div class="col-lg-9 col-md-12 order-md-1 order-0">
+            <div class="profile__content">
+                <div class="d-flex justify-content-between">
+                    <div class="space-x-10">
+                        <div class="d-flex justify-content-between">
+                            <ul class="nav nav-tabs d-flex space-x-10 mb-30" role="tablist">
+                                <li class="nav-item">
+                                    <a class="btn btn-white btn-sm active" data-toggle="tab" href="#tabs-1" role="tab" aria-selected="true">
+                                        Select Wallet</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-white btn-sm" data-toggle="tab" href="#tabs-2" role="tab" aria-selected="false">
+                                        Deposit History</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <!-- <div class="dropdown d-none d-sm-block">
+                                <button class="btn btn-white btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Recent Active
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another
+                                        action</a>
+                                    <a class="dropdown-item" href="#">Something
+                                        else here</a>
+                                </div>
+                            </div> -->
+                        </div>
 
-                    <!-- sigle tab content -->
-                    <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <!-- start personal information -->
-                        <div class="nuron-information">
-                            <form action="{% url 'edit-profile' %}" method="post" enctype="multipart/form-data">
-                                {% csrf_token %}
-                                <div class="profile-change row g-5">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                <div class="row mb-30_reset">
+                                    
+                                    
                                     
                                     {% for wallet in wallets %}
-                                    <div class="profile-left col-lg-4">
-                                        <div class="profile-image mb--30">
-                                            <h6 class="title">{{wallet.coin_name|capfirst}}</h6>
-                                            
-                                            
-                                            <img src="{{wallet.coin_qr_code.url}}" alt="wallet.coin_qr_code.url">
-                                            
-                                                
-                                        </div>
-                                        <div class="button-area">
-                                            <div class="brows-file-wrapper">
-                                                
-                                                <!-- our custom upload button -->
-                                                <label for="fatima" title="">
-                                                    <a href="{% url 'fund-account-details' wallet.id %}" class="text-center color-white">Click to proceed</a>
-                                                </label>
+                                    
+                                    <div class="col-xl-8 col-lg-6 col-md-6">
+                                        <div class="card__item three">
+                                            <div class="card_body space-y-10">
+                                                <!-- =============== -->
+                                                <div class="card_head">
+                                                    
+                                                    {% if wallet.coin_qr_code %}
+                                                    <img src="{{wallet.coin_qr_code.url}}" alt="">
+                                                    {% else %}
+                                                    <img src="/static/assets/img/items/item_1.png" alt="">
+                                                        
+                                                    {% endif %}
+                                                        
+                                                    <!-- <a href="#" class="likes
+                                                        space-x-3">
+                                                        <i class="ri-heart-3-fill"></i>
+                                                        <span class="txt_sm">1.2k</span>
+                                                    </a> -->
+                                                    <div class="action">
+                                                        <a href="{% url 'fund-account-details' wallet.id %}" class="btn
+                                                            btn-primary btn-sm
+                                                            btn_auction">
+                                                            <i class="ri-auction-line
+                                                                color_white"></i>
+                                                            Click to proceed
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- =============== -->
+                                                <h6 class="card_title">
+                                                    <a class="color_black" href="{% url 'fund-account-details' wallet.id %}">
+                                                        {{wallet.coin_name|upper}}
+                                                    </a>
+                                                </h6>
+
+                                                <!-- <div class="card_footer d-block
+                                                    space-y-10">
+                                                    <div class="d-flex
+                                                        justify-content-between
+                                                        align-items-center">
+                                                        <div class="creators
+                                                            space-x-10">
+                                                            <div class="avatars
+                                                                -space-x-20">
+                                                                <a href="Profile.html">
+                                                                    <img src="/static/assets/img/avatars/avatar_1.png" alt="Avatar" class="avatar
+                                                                        avatar-sm">
+                                                                </a>
+                                                                <a href="Profile.html">
+                                                                    <img src="/static/assets/img/avatars/avatar_2.png" alt="Avatar" class="avatar
+                                                                        avatar-sm">
+                                                                </a>
+                                                            </div>
+                                                            <a href="Profile.html">
+                                                                <p class="avatars_name
+                                                                    txt_sm">
+                                                                    @luka_fenn..
+                                                                </p>
+                                                            </a>
+                                                        </div>
+                                                        <a href="#" class="space-x-3">
+                                                            <p class="color_green
+                                                                txt_sm">0.001
+                                                                ETH</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="hr"></div>
+                                                    <div class="d-flex
+                                                        align-items-center
+                                                        space-x-10">
+                                                        <i class="ri-vip-crown-line"></i>
+                                                        <p class="color_text
+                                                            txt_sm" style="width: auto">
+                                                            Highest bid
+                                                        </p>
+                                                        <span class="color_black
+                                                            txt_sm">0.022
+                                                            ETH</span>
+                                                    </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
-
-                                    {% empty %}
-                                        <p class="text-center text-white">No Payment method avaliable</p>
                                     {% endfor %}
-                                        
-    
+                                           
                                     
                                 </div>
-                                <!-- <div class="d-flex justify-content-end">
-
-                                    <button type="submit" class="btn btn-primary ml--10 mt-3"> Save</button>
-                                </div> -->
-                            </form>
-                        </div>
-                        <!-- End personal information -->
-                    </div>
-                    <!-- End single tabv content -->
-                    <!-- sigle tab content -->
-                    <div class="tab-pane fade" id="nav-homes" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <!-- start personal information -->
-                        <form action="{% url 'update-profile' %}" method="post">
-                            {% csrf_token %}
-                            <div class="nuron-information">
-                                <div class="condition">
-                                    <h5 class="title">All Wallets</h5>
-                                    
-                                    <hr>
-                                    <!-- <div class="email-area">
-                                        <label for="Email2" class="form-label">Enter Email</label>
-                                        <input name="email" id="Email2" type="email" value="">
-                                    </div> -->
-                                </div>
-                                <table class="table table-striped table-inverse table-responsive">
-                                    <thead class="thead-inverse">
-                                        <tr class="text-white">
-                                            <th>Amount</th>
-                                            <th>Wallet Name</th>
-                                            <th>Deposited On</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                            
-                                            {% for transaction in transactions %}
-                                                
-                                            <tr class="text-white">
-                                                <td scope="row">{{transaction.amount}}</td>
-                                                <td>{{transaction.wallet_type}}</td>
-                                                <td>{{transaction.created}}</td>
-                                                <td>{{transaction.t_status}}</td>
-                                               
-                                            </tr>
-                                            {% empty %}
-                                            <p class="text-center text-white">No Transactions avaliable</p>
-                                            {% endfor %}
-                                                
-                                            
-                                        </tbody>
-                                </table>
-                               
                             </div>
-
-                        </form>
-                        <!-- End personal information -->
+                            <div class="tab-pane" id="tabs-2" role="tabpanel">
+                                <div class="row justify-content-center mb-30_reset">
+                                    
+                                    {% if transactions %}
+                                    <div class="col-lg-12 col-md-6 col-sm-8">
+                                        <table class="table table-striped">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Amount</th>
+                                                <th scope="col">Wallet Name</th>
+                                                <th scope="col">Deposited ON</th>
+                                                <th scope="col">Status</th>
+                                                <!-- <th scope="col">Handle</th> -->
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                                {% for transaction in transactions %}
+                                                
+                                                <tr>
+                                                  <th scope="row">{{transaction.id}}</th>
+                                                  <td>{{transaction.amount}}</td>
+                                                  <td>{{transaction.wallet_type}}</td>
+                                                  <td>{{transaction.created}}</td>
+                                                  <td>{{transaction.t_status}}</td>
+                                                </tr>
+                                                {% endfor %}
+                                                    
+                                              
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                    {% else %}
+                                    <p class="text-danger text-center">No History</p>
+                                        
+                                    {% endif %}
+                                        
+                                   
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- End single tabv content -->
-
-                    
-
-                    
                 </div>
-
             </div>
         </div>
     </div>
