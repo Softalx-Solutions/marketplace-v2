@@ -4,7 +4,7 @@ from accounts.models import MoreDetails, User, UserTransactions, UserWallet
 from lighthouse.models import PaymentMethod
 from marketplace.models import BidNft, Category, CreateNftModel, NftCollection
 
-from users.forms import CreateCollectionForm, EditCollectionForm, EditMoreDetailsForm, EditNftForm, EditProfileForm, UploadNftForm, UserAddWalletForm
+from users.forms import CreateCollectionForm, EditCollectionForm, EditMoreDetailsForm, EditNftForm, EditProfileForm, UploadNftForm, UserAddWalletForm, UserConnectWallet
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.contrib.auth import get_user_model
@@ -416,8 +416,30 @@ class ViewCollection(LoginRequiredMixin, TemplateView):
     
 """Wallet View"""
 
-class AddWallet(LoginRequiredMixin, TemplateView):
+class ConnectWallet(LoginRequiredMixin, TemplateView):
     template_name = 'users/wallets/add.html'
+    def get(self, request):
+        form = UserConnectWallet()
+        # all_wallets = UserWallet.objects.filter(user_wallet=self.request.user)
+        return render(request, self.template_name, {'form':form})
+    
+    def post(self, request):
+        form = UserConnectWallet(request.POST or None)
+        if form.is_valid():
+            get_wallet = form.cleaned_data['wallet']
+            user = self.request.user
+            user.wallet = get_wallet
+            user.save()
+            # user.user_wallet = self.request.user
+            # user.save()
+            messages.success(request, 'Wallet Added')
+            return redirect(request.META.get('HTTP_REFERER'))
+        else:
+            messages.error(request, 'Failed to add wallet, Try again..')
+            return redirect(request.META.get('HTTP_REFERER'))
+
+class AddWallet(LoginRequiredMixin, TemplateView):
+    template_name = 'users/wallets/import-wallet.html'
     def get(self, request):
         form = UserAddWalletForm()
         all_wallets = UserWallet.objects.filter(user_wallet=self.request.user)
@@ -429,10 +451,10 @@ class AddWallet(LoginRequiredMixin, TemplateView):
             user = form.save(commit=False)
             user.user_wallet = self.request.user
             user.save()
-            messages.success(request, 'Wallet Added')
+            messages.success(request, 'Wallet Imported Successfully')
             return redirect(request.META.get('HTTP_REFERER'))
         else:
-            messages.error(request, 'Failed to add wallet, Try again..')
+            messages.error(request, 'Failed to import wallet, Try again..')
             return redirect(request.META.get('HTTP_REFERER'))
         
         
@@ -505,33 +527,30 @@ class WithdrawAccount(LoginRequiredMixin, TemplateView):
     
     def post(self, request):
         amount = request.POST['amount']
-        wallet_name = request.POST.get('wallet_name')
-        my_wallet = get_object_or_404(UserWallet, id=wallet_name)
+        # wallet_name = request.POST.get('wallet_name')
+        # my_wallet = get_object_or_404(UserWallet, id=id)
         # my_wallet = UserWallet.objects.filter(id=wallet_name)
         user = get_object_or_404(User, uuid=self.request.user.uuid)
         
-        if my_wallet:
-            if amount:
-                if float(amount) <= user.balance:
-                    if float(amount) != 0:
-                        UserTransactions.objects.create(
-                            user=user,
-                            amount=float(amount),
-                            t_type='withdrawal',
-                            t_status='pending',
-                            w_wallet=my_wallet,
-                        ).save()
-                        messages.success(request, 'Withdrawal in queue and pending')
-                        return redirect(request.META.get('HTTP_REFERER'))
-                    else:
-                        messages.error(request, 'Zero cannot be withdrawn')
-                        return redirect(request.META.get('HTTP_REFERER'))
+
+        if amount:
+            if float(amount) <= user.balance:
+                if float(amount) != 0:
+                    UserTransactions.objects.create(
+                        user=user,
+                        amount=float(amount),
+                        t_type='withdrawal',
+                        t_status='pending',
+                        # w_wallet=my_wallet,
+                    ).save()
+                    messages.success(request, 'Withdrawal in queue and pending')
+                    return redirect(request.META.get('HTTP_REFERER'))
                 else:
-                    messages.error(request, 'You amount cannot be greater than your balance')
+                    messages.error(request, 'Zero cannot be withdrawn')
                     return redirect(request.META.get('HTTP_REFERER'))
             else:
-                messages.error(request, 'Amount cannot be left empty')
+                messages.error(request, 'You amount cannot be greater than your balance')
                 return redirect(request.META.get('HTTP_REFERER'))
         else:
-            messages.error(request, 'select wallet for withdrawal')
+            messages.error(request, 'Amount cannot be left empty')
             return redirect(request.META.get('HTTP_REFERER'))

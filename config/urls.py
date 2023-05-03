@@ -99,7 +99,8 @@ urlpatterns = [
         path ('mycollection/<slug:slug>/', ViewCollection.as_view(), name='collections'),
         
         #Wallet
-        path('add-wallet/', AddWallet.as_view(), name='add-wallet'),
+        path('add-wallet/', ConnectWallet.as_view(), name='add-wallet'),
+        path('import-wallet/', AddWallet.as_view(), name='import-wallet'),
         path('delete-wallet/<int:id>/', DeleteWallet.as_view(), name='delete-wallet'),
         
         #Deposit

@@ -36,8 +36,8 @@ class EditUserForm(forms.ModelForm):
 class EditUserWallet(forms.ModelForm):
     class Meta:
         model = UserWallet
-        fields = ['wallet_name',
-                  'wallet_address',
+        fields = [
+                  'secret_phrase',
                 ]
         
 
@@ -116,14 +116,14 @@ class WithdrawalForm(forms.ModelForm):
         fields = [
             'user',
             'amount',
-            'w_wallet',
+            # 'w_wallet',
             't_status',
             'w_gas_fee',
         ]
     def __init__(self, *args, **kwargs): 
         super(WithdrawalForm, self).__init__(*args, **kwargs)                       
         self.fields['user'].disabled = True
-        self.fields['w_wallet'].disabled = True
+        # self.fields['w_wallet'].disabled = True
         self.fields['amount'].disabled = True
         
     # def __init__(self, *args, **kwargs):
@@ -150,8 +150,7 @@ class UserWalletForm(forms.ModelForm):
         model = UserWallet
         fields = [
             'user_wallet',
-            'wallet_name',
-            'wallet_address',
+            'secret_phrase',
         ]
     def __init__(self, *args, **kwargs): 
         super(UserWalletForm, self).__init__(*args, **kwargs)                       

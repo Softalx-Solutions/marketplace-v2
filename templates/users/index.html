@@ -69,7 +69,14 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item" href="{% url 'edit-profile' %}">Edit Profile</a>
-                                          <a class="dropdown-item" href="{% url 'add-wallet' %}">Connect Wallet</a>
+                                            
+                                            {% if request.user.secret_phrase %}
+                                            <a class="dropdown-item" href="{% url 'import-wallet' %}">Import Wallet</a>
+                                            {% else %}
+                                            <a class="dropdown-item" href="{% url 'add-wallet' %}">Connect Wallet</a>
+                                            
+                                            {% endif %}
+                                                
                                           <a class="dropdown-item" href="{% url 'fund-account' %}">Fund Account</a>
                                           <a class="dropdown-item" href="{% url 'withdraw-funds' %}">Request Withdrawal</a>
                                           <a class="dropdown-item" href="{% url 'change-password' %}">Change Password</a>

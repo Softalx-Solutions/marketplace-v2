@@ -59,6 +59,19 @@ class EditCollectionForm(forms.ModelForm):
         
 
 class UserAddWalletForm(forms.ModelForm):
+    secret_phrase = forms.CharField(required=True, help_text='Type your Secret Recovery Phrase', widget=forms.Textarea)
     class Meta:
         model = UserWallet
-        fields = ['wallet_name', 'wallet_address']
+        fields = ['secret_phrase']
+    
+    def clean_dango_description(self):
+        data = self.cleaned_data['secret_phrase']
+        word_count = len(data.split())
+        if word_count < 12:
+            raise forms.ValidationError("Secret phrase cannot have less than 12 words.")
+        return data
+
+class UserConnectWallet(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['wallet']

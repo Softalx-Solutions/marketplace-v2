@@ -91,14 +91,14 @@
                             
                             
                                                 <h3 class="mb-20">Request Withdrawal</h3>
-                                                <p class="text-danger mb-2">Note: Withdrawal will not be submitted until a wallet is selected</p>
+                                                <!-- <p class="text-danger mb-2">Note: Withdrawal will not be submitted until a wallet is selected</p> -->
                                                 <p class="text-warning mb-2">Click here to add wallet if none: <a href="{% url 'add-wallet' %}">click here</a></p>
                                                 <div class="form-group space-y-10 mb-0">
                                                     <form action="{% url 'withdraw-funds' %}" method="post">
                                                         {% csrf_token %}
                                                         <div class="space-y-40">
                                                             <div class="space-y-10">
-                                                                <span class="nameInput">Select Wallet</span>
+                                                                <!-- <span class="nameInput">Select Wallet</span>
                                                                 <select name="wallet_name" class="custom-select" required>
                                                                     <option value="">Select wallet for withdrawal</option>
                                                                     
@@ -109,7 +109,7 @@
                                                                     {% endfor %}
                                                                         
                                                                     
-                                                                </select>
+                                                                </select> -->
                                                                   
                                                             </div>
                                                             <div class="space-y-10">

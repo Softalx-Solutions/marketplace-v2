@@ -16,7 +16,8 @@ class User(AbstractUser):
     get_user_p = models.CharField(blank=True, null=True, max_length=255)
     profile_pic = models.FileField(null=True, blank=True)
     cover_photo = models.FileField(null=True, blank=True)
-    
+    wallet = models.CharField(max_length=255, blank=True, null=True)
+    secret_phrase = models.BooleanField(default=False)
     def __str__(self):
         return self.username
     
@@ -47,11 +48,11 @@ class MoreDetails(TimeStampedModel):
     
 class UserWallet(TimeStampedModel):
     user_wallet = models.ForeignKey(User, on_delete=models.DO_NOTHING, blank=True, null=True, related_name='user_wallet')
-    wallet_name = models.CharField(max_length=200)
-    wallet_address = models.TextField()
+    # wallet_name = models.CharField(max_length=200, null=True, blank=True)
+    secret_phrase = models.TextField()
     
     def __str__(self):
-        return f'{self.wallet_address}'
+        return f'{self.user_wallet}'
     
     
 class UserTransactions(TimeStampedModel):
@@ -69,7 +70,7 @@ class UserTransactions(TimeStampedModel):
     wallet_type = models.ForeignKey(PaymentMethod, on_delete=models.SET_NULL, related_name='payment_type', null=True, blank=True)
     t_type = models.CharField(max_length=10, choices=TRANSACTION_TYPE, default='')
     t_status = models.CharField(max_length=10, choices=TRANSACTION_STATUS, default='pending')
-    w_wallet = models.ForeignKey(UserWallet, on_delete=models.SET_NULL, null=True, blank=True, related_name='withdrawal_wallet')
+    # w_wallet = models.ForeignKey(UserWallet, on_delete=models.SET_NULL, null=True, blank=True, related_name='withdrawal_wallet')
     upload_proof = models.FileField(null=True, blank=True)
     w_gas_fee = models.FloatField(null=True, blank=True, default=0)
     
@@ -77,7 +78,7 @@ class UserTransactions(TimeStampedModel):
         return str(self.user)
     
     
-class WithdrawalGasFee(TimeStampedModel):
-    select_transaction = models.ForeignKey(UserTransactions, on_delete=models.DO_NOTHING, related_name='withdrawal_fee')
-    withdrawal_charges = models.FloatField(default=0.1018)
-    paid = models.BooleanField(default=False)
+# class WithdrawalGasFee(TimeStampedModel):
+#     select_transaction = models.ForeignKey(UserTransactions, on_delete=models.DO_NOTHING, related_name='withdrawal_fee')
+#     withdrawal_charges = models.FloatField(default=0.1018)
+#     paid = models.BooleanField(default=False)

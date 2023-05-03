@@ -34,9 +34,28 @@
             <li>
               <a class="color_black" href="{% url 'contact-us' %}"> Contact Us</a>
             </li>
+            
+            {% if request.user.is_authenticated %}
+            
+            {% if request.user.is_admin == True %}
+            <li>
+              <a class="color_black" href="{% url 'lighthouse' %}"> Admin</a>
+            </li>
+            {% elif request.user.is_user == True %}
+            <li>
+              <a class="color_black" href="{% url 'users' %}"> Dashboard</a>
+            </li>
+            {% else %} 
+
+            {% endif %}
+              
+            {% else %}
+            
             <li>
               <a class="color_black" href="{% url 'login' %}"> Login</a>
             </li>
+            {% endif %}
+              
             <li>
               <!-- <a class="color_black" href="kit.html"> Ui Kit </a> -->
             </li>
@@ -50,7 +69,70 @@
             <i class="ri-search-line"></i>
           </button>
         </div>
-        <div class="header__btns">
+        
+        {% if request.user.is_authenticated %}
+        <div class="d-flex align-items-center space-x-20">
+          
+          <div class="header__avatar">
+            <div class="price">
+              <span>{{request.user.balance}} <strong>ETH</strong> </span>
+            </div>
+            
+            {% if request.user.profile_pic %}
+            <img class="avatar" src="{{request.user.profile_pic.url}}" alt="avatar">
+            {% else %}
+            <img class="avatar" src="/static/assets/img/avatars/avatar_2.png" alt="avatar">
+              
+            {% endif %}
+              
+            <div class="avatar_popup space-y-20">
+              
+              {% if request.user.wallet %}
+              <div class="d-flex align-items-center justify-content-between">
+                <span> {{request.user.wallet|truncatechars:15}} </span>
+                <a href="#" class="ml-2">
+                  <i class="ri-file-copy-line"></i>
+                </a>
+              </div>
+              {% else %}
+                
+              {% endif %}
+                
+              <div class="d-flex align-items-center space-x-10">
+                
+                
+                <img class="coin" src="/static/assets/img/logos/coin.svg" alt="/">
+                
+                  
+                <div class="info">
+                  <p class="text-sm font-book text-gray-400">Balance</p>
+                  <p class="w-full text-sm font-bold text-green-500">{{request.user.balance}} ETH</p>
+                </div>
+              </div>
+              <div class="hr"></div>
+              <div class="links space-y-10">
+                <a href="{% url 'users' %}">
+                  <i class="ri-landscape-line"></i> <span> My items</span>
+                </a>
+                <a href="{% url 'edit-profile' %}">
+                  <i class="ri-pencil-line"></i> <span> Edit Profile</span>
+                </a>
+                <a href="{% url 'logout' %}">
+                  <i class="ri-logout-circle-line"></i> <span> Logout</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="header__btns">
+            <a class="btn btn-primary btn-sm" href="{% url 'create-nft' %}">Create</a>
+          </div>
+          <div class="header__burger js-header-burger"></div>
+        </div>
+        {% else %}
+          
+        {% endif %}
+          
+        <!-- <div class="header__btns">
           <a class="btn btn-grad btn-sm" href="#">
             <i class="ri-wallet-3-line"></i>
             Connect wallet</a
@@ -58,7 +140,9 @@
           <a href="#" id="connectbtn">
             <img width="45" src="/static/assets/img/icons/metamask.svg" alt="" />
           </a>
-        </div>
+        </div> -->
+
+
         <div class="header__burger js-header-burger"></div>
 
         <div class="header__mobile js-header-mobile">
