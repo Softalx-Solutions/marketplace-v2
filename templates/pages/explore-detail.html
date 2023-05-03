@@ -14,11 +14,34 @@
             <div class="col-lg-6">
                 
                 {% if nft.upload_nft %}
+                        
+                {% if nft.nft_type == 'art' %}
                 <img class="item_img" src="{{nft.upload_nft.url}}" alt="">
+                {% elif nft.nft_type == 'video' %}
+                <video controls src="{{nft.upload_nft.url}}" width="620" poster="{{nft.upload_nft.url}}"></video>
+                {% elif nft.nft_type == 'music' %}
+                <audio src="{{nft.upload_nft.url}}" controls></audio>
+                {% elif nft.nft_type == 'trading-cards/collectible' %}
+                <img class="item_img" src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                {% elif nft.nft_type == 'text' %}
+                <img class="item_img" src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                {% elif nft.nft_type == 'memes' %}
+                <img class="item_img" src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                {% elif nft.nft_type == 'domain-name' %}
+                <img class="item_img" src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                {% elif nft.nft_type == 'virtual-style' %}
+                <img class="item_img" src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                {% elif nft.nft_type == 'pdf' %}
+                <img class="item_img" src="{% static 'assets/img/items/item_2.png' %}" alt="">
                 {% else %}
-                <img class="item_img" src="assets/img/items/item_2.png" alt="">
-                    
+                    <p>file format is not supported</p>   
                 {% endif %}
+
+                {% else %}
+                <p>No Image Uploaded</p>
+                {% endif %}
+                
+                
                     
             </div>
             <div class="col-lg-6">
