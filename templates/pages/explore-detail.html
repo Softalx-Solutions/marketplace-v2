@@ -2,93 +2,35 @@
 {% load static %}
 
 
+
 {% block content %}
 <div class="container">
-    <a href="index.html" class="btn btn-white btn-sm my-40">
+    {% include 'partials/messages.html' %}
+    <a href="{% url 'users' %}" class="btn btn-white btn-sm my-40">
         Back to home
     </a>
     <div class="item_details">
         <div class="row sm:space-y-20">
             <div class="col-lg-6">
+                
+                {% if nft.upload_nft %}
+                <img class="item_img" src="{{nft.upload_nft.url}}" alt="">
+                {% else %}
                 <img class="item_img" src="assets/img/items/item_2.png" alt="">
+                    
+                {% endif %}
+                    
             </div>
             <div class="col-lg-6">
                 <div class="space-y-20">
-                    <h3>Creative girl illustration</h3>
+                    <h3>{{nft.name}}</h3>
+                    
                     <div class="d-flex justify-content-between">
                         <div class="space-x-10 d-flex align-items-center">
                             <p>1 of 1</p>
-                            <a href="#" class="likes space-x-3">
-                                <i class="ri-heart-3-fill"></i>
-                                <span class="txt_sm">2.1k</span>
-                            </a>
+                            
                         </div>
-                        <div class="space-x-10 d-flex align-items-center">
-                            <div class="share">
-                                <div class="icon">
-                                    <a href="#"> <i class="ri-share-line"></i>
-                                    </a>
-                                </div>
-                                <div class="dropdown__popup">
-                                    <ul class="space-y-10">
-                                        <li> <a href="#"> <i class="ri-facebook-line"></i>
-                                            </a>
-                                        </li>
-                                        <li> <a href="#"> <i class="ri-messenger-line"></i>
-                                            </a>
-                                        </li>
-                                        <li> <a href="#"> <i class="ri-whatsapp-line"></i>
-                                            </a>
-                                        </li>
-                                        <li> <a href="#"> <i class="ri-youtube-line"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="more">
-                                <div class="icon">
-                                    <a href="#"> <i class="ri-more-fill"></i>
-                                    </a>
-                                </div>
-                                <div class="dropdown__popup">
-                                    <ul class="space-y-10">
-                                        <li>
-                                            <a href="#" class="space-x-10
-                                                d-flex" data-toggle="modal" data-target="#popup_report">
-                                                <i class="ri-flag-line"></i>
-                                                <span> Report
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-white btn-sm
-                            dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            View proof of authenticity
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://ipfs.io/" target="_blank">
-                                <span>
-                                    <img src="assets/img/icons/ipfs.svg" alt="" width="20">
-                                    View on IPFS
-                                </span>
-                                <i class="ri-external-link-line color_brand"></i>
-
-
-                            </a>
-                            <a class="dropdown-item" href="https://etherscan.io/" target="_blank">
-                                <span>
-                                    <img src="assets/img/icons/ether.png" alt="" width="20">
-                                    View on Etherscan
-                                </span>
-                                <i class="ri-external-link-line color_brand"></i>
-                            </a>
-                        </div>
+                        
                     </div>
                     <div class="box">
                         <div class="space-y-20">
@@ -99,17 +41,17 @@
                                         <a class="btn btn-white btn-sm active" data-toggle="tab" href="#tabs-1" role="tab">
                                             Details</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="btn btn-white btn-sm" data-toggle="tab" href="#tabs-2" role="tab">
                                             Bids</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="btn btn-white btn-sm" data-toggle="tab" href="#tabs-3" role="tab">
                                             History</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                                 <!-- Tab panes -->
-                                <div class="dropdown d-none d-sm-block">
+                                <!-- <div class="dropdown d-none d-sm-block">
                                     <button class="btn btn-white btn-sm
                                         dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Recent Active
@@ -121,67 +63,14 @@
                                         <a class="dropdown-item" href="#">Something
                                             else here</a>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="hr"></div>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                                    <p>Hey guys! New exploration about NFT
-                                        Marketplace Web Design, this time I'm
-                                        inspired by one of my favorite NFT
-                                        website called Rarible (with crypto
-                                        payment)! What do you think?</p>
+                                    <p>{{nft.description}}</p>
                                 </div>
-                                <div class="tab-pane" id="tabs-2" role="tabpanel">
-                                    <p>No active bids yet. Be the first to make
-                                        a bid!</p>
-                                </div>
-                                <div class="tab-pane space-y-20" id="tabs-3" role="tabpanel">
-                                    <div class="creator_item creator_card
-                                        space-x-10">
-                                        <div class="avatars space-x-10">
-                                            <div class="media">
-                                                <div class="badge">
-                                                    <img src="assets/img/icons/Badge.svg" alt="">
-                                                </div>
-                                                <a href="Profile.html">
-                                                    <img src="assets/img/avatars/avatar_1.png" alt="Avatar" class="avatar
-                                                        avatar-md">
-                                                </a>
-                                            </div>
-                                            <div>
-                                                <p class="color_black">Bid
-                                                    accepted <span class="color_brand">1
-                                                        ETH</span> by <a class="color_black txt
-                                                        _bold" href="Profile.html">ayoub</a></p>
-                                                <span class="date color_text">28/06/2021,
-                                                    12:08</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="creator_item creator_card
-                                        space-x-10">
-                                        <div class="avatars space-x-10">
-                                            <div class="media">
-                                                <div class="badge">
-                                                    <img src="assets/img/icons/Badge.svg" alt="">
-                                                </div>
-                                                <a href="Profile.html">
-                                                    <img src="assets/img/avatars/avatar_2.png" alt="Avatar" class="avatar
-                                                        avatar-md">
-                                                </a>
-                                            </div>
-                                            <div>
-                                                <p class="color_black">Bid
-                                                    accepted <span class="color_brand">3
-                                                        ETH</span> by <a class="color_black txt
-                                                        _bold" href="Profile.html">monir</a></p>
-                                                <span class="date color_text">22/05/2021,
-                                                    12:08</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -189,27 +78,41 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="space-y-5">
-                                    <p class="color_text">Minimum bid</p>
-                                    <h4>2.4000 <span class="txt_sm color_text">
-                                            ETH/ $4769.88</span></h4>
+                                    <p class="color_text">Price</p>
+                                    <h4>{{nft.item_price}}<span class="txt_sm color_text">
+                                            ETH </span></h4>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="space-y-5">
-                                    <p class="color_text">countdown</p>
+                                    <p class="color_text">Status</p>
                                     <div class="d-flex countdown_item
                                         align-items-center">
                                         <div class="item">
-                                            <div class="number hours">07<span></span></div>
+                                            <div class="">
+                                                
+                                                {% if nft.minted %}
+                                                    
+                                                    {% if nft.status == 'BUY' %}
+                                                    <span class="text-warning">ON SALE</span>
+                                                    {% else %}
+                                                    <span class="text-success">SOLD</span>
+                                                    {% endif %}
+                                                        
+                                                {% else %}
+                                                    <span class="text-warning">Unminted</span>
+                                                {% endif %}
+                                                    
+                                                </div>
+                                        </div>
+                                        <!-- <div class="dots">:</div>
+                                        <div class="item">
+                                            <div class="number minutes">15<span></span></div>
                                         </div>
                                         <div class="dots">:</div>
                                         <div class="item">
-                                            <div class="number minutes">22<span></span></div>
-                                        </div>
-                                        <div class="dots">:</div>
-                                        <div class="item">
-                                            <div class="number seconds">57<span></span></div>
-                                        </div>
+                                            <div class="number seconds">11<span></span></div>
+                                        </div> -->
                                     </div>
 
                                 </div>
@@ -222,47 +125,104 @@
                             <div class="col-lg-6">
                                 <div class="avatars space-x-5">
                                     <div class="media">
-                                        <a href="Profile.html">
-                                            <img src="assets/img/avatars/avatar_3.png" alt="Avatar" class="avatar
+                                        
+                                        {% if nft.creator.profile_pic %}
+                                        <a href="javascript:void(0)">
+                                            <img src="{{request.user.profile_pic.url}}" alt="Avatar" class="avatar
                                                 avatar-sm">
                                         </a>
+                                        {% else %}
+                                        <a href="javascript:void(0)">
+                                            <img src="/static/assets/img/avatars/avatar_3.png" alt="Avatar" class="avatar
+                                                avatar-sm">
+                                        </a>
+                                            
+                                        {% endif %}
+                                            
                                     </div>
                                     <div>
-                                        <a href="Profile.html">
-                                            <p class="avatars_name color_black">@ayoub_fennouni
-                                                / fouzi...</p>
+                                        <a href="javascript:void(0)">
+                                            <p class="avatars_name color_black">@{{nft.creator}}</p>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="avatars space-x-5">
+                                    
+                                    {% if nft.purchased_by %}
                                     <div class="media">
+                                        
+                                        
                                         <div class="badge">
-                                            <img class="badge" src="assets/img/icons/Badge.svg" alt="">
+                                            <img class="badge" src="/static/assets/img/icons/Badge.svg" alt="">
                                         </div>
-                                        <a href="Profile.html">
-                                            <img src="assets/img/avatars/avatar_2.png" alt="Avatar" class="avatar
+                                        {% if nft.purchased_by.profile_pic %}
+                                        <a href="javascript:void(0)">
+                                            <img src="{{nft.nft.purchased_by.profile_pic.url}}" alt="Avatar" class="avatar
                                                 avatar-sm">
                                         </a>
+                                        {% else %}
+                                        <a href="javascript:void(0)">
+                                            <img src="/static/assets/img/avatars/avatar_2.png" alt="Avatar" class="avatar
+                                                avatar-sm">
+                                        </a>
+                                            
+                                        {% endif %}
                                     </div>
                                     <div>
-                                        <a href="Profile.html">
-                                            <p class="avatars_name color_black">@makinzi_jamy...</p>
+                                        <a href="javascript:void(0)">
+                                            <p class="avatars_name color_black">Purchased By: @{{nft.purchased_by.username}}</p>
                                         </a>
                                     </div>
+                                    {% else %}
+                                        
+                                    {% endif %}
+                                        
                                 </div>
                             </div>
+                            <!-- <p class="text-danger">NFT will not be listed for sale until it has been minted</p> -->
                         </div>
                     </div>
                     <div class="d-flex space-x-20">
-                        <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#popup_buy"> Buy Now</a>
-                        <a href="#" class="btn btn-grad btn-lg" data-toggle="modal" data-target="#popup_bid"> Place bid</a>
+                        
+                        {% if nft.status == 'BUY' %}
+                        
+                            
+                        
+                        <form action="{% url 'explore-detail' nft.slug %}" method="post" class="search-form-wrapper">
+                            {% csrf_token %}
+                            
+                            <button type="submit" class="btn btn-primary btn-lg mt-2">Purchase</button>
+                        </form>
+                        {% else %}
+                        <button type="button" disabled class="btn btn-dark btn-lg mt-2">Sold</button>
+                            
+                        {% endif %}
+                            
+                        <!-- <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#popup_buy"> Buy Now</a>
+                        <a href="#" class="btn btn-grad btn-lg" data-toggle="modal" data-target="#popup_bid"> Place bid</a> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+    function myFunction() {
+      // Get the text field
+      var copyText = document.getElementById("walletAddy");
+    
+      // Select the text field
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+       // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText.value);
+    
+      // Alert the copied text
+      alert("Wallet address copied: " + copyText.value);
+    } 
+</script>
 {% endblock content %}
     
