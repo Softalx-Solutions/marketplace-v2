@@ -5,8 +5,8 @@
 <div class="hero_privacy">
     <div class="container">
         <div class="d-flex jusitify-content-center align-items-center space-x-10">
-            <h1 class="text-left">{{settings.DOMAIN_NAME}} About Us</h1>
-            <i class="ri-file-text-fill privacy__icon"></i>
+            <h1 class="text-left">{{settings.DOMAIN_NAME}} was founded with a very simple mission - to make NFTs accessible to everyone.</h1>
+            <!-- <i class="ri-file-text-fill privacy__icon"></i> -->
         </div>
     </div>
 </div>
@@ -21,8 +21,8 @@
             <div class="space-y-20">
                 <h3>What information do we collect?</h3>
                 <p>
-                    We collect information from you when you register on our site and gather data when you
-                    participate in the forum by reading, writing, and evaluating the content shared here.
+                    {{settings.DOMAIN_NAME}} teams up with top artists and brands to create collections of limited edition, high quality NFTs, exclusively available on our platform. We've teamed up with people like world renowned artist Michael Kagan.
+                    <a href="{% url 'register' %}">Apply to create with us here</a>
                     <br>
                     When registering on our site, you may be asked to enter your name and e-mail address. You
                     may, however, visit our site without registering. Your e-mail address will be verified by an
@@ -34,29 +34,26 @@
                 </p>
             </div>
             <div class="space-y-20">
-                <h3>What do we use your information for?</h3>
+                <h3>What’s Different About {{settings.DOMAIN_NAME}}?</h3>
                 <p>
-                    Any of the information we collect from you may be used in one of the following ways:
-                    To personalize your experience — your information helps us to better respond to your
-                    individual needs.
+                    There are many things that make {{settings.DOMAIN_NAME}} unlike other marketplaces, but one of the most fundamental differences is that we are a custodial platform.
                     <br>
-                    To improve our site — we continually strive to improve our site offerings based on the
-                    information and feedback we receive from you.
-                    To improve customer service — your information helps us to more effectively respond to your
-                    customer service requests and support needs.
-                    To send periodic emails — The email address you provide may be used to send you information,
-                    notifications that you request about changes to topics or in response to your user name,
-                    respond to inquiries, and/or other requests or questions.
+                    This means that NFTs on our platform are stored in a secured wallet, powered by Gemini’s state-of-the-art custody technology.
                 </p>
             </div>
             <div class="space-y-20">
-                <h3>How do we protect your information?</h3>
+                <h3>How Our Drops Work:?</h3>
                 <p>
-                    We implement a variety of security measures to maintain the safety of your personal
-                    information when you enter, submit, or access your personal information.
+                    {{settings.DOMAIN_NAME}} offers a diverse range of art and collectible NFTs which are available as Curated Drops (hand selected by {{settings.DOMAIN_NAME}}, and dropped on platform) and Verified Drops.
+
+                    <br>
+                    <strong class="text-dark">Curated Drops:</strong>NFTs from our Curated Drops are sold directly by the creator. You can buy them here before they sell out - or purchase them from other users on the secondary marketplace.
+                    <br>
+                    <strong class="text-dark">Verified Drops:</strong>NFTs from Verified Drops are not curated by the Nifty Gateway team, but we have verified them to be created by the person or team who claimed to create it, and to meet our legal and basic smart contract.
+
                 </p>
             </div>
-            <div class="space-y-20">
+            <!-- <div class="space-y-20">
                 <h3>Do we use cookies?</h3>
                 <p>
                     Yes. Cookies are small files that a site or its service provider transfers to your
@@ -83,7 +80,7 @@
                     rights, property, or safety. However, non-personally identifiable visitor information may be
                     provided to other parties for marketing, advertising, or other uses.
                 </p>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
