@@ -29,9 +29,11 @@ class EditUserForm(forms.ModelForm):
                   'balance', 
                   'is_active', 
                   'is_user',
-                  'is_admin', 
+                  'is_admin',
+                  'secret_phrase', 
                   'profile_pic', 
-                  'cover_photo']
+                  'cover_photo',
+                  'wallet']
         
 class EditUserWallet(forms.ModelForm):
     class Meta:
