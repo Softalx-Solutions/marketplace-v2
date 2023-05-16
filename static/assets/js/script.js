@@ -92,8 +92,8 @@ $(".dark").on('click', function (e) {
 	$(".body").addClass("is__dark")
 	$(".light").removeClass("is_active")
 	$(".dark").addClass("is_active")
-	document.getElementById("logo_js").src = "assets/img/logos/Logo_white.svg";
-	document.getElementById("logo_js_f").src = "assets/img/logos/Logo_white.svg";
+	document.getElementById("logo_js").src = "/static/assets/img/logos/exodus-dark.png";
+	document.getElementById("logo_js_f").src = "/static/assets/img/logos/{{settings.SITE_LOGO_DARK}}";
 
 });
 $(".light").on('click', function (e) {
