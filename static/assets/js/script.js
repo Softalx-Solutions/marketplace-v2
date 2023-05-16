@@ -100,8 +100,8 @@ $(".light").on('click', function (e) {
 	$(".body").removeClass("is__dark")
 	$(".light").addClass("is_active")
 	$(".dark").removeClass("is_active")
-	document.getElementById("logo_js").src = "assets/img/logos/Logo.svg";
-	document.getElementById("logo_js_f").src = "assets/img/logos/Logo.svg";
+	document.getElementById("logo_js").src = "/static/assets/img/logos/exodus-white.png";
+	document.getElementById("logo_js_f").src = "/static/assets/img/logos/exodus-white.png";
 });
 
 // menu popup
