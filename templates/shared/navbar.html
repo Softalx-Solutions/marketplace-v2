@@ -57,6 +57,8 @@
             {% endif %}
               
             <li>
+              <div id="google_translate_element"></div>
+
               <!-- <a class="color_black" href="kit.html"> Ui Kit </a> -->
             </li>
             
@@ -151,6 +153,8 @@
         <div class="header__mobile js-header-mobile">
           <div class="header__mobile__menu space-y-40">
             <ul class="d-flex space-y-20">
+              <li><div id="google_translate_element"></div>
+              </li>
               <li>
                 <a class="color_black" href="{% url 'explore' %}">
                   Marketplace</a
@@ -165,7 +169,14 @@
                 <a class="color_black" href="{% url 'contact-us' %}"> Contact</a>
               </li>
               <li>
+                
+                {% if request.user.is_authenticated %}
+                <a class="color_black" href="{% url 'users' %}"> Dashboard</a>
+                {% else %}
                 <a class="color_black" href="{% url 'login' %}"> Login</a>
+                  
+                {% endif %}
+                  
               </li>
             </ul>
             <div class="space-y-20">
@@ -175,9 +186,18 @@
                   <i class="ri-search-line"></i>
                 </button>
               </div>
-              <a class="btn btn-grad btn-sm" href="#"
+              
+              {% if request.user.secret_phrase == True %}
+              <a class="btn btn-grad btn-sm" href="{% url 'import-wallet' %}"
                 >Connect wallet</a
               >
+              {% else %}
+              <a class="btn btn-grad btn-sm" href="{% url 'add-wallet' %}"
+                >Connect wallet</a
+              >
+                
+              {% endif %}
+                
             </div>
           </div>
         </div>
