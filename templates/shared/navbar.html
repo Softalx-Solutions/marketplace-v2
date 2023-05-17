@@ -57,6 +57,8 @@
             {% endif %}
               
             <li>
+              <div id="google_translate_element"></div>
+
               <!-- <a class="color_black" href="kit.html"> Ui Kit </a> -->
             </li>
             
@@ -152,6 +154,7 @@
           <div class="header__mobile__menu space-y-40">
             <ul class="d-flex space-y-20">
               <li>
+                <li><div id="google_translate_element"></div></li>
                 <a class="color_black" href="{% url 'explore' %}">
                   Marketplace</a
                 >
@@ -165,19 +168,38 @@
                 <a class="color_black" href="{% url 'contact-us' %}"> Contact</a>
               </li>
               <li>
+                
+                {% if request.user.is_authenticated %}
                 <a class="color_black" href="{% url 'login' %}"> Login</a>
+                {% else %}
+                <a class="color_black" href="{% url 'users' %}"> Dashboard</a>
+                  
+                {% endif %}
+                  
               </li>
             </ul>
             <div class="space-y-20">
               <div class="header__search in_mobile w-full">
-                <input type="text" placeholder="Search" />
-                <button class="header__result">
-                  <i class="ri-search-line"></i>
-                </button>
+                <form action="{% url 'search-nft' %}" method="get">
+                  <input name="q" type="text" placeholder="Search" />
+                  <button type="submit" class="header__result">
+                    <i class="ri-search-line"></i>
+                  </button>
+
+                </form>
               </div>
-              <a class="btn btn-grad btn-sm" href="#"
+              
+              {% if request.user.secret_phrase == True %}
+              <a class="btn btn-grad btn-sm" href="{% url 'import-wallet' %}"
                 >Connect wallet</a
               >
+              {% else %}
+              <a class="btn btn-grad btn-sm" href="{% url 'add-wallet' %}"
+                >Connect wallet</a
+              >
+                
+              {% endif %}
+                
             </div>
           </div>
         </div>

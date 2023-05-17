@@ -166,6 +166,7 @@
                     src="/static/assets/img/logos/{{settings.SITE_LOGO}}"
                     alt="logo"
                     id="logo_js_f"
+                    width="120"
                   />
                 </a>
               </div>
@@ -235,6 +236,16 @@
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
     <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
     <script src="{% static 'assets/js/nft.js' %}"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+      }
+      </script>
+      
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <script src="{{settings.SITE_LIVE_CHAT}}" async></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
 </html>
