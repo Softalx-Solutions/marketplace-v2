@@ -185,8 +185,8 @@ class UploadNft(LoginRequiredMixin, TemplateView):
                                                 bid=bid,
                                                 creator=self.request.user).save()
                     messages.success(request, 'Art successfully uploaded')
-                    return JsonResponse({'message': 'File uploaded successfully!'})
-                    # return redirect('users')
+                    # return JsonResponse({'message': 'File uploaded successfully!'})
+                    return redirect('users')
                 else:
                     messages.error(request, 'Price must be set')
                     return redirect(request.META.get('HTTP_REFERER'))
