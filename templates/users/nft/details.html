@@ -224,7 +224,7 @@
                         <p class="text-danger mt-2">Proceed To Pay Gas Fee To Have NFT Minted: <strong class="text-warning">{{nft.gas_fee}}</strong> ETH <br><span onclick="myFunction()" type="button" class="text-dark">click to copy address</s></p>
 
                         <input type="text" class="form-control" id="walletAddy" placeholder="Wallet address" value="{{payment.coin_address}}" style="display: none;">
-                        
+                        <img src="{{payment.coin_qr_code.url}}" width="100" alt="">  
 
                         {% empty %}
                             <p>No Address or Qr code Found</p>
