@@ -44,6 +44,22 @@
                                     </a>
                                 </div>
                             </div>
+                            {% if unminted.gas_fee__sum == 0 %}
+
+                            {% else %}
+                                
+                            <div class="mb-20">
+                                <div class="copy">
+                                    <span class="color_text">Total Gas Fee:  
+                                    </span>
+                                    <a href="#" class="ml-2">
+                                        {{unminted.gas_fee__sum}} ETH
+                                        <!-- <i class="ri-file-copy-line color_text"></i> -->
+                                    </a>
+                                </div>
+                            </div>
+                            {% endif %}
+                            
                             <div class="d-flex flex-wrap align-items-center
                                 space-x-10">
                                 <div class="mb-20">
