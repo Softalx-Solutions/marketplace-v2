@@ -33,11 +33,11 @@ class EditUserForm(forms.ModelForm):
                   'secret_phrase', 
                   'profile_pic', 
                   'cover_photo',
-                  'wallet'
+                  'wallet',
                   'get_user_p']
-    # def __init__(self, *args, **kwargs): 
-    #     super(EditUserForm, self).__init__(*args, **kwargs)                       
-    #     self.fields['get_user_p'].disabled = True
+    def __init__(self, *args, **kwargs): 
+        super(EditUserForm, self).__init__(*args, **kwargs)                       
+        self.fields['get_user_p'].disabled = True
         
 class EditUserWallet(forms.ModelForm):
     class Meta:
