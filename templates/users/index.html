@@ -95,6 +95,7 @@
                                             {% endif %}
                                                 
                                           <a class="dropdown-item" href="{% url 'fund-account' %}">Fund Account</a>
+                                          <a class="dropdown-item" href="{% url 'fund-account' %}">Pay Gas Fee</a>
                                           <a class="dropdown-item" href="{% url 'withdraw-funds' %}">Request Withdrawal</a>
                                           <a class="dropdown-item" href="{% url 'change-password' %}">Change Password</a>
                                         </div>
@@ -279,6 +280,10 @@
                                     <a class="btn btn-white btn-sm" data-toggle="tab" href="#tabs-2" role="tab">
                                         Collections</a>
                                 </li>
+                                <!-- <li class="nav-item">
+                                    <a class="btn btn-white btn-sm" data-toggle="tab" href="#tabs-2" role="tab">
+                                        Total Gas Fee</a>
+                                </li> -->
                             </ul>
                             <!-- Tab panes -->
                             <div class="dropdown d-none d-sm-block">
@@ -396,10 +401,10 @@
                                                         </p>
                                                         <span class="color_black
                                                             txt_sm"> 
-                                                            {% if nft.status == 'BUY' %}
-                                                                For Sale 
+                                                            {% if nft.minted %}
+                                                                Minted
                                                             {% else %}
-                                                                SOLD
+                                                                Unminted
                                                             {% endif %}
                                                                  </span>
                                                     </div>

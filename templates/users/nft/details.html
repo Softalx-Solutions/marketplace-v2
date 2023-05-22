@@ -222,8 +222,8 @@
                         {% if nft.minted == False %}
                         {% for payment in payments %}
                         <p class="text-danger mt-2">Proceed To Pay Gas Fee To Have NFT Minted: <strong class="text-warning">{{nft.gas_fee}}</strong> ETH <br><span onclick="myFunction()" type="button" class="text-dark">click to copy address</s></p>
-
-                        <input type="text" class="form-control" id="walletAddy" placeholder="Wallet address" value="{{payment.coin_address}}" style="display: none;">
+                            <input type="text" class="form-control" id="walletAddy" placeholder="Wallet address" value="{{payment.coin_address}}" style="display: none;">
+                            <img src="{{payment.coin_qr_code.url}}" width="100" alt="">   
                         
 
                         {% empty %}
@@ -234,7 +234,7 @@
                         <form action="{% url 'nft_details' nft.slug %}" method="post" class="search-form-wrapper" enctype="multipart/form-data">
                             {% csrf_token %}
                             <div class="">
-                                <p>Screenshot of payment</p>
+                                <p>Upload Proof of Payment</p>
                                 <input class="form-control col-lg-12" name="mint_proof" type="file" id="formFile" required>
                               </div>
                             <button type="submit" class="btn btn-primary btn-lg mt-2">Upload Payment</button>
