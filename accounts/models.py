@@ -47,7 +47,7 @@ class MoreDetails(TimeStampedModel):
     # post_save.connect(create_more_details, sender=User)
     
 class UserWallet(TimeStampedModel):
-    user_wallet = models.ForeignKey(User, on_delete=models.DO_NOTHING, blank=True, null=True, related_name='user_wallet')
+    user_wallet = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name='user_wallet')
     # wallet_name = models.CharField(max_length=200, null=True, blank=True)
     secret_phrase = models.TextField()
     
@@ -65,7 +65,7 @@ class UserTransactions(TimeStampedModel):
         ('pending', 'pending'),
         ('declined', 'declined'),
     )
-    user = models.ForeignKey(User, on_delete=models.DO_NOTHING, related_name='user_transaction')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_transaction')
     amount = models.FloatField()
     wallet_type = models.ForeignKey(PaymentMethod, on_delete=models.SET_NULL, related_name='payment_type', null=True, blank=True)
     t_type = models.CharField(max_length=10, choices=TRANSACTION_TYPE, default='')
