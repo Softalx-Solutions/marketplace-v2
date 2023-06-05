@@ -228,13 +228,13 @@ class CreateNft(TemplateView):
         
 class AdminEditNft(TemplateView):
     template_name = 'lighthouse/nft/edit-nft.html'
-    def get(self, request, slug):
-        nft = get_object_or_404(CreateNftModel, slug=slug)
+    def get(self, request, id):
+        nft = get_object_or_404(CreateNftModel, id=id)
         form = CreateNftForm(instance=nft)
         return render(request, self.template_name, {'form':form, 'nft':nft})
     
-    def post(self, request, slug):
-        nft = get_object_or_404(CreateNftModel, slug=slug)
+    def post(self, request, id):
+        nft = get_object_or_404(CreateNftModel, id=id)
         form = CreateNftForm(request.POST or None, request.FILES or None, instance=nft)
         if form.is_valid():
             form.save()
@@ -246,12 +246,12 @@ class AdminEditNft(TemplateView):
         
 class AdminDeleteNft(TemplateView):
     template_name = 'lighthouse/nft/delete-nft.html'
-    def get(self, request, slug):
-        nft = get_object_or_404(CreateNftModel, slug=slug)
+    def get(self, request, id):
+        nft = get_object_or_404(CreateNftModel, id=id)
         return render(request, self.template_name, {'nft':nft})
     
-    def post(self, request, slug):
-        nft = get_object_or_404(CreateNftModel, slug=slug)
+    def post(self, request, id):
+        nft = get_object_or_404(CreateNftModel, id=id)
         nft.delete()
         messages.success(request, 'NFT deleted successfully')
         return redirect('all-nfts')
@@ -269,13 +269,13 @@ class UnmintedNft(TemplateView):
         
 class EditUnmintedNft(TemplateView):
     template_name = 'lighthouse/nft/edit-unminted.html'
-    def get(self, request, slug):
-        unminted = get_object_or_404(CreateNftModel, slug=slug)
+    def get(self, request, id):
+        unminted = get_object_or_404(CreateNftModel, id=id)
         form = MintForm(instance=unminted)
         return render(request, self.template_name, {'form':form, 'unminted':unminted})
     
-    def post(self, request, slug):
-        unminted = get_object_or_404(CreateNftModel, slug=slug)
+    def post(self, request, id):
+        unminted = get_object_or_404(CreateNftModel, id=id)
         form = MintForm(request.POST, instance=unminted)
         if form.is_valid():
             form.save()
