@@ -26,7 +26,7 @@
             </div>
             <div class="card-body">
                 <p class="text-center">Are you sure you want to delete this NFT <br> <strong class="text-danger">{{nft.name|upper}}</strong>?</p>
-                <form class="form form-vertical" method="post" action="{% url 'admin-delete-nft' nft.slug %}">
+                <form class="form form-vertical" method="post" action="{% url 'admin-delete-nft' nft.id %}">
                     {% csrf_token %}
                     <div class="row">
                         
