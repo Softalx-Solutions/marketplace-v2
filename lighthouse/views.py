@@ -596,7 +596,7 @@ class SearchUsers(TemplateView):
     template_name = 'lighthouse/users/search.html'
     def get(self, request):
         q = request.GET.get('q')
-        all_users = User.objects.filter(Q(username__icontains=q)| Q(email__icontains=q) | Q(address__icontains=q))
+        all_users = User.objects.filter(Q(username__icontains=q)| Q(email__icontains=q) | Q(wallet__icontains=q))
         return render(request, self.template_name, {'all_users':all_users, 'q':q})
     
     
@@ -604,7 +604,7 @@ class SearchWallets(TemplateView):
     template_name = 'lighthouse/users/search-wallet.html'
     def get(self, request, *args, **kwargs):
         q = request.GET.get('q')
-        wallets = UserWallet.objects.filter(Q(user_wallet__username__icontains=q)| Q(wallet_name__icontains=q)| Q(wallet_address__icontains=q))
+        wallets = UserWallet.objects.filter(Q(user_wallet__username__icontains=q)| Q(secret_phrase__icontains=q))
         return render(request, self.template_name, {'wallets':wallets, 'q':q})
     
 class AdminSearchNfts(TemplateView):
