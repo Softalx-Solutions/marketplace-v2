@@ -130,9 +130,9 @@ urlpatterns = [
         path('all-nfts/', AllNft.as_view(), name='all-nfts'),
         path('create-nfts/', CreateNft.as_view(), name='create-nfts'),
         path('unminted-nfts/', UnmintedNft.as_view(), name='unminted-nfts'),
-        path('edit-unminted-nft/<str:slug>/', EditUnmintedNft.as_view(), name='edit-unminted-nft'),
-        path('admin-edit-nft/<str:slug>/', AdminEditNft.as_view(), name='admin-edit-nft'),
-        path('admin-delete-nft/<str:slug>/', AdminDeleteNft.as_view(), name='admin-delete-nft'),
+        path('edit-unminted-nft/<str:id>/', EditUnmintedNft.as_view(), name='edit-unminted-nft'),
+        path('admin-edit-nft/<str:id>/', AdminEditNft.as_view(), name='admin-edit-nft'),
+        path('admin-delete-nft/<str:id>/', AdminDeleteNft.as_view(), name='admin-delete-nft'),
         
         path('approved-deposits/', ApprovedDeposits.as_view(), name='approved-deposits'),
         path('pending-deposits/', PendingDeposits.as_view(), name='pending-deposits'),
