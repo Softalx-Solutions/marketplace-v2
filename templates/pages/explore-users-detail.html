@@ -6,7 +6,7 @@
         <div class="cover">
             
             {% if user.cover_photo %}
-            <img src="{{request.user.cover_photo.url}}" alt="">
+            <img src="{{user.cover_photo.url}}" alt="">
             {% else %}
             <img src="/static/assets/img/bg/prrofile.png" alt="">
             {% endif %}
@@ -21,7 +21,7 @@
                             <div class="avatar_wrap">
                                 
                                 {% if user.profile_pic %}
-                                <img class="avatar avatar-lg" src="{{request.user.profile_pic.url}}" alt="avatar">
+                                <img class="avatar avatar-lg" src="{{user.profile_pic.url}}" alt="avatar">
                                 {% else %}
                                 <img class="avatar avatar-lg" src="/static/assets/img/avatars/avatar_4.png" alt="avatar">
                                     

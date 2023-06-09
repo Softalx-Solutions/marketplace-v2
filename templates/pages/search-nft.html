@@ -61,6 +61,8 @@
 </div>
 
 <div class="container">
+    
+    {% if all_nfts %}
     <div class="section mt-100">
         <div class="section__head">
             <h2 class="section__title mb-20"> Artworks</h2>
@@ -306,6 +308,10 @@
             
         </div>
     </div>
+    {% else %}
+    <p>No NFT Found</p>
+    {% endif %}
+        
     
     
     {% if all_users %}
@@ -404,7 +410,7 @@
             </div>
 
             {% empty %}
-            <p class="text-danger">No Users Found</p>
+            <p class="text-danger">No Users avaliable</p>
             {% endfor %}
                 
             
