@@ -306,10 +306,13 @@
             
         </div>
     </div>
-    <!-- <div class="section mt-100">
+    
+    
+    {% if all_users %}
+    <div class="section mt-100">
         <div class="section__head">
-            <h2 class="section__title mb-20"> Collections</h2>
-            <div class="row justify-content-between align-items-center">
+            <h2 class="section__title mb-20"> Users</h2>
+            <!-- <div class="row justify-content-between align-items-center">
                 <div class="col-lg-auto">
                     <div class="d-flex align-items-center">
                         <span class="color_text txt_sm d-none d-sm-block mr-10" style="min-width:
@@ -354,32 +357,38 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="row justify-content-center mb-30_reset">
+            
+            {% for user in all_users %}
             <div class="col-lg-4 col-md-6 col-sm-8">
                 <div class="collections space-y-10 mb-30">
-                    <a href="404-4.html">
+                    <a href="{% url 'explore-users-detail' user.username %}">
                         <div class="collections_item">
                             <div class="images-box space-y-10">
-                                <div class="top_imgs">
+                                <!-- <div class="top_imgs">
                                     <img src="/static/assets/img/items/item_9.png" alt="">
                                     <img src="/static/assets/img/items/item_10.png" alt="">
                                     <img src="/static/assets/img/items/item_11.png" alt="">
-                                </div>
+                                </div> -->
+                                {% if user.profile_pic %}
+                                <img src="{{user.profile_pic.url}}" alt="{{user.profile_pic}}">
+                                {% else %}
                                 <img src="/static/assets/img/items/item_12.png" alt="">
+                                {% endif %}
                             </div>
                         </div>
                     </a>
                     <div class="collections_footer justify-content-between">
-                        <h5 class="collection_title"><a href="Collections.html">Creative Art collection</a></h5>
-                        <a href="#" class="likes space-x-3">
+                        <h5 class="collection_title"><a href="{% url 'explore-users-detail' user.username %}">@{{user.username}}</a></h5>
+                        <!-- <a href="#" class="likes space-x-3">
                             <i class="ri-heart-3-fill"></i>
                             <span class="txt_md">2.1k</span>
-                        </a>
+                        </a> -->
                     </div>
-                    <div class="creators space-x-10">
+                    <!-- <div class="creators space-x-10">
                         <span class="color_text txt_md"> 5 items · Created by</span>
                         <div class="avatars space-x-5">
                             <a href="Profile.html">
@@ -390,80 +399,17 @@
                         <a href="Profile.html">
                             <p class="avatars_name txt_sm"> @william_jamy... </p>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-8">
-                <div class="collections space-y-10 mb-30">
-                    <a href="404-4.html">
-                        <div class="collections_item">
-                            <div class="images-box space-y-10">
-                                <div class="top_imgs">
-                                    <img src="/static/assets/img/items/item_13.png" alt="">
-                                    <img src="/static/assets/img/items/item_14.png" alt="">
-                                    <img src="/static/assets/img/items/item_15.png" alt="">
-                                </div>
-                                <img src="/static/assets/img/items/item_16.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                    <div class="collections_footer justify-content-between">
-                        <h5 class="collection_title"><a href="Collections.html">Colorful Abstract Painting</a></h5>
-                        <a href="#" class="likes space-x-3">
-                            <i class="ri-heart-3-fill"></i>
-                            <span class="txt_md">3.5k</span>
-                        </a>
-                    </div>
-                    <div class="creators space-x-10">
-                        <span class="color_text txt_md"> 7 items · Created by</span>
-                        <div class="avatars space-x-5">
-                            <a href="Profile.html">
-                                <img src="/static/assets/img/avatars/avatar_3.png" alt="Avatar"
-                                    class="avatar avatar-sm">
-                            </a>
-                        </div>
-                        <a href="Profile.html">
-                            <p class="avatars_name txt_sm"> @alexis_fenn... </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-8">
-                <div class="collections space-y-10 mb-30">
-                    <a href="404-4.html">
-                        <div class="collections_item">
-                            <div class="images-box space-y-10">
-                                <div class="top_imgs">
-                                    <img src="/static/assets/img/items/item_17.png" alt="">
-                                    <img src="/static/assets/img/items/item_18.png" alt="">
-                                    <img src="/static/assets/img/items/item_19.png" alt="">
-                                </div>
-                                <img src="/static/assets/img/items/item_20.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                    <div class="collections_footer justify-content-between">
-                        <h5 class="collection_title"><a href="Collections.html">Modern Art collection</a></h5>
-                        <a href="#" class="likes space-x-3">
-                            <i class="ri-heart-3-fill"></i>
-                            <span class="txt_md">7.2k</span>
-                        </a>
-                    </div>
-                    <div class="creators space-x-10">
-                        <span class="color_text txt_md"> 2 items · Created by</span>
-                        <div class="avatars space-x-5">
-                            <a href="Profile.html">
-                                <img src="/static/assets/img/avatars/avatar_1.png" alt="Avatar"
-                                    class="avatar avatar-sm">
-                            </a>
-                        </div>
-                        <a href="Profile.html">
-                            <p class="avatars_name txt_sm"> @Joshua_Bren... </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                
+            {% endfor %}
+                
+            
         </div>
-    </div> -->
+    </div>
+        
+    {% endif %}
+        
 </div>
 {% endblock content %}
