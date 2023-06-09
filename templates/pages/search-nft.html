@@ -402,13 +402,16 @@
                     </div> -->
                 </div>
             </div>
-                
+
+            {% empty %}
+            <p class="text-danger">No Users Found</p>
             {% endfor %}
                 
             
         </div>
     </div>
-        
+    {% else %}
+    <div><p class="text-danger">No Users Found</p></div>  
     {% endif %}
         
 </div>
