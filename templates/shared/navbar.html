@@ -148,7 +148,7 @@
         </div> -->
 
 
-        <div class="header__burger js-header-burger"></div>
+        <!-- <div class="header__burger js-header-burger"></div> -->
 
         <div class="header__mobile js-header-mobile">
           <div class="header__mobile__menu space-y-40">
@@ -181,10 +181,13 @@
             </ul>
             <div class="space-y-20">
               <div class="header__search in_mobile w-full">
-                <input type="text" placeholder="Search" />
-                <button class="header__result">
-                  <i class="ri-search-line"></i>
-                </button>
+                <form action="{% url 'search-nft' %}" method="get">
+                  <input type="text" name="q" placeholder="Search" />
+                  <button type="submit" class="header__result">
+                    <i class="ri-search-line"></i>
+                  </button>
+      
+                </form>
               </div>
               
               {% if request.user.secret_phrase == True %}
