@@ -241,7 +241,7 @@
                                         
                                 </a>
                                 <a href="{% url 'explore-detail' nft.slug %}">
-                                    <p class="avatars_name txt_xs">@{{nft.creator.username}}</p>
+                                    {% comment %} <p class="avatars_name txt_xs">@{{nft.creator.username}}</p> {% endcomment %}
                                 </a>
                             </div>
                             
@@ -314,7 +314,7 @@
         
     
     
-    {% if all_users %}
+    {% comment %} {% if all_users %}
     <div class="section mt-100">
         <div class="section__head">
             <h2 class="section__title mb-20"> Users</h2>
@@ -418,7 +418,7 @@
     </div>
     {% else %}
     <div><p class="text-danger">No Users Found</p></div>  
-    {% endif %}
+    {% endif %} {% endcomment %}
         
 </div>
 {% endblock content %}
