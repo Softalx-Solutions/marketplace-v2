@@ -148,7 +148,7 @@
                                         <table class="table table-striped">
                                             <thead>
                                               <tr>
-                                                <th scope="col">ID</th>
+                                                <th scope="col">#</th>
                                                 <th scope="col">Amount</th>
                                                 <th scope="col">Gas Fee</th>
                                                 <th scope="col">Withdraw Date</th>
@@ -161,7 +161,7 @@
                                                 {% for transaction in transactions %}
                                                 
                                                 <tr>
-                                                    <td>#</td>
+                                                    
                                                     <td>{{transaction.amount}}</td>
                                                     <td>{{transaction.w_wallet.wallet_name}}</td>
                                                     <td>
