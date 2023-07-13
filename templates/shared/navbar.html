@@ -59,6 +59,8 @@
             <li>
               <div id="google_translate_element"></div>
 
+              <div id="google_translate_element"></div>
+
               <!-- <a class="color_black" href="kit.html"> Ui Kit </a> -->
             </li>
             
@@ -153,6 +155,8 @@
         <div class="header__mobile js-header-mobile">
           <div class="header__mobile__menu space-y-40">
             <ul class="d-flex space-y-20">
+              <li><div id="google_translate_element"></div>
+              </li>
               <li>
                 <li><div id="google_translate_element"></div></li>
                 <a class="color_black" href="{% url 'explore' %}">
@@ -170,9 +174,9 @@
               <li>
                 
                 {% if request.user.is_authenticated %}
-                <a class="color_black" href="{% url 'login' %}"> Login</a>
-                {% else %}
                 <a class="color_black" href="{% url 'users' %}"> Dashboard</a>
+                {% else %}
+                <a class="color_black" href="{% url 'login' %}"> Login</a>
                   
                 {% endif %}
                   

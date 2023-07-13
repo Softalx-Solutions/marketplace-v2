@@ -1,116 +1,424 @@
-{% extends 'lighthouse_base.html' %}
+{% extends 'base.html' %}
 
-{% block breadcrumbs %}
-<div class="row breadcrumbs-top">
-    <div class="col-12">
-        <h2 class="content-header-title float-start mb-0">All Users</h2>
-        <div class="breadcrumb-wrapper">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a>
+{% block bg_hero %}
+<div class="hero_marketplace bg_white">
+    <div class="container">
+        <h1 class="text-center">Search Results</h1>
+    </div>
+</div>
+{% endblock bg_hero %}
+
+
+{% block content %}
+<div class="bg_white border-b py-20">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <ul class="menu_categories space-x-20">
+                <li>
+                    <a href="#" class="color_brand">
+
+                        <span> All </span>
+                    </a>
                 </li>
-                <li class="breadcrumb-item active">All users
+                <li> <a href="#">
+                        <i class="ri-gamepad-line"></i> <span> Games </span>
+                    </a>
+
                 </li>
-            </ol>
+                <li> <a href="#">
+                        <i class="ri-brush-line"></i> <span> Art </span>
+                    </a>
+
+                </li>
+                <li> <a href="#">
+                        <i class="ri-stock-line"></i> <span> Trading Cards </span>
+                    </a>
+
+                </li>
+                <li> <a href="#">
+                        <i class="ri-music-line"></i> <span> Music </span>
+                    </a>
+
+                </li>
+                <li> <a href="#">
+                        <i class="ri-global-line"></i> <span> Domain Names </span>
+                    </a>
+
+                </li>
+                <li> <a href="#">
+                        <i class="ri-emotion-laugh-line"></i> <span> Memes </span>
+                    </a>
+
+                </li>
+                <li> <a href="#">
+                        <i class="ri-layout-4-line"></i> <span> Collectibles </span>
+                    </a>
+
+                </li>
+            </ul>
         </div>
     </div>
 </div>
-{% endblock breadcrumbs %}
+
+<div class="container">
     
+    {% if all_nfts %}
+    <div class="section mt-100">
+        <div class="section__head">
+            <h2 class="section__title mb-20"> Artworks</h2>
+            <!-- <div class="row justify-content-between align-items-center">
+                <div class="col-lg-auto">
+                    <div class="d-flex align-items-center">
+                        <span class="color_text txt_sm d-none d-sm-block mr-10" style="min-width:
+                            max-content">
+                            FILTER BY:
+                        </span>
+                        <ul class="menu_categories">
+                            <li class="d-flex switch_item">
 
-{% block content %}
-<div class="basic-table mt-3" id="row">
-    <div class="row" id="table-bordered">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Users Found: {{all_users.count}}</h4>
-                    <form action="{% url 'search-users' %}" method="get">
-                        <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search by Username or email" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <button class="input-group-text btn-info" id="basic-addon2">Search</button>
-                        </div>
+                                <input type="checkbox" id="switch1"><label for="switch1">Toggle</label>
+                                <span class="ml-10"> Has list price </span>
+                            </li>
+                            <li class="d-flex switch_item">
 
-                    </form>
+                                <input type="checkbox" id="switch2" checked=""><label for="switch2">Toggle</label>
+                                <span class="ml-10"> Has open offer </span>
+                            </li>
+                            <li class="d-flex switch_item">
+
+                                <input type="checkbox" id="switch3"><label for="switch3">Toggle</label>
+                                <span class="ml-10"> Owned by creator </span>
+                            </li>
+                            <li class="d-flex switch_item">
+
+                                <input type="checkbox" id="switch4"><label for="switch4">Toggle</label>
+                                <span class="ml-10"> Has sold </span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- <div class="card-body">
-                    <p class="card-text">
-                        Add <code>.table-bordered</code> for borders on all sides of the table and cells. For Inverse Dark Table, add
-                        <code>.table-dark</code> along with <code>.table-bordered</code>.
-                    </p>
-                </div> -->
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Username</th>
-                                <th>Email</th>
-                                <th>Balance</th>
-                                <th>Date Joined</th>
-                                <th>Status</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            {% for user in all_users %}
-                                
-                            <tr>
-                                <td>
-                                    
-                                    <span class="fw-bold">{{user.get_full_name}}</span>
-                                </td>
-                                <td>{{user.username}}</td>
-                                <td>
-                                    
-                                    {{user.email}}
-                                        
-                                </td>
-                                <td>{{user.balance}} ETH</td>
-                                <td>{{user.date_joined}}</td>
-                                <td><span class="badge rounded-pill badge-light{% if user.is_active %}-primary {% else %}-danger {% endif %}  me-1">
-                                    
-                                    {% if user.is_active %}
-                                        Active
-                                    {% else %}
-                                        Inactive
-                                    {% endif %}
-                                        
-                                </span></td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button type="button" class="btn btn-sm dropdown-toggle hide-arrow py-0 waves-effect waves-float waves-light" data-bs-toggle="dropdown">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <a class="dropdown-item" href="{% url 'login-as' user.uuid %}">
-                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-1 me-50"></svg>
-                                                <span>Login as</span>
-                                            </a>
-                                            <a class="dropdown-item" href="{% url 'edit-user' user.username %}">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2 me-50"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
-                                                <span>Edit</span>
-                                            </a>
-                                            <a class="dropdown-item" href="{% url 'delete-user' user.username %}">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash me-50"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-                                                <span>Delete</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            {% endfor %}
-                                
-                           
-                        </tbody>
-                    </table>
+                <div class="col-lg-auto">
+                    <div class="d-flex space-x-10 align-items-center sm:mt-20">
+                        <span class="color_text txt_sm"> SORT BY: </span>
+                        <div class="dropdown">
+                            <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Recent Active
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else
+                                    here</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="modal fade popup" id="popup_bid_success" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <div class="modal-body space-y-20 p-40">
+                        <h3 class="text-center">Your Bidding
+                            Successfuly Added</h3>
+                        <p class="text-center">your bid <span class="color_text txt
+                                _bold">(16ETH) </span> has been listing
+                            to our database</p>
+
+                        <a href="#" class="btn btn-dark w-full"> Watch the listings</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="modal fade popup" id="popup_bid" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <div class="modal-body space-y-20 p-40">
+                        <h3>Place a Bid</h3>
+                        <p>You must bid at least <span class="color_black">15 ETH</span>
+                        </p>
+                        <input type="text" class="form-control" placeholder="00.00 ETH">
 
+                        <p>Enter quantity. <span class="color_green">5 available</span>
+                        </p>
+                        <input type="text" class="form-control" value="1">
+                        <div class="hr"></div>
+                        <div class="d-flex justify-content-between">
+                            <p> You must bid at least:</p>
+                            <p class="text-right color_black txt _bold"> 67,000 ETH </p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p> service free:</p>
+                            <p class="text-right color_black txt _bold"> 0,901 ETH </p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p> Total bid amount:</p>
+                            <p class="text-right color_black txt _bold"> 56,031 ETH </p>
+                        </div>
+                        <a href="#" class="btn btn-primary w-full" data-toggle="modal" data-target="#popup_bid_success"
+                            data-dismiss="modal" aria-label="Close"> Place a bid</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade popup" id="popup_history" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <div class="modal-body space-y-20 p-40">
+                        <h4> History </h4>
+                        <div class="creator_item creator_card space-x-10">
+                            <div class="avatars space-x-10">
+                                <div class="media">
+                                    <div class="badge">
+                                        <img src="/static/assets/img/icons/Badge.svg" alt="">
+                                    </div>
+                                    <a href="Profile.html">
+                                        <img src="/static/assets/img/avatars/avatar_1.png" alt="Avatar"
+                                            class="avatar avatar-md">
+                                    </a>
+                                </div>
+                                <div>
+                                    <p class="color_black">Bid accepted <span class="color_brand">1
+                                            ETH</span> by <a class="color_black txt
+                                            _bold" href="Profile.html">ayoub</a></p>
+                                    <span class="date color_text">28/06/2021, 12:08</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="creator_item creator_card space-x-10">
+                            <div class="avatars space-x-10">
+                                <div class="media">
+                                    <div class="badge">
+                                        <img src="/static/assets/img/icons/Badge.svg" alt="">
+                                    </div>
+                                    <a href="Profile.html">
+                                        <img src="/static/assets/img/avatars/avatar_2.png" alt="Avatar"
+                                            class="avatar avatar-md">
+                                    </a>
+                                </div>
+                                <div>
+                                    <p class="color_black">Bid accepted <span class="color_brand">3
+                                            ETH</span> by <a class="color_black txt
+                                            _bold" href="Profile.html">monir</a></p>
+                                    <span class="date color_text">22/05/2021, 12:08</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-30_reset">
+            
+            {% for nft in all_nfts %}
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="card__item four">
+                    <div class="card_body space-y-10">
+                        <!-- =============== -->
+                        <div class="creators space-x-10">
+                            <div class="avatars space-x-3">
+                                <a href="{% url 'explore-detail' nft.slug %}">
+                                    
+                                    {% if nft.creator.profile_pic %}
+                                    <img src="{{nft.creator.profile_pic.url}}" alt="Avatar"
+                                        class="avatar avatar-sm">
+                                    {% else %}
+                                    <img src="/static/assets/img/avatars/avatar_1.png" alt="Avatar"
+                                        class="avatar avatar-sm">
+                                        
+                                    {% endif %}
+                                        
+                                </a>
+                                <a href="{% url 'explore-detail' nft.slug %}">
+                                    <p class="avatars_name txt_xs">@{{nft.creator.username}}</p>
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="card_head">
+                            <a href="{% url 'explore-detail' nft.slug %}">
+                                
+                                {% if nft.upload_nft %}
+                                {% if nft.nft_type == 'art' %}
+                                <img src="{{nft.upload_nft.url}}" alt="">
+                                {% else %}
+                                <img src="/static/assets/img/items/item_4.png" alt="">
+                                    
+                                {% endif %}
+
+                                {% else %}
+                                <img src="/static/assets/img/items/item_7.png" alt="">
+                                {% endif %}
+                                    
+                                    
+                            </a>
+
+                            <!-- <a href="#" class="likes space-x-3">
+                                <i class="ri-heart-3-fill"></i>
+                                <span class="txt_sm">1.2k</span>
+                            </a> -->
+                        </div>
+                        <!-- =============== -->
+                        <h6 class="card_title">
+                            {{nft.name}}
+                        </h6>
+                        <div class="card_footer d-block space-y-10">
+                            <div class="card_footer justify-content-between">
+                                <div class="creators">
+                                    <p class="txt_sm"> {{nft.nft_type}}</p>
+                                </div>
+                                <a href="{% url 'explore-detail' nft.slug %}" class="">
+                                    <p class="txt_sm">Price: <span class="color_green
+                                            txt_sm">{{nft.item_price}} ETH</span></p>
+                                </a>
+                            </div>
+                            <div class="hr"></div>
+                            <div class="d-flex align-items-center space-x-10
+                                justify-content-between">
+                                <div class="d-flex align-items-center
+                                    space-x-10">
+                                    <!-- <i class="ri-history-line"></i> -->
+                                    <a class="view_history" href="{% url 'explore-detail' nft.slug %}" data-toggle="modal" data-target="#popup_history">
+                                        <p class="color_text txt_sm" style="width:
+                                            auto;">{{nft.status}}</p>
+                                    </a>
+                                </div>
+                                <a class="btn btn-sm btn-primary" href="{% url 'explore-detail' nft.slug %}" >View</a>
+                                <!-- <a class="btn btn-sm btn-primary" href="{% url 'explore-detail' nft.slug %}" data-toggle="modal"
+                                    data-target="#popup_bid">View</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            {% endfor %}
+                
+            
+        </div>
+    </div>
+    {% else %}
+    <p>No NFT Found</p>
+    {% endif %}
+        
+    
+    
+    {% if all_users %}
+    <div class="section mt-100">
+        <div class="section__head">
+            <h2 class="section__title mb-20"> Users</h2>
+            <!-- <div class="row justify-content-between align-items-center">
+                <div class="col-lg-auto">
+                    <div class="d-flex align-items-center">
+                        <span class="color_text txt_sm d-none d-sm-block mr-10" style="min-width:
+                            max-content">
+                            FILTER BY:
+                        </span>
+                        <ul class="menu_categories">
+                            <li class="d-flex space-x-10 switch_item">
+                                <input type="checkbox" id="switch7"><label for="switch7" class="ml-0">Toggle</label>
+                                <span> Has list price </span>
+                            </li>
+                            <li class="d-flex space-x-10 switch_item">
+                                <input type="checkbox" id="switch8" checked=""><label for="switch8"
+                                    class="ml-0">Toggle</label>
+                                <span> Has open offer </span>
+                            </li>
+                            <li class="d-flex space-x-10 switch_item">
+                                <input type="checkbox" id="switch9"><label for="switch9" class="ml-0">Toggle</label>
+                                <span> Owned by creator </span>
+                            </li>
+                            <li class="d-flex space-x-10 switch_item">
+                                <input type="checkbox" id="switch10"><label for="switch10" class="ml-0">Toggle</label>
+                                <span> Has sold </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-auto">
+                    <div class="d-flex space-x-10 align-items-center sm:mt-20">
+                        <span class="color_text txt_sm"> SORT BY: </span>
+                        <div class="dropdown">
+                            <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Recent Active
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else
+                                    here</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="row justify-content-center mb-30_reset">
+            
+            {% for user in all_users %}
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="collections space-y-10 mb-30">
+                    <a href="{% url 'explore-users-detail' user.username %}">
+                        <div class="collections_item">
+                            <div class="images-box space-y-10">
+                                <!-- <div class="top_imgs">
+                                    <img src="/static/assets/img/items/item_9.png" alt="">
+                                    <img src="/static/assets/img/items/item_10.png" alt="">
+                                    <img src="/static/assets/img/items/item_11.png" alt="">
+                                </div> -->
+                                {% if user.profile_pic %}
+                                <img src="{{user.profile_pic.url}}" alt="{{user.profile_pic}}">
+                                {% else %}
+                                <img src="/static/assets/img/items/item_12.png" alt="">
+                                {% endif %}
+                            </div>
+                        </div>
+                    </a>
+                    <div class="collections_footer justify-content-between">
+                        <h5 class="collection_title"><a href="{% url 'explore-users-detail' user.username %}">@{{user.username}}</a></h5>
+                        <!-- <a href="#" class="likes space-x-3">
+                            <i class="ri-heart-3-fill"></i>
+                            <span class="txt_md">2.1k</span>
+                        </a> -->
+                    </div>
+                    <!-- <div class="creators space-x-10">
+                        <span class="color_text txt_md"> 5 items · Created by</span>
+                        <div class="avatars space-x-5">
+                            <a href="Profile.html">
+                                <img src="/static/assets/img/avatars/avatar_2.png" alt="Avatar"
+                                    class="avatar avatar-sm">
+                            </a>
+                        </div>
+                        <a href="Profile.html">
+                            <p class="avatars_name txt_sm"> @william_jamy... </p>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+
+            {% empty %}
+            <p class="text-danger">No Users avaliable</p>
+            {% endfor %}
+                
+            
+        </div>
+    </div>
+    {% else %}
+    <div><p class="text-danger">No Users Found</p></div>  
+    {% endif %}
+        
 </div>
-    
 {% endblock content %}
-    
