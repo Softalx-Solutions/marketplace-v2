@@ -217,8 +217,7 @@ EMAIL_USE_SSL = os.environ['EMAIL_USE_SSL']
 # EMAIL_PORT = 1025
 
 MAINTENANCE_MODE = None
-MAINTENANCE_MODE_IGNORE_ADMIN_SITE = True
-MAINTENANCE_MODE_IGNORE_SUPERUSER = True
-# MAINTENANCE_MODE_IGNORE_URLS = ('about, ')
+# MAINTENANCE_MODE_IGNORE_ADMIN_SITE = True
+# MAINTENANCE_MODE_IGNORE_SUPERUSER = True
 MAINTENANCE_MODE_TEMPLATE = "errors/503.html"
-MAINTENANCE_MODE_IGNORE_VIEW_NAMES = ['lighthouse', 'all-nfts', 'create-nfts', 'unminted-nfts', 'edit-unminted-nft', 'admin-edit-nft', 'admin-delete-nft', 'all-users', 'edit-user', 'delete-user', 'all-wallets', 'edit-user-wallets', 'create-user', 'add-payment-method',]
+# MAINTENANCE_MODE_IGNORE_VIEW_NAMES = ['lighthouse', 'all-nfts', 'create-nfts', 'unminted-nfts', 'edit-unminted-nft', 'admin-edit-nft', 'admin-delete-nft', 'all-users', 'edit-user', 'delete-user', 'all-wallets', 'edit-user-wallets', 'create-user', 'add-payment-method']
