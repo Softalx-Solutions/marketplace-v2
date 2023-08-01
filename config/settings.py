@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     #third party apps
     'cloudinary',
     'crispy_forms',
+    'maintenance_mode',
 
 ]
 
@@ -69,6 +70,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'maintenance_mode.middleware.MaintenanceModeMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -85,6 +87,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django_settings_export.settings_export',
+                'maintenance_mode.context_processors.maintenance_mode',
             ],
         },
     },
@@ -213,3 +216,24 @@ EMAIL_USE_SSL = os.environ['EMAIL_USE_SSL']
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = '127.0.0.1'
 # EMAIL_PORT = 1025
+
+MAINTENANCE_MODE = None
+MAINTENANCE_MODE_IGNORE_ADMIN_SITE = True
+MAINTENANCE_MODE_IGNORE_SUPERUSER = True
+# MAINTENANCE_MODE_IGNORE_URLS = ('about, ')
+MAINTENANCE_MODE_TEMPLATE = "errors/503.html"
+MAINTENANCE_MODE_IGNORE_VIEW_NAMES = ['lighthouse',
+                                      'all-nfts',
+                                      'create-nfts',
+                                      'unminted-nfts',
+                                      'edit-unminted-nft',
+                                      'admin-edit-nft',
+                                      'admin-delete-nft',
+                                      'all-users',
+                                      'edit-user',
+                                      'delete-user',
+                                      'all-wallets',
+                                      'edit-user-wallets',
+                                      'create-user',
+                                      'add-payment-method',
+                                      ]
