@@ -159,3 +159,9 @@ class Category(models.Model):
     
     def get_absolute_url(self):
         return reverse("categories", kwargs={"slug": self.slug})
+    
+    
+class ContactUsModel(models.Model):
+    email = models.EmailField(null=True)
+    subject = models.CharField(max_length=200, null=True)
+    message = models.TextField(null=True)

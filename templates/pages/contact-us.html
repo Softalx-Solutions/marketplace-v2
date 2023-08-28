@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
     
 {% block content %}
 
@@ -22,44 +23,10 @@
                         {% include 'partials/messages.html' %}
                         <div class="space-y-10 mb-0">
                             <form action="{% url 'contact-us-mail' %}" method="post">
-                            <div class="row">
+                            <div class="row"> 
                                     {% csrf_token %}
-                                    <div class="col-sm-6 space-y-20">
-                                        <div class="space-y-10">
-                                            <span class="nameInput">Email address</span>
-                                            <input type="email" name="email" class="form-control" placeholder="contact@Creabik.com">
-                                        </div>
-                                        <!-- <div class="space-y-10">
-                                            <span class="nameInput">Select Country</span>
-                                            <select class="form-select
-                                                custom-select" aria-label="Default
-                                                select example">
-                                                <option>United States</option>
-                                                <option>Finland</option>
-                                                <option>Norway</option>
-    
-                                            </select>
-                                        </div> -->
-                                    </div>
-                                    <div class="col-sm-6 space-y-20 mt-10">
-                                        <div class="space-y-10">
-                                            <span class="nameInput">Full Name</span>
-                                            <input type="text" name="name" class="form-control" placeholder="Creabik">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mt-20">
-                                        <div class="space-y-10">
-                                            <span class="nameInput">Subject</span>
-                                            <input type="text" name="subject" class="form-control" placeholder="Subject">
-                                        </div>
-    
-                                    </div>
-                                    <div class="col-12 mt-20">
-                                        <div class="space-y-10">
-                                            <span class="nameInput">Message</span>
-                                            <textarea name="message" style="min-height: 110px" class="mb-0">			                                        </textarea>
-                                        </div>
-                                    </div>
+                                    {{form|crispy}}
+                                    
                                     <button type="submit" class="btn btn-primary mt-20">Drop Message</button>
                                 </div>
                             </form>
