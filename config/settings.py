@@ -58,7 +58,7 @@ INSTALLED_APPS = [
     #third party apps
     'cloudinary',
     'crispy_forms',
-    'captcha',
+    # 'captcha',
 
 ]
 
