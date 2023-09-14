@@ -24,7 +24,7 @@
                 <div class="form-group space-y-10">
                     <div class="space-y-20 text-center">
                         <p class="text-danger">Do you want to delete this {{nft.name}}?</p>
-                        <form action="{% url 'delete-nft' nft.slug %}" method="post" enctype="multipart/form-data">
+                        <form action="{% url 'delete-nft' nft.id %}" method="post" enctype="multipart/form-data">
                             {% csrf_token %}
                             {{form|crispy}}
                         

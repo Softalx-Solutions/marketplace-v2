@@ -25,7 +25,7 @@
                 <h4 class="card-title">Edit Form</h4>
             </div>
             <div class="card-body">
-                <form class="form form-vertical" method="post" action="{% url 'edit-unminted-nft' unminted.slug %}">
+                <form class="form form-vertical" method="post" action="{% url 'edit-unminted-nft' unminted.id %}">
                     {% csrf_token %}
                     <div class="row">
                         
