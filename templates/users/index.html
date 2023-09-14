@@ -336,7 +336,7 @@
                                                         <span class="txt_sm">1.2k</span>
                                                     </a> -->
                                                     <div class="action">
-                                                        <a href="{{% url 'nft_details' nft.id %}" class="btn
+                                                        <a href="{% url 'nft_details' nft.id %}" class="btn
                                                             btn-primary btn-sm
                                                             btn_auction" >
                                                             <i class="ri-auction-line
@@ -347,7 +347,7 @@
                                                 </div>
                                                 <!-- =============== -->
                                                 <h6 class="card_title">
-                                                    <a class="color_black" href="{{% url 'nft_details' nft.id %}">
+                                                    <a class="color_black" href="{% url 'nft_details' nft.id %}">
                                                         {{nft.name}}
                                                     </a>
                                                 </h6>
@@ -370,14 +370,14 @@
                                                                         avatar-sm">
                                                                 </a>
                                                             </div> -->
-                                                            <a href="{{% url 'nft_details' nft.id %}">
+                                                            <a href="{% url 'nft_details' nft.id %}">
                                                                 <p class="color_blue
                                                                     txt_sm">
                                                                     {{nft.nft_type|upper}}
                                                                 </p>
                                                             </a>
                                                         </div>
-                                                        <a href="{{% url 'nft_details' nft.id %}" class="space-x-3">
+                                                        <a href="{% url 'nft_details' nft.id %}" class="space-x-3">
                                                             <p class="color_green
                                                                 txt_sm">{{nft.item_price}}
                                                                 ETH</p>
