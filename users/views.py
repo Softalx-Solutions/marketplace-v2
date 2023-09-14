@@ -295,8 +295,8 @@ class UploadNftDetail(LoginRequiredMixin, TemplateView):
         payments = PaymentMethod.objects.filter(wallet_type='minting', enable=True).order_by('-created')
         return render(request, self.template_name, {'nft':nft, 'payments':payments, 'bids':bids})
     
-    def post(self, request, *args, **kwargs):
-        nft = get_object_or_404(CreateNftModel, id=kwargs.get('id'))
+    def post(self, request, id, *args, **kwargs):
+        nft = get_object_or_404(CreateNftModel, id=id)
         if nft:
             nft.mint_proof = request.FILES.get('mint_proof')
             nft.save()
