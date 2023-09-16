@@ -8,7 +8,7 @@ from django.contrib import messages
 from django.shortcuts import redirect
 from .models import *
 from accounts.models import MoreDetails, User
-
+from marketplace.forms import ContactForm
 # Create your views here.
 
 """Explore NFTs"""
@@ -166,32 +166,42 @@ class ExploreUsersDetailView(TemplateView):
     
 to_mail = settings.SEND_EMAIL_NAME
 class ContactUsMail(TemplateView):
+    template_name = 'pages/contact-us.html'
     def get(self, request):
-        return redirect('contact-us')
+        form = ContactForm
+        context = {
+            'form':form,
+        }
+        return render(request, self.template_name, context)
+        # return redirect('contact-us')
     
     def post(self, request):
-        name = request.POST.get('name', '')
-        email = request.POST.get('email', '')
-        subject = request.POST.get('subject', '')
-        message = request.POST.get('message', '')
-        
-        if name and email and subject and message:
-            try:
-                email = EmailMessage(
-                    subject,
-                    message,
-                    settings.EMAIL_HOST_USER,
-                    to=[f"{to_mail}"],
-                    reply_to=[email],
-                )
-                
-                email.send(fail_silently=True)
-                messages.success(request, 'Message Sent')
-                return redirect(request.META.get('HTTP_REFERER'))
+        form = ContactForm(request.POST or None)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
             
-            except BadHeaderError:
+            if email and subject and message:
+                try:
+                    email = EmailMessage(
+                        subject,
+                        message,
+                        settings.EMAIL_HOST_USER,
+                        to=[f"{to_mail}"],
+                        reply_to=[email],
+                    )
+                    
+                    email.send(fail_silently=True)
+                    messages.success(request, 'Message Sent')
+                    return redirect(request.META.get('HTTP_REFERER'))
+                
+                except BadHeaderError:
+                    messages.warning(request, 'Message failed Bad Header')
+                    return redirect(request.META.get('HTTP_REFERER'))
+            else:
                 messages.warning(request, 'Message failed to send')
                 return redirect(request.META.get('HTTP_REFERER'))
         else:
-            messages.warning(request, 'Message failed to send')
+            messages.warning(request, 'Invalid captcha')
             return redirect(request.META.get('HTTP_REFERER'))
