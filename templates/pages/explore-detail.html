@@ -151,7 +151,7 @@
                                         
                                         {% if nft.creator.profile_pic %}
                                         <a href="javascript:void(0)">
-                                            <img src="{{request.user.profile_pic.url}}" alt="Avatar" class="avatar
+                                            <img src="{{nft.creator.profile_pic.url}}" alt="Avatar" class="avatar
                                                 avatar-sm">
                                         </a>
                                         {% else %}
