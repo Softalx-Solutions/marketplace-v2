@@ -25,8 +25,8 @@ class ExploreNft(TemplateView):
 """Product Details"""
 class ExploreNftPageDetail(TemplateView):
     template_name = 'pages/explore-detail.html'
-    def get(self, request, slug):
-        nft = get_object_or_404(CreateNftModel, slug=slug)
+    def get(self, request, id):
+        nft = get_object_or_404(CreateNftModel, id=id)
         bids = BidNft.objects.filter(bid_item_id=nft.id)
         context = {
             'nft':nft,
@@ -34,8 +34,8 @@ class ExploreNftPageDetail(TemplateView):
         }
         return render(request, self.template_name, context)
     
-    def post(self, request, slug):
-        nft = get_object_or_404(CreateNftModel, slug=slug)
+    def post(self, request, id):
+        nft = get_object_or_404(CreateNftModel, id=id)
         user = get_object_or_404(User, uuid=self.request.user.uuid)
         seller = get_object_or_404(User, uuid=nft.creator.uuid)
 

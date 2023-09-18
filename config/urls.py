@@ -42,7 +42,7 @@ urlpatterns = [
     
     path('contact-us-mail/', ContactUsMail.as_view(template_name='pages/contact-us.html'), name='contact-us-mail'),
     path('explore/', ExploreNft.as_view(), name='explore'),
-    path('explore/<slug:slug>/', ExploreNftPageDetail.as_view(), name='explore-detail'),
+    path('explore/<str:id>/', ExploreNftPageDetail.as_view(), name='explore-detail'),
     path('explore/bid/<int:id>/', PlaceBid.as_view(), name='place-bid'),
     path('explore-users/', ExploreUsers.as_view(), name='explore-users'),
     path('explore-users-arts/<str:username>/', ExploreUsersDetailView.as_view(), name='explore-users-detail'),
@@ -89,9 +89,9 @@ urlpatterns = [
         
         #NFT routes
         path('create-nft/', UploadNft.as_view(), name='create-nft'),
-        path('edit-nft/<slug:slug>/', EditNft.as_view(), name='edit-nft'),
-        path('delete-nft/<slug:slug>/', DeleteNft.as_view(), name='delete-nft'),
-        path('myarts/<slug:slug>/', UploadNftDetail.as_view(), name='nft_details'),
+        path('edit-nft/<str:id>/', EditNft.as_view(), name='edit-nft'),
+        path('delete-nft/<str:id>/', DeleteNft.as_view(), name='delete-nft'),
+        path('myarts/<str:id>/', UploadNftDetail.as_view(), name='nft_details'),
         
         path('create-collection/', CreateCollection.as_view(), name='create-collection'),
         path('edit-collection/<slug:slug>/', EditCollection.as_view(), name='edit-collection'),

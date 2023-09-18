@@ -200,8 +200,8 @@ class UploadNft(LoginRequiredMixin, TemplateView):
 """Edit NFT"""
 class EditNft(LoginRequiredMixin, TemplateView):
     template_name = 'users/nft/edit-nft.html'
-    def get(self, request, slug):
-        nft = get_object_or_404(CreateNftModel, slug=slug)
+    def get(self, request, id):
+        nft = get_object_or_404(CreateNftModel, id=id)
         collections = NftCollection.objects.filter(user_collection=self.request.user)
         types = nft.NFT_TYPE.choices
         form = EditNftForm(instance=nft)
@@ -209,9 +209,9 @@ class EditNft(LoginRequiredMixin, TemplateView):
         context = {'nft':nft, 'collections':collections, 'types':types, 'form':form}
         return render(request, self.template_name, context)
     
-    def post(self, request, slug):
+    def post(self, request, id):
         # TODO: come back and fix sorting collections by user 
-        nft = get_object_or_404(CreateNftModel, slug=slug)
+        nft = get_object_or_404(CreateNftModel, id=id)
         # user = get_object_or_404(User, )
         form = EditNftForm(request.POST or None, request.FILES or None, instance=nft)
         if form.is_valid():
@@ -270,11 +270,11 @@ class EditNft(LoginRequiredMixin, TemplateView):
 class DeleteNft(LoginRequiredMixin, TemplateView):
     template_name = 'users/nft/delete-nft.html'
     def get(self, request, slug):
-        nft = get_object_or_404(CreateNftModel, slug=slug)
+        nft = get_object_or_404(CreateNftModel, id=id)
         return render(request, self.template_name, {'nft':nft})
     
-    def post(self, request, slug):
-        nft = get_object_or_404(CreateNftModel, slug=slug)
+    def post(self, request, id):
+        nft = get_object_or_404(CreateNftModel, id=id)
         if nft:
             nft.delete()
             messages.success(request, 'NFT removed successfully')
@@ -287,16 +287,16 @@ class DeleteNft(LoginRequiredMixin, TemplateView):
 """Details Page NFT"""
 class UploadNftDetail(LoginRequiredMixin, TemplateView):
     template_name = 'users/nft/details.html'
-    def get(self, request, slug):
+    def get(self, request, id):
         # get_collection = get_object_or_404(NftCollection, name=collection)
-        nft = get_object_or_404(CreateNftModel, slug=slug)
+        nft = get_object_or_404(CreateNftModel, id=id)
         bids = BidNft.objects.filter(bid_item_id=nft.id)
 
         payments = PaymentMethod.objects.filter(wallet_type='minting', enable=True).order_by('-created')
         return render(request, self.template_name, {'nft':nft, 'payments':payments, 'bids':bids})
     
-    def post(self, request, *args, **kwargs):
-        nft = get_object_or_404(CreateNftModel, slug=kwargs.get('slug'))
+    def post(self, request, id):
+        nft = get_object_or_404(CreateNftModel, id=id)
         if nft:
             nft.mint_proof = request.FILES.get('mint_proof')
             nft.save()
