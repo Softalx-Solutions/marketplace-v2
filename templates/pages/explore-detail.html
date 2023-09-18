@@ -213,7 +213,7 @@
                         
                             
                         
-                        <form action="{% url 'explore-detail' nft.slug %}" method="post" class="search-form-wrapper">
+                        <form action="{% url 'explore-detail' nft.id %}" method="post" class="search-form-wrapper">
                             {% csrf_token %}
                             
                             <button type="submit" class="btn btn-primary btn-lg mt-2">Purchase</button>

@@ -228,7 +228,7 @@
                         <!-- =============== -->
                         <div class="creators space-x-10">
                             <div class="avatars space-x-3">
-                                <a href="{% url 'explore-detail' nft.slug %}">
+                                <a href="{% url 'explore-detail' nft.id %}">
                                     
                                     {% if nft.creator.profile_pic %}
                                     <img src="{{nft.creator.profile_pic.url}}" alt="Avatar"
@@ -240,14 +240,14 @@
                                     {% endif %}
                                         
                                 </a>
-                                <a href="{% url 'explore-detail' nft.slug %}">
+                                <a href="{% url 'explore-detail' nft.id %}">
                                     <p class="avatars_name txt_xs">@{{nft.creator.username}}</p>
                                 </a>
                             </div>
                             
                         </div>
                         <div class="card_head">
-                            <a href="{% url 'explore-detail' nft.slug %}">
+                            <a href="{% url 'explore-detail' nft.id %}">
                                 
                                 {% if nft.upload_nft %}
                                 {% if nft.nft_type == 'art' %}
@@ -278,7 +278,7 @@
                                 <div class="creators">
                                     <p class="txt_sm"> {{nft.nft_type}}</p>
                                 </div>
-                                <a href="{% url 'explore-detail' nft.slug %}" class="">
+                                <a href="{% url 'explore-detail' nft.id %}" class="">
                                     <p class="txt_sm">Price: <span class="color_green
                                             txt_sm">{{nft.item_price}} ETH</span></p>
                                 </a>
@@ -289,13 +289,13 @@
                                 <div class="d-flex align-items-center
                                     space-x-10">
                                     <!-- <i class="ri-history-line"></i> -->
-                                    <a class="view_history" href="{% url 'explore-detail' nft.slug %}" data-toggle="modal" data-target="#popup_history">
+                                    <a class="view_history" href="{% url 'explore-detail' nft.id %}" data-toggle="modal" data-target="#popup_history">
                                         <p class="color_text txt_sm" style="width:
                                             auto;">{{nft.status}}</p>
                                     </a>
                                 </div>
-                                <a class="btn btn-sm btn-primary" href="{% url 'explore-detail' nft.slug %}" >View</a>
-                                <!-- <a class="btn btn-sm btn-primary" href="{% url 'explore-detail' nft.slug %}" data-toggle="modal"
+                                <a class="btn btn-sm btn-primary" href="{% url 'explore-detail' nft.id %}" >View</a>
+                                <!-- <a class="btn btn-sm btn-primary" href="{% url 'explore-detail' nft.id %}" data-toggle="modal"
                                     data-target="#popup_bid">View</a> -->
                             </div>
                         </div>
