@@ -92,16 +92,16 @@ $(".dark").on('click', function (e) {
 	$(".body").addClass("is__dark")
 	$(".light").removeClass("is_active")
 	$(".dark").addClass("is_active")
-	document.getElementById("logo_js").src = "/static/assets/img/logos/artchronicles.png";
-	document.getElementById("logo_js_f").src = "/static/assets/img/logos/artchronicles.png";
+	document.getElementById("logo_js").src = "/static/assets/img/logos/baselarts.png";
+	document.getElementById("logo_js_f").src = "/static/assets/img/logos/baselarts.png";
 
 });
 $(".light").on('click', function (e) {
 	$(".body").removeClass("is__dark")
 	$(".light").addClass("is_active")
 	$(".dark").removeClass("is_active")
-	document.getElementById("logo_js").src = "/static/assets/img/logos/artchronicles.png";
-	document.getElementById("logo_js_f").src = "/static/assets/img/logos/artchronicles.png";
+	document.getElementById("logo_js").src = "/static/assets/img/logos/baselarts.png";
+	document.getElementById("logo_js_f").src = "/static/assets/img/logos/baselarts.png";
 });
 
 // menu popup
