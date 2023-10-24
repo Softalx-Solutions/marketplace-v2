@@ -1,6 +1,653 @@
 {% extends 'base.html' %}
 
 {% block bg_hero %}
+<div class="hero__5">
+  <div class="container">
+    <div
+      class="row align-items-center justify-content-center gx-4"
+    >
+      <div class="col-lg-8 col-md-12">
+        <div class="swiper_games">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="hero__left slide_1">
+                <div class="hero__wrap space-y-20">
+                  <h2 class="hero__title">
+                    Trade NFT and Virtual In-game Items
+                  </h2>
+                  {% comment %} <p class="hero__text txt">
+                    {{settings.DOMAIN_NAME}} among the top six NFT platforms on
+                    eips.ethereum.org, the DMarket marketplace
+                    enables millions of gamers and Esports fans
+                  </p> {% endcomment %}
+                  <div>
+                    <a
+                      class="btn btn-grad"
+                      href="{% url 'register' %}"
+                    >
+                      Create Account
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero__left slide_2">
+                <div class="hero__wrap space-y-20">
+                  <h2 class="hero__title">
+                    Discover digital art and collect NFTs
+                  </h2>
+                  {% comment %} <p class="hero__text txt">
+                    {{settings.DOMAIN_NAME}} is a shared liquidity NFT market smart
+                    contract which is used by multiple websites to
+                    provide the users the best possible
+                    experience.
+                  </p> {% endcomment %}
+                  <div>
+                    <a
+                      class="btn btn-grad"
+                      href="{% url 'explore' %}"
+                      >View market</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero__left slide_3">
+                <div class="hero__wrap space-y-20">
+                  <h2 class="hero__title">
+                    Pull market data from our digital asset API
+                  </h2>
+                  {% comment %} <p class="hero__text txt">
+                    {{settings.DOMAIN_NAME}} is a shared liquidity NFT market smart
+                    contract which is used by multiple websites to
+                    provide the users the best possible experience
+                  </p> {% endcomment %}
+                  <div>
+                    <a
+                      class="btn btn-grad"
+                      href="{% url 'add-wallet' %}"
+                      >Connect wallet</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="box hero__right space-y-20">
+          <h4>Offers</h4>
+          <div class="cards space-y-15 position-relative">
+            
+            {% for offer in offers %}
+            <div class="card__item seven mb-0">
+              <div class="card_body space-x-10">
+                <div class="d-flex space-x-10">
+                  <div>
+                    <a href="{% url 'explore-detail' offer.slug %}">
+                      {% if offer.upload_nft %}
+                      {% if offer.nft_type == 'art' %}
+                      <img src="{{offer.upload_nft.url}}" height="50" alt="">
+                      {% else %}
+                      <img src="/static/assets/img/bg/home5/1.png" heu alt="">
+                          
+                      {% endif %}
+
+                      {% else %}
+                      <img src="/static/assets/img/items/item_7.png" alt="">
+                      {% endif %}
+                      {% comment %} <img
+                        class="product__img"
+                        src="/static/assets/img/bg/home5/1.png"
+                        alt="product"
+                      /> {% endcomment %}
+                    </a>
+                  </div>
+                  <div class="">
+                    <span class="product__name txt_sm _bold"
+                      >{{offer.name}}</span
+                    >
+                    <span class="offer txt_xs">-20%</span>
+                  </div>
+                </div>
+                <div class="space-x-3">
+                  <img
+                    class="eth__img"
+                    src="/static/assets/img/icons/ETH-2.svg"
+                    alt="eth"
+                  />
+                  <span class="price txt_sm _bold">{{offer.item_price}} ETH</span>
+                </div>
+              </div>
+            </div>
+              
+            {% endfor %}
+              
+            
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock bg_hero %}
+
+
+{% block content %}
+<div class="section__games mt-80">
+  <div class="container">
+    <div class="space-y-30">
+      <div class="section_head">
+        <h2 class="section__title">Games</h2>
+      </div>
+      <div class="section_body swiper_games2">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper position-relative">
+          <div class="swiper-slide">
+            <a class="box card__games game_1" href="#">
+              <img
+                class="logo"
+                src="/static/assets/img/logos/game_1.svg"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="box card__games game_2" href="#">
+              <img
+                class="logo"
+                src="/static/assets/img/logos/game_2.svg"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="box card__games game_3" href="#">
+              <img
+                class="logo"
+                src="/static/assets/img/logos/game_3.svg"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="box card__games game_4" href="#">
+              <img
+                class="logo"
+                src="/static/assets/img/logos/game_4.svg"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="box card__games game_5" href="#">
+              <img
+                class="logo"
+                src="/static/assets/img/logos/game_5.svg"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="box card__games game_6" href="#">
+              <img
+                class="logo"
+                src="/static/assets/img/logos/game_6.svg"
+              />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a class="box card__games game_7" href="#">
+              <img
+                class="logo"
+                src="/static/assets/img/logos/game_7.svg"
+              />
+            </a>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% comment %} <div class="section__deals mt-80">
+  <div class="container">
+    <div class="space-y-30">
+      <div class="section_head">
+        <h2 class="section__title">Best TF2 Deals</h2>
+      </div>
+      <div class="swiper_deals">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper position-relative">
+          <div class="swiper-slide">
+            <div class="card__item eight">
+              <div class="card_body space-y-10">
+                <!-- =============== -->
+                <div class="card_head space-y-10">
+                  <span class="txt_xs color_text numbering"
+                    >1/6</span
+                  >
+                  <a href="Item-details.html">
+                    <img
+                      class="product__img"
+                      src="/static/assets/img/bg/home5/27.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <!-- =============== -->
+                <div
+                  class="card_footer justify-content-between space-x-20"
+                >
+                  <div class="space-y-3">
+                    <div class="space-x-5 d-flex">
+                      <i
+                        class="ri-star-fill color_brand txt_xs"
+                      ></i>
+                      <span class="color_brand txt_xs"
+                        >Karambit</span
+                      >
+                    </div>
+                    <a href="Profile.html">
+                      <p class="product__name txt_sm">
+                        Baba Yoga
+                      </p>
+                    </a>
+                  </div>
+                  <div class="price__content space-x-5">
+                    <img
+                      class="eth__img"
+                      src="/static/assets/img/icons/ETH-2.svg"
+                      alt="eth"
+                    />
+                    <p class="price txt_sm _bold">665 ETH</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card__item eight">
+              <div class="card_body space-y-10">
+                <!-- =============== -->
+                <div class="card_head space-y-10">
+                  <span class="txt_xs color_text numbering"
+                    >2/6</span
+                  >
+                  <a href="Item-details.html">
+                    <img
+                      class="product__img"
+                      src="/static/assets/img/bg/home5/28.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <!-- =============== -->
+                <div
+                  class="card_footer justify-content-between space-x-20"
+                >
+                  <div class="space-y-3">
+                    <div class="space-x-5 d-flex">
+                      <i
+                        class="ri-star-fill color_brand txt_xs"
+                      ></i>
+                      <span class="color_brand txt_xs"
+                        >Karambit</span
+                      >
+                    </div>
+                    <a href="Profile.html">
+                      <p class="product__name txt_sm">
+                        Paul Atreides
+                      </p>
+                    </a>
+                  </div>
+                  <div class="price__content space-x-5">
+                    <img
+                      class="eth__img"
+                      src="/static/assets/img/icons/ETH-2.svg"
+                      alt="eth"
+                    />
+                    <p class="price txt_sm _bold">424 ETH</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card__item eight">
+              <div class="card_body space-y-10">
+                <!-- =============== -->
+                <div class="card_head space-y-10">
+                  <span class="txt_xs color_text numbering"
+                    >3/6</span
+                  >
+                  <a href="Item-details.html">
+                    <img
+                      class="product__img"
+                      src="/static/assets/img/bg/home5/29.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <!-- =============== -->
+                <div
+                  class="card_footer justify-content-between space-x-20"
+                >
+                  <div class="space-y-3">
+                    <div class="space-x-5 d-flex">
+                      <i
+                        class="ri-star-fill color_brand txt_xs"
+                      ></i>
+                      <span class="color_brand txt_xs"
+                        >Karambit</span
+                      >
+                    </div>
+                    <a href="Profile.html">
+                      <p class="product__name txt_sm">Ravina</p>
+                    </a>
+                  </div>
+                  <div class="price__content space-x-5">
+                    <img
+                      class="eth__img"
+                      src="/static/assets/img/icons/ETH-2.svg"
+                      alt="eth"
+                    />
+                    <p class="price txt_sm _bold">935 ETH</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card__item eight">
+              <div class="card_body space-y-10">
+                <!-- =============== -->
+                <div class="card_head space-y-10">
+                  <span class="txt_xs color_text numbering"
+                    >4/6</span
+                  >
+                  <a href="Item-details.html">
+                    <img
+                      class="product__img"
+                      src="/static/assets/img/bg/home5/30.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <!-- =============== -->
+                <div
+                  class="card_footer justify-content-between space-x-20"
+                >
+                  <div class="space-y-3">
+                    <div class="space-x-5 d-flex">
+                      <i
+                        class="ri-star-fill color_brand txt_xs"
+                      ></i>
+                      <span class="color_brand txt_xs"
+                        >Karambit</span
+                      >
+                    </div>
+                    <a href="Profile.html">
+                      <p class="product__name txt_sm">
+                        Jil valentine
+                      </p>
+                    </a>
+                  </div>
+                  <div class="price__content space-x-5">
+                    <img
+                      class="eth__img"
+                      src="/static/assets/img/icons/ETH-2.svg"
+                      alt="eth"
+                    />
+                    <p class="price txt_sm _bold">235 ETH</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card__item eight">
+              <div class="card_body space-y-10">
+                <!-- =============== -->
+                <div class="card_head space-y-10">
+                  <span class="txt_xs color_text numbering"
+                    >5/6</span
+                  >
+                  <a href="Item-details.html">
+                    <img
+                      class="product__img"
+                      src="/static/assets/img/bg/home5/31.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <!-- =============== -->
+                <div
+                  class="card_footer justify-content-between space-x-20"
+                >
+                  <div class="space-y-3">
+                    <div class="space-x-5 d-flex">
+                      <i
+                        class="ri-star-fill color_brand txt_xs"
+                      ></i>
+                      <span class="color_brand txt_xs"
+                        >Karambit</span
+                      >
+                    </div>
+                    <a href="Profile.html">
+                      <p class="product__name txt_sm">
+                        Potassius
+                      </p>
+                    </a>
+                  </div>
+                  <div class="price__content space-x-5">
+                    <img
+                      class="eth__img"
+                      src="/static/assets/img/icons/ETH-2.svg"
+                      alt="eth"
+                    />
+                    <p class="price txt_sm _bold">265 ETH</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card__item eight">
+              <div class="card_body space-y-10">
+                <!-- =============== -->
+                <div class="card_head space-y-10">
+                  <span class="txt_xs color_text numbering"
+                    >6/6&quot;</span
+                  >
+                  <a href="Item-details.html">
+                    <img
+                      class="product__img"
+                      src="/static/assets/img/bg/home5/32.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <!-- =============== -->
+                <div
+                  class="card_footer justify-content-between space-x-20"
+                >
+                  <div class="space-y-3">
+                    <div class="space-x-5 d-flex">
+                      <i
+                        class="ri-star-fill color_brand txt_xs"
+                      ></i>
+                      <span class="color_brand txt_xs"
+                        >Karambit</span
+                      >
+                    </div>
+                    <a href="Profile.html">
+                      <p class="product__name txt_sm">
+                        The Batman
+                      </p>
+                    </a>
+                  </div>
+                  <div class="price__content space-x-5">
+                    <img
+                      class="eth__img"
+                      src="/static/assets/img/icons/ETH-2.svg"
+                      alt="eth"
+                    />
+                    <p class="price txt_sm _bold">132 ETH</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+</div> {% endcomment %}
+<div class="section__buy__sell mt-80">
+  <div class="container">
+    <div class="row justify-content-center sm:space-y-30">
+      <div class="col-md-6 col-sm-10">
+        <div class="box space-y-50">
+          <div class="space-y-10">
+            <h2>Buyers</h2>
+            <p>
+              ItemHerald has a wide range of items available, from
+              CS:GO to DotA to TF2.
+            </p>
+          </div>
+          <div>
+            <a href="{% url 'explore' %}" class="btn btn-grad"
+              >To Market</a
+            >
+            <img
+              class="icon"
+              src="/static/assets/img/icons/Buyers.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-10">
+        <div class="box space-y-50">
+          <div class="space-y-10">
+            <h2>Sellers</h2>
+            <p>
+              ItemHerald is the easiest and most secure way to
+              sell your skins.
+            </p>
+          </div>
+          <div>
+            <a href="{% url 'create-nft' %}" class="btn btn-grad"
+              >Start Selling</a
+            >
+            <img
+              class="icon"
+              src="/static/assets/img/icons/Sellers.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section__shop mt-80">
+  <div class="container">
+    <div class="space-y-30">
+      <div class="section_head space-y-20">
+        <div class="d-flex space-x-30">
+          <h2 class="section__title">Shop</h2>
+          
+        </div>
+        
+      </div>
+      <div class="row mb-30_reset">
+        
+        {% for random in randoms %}
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+          <div class="card__item eight">
+            {% comment %} <span class="txt_xs color_text stars"
+              ><i class="ri-star-fill txt_xs"></i>12x</span
+            > {% endcomment %}
+            <div class="card_body space-y-10">
+              <!-- =============== -->
+              <div class="card_head space-y-10">
+                {% comment %} <span class="txt_xs color_text numbering"
+                  >1/8</span
+                > {% endcomment %}
+                <a href="{% url 'explore-detail' random.slug %}">
+                  {% if random.upload_nft %}
+                  {% if random.nft_type == 'art' %}
+                  <img src="{{random.upload_nft.url}}" alt="">
+                  {% else %}
+                  <img src="/static/assets/img/items/item_4.png" alt="">
+                      
+                  {% endif %}
+
+                  {% else %}
+                  <img src="/static/assets/img/items/item_7.png" alt="">
+                  {% endif %}
+                </a>
+              </div>
+              <!-- =============== -->
+              <div
+                class="card_footer justify-content-between space-x-20"
+              >
+                <div class="space-y-3">
+                  {% comment %} <div class="space-x-5 d-flex">
+                    <i
+                      class="ri-star-fill color_brand txt_xs"
+                    ></i>
+                    <span class="color_brand txt_xs"
+                      >Karambit</span
+                    >
+                  </div> {% endcomment %}
+                  <a href="Profile.html">
+                    <p class="product__name txt_sm">{{random.name}}</p>
+                  </a>
+                </div>
+                <div class="price__content space-x-5">
+                  <img
+                    class="eth__img"
+                    src="/static/assets/img/icons/ETH-2.svg"
+                    alt="eth"
+                  />
+                  <p class="price txt_sm _bold">{{random.item_price}} ETH</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% empty %}
+          
+        {% endfor %}
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+  
+  
+{% comment %} {% block bg_hero %}
 <div class="hero__3">
     <div class="container">
       <div class="row align-items-center mb-50 md:space-y-20">
@@ -1954,5 +2601,5 @@
     </div>
   </div>
 {% endblock content %}
-    
+     {% endcomment %}
     

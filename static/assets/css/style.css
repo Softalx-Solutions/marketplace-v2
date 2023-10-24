@@ -15756,6 +15756,7 @@ label:active:after {
   color: white;
   max-width: 60rem;
   font-size: 67px;
+  margin-top: 25px;
 }
 
 .hero__5 .hero__left .hero__wrap .hero__text {
