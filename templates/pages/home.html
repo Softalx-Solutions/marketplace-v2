@@ -244,7 +244,7 @@
                     <!-- =============== -->
                     
                     <div class="card_head">
-                        <a href="{% url 'explore-detail' random.slug %}">
+                        <a href="{% url 'explore-detail' random.id %}">
                             {% if random.upload_nft %}
                             {% if random.nft_type == 'art' %}
                             <img src="{{random.upload_nft.url}}" alt="">
@@ -267,7 +267,7 @@
                     <!-- =============== -->
 
                     <h6 class="card_title">
-                        <a class="color_black" href="{% url 'explore-detail' random.slug %}">
+                        <a class="color_black" href="{% url 'explore-detail' random.id %}">
                             {{random.name}}
                         </a>
                     </h6>
@@ -276,7 +276,7 @@
                             <!-- <div class="creators">
                                 <p class="txt_sm">4 in stock</p>
                             </div> -->
-                            <a href="{% url 'explore-detail' random.slug %}" class="">
+                            <a href="{% url 'explore-detail' random.id %}" class="">
                                 <p class="txt_sm">
                                     Price: <span class="color_green txt_sm">{{random.item_price}}
                                         ETH</span>
@@ -291,7 +291,7 @@
                             <div class="d-flex align-items-center
                                         space-x-5">
                                 <i class="ri-history-line"></i>
-                                <a href="{% url 'explore-detail' random.slug %}" data-toggle="modal" data-target="#popup_history">
+                                <a href="{% url 'explore-detail' random.id %}">
                                     <p class="color_text txt_sm
                                                 view_history" style="width:
                                                 auto">
@@ -299,8 +299,7 @@
                                     </p>
                                 </a>
                             </div>
-                            <a class="btn btn-sm btn-primary" href="{% url 'explore-detail' random.slug %}" data-toggle="modal"
-                                data-target="#popup_bid">View</a>
+                            <a class="btn btn-sm btn-primary" href="{% url 'explore-detail' random.id %}" >View</a>
                         </div>
                     </div>
                 </div>
