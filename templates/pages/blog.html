@@ -1,0 +1,103 @@
+{% extends 'home_base.html' %}
+{% load static %}
+
+{% block slideshow %}
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('/static/spacex/assets/img/breadcrumbs_bg.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center aos-init aos-animate" data-aos="fade">
+
+      <h2>Blog</h2>
+      <ol>
+        <li><a href="index-2.html">Home</a></li>
+        <li>Blog</li>
+      </ol>
+
+    </div>
+  </div>
+{% endblock slideshow %}
+    
+{% block main %}
+<section id="blog" class="blog">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-9 col-12 entries">
+
+          <article class="entry">
+
+           <div class="entry-img">
+              <img src="/static/spacex/assets/img/blog-01.jpg" class="img-fluid">
+                             
+                </div>
+
+            <h2 class="entry-title">
+              {{settings.DOMAIN_NAME}} , as the pioneer of metaverse ecology
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i>{{settings.DOMAIN_NAME}}</li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="2020-01-01">March 6, 2023</time></li>
+              </ul>
+            </div>
+
+            <div class="entry-content">
+              <div class="row d-flex align-items-center justify-content-center py-3">
+              <div class="col-lg-3 col-12 px-3">
+               <img src="/static/spacex/assets/img/blog-02.jpg" class="img-fluid rounded">
+             </div>
+                 <div class="col-lg-9 col-12">
+                  <p style="border-left: 2px solid #FF9800;padding: 10px;">
+                  <strong>{{settings.DOMAIN_NAME}}, as the pioneer of metaverse ecology, has established the most diverse digital economic application scenarios and a new continent where virtual and reality coexist.</strong></p>
+                  <p>{{settings.DOMAIN_NAME}}'s "Harness The Potential of Metaverse" conference was conducted in Hong Kong's Central Center on March 6, 2023. The conference commenced with the playing of the national anthem and was broadcast concurrently in the form of metaverse using state-of-the-art technology. Estate, airports, fisheries, education, and even a durian valley are just a few of the eight primary industries that {{settings.DOMAIN_NAME}} owns. Matrix flow, enabled by modern science and technology, serves as a connecting point for business dealings in the ecological supply chain of the metaverse's 21st-century marketplace.
+              </p>
+            </div>
+          </div>
+
+           <div class="row d-flex align-items-center justify-content-center py-3">
+            <div class="col-lg-9 col-12 order-lg-1 order-2">
+               <p>Science, technology, and economics all working together generates new perspectives on the state of the metaverse's environment. The metaverse will have far-reaching effects on the international economy, society, and culture. A wide range of ages is participating in this movement. Meta Space X's driving idea is that current events provide more chances to break new ground. Dr. Dato' Sri Lai Caiyun personally was present at the conference. The innovative AMM online live broadcast system developed at this gathering allowed for a productive and engaging meeting experience in the Metaverse.</p>
+            </div>
+             <div class="col-lg-3 col-12 px-3 order-lg-2 order-1">
+               <img src="/static/spacex/assets/img/blog-03.jpg" class="img-fluid rounded">
+             </div>
+           </div>
+
+
+           <div class="row d-flex align-items-center justify-content-center py-3">
+              <div class="col-lg-3 col-12 px-3">
+               <img src="/static/spacex/assets/img/blog-05.jpg" class="img-fluid rounded">
+             </div>
+                 <div class="col-lg-9 col-12">
+                    <p>Industry guests at the scene shared their knowledge and participated in lively discussions about WEB 3, 3D scenes, virtual reality, and the real-world experience of operating in the {{settings.DOMAIN_NAME}} cloud universe ecology. Speakers included Peking University-Tsinghua University EMBA President Class Special Lecturer Xiao Muchun, world-famous boxer and Philippine politician Manny Pacquiao, and Ethan Liu Xinghao, CEO of Hong Kong Blockchain Asset Management Co., Ltd., and President of the Asian Blockchain Association Nspace. The {{settings.DOMAIN_NAME}} officially appointed Manny Pacquiao as a spokesperson after he signed and authorised the appointment.</p>
+            </div>
+          </div>
+
+          <div class="row d-flex align-items-center justify-content-center py-3 ">
+             <div class="col-lg-9 col-12 order-lg-1 order-2">
+                    <p>Hundreds of industry leaders and association presidents who have excelled in their fields were invited to attend the summit and engage in in-depth discussions. There was a positive vibe amongst conference attendees, and the great platform provided by {{settings.DOMAIN_NAME}} was highly appreciated. Boxing legend and Philippine politician Manny Pacquiao disrupted the scene by immersing himself in the virtual and real {{settings.DOMAIN_NAME}} experience, visiting the Durian Valley and playing the HLY Ocean game.</p>
+                        <p>{{settings.DOMAIN_NAME}} plans to continue innovating the metaverse's new ecology in the future, thereby facilitating the growth of metaverse technology and financial markets and the building of a digital society.</p>
+            </div>
+              <div class="col-lg-3 col-12 px-3 order-lg-2 order-1">
+               <img src="/static/spacex/assets/img/blog-04.jpg" class="img-fluid rounded">
+             </div>
+                
+          </div>
+             
+            </div>
+
+          </article><!-- End blog entry -->
+
+
+    
+
+        </div><!-- End blog  -->
+
+       
+
+      </div>
+
+    </div>
+  </section>
+{% endblock main %}
+    

@@ -1,1958 +1,533 @@
-{% extends 'base.html' %}
-
-{% block bg_hero %}
-<div class="hero__3">
-    <div class="container">
-      <div class="row align-items-center mb-50 md:space-y-20">
-        <div class="col-lg-6">
-          <h1 class="hero__title">
-            <span class="color_brand">Discover</span> rare digital art and
-            collect NFTs
-          </h1>
-        </div>
-        <div class="col-lg-6">
-          <p class="hero__text color_black">
-            {{settings.DOMAIN_NAME}} is a shared liquidity NFT market smart
-            contract which is used by multiple websites to provide the users
-            the best possible experience.
-          </p>
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="card__item two">
-              <div class="card_body space-y-10">
-                <!-- ???? =============== -->
-                <div class="card_head">
-                  <img src="/static/assets/img/items/item_5.png" alt="" />
-                  <div class="block_timer">
-                    <div
-                      class="d-flex justify-content-center align-items-center"
-                    >
-                      <div class="item">
-                        <div class="number txt hours">46<span></span></div>
-                      </div>
-                      <div class="dots">:</div>
-                      <div class="item">
-                        <div class="number txt minutes">
-                          35<span></span>
-                        </div>
-                      </div>
-                      <div class="dots">:</div>
-                      <div class="item">
-                        <div class="number txt seconds">
-                          03<span></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="details d-flex justify-content-between">
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 80%"
-                        aria-valuenow="80"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- ???? =============== -->
-                <h6 class="card_title">
-                  <a class="color_black" href="{% url 'users' %}">
-                    Colorful Abstract Painting
-                  </a>
-                </h6>
-                <div class="hr"></div>
-                <div class="card_footer justify-content-between">
-                  <a href="javascript:void(0)" class="creators space-x-10">
-                    <div class="avatars -space-x-20">
-                      <img
-                        src="/static/assets/img/avatars/avatar_1.png"
-                        alt="Avatar"
-                        class="avatar avatar-sm"
-                      />
-                      <img
-                        src="/static/assets/img/avatars/avatar_2.png"
-                        alt="Avatar"
-                        class="avatar avatar-sm"
-                      />
-                    </div>
-                    <p class="avatars_name txt_sm">@xander_hall...</p>
-                  </a>
-                  <a href="{% url 'users' %}" class="space-x-3">
-                    <p class="color_green txt_sm">1.54 ETH</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card__item two">
-              <div class="card_body space-y-10">
-                <!-- ???? =============== -->
-                <div class="card_head">
-                  <img src="/static/assets/img/items/item_7.png" alt="" />
-                  <div class="block_timer">
-                    <div
-                      class="d-flex justify-content-center align-items-center"
-                    >
-                      <div class="item">
-                        <div class="number txt hours">23<span></span></div>
-                      </div>
-                      <div class="dots">:</div>
-                      <div class="item">
-                        <div class="number txt minutes">
-                          53<span></span>
-                        </div>
-                      </div>
-                      <div class="dots">:</div>
-                      <div class="item">
-                        <div class="number txt seconds">
-                          23<span></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="details d-flex justify-content-between">
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 80%"
-                        aria-valuenow="80"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- ???? =============== -->
-                <h6 class="card_title">
-                  <a class="color_black" href="{% url 'users' %}">
-                    Spider Eyes Modern Art
-                  </a>
-                </h6>
-                <div class="hr"></div>
-                <div class="card_footer justify-content-between">
-                  <a href="javascript:void(0)" class="creators space-x-10">
-                    <div class="avatars -space-x-20">
-                      <img
-                        src="/static/assets/img/avatars/avatar_4.png"
-                        alt="Avatar"
-                        class="avatar avatar-sm"
-                      />
-                      <img
-                        src="/static/assets/img/avatars/avatar_3.png"
-                        alt="Avatar"
-                        class="avatar avatar-sm"
-                      />
-                    </div>
-                    <p class="avatars_name txt_sm">@nathan_wall...</p>
-                  </a>
-                  <a href="{% url 'users' %}" class="space-x-3">
-                    <p class="color_green txt_sm">0.6 ETH</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card__item five">
-              <div class="card_body space-y-10 space-x-10 d-flex">
-                <!-- ???? =============== -->
-                <div class="card_head">
-                  <img src="/static/assets/img/items/item_6.png" alt="" />
-                  <div class="details d-flex justify-content-between">
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 80%"
-                        aria-valuenow="80"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- ???? =============== -->
-                <div
-                  class="d-flex flex-column justify-content-center w-100 space-y-10"
-                >
-                  <h6>
-                    <a class="color_black" href="{% url 'users' %}">
-                      Colorful Abstract Painting
-                    </a>
-                  </h6>
-                  <div class="hr"></div>
-                  <div class="card_footer d-block space-y-10">
-                    <a href="javascript:void(0)" class="creators space-x-10">
-                      <div class="avatars">
-                        <img
-                          src="/static/assets/img/avatars/avatar_4.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </div>
-                      <p class="avatars_name txt_sm">@krista_bryan...</p>
-                    </a>
-                    <div
-                      class="d-flex align-items-center space-x-10 justify-content-between"
-                    >
-                      <a
-                        class="btn btn-sm btn-primary"
-                        href="{% url 'users' %}"
-                        
-                        
-                        >Place Bid</a
-                      >
-                      <span class="color_green txt_sm text-right"
-                        >4.906 ETH</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card__item five">
-              <div class="card_body space-y-10 space-x-10 d-flex">
-                <!-- ???? =============== -->
-                <div class="card_head">
-                  <img src="/static/assets/img/items/item_5.png" alt="" />
-                  <div class="details d-flex justify-content-between">
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 80%"
-                        aria-valuenow="80"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- ???? =============== -->
-                <div
-                  class="d-flex flex-column justify-content-center w-100 space-y-10"
-                >
-                  <h6>
-                    <a class="color_black" href="{% url 'users' %}">
-                      Synthwave Modern Painting
-                    </a>
-                  </h6>
-                  <div class="hr"></div>
-                  <div class="card_footer d-block space-y-10">
-                    <a href="javascript:void(0)" class="creators space-x-10">
-                      <div class="avatars">
-                        <img
-                          src="/static/assets/img/avatars/avatar_6.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </div>
-                      <p class="avatars_name txt_sm">@makinzi_beck...</p>
-                    </a>
-                    <div
-                      class="d-flex align-items-center space-x-10 justify-content-between"
-                    >
-                      <a
-                        class="btn btn-sm btn-primary"
-                        href="{% url 'users' %}"
-                        
-                        
-                        >Place Bid</a
-                      >
-                      <span class="color_green txt_sm text-right"
-                        >3 ETH</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex justify-content-center mb-30">
-              <a href="{% url 'users' %}" class="btn btn-md btn-dark">
-                View all
+{% extends 'home_base.html' %}
+{% load static %}
+{% block slideshow %}
+<section id="hero" class="d-flex align-items-center">
+  <div class="container" data-aos="fade-up">
+     <div class="row  d-flex justify-content-center text-center">
+        
+        <div class="col-lg-10 d-none">
+           <!--
+           <div class="d-lg-block d-none">
+              <a href="https://www.mxboxing.io/" target="_blank">
+                 <img src="/static/spacex/global/images/banner_boxing.jpg?v3" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
               </a>
-            </div>
-          </div>
+           </div>
+           <div class="d-lg-none d-block">
+              <a href="https://www.mxboxing.io/" target="_blank">
+                 <img src="/static/spacex/global/images/banner_boxing_mobile.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+              </a>
+           </div>
+           -->
+           <div class="d-lg-block d-none">
+                 <img src="/static/spacex/global/images/124-banner.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+           </div>
+           <div class="d-lg-none d-block">
+                 <img src="/static/spacex/global/images/124-banner-mobile.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+           </div>
         </div>
-      </div>
-    </div>
+        
+        
+        <div class="col-lg-10 col-12 pt-3 pt-lg-0 order-2 order-lg-1">
+           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="min-height: 400px;">
+             <div class="carousel-inner">
+              
+                 <div class="carousel-item active" style="min-height: 470px;">
+                    <div class="mt-5">
+                       <h1>Welcome to the Metaverse world of <span class="text-gradient">{{settings.DOMAIN_NAME}}</span></h1>
+                       <h2>Become the master of virtual and real world · Life inspiring life</h2>
+                       <div>
+                          <a href="#explore" class="btn-get-started scrollto">Get Started</a>
+                       </div>
+                    </div>
+                    
+                 </div>
+                 <!--
+                 <div class="carousel-item">
+                    <div class="d-lg-block d-none">
+                          <img src="/static/spacex/global/images/133-banner.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+                    </div>
+                    <div class="d-lg-none d-block">
+                          <img src="/static/spacex/global/images/133-banner-mobile.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+                    </div>
+                 </div>
+                 -->
+                 <div class="carousel-item">
+                    <div class="d-lg-block d-none">
+                          <img src="/static/spacex/global/images/transi-banner1b26.jpg?v2" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+                    </div>
+                    <div class="d-lg-none d-block">
+                       <a href="https://www.mxboxing.io/" target="_blank">
+                          <img src="/static/spacex/global/images/transi-banner-mobile.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+                       </a>
+                    </div>
+                 </div>
+                 <div class="carousel-item">
+                    <div class="d-lg-block d-none">
+                       <a href="https://www.mxboxing.io/" target="_blank">
+                          <img src="/static/spacex/global/images/banner_boxing.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+                       </a>
+                    </div>
+                    <div class="d-lg-none d-block">
+                       <a href="https://www.mxboxing.io/" target="_blank">
+                          <img src="/static/spacex/global/images/banner_boxing_mobile.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+                       </a>
+                    </div>
+                 </div>
+              <!--
+               <div class="carousel-item">
+                 <div class="position-relative">
+                    <a href="https://forms.gle/SD8qGNJmkSGrAEmY6" class="btn btn-warning btn-lg position-absolute mx-auto" target="_blank" style="left:0; right:0; bottom: 30px; max-width: 200px;">REGISTER</a>
+                    <img src="/static/spacex/global/images/hm-banner-form-en.png" class="img-fluid d-none d-lg-block">
+                    <img src="/static/spacex/global/images/hm-banner-form-en-mobile.png" class="img-fluid d-block d-lg-none">
+                 </div>
+                  
+               </div>
+               
+              <div class="carousel-item active">
+                    <img src="/static/spacex/global/images/amm-banner_v2.jpg" class="img-fluid d-none d-lg-block mx-auto" style="box-shadow: 1px 1px 16px #ce00ff;">
+                    <img src="/static/spacex/global/images/amm-banner-mobile_v2.jpg" class="img-fluid d-block d-lg-none" style="box-shadow: 1px 1px 16px #ce00ff;">
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://reg.{{settings.DOMAIN_NAME}}.co" target="_blank" class="d-block">
+                        <img src="/static/spacex/global/images/reg-banner.jpeg" class="img-fluid d-none d-lg-block mx-auto" style="box-shadow: 1px 1px 16px #ce00ff;">
+                          <img src="/static/spacex/global/images/reg-banner-mobile.jpg" class="img-fluid d-block d-lg-none" style="box-shadow: 1px 1px 16px #ce00ff;">
+                     </a>
+                  </div>
+             </div>
+             -->
+             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+             </button>
+             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+             </button>
+        
+           </div>    
+        </div>
+     
+     </div>
   </div>
-{% endblock bg_hero %}
+</section>
+{% endblock slideshow %}
+  
 
-
-{% block content %}
-<div class="section__artists mt-100">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 space-y-30">
-          <div
-            class="section_head d-flex justify-content-between align-items-center"
-          >
-            <h2 class="section__title">Hot Sellers</h2>
-            <!-- <div class="dropdown">
-              <button
-                class="btn btn-white btn-sm dropdown-toggle"
-                type="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Recent Active
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% url 'users' %}">Action</a>
-                <a class="dropdown-item" href="{% url 'users' %}">Another action</a>
-                <a class="dropdown-item" href="{% url 'users' %}">Something else here</a>
-              </div>
-            </div> -->
-          </div>
-          <div class="box">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="space-y-10">
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_1.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">1</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @xander_hall...
-                          </p>
-                        </a>
-                        <span class="price color_green">13.02 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_2.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">2</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @hamza_pitts...
-                          </p>
-                        </a>
-                        <span class="price color_green">38.23 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_3.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">3</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @nathan_walls...
-                          </p>
-                        </a>
-                        <span class="price color_green">11.34 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_4.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">4</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @kelton_collier...
-                          </p>
-                        </a>
-                        <span class="price color_green">23.24 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="space-y-10">
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_12.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">5</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @cade_glover...
-                          </p>
-                        </a>
-                        <span class="price color_green">12.45 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_6.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">6</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @teagan_poole...
-                          </p>
-                        </a>
-                        <span class="price color_green">7.99 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_7.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">7</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @austin_rivera...
-                          </p>
-                        </a>
-                        <span class="price color_green">12.34 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_8.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">8</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @jeremy_shah...
-                          </p>
-                        </a>
-                        <span class="price color_green">18.82 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 space-y-30">
-          <div
-            class="section_head d-flex justify-content-between align-items-center"
-          >
-            <h3 class="section__title">Hot Buyers</h3>
-            <!-- <div class="dropdown">
-              <button
-                class="btn btn-white btn-sm dropdown-toggle"
-                type="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Recent Active
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% url 'users' %}">Action</a>
-                <a class="dropdown-item" href="{% url 'users' %}">Another action</a>
-                <a class="dropdown-item" href="{% url 'users' %}">Something else here</a>
-              </div>
-            </div> -->
-          </div>
-          <div class="box">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="space-y-10">
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_9.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">1</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @joel_reese...
-                          </p>
-                        </a>
-                        <span class="price color_green">12.22 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_10.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">2</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @anton_wright...
-                          </p>
-                        </a>
-                        <span class="price color_green">6.03 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_11.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">3</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @eli_tyler...
-                          </p>
-                        </a>
-                        <span class="price color_green">16.73 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_12.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">4</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @alonzo_knight...
-                          </p>
-                        </a>
-                        <span class="price color_green">7.24 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="space-y-10">
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_13.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">5</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @cannon_stark...
-                          </p>
-                        </a>
-                        <span class="price color_green">12.03 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_14.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">6</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @kolten_hart...
-                          </p>
-                        </a>
-                        <span class="price color_green">7.65 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_15.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">7</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @ethan_cain...
-                          </p>
-                        </a>
-                        <span class="price color_green">12.63 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_4.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">8</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @waylon_ford...
-                          </p>
-                        </a>
-                        <span class="price color_green">23.42 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="modal fade popup"
-    id="popup_bid_success"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-body space-y-20 p-40">
-          <h3 class="text-center">Your Bidding Successfuly Added</h3>
-          <p class="text-center">
-            your bid <span class="color_text txt _bold">(16ETH) </span> has
-            been listing to our database
-          </p>
-
-          <a href="{% url 'users' %}" class="btn btn-dark w-full"> Watch the listings</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="modal fade popup"
-    id="popup_bid"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-body space-y-20 p-40">
-          <h3>Place a Bid</h3>
-          <p>
-            You must bid at least <span class="color_black">15 ETH</span>
-          </p>
-          <input type="text" class="form-control" placeholder="00.00 ETH" />
-
-          <p>
-            Enter quantity. <span class="color_green">5 available</span>
-          </p>
-          <input type="text" class="form-control" value="1" />
-          <div class="hr"></div>
-          <div class="d-flex justify-content-between">
-            <p>You must bid at least:</p>
-            <p class="text-right color_black txt _bold">67,000 ETH</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p>service free:</p>
-            <p class="text-right color_black txt _bold">0,901 ETH</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p>Total bid amount:</p>
-            <p class="text-right color_black txt _bold">56,031 ETH</p>
-          </div>
-          <a
-            href="{% url 'users' %}"
-            class="btn btn-primary w-full"
-            
-            data-target="#popup_bid_success"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            Place a bid</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="modal fade popup"
-    id="popup_history"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-body space-y-20 p-40">
-          <h4>History</h4>
-          <div class="creator_item creator_card space-x-10">
-            <div class="avatars space-x-10">
-              <div class="media">
-                <div class="badge">
-                  <img src="/static/assets/img/icons/Badge.svg" alt="" />
-                </div>
-                <a href="javascript:void(0)">
-                  <img
-                    src="/static/assets/img/avatars/avatar_1.png"
-                    alt="Avatar"
-                    class="avatar avatar-md"
-                  />
-                </a>
-              </div>
-              <div>
-                <p class="color_black">
-                  Bid accepted <span class="color_brand">1 ETH</span> by
-                  <a class="color_black txt _bold" href="javascript:void(0)"
-                    >ayoub</a
-                  >
-                </p>
-                <span class="date color_text">28/06/2021, 12:08</span>
-              </div>
-            </div>
-          </div>
-          <div class="creator_item creator_card space-x-10">
-            <div class="avatars space-x-10">
-              <div class="media">
-                <div class="badge">
-                  <img src="/static/assets/img/icons/Badge.svg" alt="" />
-                </div>
-                <a href="javascript:void(0)">
-                  <img
-                    src="/static/assets/img/avatars/avatar_2.png"
-                    alt="Avatar"
-                    class="avatar avatar-md"
-                  />
-                </a>
-              </div>
-              <div>
-                <p class="color_black">
-                  Bid accepted <span class="color_brand">3 ETH</span> by
-                  <a class="color_black txt _bold" href="javascript:void(0)"
-                    >monir</a
-                  >
-                </p>
-                <span class="date color_text">22/05/2021, 12:08</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section mt-100">
-    <div class="container">
-      <div class="section__head">
-        <div
-          class="d-flex justify-content-between sm-column align-items-center mb-20"
-        >
-          <h2 class="section__title">Recently Listed</h2>
-          <a href="{% url 'users' %}" class="btn btn-dark btn-sm">
-            View All</a
-          >
-        </div>
-        <!-- <div class="d-flex">
-          <span
-            class="color_text txt_sm d-none d-sm-block mr-10"
-            style="min-width: max-content"
-          >
-            FILTER BY:
-          </span>
-          <ul class="menu_categories">
-            <li class="d-flex switch_item">
-              <input type="checkbox" id="switch1" checked="" /><label
-                for="switch1"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-10"> Has list price </span>
-            </li>
-            <li class="d-flex switch_item">
-              <input type="checkbox" id="switch2" /><label
-                for="switch2"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-10"> Has open offer </span>
-            </li>
-            <li class="d-flex space-x-10 switch_item">
-              <input type="checkbox" id="switch3" /><label
-                for="switch3"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-10"> Has sold </span>
-            </li>
-          </ul>
-        </div> -->
-      </div>
-      <div class="row">
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="card__item four">
-            <div class="card_body space-y-10">
-              <!-- =============== -->
-              <div class="creators space-x-10">
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_1.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@mickel_fenn</p>
-                  </a>
-                </div>
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_2.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@danil_pan</p>
-                  </a>
-                </div>
-              </div>
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_1.png" alt="" />
-                </a>
-
-                <a href="{% url 'users' %}" class="likes space-x-3">
-                  <i class="ri-heart-3-fill"></i>
-                  <span class="txt_sm">1.2k</span>
-                </a>
-              </div>
-              <!-- =============== -->
-              <h6 class="card_title">
-                <a class="color_black" href="{% url 'users' %}">
-                  Colorful Abstract Painting
-                </a>
-              </h6>
-
-              <div class="card_footer d-block space-y-10">
-                <div class="card_footer justify-content-between">
-                  <div class="creators">
-                    <p class="txt_sm">4 in stock</p>
-                  </div>
-                  <a href="{% url 'users' %}" class="">
-                    <p class="txt_sm">
-                      Price:
-                      <span class="color_green txt_sm">2.45 ETH</span>
-                    </p>
-                  </a>
-                </div>
-                <div class="hr"></div>
-                <div
-                  class="d-flex align-items-center space-x-10 justify-content-between"
-                >
-                  <div class="d-flex align-items-center space-x-10">
-                    <i class="ri-history-line"></i>
-                    <a
-                      href="{% url 'users' %}"
+{% block main %}
+         <!-- ======= About Section ======= -->
+         <section id="explore" class="explore">
+          <div class="container">
+             <div class="row">
+                <div class="col-lg-6 col-12 pt-4 pt-lg-0  content section-title align-self-center" data-aos="fade-right">
+                   <h6>EXPLORE</h6>
+                   <h1>Manny Pacquiao</h1>
+                   <p> Manny Pacquiao, Filipino professional boxer, winner of 8 heavyweight classes and 12 world titles Manny Pacquiao is officially a {{settings.DOMAIN_NAME}} citizen and ready to embrace his second life! </p>
+                   <!--
+                      <a href="#" class="read-more mt-2" data-bs-toggle="modal" data-bs-target="#myModal-02">Explore <i class="bi bi-arrow-right-short"></i>
                       
-                      data-target="#popup_history"
-                    >
-                      <p class="color_text txt_sm" style="width: auto">
-                        View History
-                      </p>
-                    </a>
-                  </div>
-                  <a
-                    class="btn btn-sm btn-primary"
-                    href="{% url 'users' %}"
-                    
-                    
-                    >Place Bid</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="card__item four">
-            <div class="card_body space-y-10">
-              <!-- =============== -->
-              <div class="creators space-x-10">
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_3.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@mazanov_sky</p>
-                  </a>
-                </div>
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_4.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@mucky_art</p>
-                  </a>
-                </div>
-              </div>
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_2.png" alt="" />
-                </a>
-
-                <a href="{% url 'users' %}" class="likes space-x-3">
-                  <i class="ri-heart-3-fill"></i>
-                  <span class="txt_sm">13.2k</span>
-                </a>
-              </div>
-              <!-- =============== -->
-              <h6 class="card_title">
-                <a class="color_black" href="{% url 'users' %}">
-                  Colorful Abstract Painting
-                </a>
-              </h6>
-
-              <div class="card_footer d-block space-y-10">
-                <div class="card_footer justify-content-between">
-                  <div class="creators">
-                    <p class="txt_sm">12 in stock</p>
-                  </div>
-                  <a href="{% url 'users' %}" class="">
-                    <p class="txt_sm">
-                      Price:
-                      <span class="color_green txt_sm">2.55 ETH</span>
-                    </p>
-                  </a>
-                </div>
-                <div class="hr"></div>
-                <div
-                  class="d-flex align-items-center space-x-10 justify-content-between"
-                >
-                  <div class="d-flex align-items-center space-x-10">
-                    <i class="ri-history-line"></i>
-                    <a
-                      href="{% url 'users' %}"
-                      
-                      data-target="#popup_history"
-                    >
-                      <p class="color_text txt_sm" style="width: auto">
-                        View History
-                      </p>
-                    </a>
-                  </div>
-                  <a
-                    class="btn btn-sm btn-primary"
-                    href="{% url 'users' %}"
-                    
-                    
-                    >Place Bid</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="card__item four">
-            <div class="card_body space-y-10">
-              <!-- =============== -->
-              <div class="creators space-x-10">
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_5.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@jimmy_dom</p>
-                  </a>
-                </div>
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_6.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@kristian_fel</p>
-                  </a>
-                </div>
-              </div>
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_3.png" alt="" />
-                </a>
-
-                <a href="{% url 'users' %}" class="likes space-x-3">
-                  <i class="ri-heart-3-fill"></i>
-                  <span class="txt_sm">1.2k</span>
-                </a>
-              </div>
-              <!-- =============== -->
-              <h6 class="card_title">
-                <a class="color_black" href="{% url 'users' %}">
-                  Colorful Abstract Painting
-                </a>
-              </h6>
-
-              <div class="card_footer d-block space-y-10">
-                <div class="card_footer justify-content-between">
-                  <div class="creators">
-                    <p class="txt_sm">6 in stock</p>
-                  </div>
-                  <a href="{% url 'users' %}" class="">
-                    <p class="txt_sm">
-                      Price:
-                      <span class="color_green txt_sm">2.45 ETH</span>
-                    </p>
-                  </a>
-                </div>
-                <div class="hr"></div>
-                <div
-                  class="d-flex align-items-center space-x-10 justify-content-between"
-                >
-                  <div class="d-flex align-items-center space-x-10">
-                    <i class="ri-history-line"></i>
-                    <a
-                      href="{% url 'users' %}"
-                      
-                      data-target="#popup_history"
-                    >
-                      <p class="color_text txt_sm" style="width: auto">
-                        View History
-                      </p>
-                    </a>
-                  </div>
-                  <a
-                    class="btn btn-sm btn-primary"
-                    href="{% url 'users' %}"
-                    
-                    
-                    >Place Bid</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="card__item four">
-            <div class="card_body space-y-10">
-              <!-- =============== -->
-              <div class="creators space-x-10">
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_1.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@Alvin_nov</p>
-                  </a>
-                </div>
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_7.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@mucky_art</p>
-                  </a>
-                </div>
-              </div>
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_4.png" alt="" />
-                </a>
-
-                <a href="{% url 'users' %}" class="likes space-x-3">
-                  <i class="ri-heart-3-fill"></i>
-                  <span class="txt_sm">4.1k</span>
-                </a>
-              </div>
-              <!-- =============== -->
-              <h6 class="card_title">
-                <a class="color_black" href="{% url 'users' %}">
-                  Colorful Abstract Painting
-                </a>
-              </h6>
-
-              <div class="card_footer d-block space-y-10">
-                <div class="card_footer justify-content-between">
-                  <div class="creators">
-                    <p class="txt_sm">34 in stock</p>
-                  </div>
-                  <a href="{% url 'users' %}" class="">
-                    <p class="txt_sm">
-                      Price:
-                      <span class="color_green txt_sm">0.55 ETH</span>
-                    </p>
-                  </a>
-                </div>
-                <div class="hr"></div>
-                <div
-                  class="d-flex align-items-center space-x-10 justify-content-between"
-                >
-                  <div class="d-flex align-items-center space-x-10">
-                    <i class="ri-history-line"></i>
-                    <a
-                      href="{% url 'users' %}"
-                      
-                      data-target="#popup_history"
-                    >
-                      <p class="color_text txt_sm" style="width: auto">
-                        View History
-                      </p>
-                    </a>
-                  </div>
-                  <a
-                    class="btn btn-sm btn-primary"
-                    href="{% url 'users' %}"
-                    
-                    
-                    >Place Bid</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="modal fade popup"
-    id="popup_bid_success"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-body space-y-20 p-40">
-          <h3 class="text-center">Your Bidding Successfuly Added</h3>
-          <p class="text-center">
-            your bid <span class="color_text txt _bold">(16ETH) </span> has
-            been listing to our database
-          </p>
-
-          <a href="{% url 'users' %}" class="btn btn-dark w-full"> Watch the listings</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="modal fade popup"
-    id="popup_bid"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-body space-y-20 p-40">
-          <h3>Place a Bid</h3>
-          <p>
-            You must bid at least <span class="color_black">15 ETH</span>
-          </p>
-          <input type="text" class="form-control" placeholder="00.00 ETH" />
-
-          <p>
-            Enter quantity. <span class="color_green">5 available</span>
-          </p>
-          <input type="text" class="form-control" value="1" />
-          <div class="hr"></div>
-          <div class="d-flex justify-content-between">
-            <p>You must bid at least:</p>
-            <p class="text-right color_black txt _bold">67,000 ETH</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p>service free:</p>
-            <p class="text-right color_black txt _bold">0,901 ETH</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p>Total bid amount:</p>
-            <p class="text-right color_black txt _bold">56,031 ETH</p>
-          </div>
-          <a
-            href="{% url 'users' %}"
-            class="btn btn-primary w-full"
-            
-            data-target="#popup_bid_success"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            Place a bid</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mt-100">
-    <div class="container">
-      <div class="section__head">
-        <div
-          class="d-flex flex-md-wrap justify-content-between align-items-center mb-20"
-        >
-          <h2 class="section__title">Top artworks</h2>
-          <!-- <div class="dropdown">
-            <button
-              class="btn btn-dark btn-sm dropdown-toggle"
-              type="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Recent Active
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="{% url 'users' %}">Action</a>
-              <a class="dropdown-item" href="{% url 'users' %}">Another action</a>
-              <a class="dropdown-item" href="{% url 'users' %}">Something else here</a>
-            </div>
-          </div> -->
-        </div>
-        <!-- <div class="d-flex align-items-center">
-          <span
-            class="color_text txt_sm d-none d-sm-block mr-10"
-            style="min-width: max-content"
-          >
-            FILTER BY:
-          </span>
-          <ul class="menu_categories">
-            <li class="d-flex switch_item">
-              <input type="checkbox" id="switch5" /><label
-                for="switch5"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-20"> Has list price </span>
-            </li>
-            <li class="d-flex switch_item">
-              <input type="checkbox" id="switch6" checked /><label
-                for="switch6"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-20"> Has open offer </span>
-            </li>
-            <li class="d-flex switch_item">
-              <input type="checkbox" id="switch7" /><label
-                for="switch7"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-20"> Owned by creator </span>
-            </li>
-            <li class="d-flex switch_item">
-              <input type="checkbox" id="switch8" /><label
-                for="switch8"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-20"> Has sold </span>
-            </li>
-          </ul>
-        </div> -->
-      </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="card__item three">
-            <div class="card_body space-y-10">
-              <!-- =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img
-                    src="/static/assets/img/items/item_4.png"
-                    alt="..."
-                  />
-                </a>
-
-                <a href="{% url 'users' %}" class="likes space-x-3">
-                  <i class="ri-heart-3-fill"></i>
-                  <span class="txt_sm">23.1k</span>
-                </a>
-                <div class="action">
-                  <a
-                    href="{% url 'users' %}"
-                    class="btn btn-primary btn_card"
-                    
-                    
-                  >
-                    <i class="ri-pie-chart-line color_white"></i>
-                    Place Your Bid
-                  </a>
-                </div>
-              </div>
-              <!-- =============== -->
-              <h6 class="card_title">
-                <a class="color_black" href="{% url 'users' %}">
-                  Colorful Abstract Painting
-                </a>
-              </h6>
-
-              <div class="card_footer d-block space-y-10">
-                <div class="d-flex justify-content-between">
-                  <div class="creators space-x-10">
-                    <div class="avatars -space-x-20">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_3.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
                       </a>
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_2.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@makinzi_jamy...</p>
-                    </a>
-                  </div>
-                  <a href="{% url 'users' %}" class="space-x-3">
-                    <span class="color_green txt_sm">0.001 ETH</span>
-                  </a>
+                      -->
                 </div>
-                <div class="hr"></div>
-                <a href="{% url 'users' %}" class="d-flex align-items-center space-x-10">
-                  <i class="ri-vip-crown-line"></i>
-                  <p class="color_text txt_sm" style="width: auto">
-                    Highest bid
-                  </p>
-                  <span class="color_black txt_sm">0.0022 ETH</span>
-                </a>
-              </div>
-            </div>
+                <div class="col-lg-6 col-12" data-aos="zoom-in" data-aos-delay="150">
+                   <img src="/static/spacex/assets/img/explore.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-8 col-12 mx-auto " data-aos="zoom-in" data-aos-delay="200">
+                   <video  src="/static/spacex/assets/video/manny(40).mp4" class="w-100 rounded" playsinline controls>
+                      <source src="movie.html" type="video/mp4">
+                      <source src="movie-2.html" type="video/ogg">
+                      Your browser does not support the video tag.
+                   </video>
+                </div>
+             </div>
           </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card__item five">
-            <div class="card_body space-y-10 space-x-10 d-flex">
-              <!-- ???? =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_1.png" alt="" />
-                </a>
+       </section>
+       <!-- End About Section -->
+       <!-- ======= about-nft Section ======= -->
+       <section id="about-nft" class="about-nft ">
+          <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center">
+             <div class="col-lg-8 col-12 section-title ">
+                <h6>ABOUT</h6>
+                <h1>NFT</h1>
+                <p>The game offers players a chance to act out the comic's fight sequences in their entirety. Ignite player's passion, PK with each other, and compete for awesome prizes.</p>
+             </div>
+             <div class="col-lg-12 col-12">
+                <div class="swiper-container">
+                   <div class="swiper-wrapper">
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-01.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-02.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-03.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-04.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-05.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-06.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-07.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-08.jpg)"></div>
+                   </div>
+                   <div class="swiper-button-next"></div>
+                   <div class="swiper-button-prev"></div>
+                   <!-- Add Pagination -->
+                   <div class="swiper-pagination"></div>
+                </div>
+             </div>
+          </div>
+       </section>
+       <!-- End about-nft Section -->
+       <!-- ======= Features Section ======= -->
+       <section id="features" class="features">
+          <div class="container" data-aos="fade-up">
+             <div class="row justify-content-start align-items-center">
+                <div class="col-lg-5 col-12 section-title-02" data-aos="fade-right">
+                   <h6>{{settings.DOMAIN_NAME}}</h6>
+                   <h1>ABOUT {{settings.DOMAIN_NAME}}</h1>
+                   <p>A realm of virtual reality where anything is possible; a place to create, experiment, and discover at will. </p>
+                   <p>Make {{settings.DOMAIN_NAME}} one of the top 500 companies worldwide through the use of cutting-edge technology and highly qualified staff, usher in an era of {{settings.DOMAIN_NAME}} for users throughout the world, and empower citizens to exercise smart governance with the help of technological rainmakers.</p>
+                   <p class="font-weight-bold">More exciting future developments are coming!</p>
+                </div>
+                <div class="col-lg-7 col-12"  data-aos="zoom-in" data-aos-delay="200">
+                   <div class="row">
+                      <div class="col-lg-6 d-flex align-items-stretch mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+                         <div class="icon-box iconbox-blue" style="background-image:url(/static/spacex/assets/img/features-01.jpg);background-size: cover;">
+                            <div class="icon">
+                               <i class="bx bxl-dribbble"></i>
+                            </div>
+                            <h4>Durian Valley</h4>
+                            <p>As citizens take control of a manor, they are able to cultivate crops, tend to fields, irrigate crops, harvest crops, and engage in other agricultural activities before selling or buying them.</p>
+                         </div>
+                      </div>
+                      <div class="col-lg-6 d-flex align-items-stretch mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
+                         <div class="icon-box iconbox-blue" style="background-image:url(/static/spacex/assets/img/features-02.jpg);background-size: cover;">
+                            <div class="icon">
+                               <i class="bx bxl-dribbble"></i>
+                            </div>
+                            <h4>Rice planting</h4>
+                            <p>Run a ranch and experience a complete ranch life</p>
+                         </div>
+                      </div>
+                      <div class="col-lg-6 d-flex align-items-stretch mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
+                         <div class="icon-box iconbox-blue" style="background-image:url(/static/spacex/assets/img/features-03.jpg);background-size: cover;">
+                            <div class="icon">
+                               <i class="bx bxl-dribbble"></i>
+                            </div>
+                            <h4>HLY Ocean</h4>
+                            <p>Raise pearl grouper, continuously upgrade the fish quality and make profit by selling them on the market</p>
+                         </div>
+                      </div>
+                      <div class="col-lg-6 d-flex align-items-stretch mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+                         <div class="icon-box" style="background-image:url(/static/spacex/assets/img/features-04.jpg);background-size: cover;">
+                            <div class="icon">
+                               <i class="bx bxl-dribbble"></i>
+                            </div>
+                            <h4>Nexus Trade</h4>
+                            <p>NEXUS TRADE, World’s first innovative satellite based FinTech trading platform</p>
+                            <p>
+                               Providing CFD financial trading circumstances that are tailored to satisfy both experienced and inexperienced investors. Offer investors access to worldwide stock, currency, index, digital currency, and commodity markets through trading services.
+                            </p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </section>
+       <!-- End Features Section -->
+       <!-- ======= PLAYER Section ======= -->
+       <section id="players" class="players ">
+          <div class="container" data-aos="fade-up">
+             <div class="row">
+                <div class="section-title">
+                   <h6>PLAYER</h6>
+                   <h1>GLOBAL PLAYER</h1>
+                </div>
+                <div class="col-lg-4 col-12 text-center">
+                   <a href="https://www.mx-space.com/avatar.cshtml" target="_blank">
+                      <img src="/static/spacex/assets/img/player-02.png" class="img-fluid mb-2" alt="" data-aos="zoom-in-up" data-aos-delay="200">
+                      <h6 class="btn-join">Click To Join {{settings.DOMAIN_NAME}}</h6>
+                   </a>
+                </div>
+                <div class="col-lg-4 col-12 text-center">
+                   <a href="https://www.mx-space.com/avatar.cshtml" target="_blank">
+                      <img src="/static/spacex/assets/img/player-01.png" class="img-fluid mb-2" alt="" data-aos="zoom-in-up" data-aos-delay="200">
+                      <h6 class="btn-join">Click To Join {{settings.DOMAIN_NAME}}</h6>
+                   </a>
+                </div>
+                <div class="col-lg-4 col-12 text-center">
+                   <a href="https://www.mx-space.com/avatar.cshtml" target="_blank">
+                      <img src="/static/spacex/assets/img/player-03.png" class="img-fluid mb-2" alt="" data-aos="zoom-in-up" data-aos-delay="300">
+                      <h6 class="btn-join">Click To Join {{settings.DOMAIN_NAME}}</h6>
+                   </a>
+                </div>
+                <!--
+                   <div class="col-lg-3 col-12 text-center">
+                   
+                     <img src="/static/spacex/assets/img/player-04.png" class="img-fluid mb-2" alt="" data-aos="zoom-in-up" data-aos-delay="400">
+                   
+                   </div>
+                   -->
+             </div>
+          </div>
+       </section>
+       <!-- End PLAYER Section -->
 
-                <div class="details d-flex justify-content-between">
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
+       <!-- ======= Advisor Section ======= -->
+       <section id="advisor" class="players">
+          <div class="container" data-aos="fade-up">
+             <div class="row justify-content-center">
+                <div class="section-title">
+                   <h6>Strategic Advisor</h6>
+                   <h1>ADVISOR</h1>
                 </div>
-              </div>
-              <!-- ???? =============== -->
-              <div
-                class="d-flex flex-column justify-content-center w-100 space-y-10"
-              >
-                <h6 class="card_title">Colorful Abstract Painting</h6>
-                <div class="hr"></div>
-                <div class="card_footer d-block space-y-10">
-                  <div class="creators space-x-10">
-                    <div class="avatars">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_4.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@krista_bryan...</p>
-                    </a>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between space-x-3"
-                  >
-                    <a
-                      class="btn btn-sm btn-primary"
-                      href="{% url 'users' %}"
-                      
-                      
-                      >Place Bid</a
-                    >
-                    <span class="color_green txt_sm text-right"
-                      >4.906 ETH</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__item five">
-            <div class="card_body space-y-10 space-x-10 d-flex">
-              <!-- ???? =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_2.png" alt="" />
-                </a>
+                <div class="col-lg-10">
+                   <div class="row mb-5">
+                      <div class="col-lg-4">
+                         <img src='/static/spacex/assets/img/advisor-011b26.png?v2' class="img-fluid w-75 mx-auto d-block" data-aos="zoom-in-up">
+                      </div>
+                      <div class="col-lg-8 flex-column d-flex justify-content-center">
+                         <div class="d-flex flex-column align-items-center align-items-lg-start">
+                            <h5 class="btn-join mb-0 pb-0">Ms. Gözde Dizdar</h5>
+                            <h6 class="mb-4">Strategic Advisor for Europe and Middle East</h6>   
+                         </div>                        
+                         <div class="token-bg p-4">
+                            <p>
+                            Gözde Dizdar has over 20 years of experience in
+                            international development work, including work with the
+                            United Nations (UN) and The World Bank. She is engaged
+                            in Youth empowerment initiatives, policy and research,
+                            advocacy, program management including development
+                            and implementation of projects.
+                            </p>
+                            <p>
+                               Additionally, Ms. Dizdar’s work includes a consultancy
+                               assignment on studying the impact of urbanization on
+                               women’s empowerment, youth employment and
+                               entrepreneurship.
+                            </p>
+                            <p>
+                               She has been strong business development professional
+                               and the leading person working with industrial
+                               conglomerates’ investments and B2B - B2G - G2G
+                               agreements in number of countries and mainly in
+                               Southeast Asia.
+                            </p>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="col-lg-8 flex-column d-flex justify-content-center order-lg-1 order-2">
+                         <div class="d-flex flex-column align-items-center align-items-lg-end">
+                            <h5 class="btn-join mb-0 pb-0">Mr. Manny Pacquiao</h5>
+                            <h6 class="mb-4">Strategic Advisor for South East Asia</h6>
+                         </div>
+                         <div class="token-bg p-4">
+                            <p>
+                            Manny Pacquiao, is a legendary boxer and politician. Renowned as "Pac-Man," he achieved unprecedented success by winning world titles in eight different weight classes, showcasing his exceptional speed, power, and versatility.
+                            </p>
+                            <p>
+                               Beyond boxing, Pacquiao entered politics, serving as a congressman in 2010 and later being elected to the Philippine Senate in 2016. His political career runs parallel to his philanthropic efforts, where he utilizes his fame and resources to support education, healthcare, and disaster relief initiatives in the Philippines.
 
-                <div class="details d-flex justify-content-between">
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
+                            </p>
+                            <p>
+                               Pacquiao's journey from humble beginnings to global stardom exemplifies the values of hard work and resilience. His legacy extends beyond the sports arena, making him an inspirational figure and symbol of Filipino pride. Whether in the ring or the political arena, Manny Pacquiao's impact on the world is defined by his dedication, versatility, and commitment to uplifting others.
+                            </p>
+                         </div>
+                      </div>
+                      <div class="col-lg-4 order-lg-2 order-1">
+                         <img src='/static/spacex/assets/img/advisor-021b26.png?v2' class="img-fluid w-75 mx-auto d-block" data-aos="zoom-in-up">
+                      </div>
+                   </div>
                 </div>
-              </div>
-              <!-- ???? =============== -->
-              <div
-                class="d-flex flex-column justify-content-center w-100 space-y-10"
-              >
-                <h6 class="card_title">Synthwave Modern Painting</h6>
-                <div class="hr"></div>
-                <div class="card_footer d-block space-y-10">
-                  <div class="creators space-x-10">
-                    <div class="avatars">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_6.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@makinzi_beck...</p>
-                    </a>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between space-x-3"
-                  >
-                    <a
-                      class="btn btn-sm btn-primary"
-                      href="{% url 'users' %}"
-                      
-                      
-                      >Place Bid</a
-                    >
-                    <span class="color_green txt_sm text-right"
-                      >3.003 ETH</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
+             </div>
           </div>
-          <div class="card__item five">
-            <div class="card_body space-y-10 space-x-10 d-flex">
-              <!-- ???? =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_3.png" alt="" />
-                </a>
+       </section>
+       <!-- End Advisor Section -->
 
-                <div class="details d-flex justify-content-between">
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
+       <!-- =======Step token Section ======= -->
+       <section id="token" class="token section-bg">
+          <div class="container" data-aos="fade-up">
+             <div class="row d-flex justify-content-center align-items-center token-bg">
+                <div class="section-title pt-4">
+                   <h2>{{settings.DOMAIN_NAME}} Token System</h2>
                 </div>
-              </div>
-              <!-- ???? =============== -->
-              <div
-                class="d-flex flex-column justify-content-center w-100 space-y-10"
-              >
-                <h6 class="card_title">Synthwave Modern Painting</h6>
-                <div class="hr"></div>
-                <div class="card_footer d-block space-y-10">
-                  <div class="creators space-x-10">
-                    <div class="avatars">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_3.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@alonzo_knight...</p>
-                    </a>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between space-x-3"
-                  >
-                    <a
-                      class="btn btn-sm btn-primary"
-                      href="{% url 'users' %}"
-                      
-                      
-                      >Place Bid</a
-                    >
-                    <span class="color_green txt_sm text-right"
-                      >5.044 ETH</span
-                    >
-                  </div>
+                <div class="col-12 col-lg-10 ">
+                   <img src='/static/spacex/assets/img/step-token-img.png' class="img-fluid" data-aos="zoom-in-up">
                 </div>
-              </div>
-            </div>
+             </div>
           </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card__item five">
-            <div class="card_body space-y-10 space-x-10 d-flex">
-              <!-- ???? =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_5.png" alt="" />
-                </a>
-
-                <div class="details d-flex justify-content-between">
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
+       </section>
+       <!-- Step token Section -->
+       <!-- =======SGS Section ======= -->
+       <section id="sgs" class="ps-timeline-sec sgs">
+          <div class="section-title">
+             <h2>SGS SMART GUILD SYSTEM</h2>
+          </div>
+          <div class="container" data-aos="fade-up">
+             <ol class="ps-timeline text-left text-lg-center ">
+                <li>
+                   <div class="card-2">
+                      <p>Players get equivalent stocks and earn game points.</p>
+                   </div>
+                </li>
+                <li>
+                   <div class="ps-top-content ">
+                      <h6 class="fw-bold mb-1">Upgrade 1 player for every 25 players </p>
+                      </h6>
+                   </div>
+                   <span class="ps-sp-bot"></span>
+                </li>
+                <li>
+                   <div class="card">
+                      <div class="front d-flex flex-column">
+                         <h1 id="blue">SIFU</h1>
+                         <p class="d-block d-sm-none">Bonus $2658</p>
+                      </div>
+                      <div class="back">
+                         <h1>Bonus $2658</h1>
+                      </div>
+                   </div>
+                </li>
+                <li>
+                   <div class="ps-top-content ">
+                      <h6 class="fw-bold mb-1">Upgrade 1 for every 10 </p>
+                      </h6>
+                   </div>
+                   <span class="ps-sp-bot"></span>
+                </li>
+                <li>
+                   <div class="card">
+                      <div class="front  d-flex flex-column">
+                         <h1 id="blue">MASTER</h1>
+                         <p class="d-block d-sm-none">Bonus $5901</p>
+                      </div>
+                      <div class="back">
+                         <h1>Bonus $5901</h1>
+                      </div>
+                   </div>
+                </li>
+                <li>
+                   <div class="ps-top-content ">
+                      <h6 class="fw-bold mb-1">Upgrade 1 for every 10 </p>
+                      </h6>
+                   </div>
+                   <span class="ps-sp-bot"></span>
+                </li>
+                <li>
+                   <div class="card">
+                      <div class="front  d-flex flex-column">
+                         <h1 id="blue">GUILD MASTER</h1>
+                         <p class="d-block d-sm-none">Bonus $63190</p>
+                      </div>
+                      <div class="back">
+                         <h1>Bonus $63190</h1>
+                      </div>
+                   </div>
+                </li>
+             </ol>
+          </div>
+       </section>
+       <!--  SGS Section -->
+       <!-- =======Transi APPS Section ======= -->
+       <section id="me-talk" class="me-talk ">
+          <div class="container" data-aos="fade-up">
+             <div class="row align-items-center">
+                <div class="col-lg-6 col-12 aos-init aos-animate text-end" >
+                   <img src='/static/spacex/assets/img/transi_img.png' class="img-fluid" width="400" data-aos="zoom-in-up" data-aos-delay="100">
                 </div>
-              </div>
-              <!-- ???? =============== -->
-              <div
-                class="d-flex flex-column justify-content-center w-100 space-y-10"
-              >
-                <h6 class="card_title">Colorful Abstract Painting</h6>
-                <div class="hr"></div>
-                <div class="card_footer d-block space-y-10">
-                  <div class="creators space-x-10">
-                    <div class="avatars">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_1.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@cannon_stark...</p>
-                    </a>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between space-x-3"
-                  >
-                    <a
-                      class="btn btn-sm btn-primary"
-                      href="{% url 'users' %}"
-                      
-                      
-                      >Place Bid</a
-                    >
-                    <span class="color_green txt_sm text-right"
-                      >2.937 ETH</span
-                    >
-                  </div>
+                <div class="col-lg-6 col-12 text-lg-start text-md-end aos-init aos-animate"  data-aos="zoom-in-up" data-aos-delay="200">
+                   <div class="section-title-02 ">
+                      <h6>DOWNLOAD HERE</h6>
+                      <h1>TRANSI CHAT</h1>
+                   </div>
+                   <a href="https://play.google.com/store/apps/details?id=io.transi.im.wallet&amp;pcampaignid" target="_blank" class="read-more mt-2">Google Play <i class="bi bi-google-play"></i></a>
+                   <a href="https://apps.apple.com/my/app/transi-chat/id1662471884" target="_blank" class="read-more mt-2">Apple Store<i class="bi bi-apple"></i></a>
                 </div>
-              </div>
-            </div>
+             </div>
           </div>
-          <div class="card__item five">
-            <div class="card_body space-y-10 space-x-10 d-flex">
-              <!-- ???? =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_6.png" alt="" />
-                </a>
-
-                <div class="details d-flex justify-content-between">
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
+       </section>
+       <!-- METALK APPS Section -->
+       <section id="partner" class="partner">
+          <div class="container aos-init aos-animate" data-aos="fade-up">
+             <div class="row justify-content-center align-items-center">
+                <div class="section-title">
+                   <h2>PARTNERS</h2>
                 </div>
-              </div>
-              <!-- ???? =============== -->
-              <div
-                class="d-flex flex-column justify-content-center w-100 space-y-10"
-              >
-                <h6 class="card_title">Synthwave Modern Painting</h6>
-                <div class="hr"></div>
-                <div class="card_footer d-block space-y-10">
-                  <div class="creators space-x-10">
-                    <div class="avatars">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_8.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@jimena_stark...</p>
-                    </a>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between space-x-3"
-                  >
-                    <a
-                      class="btn btn-sm btn-primary"
-                      href="{% url 'users' %}"
-                      
-                      
-                      >Place Bid</a
-                    >
-                    <span class="color_green txt_sm text-right"
-                      >7.004 ETH</span
-                    >
-                  </div>
+                <div class="col-12 col-lg-10  text-center">
+                   <div class="customer-logos">
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-011b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-021b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-031b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-041b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-051b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-061b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-071b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-081b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-091b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-101b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-111b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-121b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-131b26.png?v2" ></div>
+                   </div>
                 </div>
-              </div>
-            </div>
+             </div>
           </div>
-          <div class="card__item five">
-            <div class="card_body space-y-10 space-x-10 d-flex">
-              <!-- ???? =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_7.png" alt="" />
-                </a>
-
-                <div class="details d-flex justify-content-between">
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
+       </section>
+       <!-- ======= COLLAB section ======= -->
+       <section id="collab" class="collab ">
+          <div class="container">
+             <div class="row">
+                <div class="section-title">
+                   <h6>Join Us</h6>
+                   <h1>Collaboration</h1>
                 </div>
-              </div>
-              <!-- ???? =============== -->
-              <div
-                class="d-flex flex-column justify-content-center w-100 space-y-10"
-              >
-                <h6 class="card_title">Synthwave Modern Painting</h6>
-                <div class="hr"></div>
-                <div class="card_footer d-block space-y-10">
-                  <div class="creators space-x-10">
-                    <div class="avatars">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_5.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@eli_tyle...</p>
-                    </a>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between space-x-3"
-                  >
-                    <a
-                      class="btn btn-sm btn-primary"
-                      href="{% url 'users' %}"
-                      
-                      
-                      >Place Bid</a
-                    >
-                    <span class="color_green txt_sm text-right"
-                      >1.2043 ETH</span
-                    >
-                  </div>
+                <div class="col-lg-12 col-12">
+                   <div class="row">
+                      <div class="col-lg-4 col-12 d-flex  mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+                         <div class="box-collab d-flex flex-column align-items-start">
+                            <img src="/static/spacex/assets/img/collab-1.png" class="img-fluid mb-2" width="60">
+                            <h3>
+                               Collaborator 
+                            </h3>
+                            <a href="{% url 'contact-us' %}" class="btn-get-started"><i class="bi bi-arrow-right"></i></a>
+                         </div>
+                      </div>
+                      <div class="col-lg-4 col-12 d-flex  mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
+                         <div class="box-collab d-flex flex-column align-items-start">
+                            <img src="/static/spacex/assets/img/collab-3.png" class="img-fluid mb-2" width="60">
+                            <h3>
+                               Creator
+                            </h3>
+                            <a href="{% url 'contact-us' %}" class="btn-get-started"><i class="bi bi-arrow-right"></i></a>
+                         </div>
+                      </div>
+                      <div class="col-lg-4 col-12 d-flex  mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
+                         <div class="box-collab d-flex flex-column align-items-start">
+                            <img src="/static/spacex/assets/img/collab-2.png" class="img-fluid mb-2" width="60">
+                            <h3>
+                               System Developer 
+                            </h3>
+                            <a href="{% url 'contact-us' %}" class="btn-get-started"><i class="bi bi-arrow-right"></i></a>
+                         </div>
+                      </div>
+                   </div>
                 </div>
-              </div>
-            </div>
+             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="call2action is__light">
-    <div class="container">
-      <div
-        class="row justify-content-between align-items-center sm:space-y-20"
-      >
-        <div class="col-md-6">
-          <div class="space-y-20">
-            <h1>Start your own collection today</h1>
-            <p class="color_text section__text">
-              {{settings.DOMAIN_NAME}} is a shared liquidity NFT market
-              smart contract which is used by multiple websites to provide
-              the users the best possible experience.
-            </p>
-            <a href="{% url 'create-collection' %}" class="btn btn-primary"
-              >Start Collecting</a
-            >
+       </section>
+       <!--  collab Section -->
+       <!-- ======= Contact Section ======= -->
+       <section id="contact" class="contact section-bg">
+          <div class="container" >
+             <div class="section-title">
+                <h6>Contact</h6>
+             </div>
+             <div class="row align-items-center">
+                <div class="contact-section">
+                   <div class="contact-form col-12 m-0">
+                      <a href="{% url 'contact-us' %}" class="send-btn pt-2" style="float: inherit; margin: 0 auto; display: block; width: 200px;">GET IN TOUCH >></a>
+                   </div>
+                </div>
+             </div>
           </div>
-        </div>
-        <div class="col-md-auto">
-          <img
-            class="img-fluid img__logo"
-            src="/static/assets/img/logos/Logo_illustrstion_white.png"
-            alt="..."
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="community">
-      <div class="section__head space-y-20">
-        <h3 class="section__title text-center">Global community</h3>
-        <p class="section__text text-center">
-          Learn more about {{settings.DOMAIN_NAME}}, chat with the team,
-          other people in the community, and express your opinion on the
-          future development of {{settings.DOMAIN_NAME}}.
-        </p>
-      </div>
-
-      <div class="community__items">
-        <div class="row justify-content-center mb-20_reset">
-          <div class="col-md-3">
-            <div class="item space-y-10">
-              <div class="logo">
-                <img
-                  src="/static/assets/img/icons/github.svg"
-                  alt="logo_community"
-                />
-              </div>
-              <h5 class="text-center">Github</h5>
-              <p class="text-center">
-                Understand the progress of our code and project
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="item space-y-10">
-              <div class="logo is_twitter">
-                <img
-                  src="/static/assets/img/icons/twitter.svg"
-                  alt="logo_community"
-                />
-              </div>
-              <h5 class="text-center">Twitter</h5>
-              <p class="text-center">
-                Understand the progress of our code and project
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="item space-y-10">
-              <div class="logo is_discord">
-                <img
-                  src="/static/assets/img/icons/discord.svg"
-                  alt="logo_community"
-                />
-              </div>
-              <h5 class="text-center">Discord</h5>
-              <p class="text-center">
-                Understand the progress of our code and project
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-{% endblock content %}
-    
+       </section>
+       <!-- End Contact Section -->
+{% endblock main %}
+  
     

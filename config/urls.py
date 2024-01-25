@@ -36,6 +36,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     path('about/', TemplateView.as_view(template_name='pages/about.html'), name='about-us'),
     path('faq/', TemplateView.as_view(template_name='pages/faq.html'), name='faq'),
+    path('blog/', TemplateView.as_view(template_name='pages/blog.html'), name='blog'),
     path('terms-and-condition/', TemplateView.as_view(template_name='pages/terms-and-condition.html'), name='terms-and-condition'),
     path('privacy-policy/', TemplateView.as_view(template_name='pages/privacy-policy.html'), name='privacy-policy'),
     path('contact-us/', TemplateView.as_view(template_name='pages/contact-us.html'), name='contact-us'),
@@ -167,8 +168,4 @@ urlpatterns = [
     
     
 ]
-if settings.DEBUG:
-        urlpatterns += static(settings.STATIC_URL,
-                          document_root=settings.STATIC_ROOT)
-        urlpatterns += static(settings.MEDIA_URL,
-                        document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

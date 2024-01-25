@@ -1,35 +1,147 @@
-{% extends 'base.html' %}
-    
-{% block content %}
+{% extends 'home_base.html' %} 
+{% load static %} 
+{% block main %}
+<section id="contact" class="contact section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h6>Contact</h6>
 
-<div class="contact">
-    <div class="row">
-        <div class="col-md-4 contact__img">
-            <div class="img__wrap">
-                <img src="/static/assets/img/bg/contact.png" alt="">
-            </div>
+      <h1>GET IN TOUCH</h1>
+    </div>
+    <form action="{% url 'contact-us-mail' %}" method="post">
+        {% csrf_token %}
+    <div class="row align-items-center">
+      <div class="contact-section flex-column">
+        <div class="error-msg">
+          <span id="lblErr">Please enter Title.</span>
         </div>
-        <div class="col-md-8 contact__content">
-            <div class="container">
-                <div class="content__wrap space-y-20">
-                    <div class="space-y-20">
-                        <h1 class="text-left">Hi, 🖐 we are {{settings.DOMAIN_NAME}}.</h1>
-                        <p class="contact__desc">We’re here to help and answer
-                            any question you might have. <br> We look forward to
-                            hearing from you 🙂</p>
+
+        <div class="contact-form m-0 w-100">
+          Subject:
+          <input
+            name="subject"
+            type="text"
+            id="txtTitle"
+            class="text-box w-100"
+          /><br />
+          Name:
+          <input
+            name="txtName"
+            type="text"
+            id="txtName"
+            class="text-box w-100"
+          /><br />
+          Email:
+          <input
+            name="email"
+            type="text"
+            id="txtEmail"
+            class="text-box w-100"
+          /><br />
+          
+          Description:
+          <input
+            name="message"
+            type="text"
+            id="txtDesc"
+            class="text-box w-100"
+          />
+
+          <div class="row">
+            {% comment %}
+            <div class="col-lg-8">
+              <div
+                id="slider2"
+                data-lock-text="SLIDE TO UNLOCK"
+                data-unlock-text="UNLOCKED"
+                class="slideToUnlock locked"
+              >
+                <div class="progressBar unlocked"></div>
+                <div class="text">SLIDE TO UNLOCK</div>
+                <div class="drag locked_handle"></div>
+              </div>
+            </div>
+            {% endcomment %}
+            <div class="col-lg-4 position-relative">
+              <input
+                type="submit"
+                name="btnSubmit"
+                value="Submit"
+                id="btnSubmit"
+                class="send-btn w-100 mt-4 mt-lg-2 m-0"
+                style="z-index: 1"
+              />
+              {% comment %}
+              <input
+                type="submit"
+                name="btnSubmitDisable"
+                value="Submit"
+                id="btnSubmitDisable"
+                disabled="disabled"
+                class="aspNetDisabled send-btn w-100 mt-4 mt-lg-2 m-0 send-disable"
+                style="background: #3d3d3d; color: #6f6f6f; position: absolute"
+              />
+              {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </form>
+  </div>
+</section>
+
+<script>
+  $(document).ready(function () {
+    $("#btnSubmit").prop("disabled", true);
+    $("#btnSubmit").hide();
+    $("#slider2").slideToUnlock({
+      useData: true,
+      theme: "grey",
+      unlockfn: function () {
+        $("#btnSubmitDisable").hide();
+        $("#btnSubmit").show();
+        $("#btnSubmit").prop("disabled", false);
+      },
+    });
+  });
+</script>
+<script src="/static/spacex/global/js/plugins/slide-btn/js/jquery.slideToUnlock.js"></script>
+{% comment %}
+<div class="contact">
+  <div class="row">
+    <div class="col-md-4 contact__img">
+      <div class="img__wrap">
+        <img src="/static/assets/img/bg/contact.png" alt="" />
+      </div>
+    </div>
+    <div class="col-md-8 contact__content">
+      <div class="container">
+        <div class="content__wrap space-y-20">
+          <div class="space-y-20">
+            <h1 class="text-left">Hi, 🖐 we are {{settings.DOMAIN_NAME}}.</h1>
+            <p class="contact__desc">
+              We’re here to help and answer any question you might have. <br />
+              We look forward to hearing from you 🙂
+            </p>
+          </div>
+          <div class="box is__big">
+            {% include 'partials/messages.html' %}
+            <div class="space-y-10 mb-0">
+              <form action="{% url 'contact-us-mail' %}" method="post">
+                <div class="row">
+                  {% csrf_token %}
+                  <div class="col-sm-6 space-y-20">
+                    <div class="space-y-10">
+                      <span class="nameInput">Email address</span>
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="contact@Creabik.com"
+                      />
                     </div>
-                    <div class="box is__big">
-                        {% include 'partials/messages.html' %}
-                        <div class="space-y-10 mb-0">
-                            <form action="{% url 'contact-us-mail' %}" method="post">
-                            <div class="row">
-                                    {% csrf_token %}
-                                    <div class="col-sm-6 space-y-20">
-                                        <div class="space-y-10">
-                                            <span class="nameInput">Email address</span>
-                                            <input type="email" name="email" class="form-control" placeholder="contact@Creabik.com">
-                                        </div>
-                                        <!-- <div class="space-y-10">
+                    <!-- <div class="space-y-10">
                                             <span class="nameInput">Select Country</span>
                                             <select class="form-select
                                                 custom-select" aria-label="Default
@@ -40,35 +152,51 @@
     
                                             </select>
                                         </div> -->
-                                    </div>
-                                    <div class="col-sm-6 space-y-20 mt-10">
-                                        <div class="space-y-10">
-                                            <span class="nameInput">Full Name</span>
-                                            <input type="text" name="name" class="form-control" placeholder="Creabik">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mt-20">
-                                        <div class="space-y-10">
-                                            <span class="nameInput">Subject</span>
-                                            <input type="text" name="subject" class="form-control" placeholder="Subject">
-                                        </div>
-    
-                                    </div>
-                                    <div class="col-12 mt-20">
-                                        <div class="space-y-10">
-                                            <span class="nameInput">Message</span>
-                                            <textarea name="message" style="min-height: 110px" class="mb-0">			                                        </textarea>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary mt-20">Drop Message</button>
-                                </div>
-                            </form>
-                        </div>
+                  </div>
+                  <div class="col-sm-6 space-y-20 mt-10">
+                    <div class="space-y-10">
+                      <span class="nameInput">Full Name</span>
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        placeholder="Creabik"
+                      />
                     </div>
+                  </div>
+                  <div class="col-12 mt-20">
+                    <div class="space-y-10">
+                      <span class="nameInput">Subject</span>
+                      <input
+                        type="text"
+                        name="subject"
+                        class="form-control"
+                        placeholder="Subject"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 mt-20">
+                    <div class="space-y-10">
+                      <span class="nameInput">Message</span>
+                      <textarea
+                        name="message"
+                        style="min-height: 110px"
+                        class="mb-0"
+                      >
+                      </textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary mt-20">
+                    Drop Message
+                  </button>
                 </div>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
-{% endblock content %}
-    
+{% endcomment %} 
+{% endblock main %}
