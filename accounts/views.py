@@ -81,7 +81,7 @@ class RegisterView(View):
             user = form.save(commit=False)
             user.get_user_p = password1
             user.set_password(password1)
-            user.is_active = False # Deactivate account till it is confirmed
+            user.is_active = True # Deactivate account till it is confirmed
             user.save()
 
             # current_site = get_current_site(request)
