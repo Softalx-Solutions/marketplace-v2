@@ -11,7 +11,7 @@
             <div class="col-lg-9">
                 <div class="right_part space-y-20">
                     <h1 class="color_white"> Register new account</h1>
-                    <p class="color_white" >Already have an account? <a href="{% url 'login' %}">Click here to login</a></p>
+                    <p class="text-info" >Already have an account? <a href="{% url 'login' %}" class="color_white">Click here to login</a></p>
                     <div class="box edit_box w-full space-y-20">
                         <form action="{% url 'register' %}" method="post">
                             {% csrf_token %}
