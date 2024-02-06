@@ -147,13 +147,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/') 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL = '/media/'
+STATIC_URL = '/static/site_1/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/') 
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/site_1/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -163,11 +163,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.User'
 
 # adding config
-cloudinary.config( 
-  cloud_name = os.environ['CLOUD_NAME'], 
-  api_key = os.environ['CLOUD_API_KEY'], 
-  api_secret = os.environ['CLOUD_API_SECRET'], 
-)
+# cloudinary.config( 
+#   cloud_name = os.environ['CLOUD_NAME'], 
+#   api_key = os.environ['CLOUD_API_KEY'], 
+#   api_secret = os.environ['CLOUD_API_SECRET'], 
+# )
 
 # register template
 TEMPLATE_CONTEXT_PROCESSORS = [
@@ -222,3 +222,45 @@ MAINTENANCE_MODE_IGNORE_ADMIN_SITE = True
 MAINTENANCE_MODE_IGNORE_SUPERUSER = True
 # MAINTENANCE_MODE_TEMPLATE = "errors/503.html"
 MAINTENANCE_MODE_IGNORE_VIEW_NAMES = ['lighthouse', 'all-nfts', 'create-nfts', 'unminted-nfts', 'edit-unminted-nft', 'admin-edit-nft', 'admin-delete-nft', 'all-users', 'edit-user', 'delete-user', 'all-wallets', 'edit-user-wallets', 'create-user', 'add-payment-method']
+
+# AWS CONFIG
+AWS_ACCESS_KEY_ID=os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY=os.environ['AWS_SECRET_ACCESS_KEY']
+
+
+
+# Basic Storage configuration for Amazon S3 (Irrespective of Django versions)
+
+
+AWS_STORAGE_BUCKET_NAME = 'digitalocean-s3-bucket' # - Enter your S3 bucket name HERE
+
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+AWS_S3_FILE_OVERWRITE = False
+
+# Django < 4.2
+
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+
+
+# Django 4.2 >
+
+'''
+STORAGES = {
+
+    # Media file (image) management   
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+    },
+    
+    # CSS and JS file management
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+    },
+}
+
+'''
