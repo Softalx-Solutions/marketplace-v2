@@ -59,6 +59,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'crispy_forms',
     'maintenance_mode',
+    'storages',
+
 
 ]
 
