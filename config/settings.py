@@ -149,13 +149,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 
-STATIC_URL = '/static/site_1/'
+# STATIC_URL = '/static/site_1/'
+
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/') 
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, 'static'),
 # )
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL = '/media/site_1/'
+# MEDIA_URL = '/media/site_1/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -237,6 +238,8 @@ AWS_SECRET_ACCESS_KEY=os.environ['AWS_SECRET_ACCESS_KEY']
 AWS_STORAGE_BUCKET_NAME = 'digitalocean-s3-bucket' # - Enter your S3 bucket name HERE
 
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/site1/'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/site1/'
 
 AWS_S3_FILE_OVERWRITE = False
 
