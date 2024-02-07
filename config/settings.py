@@ -17,9 +17,9 @@ env = environ.Env()
 environ.Env.read_env()
 from django.contrib import messages
 
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
+# import cloudinary
+# import cloudinary.uploader
+# import cloudinary.api
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'lighthouse',
     
     #third party apps
-    'cloudinary',
+    # 'cloudinary',
     'crispy_forms',
     'maintenance_mode',
     'storages',
@@ -149,14 +149,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 
-# STATIC_URL = '/static/site_1/'
+STATIC_URL = '/static/'
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/') 
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-# MEDIA_URL = '/media/site_1/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -235,13 +235,13 @@ AWS_SECRET_ACCESS_KEY=os.environ['AWS_SECRET_ACCESS_KEY']
 # Basic Storage configuration for Amazon S3 (Irrespective of Django versions)
 
 
-AWS_STORAGE_BUCKET_NAME = 'digitalocean-s3-bucket' # - Enter your S3 bucket name HERE
+AWS_STORAGE_BUCKET_NAME = 'soulcrafts-nft-bucket' # - Enter your S3 bucket name HERE
 
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/site1/'
-MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/site1/'
 
 AWS_S3_FILE_OVERWRITE = False
+
+AWS_S3_REGION_NAME = 'eu-west-2'
 
 # Django < 4.2
 

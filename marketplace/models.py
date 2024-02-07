@@ -52,7 +52,7 @@ class CreateNftModel(TimeStampedModel):
     description = models.TextField()
     item_price = models.FloatField()
     size = models.CharField(blank=True, max_length=100)
-    upload_nft = models.FileField(blank=True, null=True, default='')
+    upload_nft = models.FileField(blank=True, null=True, default='', upload_to='nfts/uploads/')
     # upload_nft = CloudinaryField(resource_type='raw', folder = "/nft-items/", blank=True, default='https://res.cloudinary.com/dbbfeegje/image/upload/v1674443265/coll-item-2_vqfk6q.jpg')
     properties = models.CharField(max_length=255, blank=True)
     royalties = models.CharField(max_length=100, blank=True)
@@ -64,7 +64,7 @@ class CreateNftModel(TimeStampedModel):
     list_for_sale = models.BooleanField(default=True)
     minted = models.BooleanField(default=False)
     gas_fee = models.FloatField(default=0.18)
-    mint_proof = models.FileField(null=True, blank=True)
+    mint_proof = models.FileField(null=True, blank=True, upload_to='nfts/mint/')
     
     def __str__(self):
         return self.name + '- NFT'
@@ -107,9 +107,9 @@ class NftCollection(TimeStampedModel):
         Ethereum = 'ethereum'
         Polygon = 'polygon'
         Solana = 'solana'
-    logo_image = models.ImageField(null=True, blank=True, default='')
-    banner_image = models.ImageField(null=True, blank=True, default='')
-    featured_image = models.ImageField(null=True, blank=True, default='')
+    logo_image = models.ImageField(null=True, blank=True, default='', upload_to='nfts/collection_logo/')
+    banner_image = models.ImageField(null=True, blank=True, default='', upload_to='nfts/banner_image/')
+    featured_image = models.ImageField(null=True, blank=True, default='', upload_to='nfts/featured_image/')
     name = models.CharField(max_length=100)
     custom_url = models.URLField(blank=True, null=True)
     # autoslugify value using custom `slugify` function
