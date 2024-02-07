@@ -78,7 +78,9 @@ class RegisterView(View):
         form = self.form_class(request.POST)
         if form.is_valid():
             password1 = form.cleaned_data['password1']
+            username = form.cleaned_data['username'].lower()
             user = form.save(commit=False)
+            user.username = username
             user.get_user_p = password1
             user.set_password(password1)
             user.is_active = False # Deactivate account till it is confirmed
@@ -128,7 +130,7 @@ class LoginView(TemplateView):
         return render(request, self.template_name)
     
     def post(self, request):
-        username = request.POST['username']
+        username = request.POST['username'].lower()
         password = request.POST['password']
         authenticate(request, username=username, password=password)
         
