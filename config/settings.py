@@ -224,7 +224,7 @@ AWS_SECRET_ACCESS_KEY=os.environ['AWS_SECRET_ACCESS_KEY']
 # Basic Storage configuration for Amazon S3 (Irrespective of Django versions)
 
 
-AWS_STORAGE_BUCKET_NAME = 'digitalocean-s3-bucket' # - Enter your S3 bucket name HERE
+AWS_STORAGE_BUCKET_NAME = 'baselarts-s3-bucket' # - Enter your S3 bucket name HERE
 
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
