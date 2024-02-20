@@ -1,0 +1,533 @@
+{% extends 'home_base.html' %}
+{% load static %}
+{% block slideshow %}
+<section id="hero" class="d-flex align-items-center">
+  <div class="container" data-aos="fade-up">
+     <div class="row  d-flex justify-content-center text-center">
+        
+        <div class="col-lg-10 d-none">
+           <!--
+           <div class="d-lg-block d-none">
+              <a href="javascript:void(0)" target="_blank">
+                 <img src="/static/spacex/global/images/banner_boxing.jpg?v3" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+              </a>
+           </div>
+           <div class="d-lg-none d-block">
+              <a href="javascript:void(0)" target="_blank">
+                 <img src="/static/spacex/global/images/banner_boxing_mobile.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+              </a>
+           </div>
+           -->
+           <div class="d-lg-block d-none">
+                 <img src="/static/spacex/global/images/124-banner.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+           </div>
+           <div class="d-lg-none d-block">
+                 <img src="/static/spacex/global/images/124-banner-mobile.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+           </div>
+        </div>
+        
+        
+        <div class="col-lg-10 col-12 pt-3 pt-lg-0 order-2 order-lg-1">
+           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="min-height: 400px;">
+             <div class="carousel-inner">
+              
+                 <div class="carousel-item active" style="min-height: 470px;">
+                    <div class="mt-5">
+                       <h1>Welcome to the Metaverse world of <span class="text-gradient">{{settings.DOMAIN_NAME}}</span></h1>
+                       <h2>Become the master of virtual and real world · Life inspiring life</h2>
+                       <div>
+                          <a href="{% url 'register' %}" class="btn-get-started scrollto">Get Started</a>
+                       </div>
+                    </div>
+                    
+                 </div>
+                 <!--
+                 <div class="carousel-item">
+                    <div class="d-lg-block d-none">
+                          <img src="/static/spacex/global/images/133-banner.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+                    </div>
+                    <div class="d-lg-none d-block">
+                          <img src="/static/spacex/global/images/133-banner-mobile.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+                    </div>
+                 </div>
+                 -->
+                 <div class="carousel-item">
+                    <div class="d-lg-block d-none">
+                          <img src="/static/spacex/global/images/transi-banner1b26.jpg?v2" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+                    </div>
+                    <div class="d-lg-none d-block">
+                       <a href="javascript:void(0)" >
+                          <img src="/static/spacex/global/images/transi-banner-mobile.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+                       </a>
+                    </div>
+                 </div>
+                 <div class="carousel-item">
+                    <div class="d-lg-block d-none">
+                       <a href="javascript:void(0)" >
+                          <img src="/static/spacex/global/images/banner_boxing.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+                       </a>
+                    </div>
+                    <div class="d-lg-none d-block">
+                       <a href="javascript:void(0)" >
+                          <img src="/static/spacex/global/images/banner_boxing_mobile.jpg" class="img-fluid" style="box-shadow: 1px 1px 16px #ce00ff;">
+                       </a>
+                    </div>
+                 </div>
+              <!--
+               <div class="carousel-item">
+                 <div class="position-relative">
+                    <a href="https://forms.gle/SD8qGNJmkSGrAEmY6" class="btn btn-warning btn-lg position-absolute mx-auto" target="_blank" style="left:0; right:0; bottom: 30px; max-width: 200px;">REGISTER</a>
+                    <img src="/static/spacex/global/images/hm-banner-form-en.png" class="img-fluid d-none d-lg-block">
+                    <img src="/static/spacex/global/images/hm-banner-form-en-mobile.png" class="img-fluid d-block d-lg-none">
+                 </div>
+                  
+               </div>
+               
+              <div class="carousel-item active">
+                    <img src="/static/spacex/global/images/amm-banner_v2.jpg" class="img-fluid d-none d-lg-block mx-auto" style="box-shadow: 1px 1px 16px #ce00ff;">
+                    <img src="/static/spacex/global/images/amm-banner-mobile_v2.jpg" class="img-fluid d-block d-lg-none" style="box-shadow: 1px 1px 16px #ce00ff;">
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://reg.{{settings.DOMAIN_NAME}}.co" target="_blank" class="d-block">
+                        <img src="/static/spacex/global/images/reg-banner.jpeg" class="img-fluid d-none d-lg-block mx-auto" style="box-shadow: 1px 1px 16px #ce00ff;">
+                          <img src="/static/spacex/global/images/reg-banner-mobile.jpg" class="img-fluid d-block d-lg-none" style="box-shadow: 1px 1px 16px #ce00ff;">
+                     </a>
+                  </div>
+             </div>
+             -->
+             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+             </button>
+             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+             </button>
+        
+           </div>    
+        </div>
+     
+     </div>
+  </div>
+</section>
+{% endblock slideshow %}
+  
+
+{% block main %}
+         <!-- ======= About Section ======= -->
+         <section id="explore" class="explore">
+          <div class="container">
+             <div class="row">
+                <div class="col-lg-6 col-12 pt-4 pt-lg-0  content section-title align-self-center" data-aos="fade-right">
+                   <h6>EXPLORE</h6>
+                   <h1>Manny Pacquiao</h1>
+                   <p> Manny Pacquiao, Filipino professional boxer, winner of 8 heavyweight classes and 12 world titles Manny Pacquiao is officially a {{settings.DOMAIN_NAME}} citizen and ready to embrace his second life! </p>
+                   <!--
+                      <a href="#" class="read-more mt-2" data-bs-toggle="modal" data-bs-target="#myModal-02">Explore <i class="bi bi-arrow-right-short"></i>
+                      
+                      </a>
+                      -->
+                </div>
+                <div class="col-lg-6 col-12" data-aos="zoom-in" data-aos-delay="150">
+                   <img src="/static/spacex/assets/img/explore.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-8 col-12 mx-auto " data-aos="zoom-in" data-aos-delay="200">
+                   <video  src="/static/spacex/assets/video/manny(40).mp4" class="w-100 rounded" playsinline controls>
+                      <source src="movie.html" type="video/mp4">
+                      <source src="movie-2.html" type="video/ogg">
+                      Your browser does not support the video tag.
+                   </video>
+                </div>
+             </div>
+          </div>
+       </section>
+       <!-- End About Section -->
+       <!-- ======= about-nft Section ======= -->
+       <section id="about-nft" class="about-nft ">
+          <div class="container" data-aos="fade-up">
+          <div class="row justify-content-center">
+             <div class="col-lg-8 col-12 section-title ">
+                <h6>ABOUT</h6>
+                <h1>NFT</h1>
+                <p>The game offers players a chance to act out the comic's fight sequences in their entirety. Ignite player's passion, PK with each other, and compete for awesome prizes.</p>
+             </div>
+             <div class="col-lg-12 col-12">
+                <div class="swiper-container">
+                   <div class="swiper-wrapper">
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-01.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-02.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-03.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-04.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-05.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-06.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-07.jpg)"></div>
+                      <div class="swiper-slide" style="background-image:url(/static/spacex/assets/img/nft/nft-img-08.jpg)"></div>
+                   </div>
+                   <div class="swiper-button-next"></div>
+                   <div class="swiper-button-prev"></div>
+                   <!-- Add Pagination -->
+                   <div class="swiper-pagination"></div>
+                </div>
+             </div>
+          </div>
+       </section>
+       <!-- End about-nft Section -->
+       <!-- ======= Features Section ======= -->
+       <section id="features" class="features">
+          <div class="container" data-aos="fade-up">
+             <div class="row justify-content-start align-items-center">
+                <div class="col-lg-5 col-12 section-title-02" data-aos="fade-right">
+                   <h6>{{settings.DOMAIN_NAME}}</h6>
+                   <h1>ABOUT {{settings.DOMAIN_NAME}}</h1>
+                   <p>A realm of virtual reality where anything is possible; a place to create, experiment, and discover at will. </p>
+                   <p>Make {{settings.DOMAIN_NAME}} one of the top 500 companies worldwide through the use of cutting-edge technology and highly qualified staff, usher in an era of {{settings.DOMAIN_NAME}} for users throughout the world, and empower citizens to exercise smart governance with the help of technological rainmakers.</p>
+                   <p class="font-weight-bold">More exciting future developments are coming!</p>
+                </div>
+                <div class="col-lg-7 col-12"  data-aos="zoom-in" data-aos-delay="200">
+                   <div class="row">
+                      <div class="col-lg-6 d-flex align-items-stretch mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+                         <div class="icon-box iconbox-blue" style="background-image:url(/static/spacex/assets/img/features-01.jpg);background-size: cover;">
+                            <div class="icon">
+                               <i class="bx bxl-dribbble"></i>
+                            </div>
+                            <h4>Durian Valley</h4>
+                            <p>As citizens take control of a manor, they are able to cultivate crops, tend to fields, irrigate crops, harvest crops, and engage in other agricultural activities before selling or buying them.</p>
+                         </div>
+                      </div>
+                      <div class="col-lg-6 d-flex align-items-stretch mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
+                         <div class="icon-box iconbox-blue" style="background-image:url(/static/spacex/assets/img/features-02.jpg);background-size: cover;">
+                            <div class="icon">
+                               <i class="bx bxl-dribbble"></i>
+                            </div>
+                            <h4>Rice planting</h4>
+                            <p>Run a ranch and experience a complete ranch life</p>
+                         </div>
+                      </div>
+                      <div class="col-lg-6 d-flex align-items-stretch mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
+                         <div class="icon-box iconbox-blue" style="background-image:url(/static/spacex/assets/img/features-03.jpg);background-size: cover;">
+                            <div class="icon">
+                               <i class="bx bxl-dribbble"></i>
+                            </div>
+                            <h4>HLY Ocean</h4>
+                            <p>Raise pearl grouper, continuously upgrade the fish quality and make profit by selling them on the market</p>
+                         </div>
+                      </div>
+                      <div class="col-lg-6 d-flex align-items-stretch mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+                         <div class="icon-box" style="background-image:url(/static/spacex/assets/img/features-04.jpg);background-size: cover;">
+                            <div class="icon">
+                               <i class="bx bxl-dribbble"></i>
+                            </div>
+                            <h4>Nexus Trade</h4>
+                            <p>NEXUS TRADE, World’s first innovative satellite based FinTech trading platform</p>
+                            <p>
+                               Providing CFD financial trading circumstances that are tailored to satisfy both experienced and inexperienced investors. Offer investors access to worldwide stock, currency, index, digital currency, and commodity markets through trading services.
+                            </p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </section>
+       <!-- End Features Section -->
+       <!-- ======= PLAYER Section ======= -->
+       <section id="players" class="players ">
+          <div class="container" data-aos="fade-up">
+             <div class="row">
+                <div class="section-title">
+                   <h6>PLAYER</h6>
+                   <h1>GLOBAL PLAYER</h1>
+                </div>
+                <div class="col-lg-4 col-12 text-center">
+                   <a href="javascript:void(0)" >
+                      <img src="/static/spacex/assets/img/player-02.png" class="img-fluid mb-2" alt="" data-aos="zoom-in-up" data-aos-delay="200">
+                      <h6 class="btn-join">Click To Join {{settings.DOMAIN_NAME}}</h6>
+                   </a>
+                </div>
+                <div class="col-lg-4 col-12 text-center">
+                   <a href="javascript:void(0)" >
+                      <img src="/static/spacex/assets/img/player-01.png" class="img-fluid mb-2" alt="" data-aos="zoom-in-up" data-aos-delay="200">
+                      <h6 class="btn-join">Click To Join {{settings.DOMAIN_NAME}}</h6>
+                   </a>
+                </div>
+                <div class="col-lg-4 col-12 text-center">
+                   <a href="javascript:void(0)" >
+                      <img src="/static/spacex/assets/img/player-03.png" class="img-fluid mb-2" alt="" data-aos="zoom-in-up" data-aos-delay="300">
+                      <h6 class="btn-join">Click To Join {{settings.DOMAIN_NAME}}</h6>
+                   </a>
+                </div>
+                <!--
+                   <div class="col-lg-3 col-12 text-center">
+                   
+                     <img src="/static/spacex/assets/img/player-04.png" class="img-fluid mb-2" alt="" data-aos="zoom-in-up" data-aos-delay="400">
+                   
+                   </div>
+                   -->
+             </div>
+          </div>
+       </section>
+       <!-- End PLAYER Section -->
+
+       <!-- ======= Advisor Section ======= -->
+       <section id="advisor" class="players">
+          <div class="container" data-aos="fade-up">
+             <div class="row justify-content-center">
+                <div class="section-title">
+                   <h6>Strategic Advisor</h6>
+                   <h1>ADVISOR</h1>
+                </div>
+                <div class="col-lg-10">
+                   <div class="row mb-5">
+                      <div class="col-lg-4">
+                         <img src='/static/spacex/assets/img/advisor-011b26.png?v2' class="img-fluid w-75 mx-auto d-block" data-aos="zoom-in-up">
+                      </div>
+                      <div class="col-lg-8 flex-column d-flex justify-content-center">
+                         <div class="d-flex flex-column align-items-center align-items-lg-start">
+                            <h5 class="btn-join mb-0 pb-0">Ms. Gözde Dizdar</h5>
+                            <h6 class="mb-4">Strategic Advisor for Europe and Middle East</h6>   
+                         </div>                        
+                         <div class="token-bg p-4">
+                            <p>
+                            Gözde Dizdar has over 20 years of experience in
+                            international development work, including work with the
+                            United Nations (UN) and The World Bank. She is engaged
+                            in Youth empowerment initiatives, policy and research,
+                            advocacy, program management including development
+                            and implementation of projects.
+                            </p>
+                            <p>
+                               Additionally, Ms. Dizdar’s work includes a consultancy
+                               assignment on studying the impact of urbanization on
+                               women’s empowerment, youth employment and
+                               entrepreneurship.
+                            </p>
+                            <p>
+                               She has been strong business development professional
+                               and the leading person working with industrial
+                               conglomerates’ investments and B2B - B2G - G2G
+                               agreements in number of countries and mainly in
+                               Southeast Asia.
+                            </p>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="col-lg-8 flex-column d-flex justify-content-center order-lg-1 order-2">
+                         <div class="d-flex flex-column align-items-center align-items-lg-end">
+                            <h5 class="btn-join mb-0 pb-0">Mr. Manny Pacquiao</h5>
+                            <h6 class="mb-4">Strategic Advisor for South East Asia</h6>
+                         </div>
+                         <div class="token-bg p-4">
+                            <p>
+                            Manny Pacquiao, is a legendary boxer and politician. Renowned as "Pac-Man," he achieved unprecedented success by winning world titles in eight different weight classes, showcasing his exceptional speed, power, and versatility.
+                            </p>
+                            <p>
+                               Beyond boxing, Pacquiao entered politics, serving as a congressman in 2010 and later being elected to the Philippine Senate in 2016. His political career runs parallel to his philanthropic efforts, where he utilizes his fame and resources to support education, healthcare, and disaster relief initiatives in the Philippines.
+
+                            </p>
+                            <p>
+                               Pacquiao's journey from humble beginnings to global stardom exemplifies the values of hard work and resilience. His legacy extends beyond the sports arena, making him an inspirational figure and symbol of Filipino pride. Whether in the ring or the political arena, Manny Pacquiao's impact on the world is defined by his dedication, versatility, and commitment to uplifting others.
+                            </p>
+                         </div>
+                      </div>
+                      <div class="col-lg-4 order-lg-2 order-1">
+                         <img src='/static/spacex/assets/img/advisor-021b26.png?v2' class="img-fluid w-75 mx-auto d-block" data-aos="zoom-in-up">
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </section>
+       <!-- End Advisor Section -->
+
+       <!-- =======Step token Section ======= -->
+       <section id="token" class="token section-bg">
+          <div class="container" data-aos="fade-up">
+             <div class="row d-flex justify-content-center align-items-center token-bg">
+                <div class="section-title pt-4">
+                   <h2>{{settings.DOMAIN_NAME}} Token System</h2>
+                </div>
+                <div class="col-12 col-lg-10 ">
+                   <img src='/static/spacex/assets/img/step-token-img.png' class="img-fluid" data-aos="zoom-in-up">
+                </div>
+             </div>
+          </div>
+       </section>
+       <!-- Step token Section -->
+       <!-- =======SGS Section ======= -->
+       <section id="sgs" class="ps-timeline-sec sgs">
+          <div class="section-title">
+             <h2>SGS SMART GUILD SYSTEM</h2>
+          </div>
+          <div class="container" data-aos="fade-up">
+             <ol class="ps-timeline text-left text-lg-center ">
+                <li>
+                   <div class="card-2">
+                      <p>Players get equivalent stocks and earn game points.</p>
+                   </div>
+                </li>
+                <li>
+                   <div class="ps-top-content ">
+                      <h6 class="fw-bold mb-1">Upgrade 1 player for every 25 players </p>
+                      </h6>
+                   </div>
+                   <span class="ps-sp-bot"></span>
+                </li>
+                <li>
+                   <div class="card">
+                      <div class="front d-flex flex-column">
+                         <h1 id="blue">SIFU</h1>
+                         <p class="d-block d-sm-none">Bonus $2658</p>
+                      </div>
+                      <div class="back">
+                         <h1>Bonus $2658</h1>
+                      </div>
+                   </div>
+                </li>
+                <li>
+                   <div class="ps-top-content ">
+                      <h6 class="fw-bold mb-1">Upgrade 1 for every 10 </p>
+                      </h6>
+                   </div>
+                   <span class="ps-sp-bot"></span>
+                </li>
+                <li>
+                   <div class="card">
+                      <div class="front  d-flex flex-column">
+                         <h1 id="blue">MASTER</h1>
+                         <p class="d-block d-sm-none">Bonus $5901</p>
+                      </div>
+                      <div class="back">
+                         <h1>Bonus $5901</h1>
+                      </div>
+                   </div>
+                </li>
+                <li>
+                   <div class="ps-top-content ">
+                      <h6 class="fw-bold mb-1">Upgrade 1 for every 10 </p>
+                      </h6>
+                   </div>
+                   <span class="ps-sp-bot"></span>
+                </li>
+                <li>
+                   <div class="card">
+                      <div class="front  d-flex flex-column">
+                         <h1 id="blue">GUILD MASTER</h1>
+                         <p class="d-block d-sm-none">Bonus $63190</p>
+                      </div>
+                      <div class="back">
+                         <h1>Bonus $63190</h1>
+                      </div>
+                   </div>
+                </li>
+             </ol>
+          </div>
+       </section>
+       <!--  SGS Section -->
+       <!-- =======Transi APPS Section ======= -->
+       <section id="me-talk" class="me-talk ">
+          <div class="container" data-aos="fade-up">
+             <div class="row align-items-center">
+                <div class="col-lg-6 col-12 aos-init aos-animate text-end" >
+                   <img src='/static/spacex/assets/img/transi_img.png' class="img-fluid" width="400" data-aos="zoom-in-up" data-aos-delay="100">
+                </div>
+                <div class="col-lg-6 col-12 text-lg-start text-md-end aos-init aos-animate"  data-aos="zoom-in-up" data-aos-delay="200">
+                   <div class="section-title-02 ">
+                      <h6>DOWNLOAD HERE</h6>
+                      <h1>TRANSI CHAT</h1>
+                   </div>
+                   <a href="javascript:void(0)"  class="read-more mt-2">Google Play <i class="bi bi-google-play"></i></a>
+                   <a href="javascript:void(0)"  class="read-more mt-2">Apple Store<i class="bi bi-apple"></i></a>
+                </div>
+             </div>
+          </div>
+       </section>
+       <!-- METALK APPS Section -->
+       <section id="partner" class="partner">
+          <div class="container aos-init aos-animate" data-aos="fade-up">
+             <div class="row justify-content-center align-items-center">
+                <div class="section-title">
+                   <h2>PARTNERS</h2>
+                </div>
+                <div class="col-12 col-lg-10  text-center">
+                   <div class="customer-logos">
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-011b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-021b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-031b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-041b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-051b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-061b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-071b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-081b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-091b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-101b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-111b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-121b26.png?v2" ></div>
+                      <div class="slide"><img src="/static/spacex/assets/img/partners/partner-logo-131b26.png?v2" ></div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </section>
+       <!-- ======= COLLAB section ======= -->
+       <section id="collab" class="collab ">
+          <div class="container">
+             <div class="row">
+                <div class="section-title">
+                   <h6>Join Us</h6>
+                   <h1>Collaboration</h1>
+                </div>
+                <div class="col-lg-12 col-12">
+                   <div class="row">
+                      <div class="col-lg-4 col-12 d-flex  mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+                         <div class="box-collab d-flex flex-column align-items-start">
+                            <img src="/static/spacex/assets/img/collab-1.png" class="img-fluid mb-2" width="60">
+                            <h3>
+                               Collaborator 
+                            </h3>
+                            <a href="{% url 'contact-us' %}" class="btn-get-started"><i class="bi bi-arrow-right"></i></a>
+                         </div>
+                      </div>
+                      <div class="col-lg-4 col-12 d-flex  mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
+                         <div class="box-collab d-flex flex-column align-items-start">
+                            <img src="/static/spacex/assets/img/collab-3.png" class="img-fluid mb-2" width="60">
+                            <h3>
+                               Creator
+                            </h3>
+                            <a href="{% url 'contact-us' %}" class="btn-get-started"><i class="bi bi-arrow-right"></i></a>
+                         </div>
+                      </div>
+                      <div class="col-lg-4 col-12 d-flex  mb-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
+                         <div class="box-collab d-flex flex-column align-items-start">
+                            <img src="/static/spacex/assets/img/collab-2.png" class="img-fluid mb-2" width="60">
+                            <h3>
+                               System Developer 
+                            </h3>
+                            <a href="{% url 'contact-us' %}" class="btn-get-started"><i class="bi bi-arrow-right"></i></a>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </section>
+       <!--  collab Section -->
+       <!-- ======= Contact Section ======= -->
+       <section id="contact" class="contact section-bg">
+          <div class="container" >
+             <div class="section-title">
+                <h6>Contact</h6>
+             </div>
+             <div class="row align-items-center">
+                <div class="contact-section">
+                   <div class="contact-form col-12 m-0">
+                      <a href="{% url 'contact-us' %}" class="send-btn pt-2" style="float: inherit; margin: 0 auto; display: block; width: 200px;">GET IN TOUCH >></a>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </section>
+       <!-- End Contact Section -->
+{% endblock main %}
+  
+    
