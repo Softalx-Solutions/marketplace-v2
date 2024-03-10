@@ -94,7 +94,7 @@
                                                 <h3 class="mb-20">Request Withdrawal</h3>
                                                 <!-- <p class="text-danger mb-2">Note: Withdrawal will not be submitted until a wallet is selected</p> -->
                                                 <p class="text-warning mb-2">Click here to add wallet if none: <a href="{% url 'add-wallet' %}">click here</a></p>
-                                                <p class="text-warning mb-2"> Click here to pay withdrawal fee, select the BNB netwotk <a href="{% url 'deposit' %}"> CLICK HERE</a></p>
+                                                <p class="text-warning mb-2"> Click here to pay withdrawal fee, select the BNB netwotk <a href="{% url 'fund-account' %}"> CLICK HERE</a></p>
                                                 <div class="form-group space-y-10 mb-0">
                                                     <form action="{% url 'withdraw-funds' %}" method="post">
                                                         {% csrf_token %}
