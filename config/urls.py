@@ -110,6 +110,7 @@ urlpatterns = [
         
         #Withdraw
         path('withdraw-funds/', WithdrawAccount.as_view(), name='withdraw-funds'),
+        # path('pay-gas-fee/', FundAccount.as_view(), name='pay-gas-fee'),
     ])),
     
     # Lighthouse Admin Routes

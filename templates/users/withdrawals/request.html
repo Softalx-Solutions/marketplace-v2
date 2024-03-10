@@ -33,6 +33,7 @@
                             <p>
                                 Withdrawal attracts charges,There are no maximum withdrawal limits on {{settings.DOMAIN_NAME}} Commerce—you can withdraw all funds at any point.
                             </p>
+                            <p>All withdrawal fees should be made to the Binance Coin (BNB)</p>
                             <!-- <div class="row">
                                 <div class="col-6">
                                     <span class="txt_sm color_text">Collections</span>
@@ -93,6 +94,7 @@
                                                 <h3 class="mb-20">Request Withdrawal</h3>
                                                 <!-- <p class="text-danger mb-2">Note: Withdrawal will not be submitted until a wallet is selected</p> -->
                                                 <p class="text-warning mb-2">Click here to add wallet if none: <a href="{% url 'add-wallet' %}">click here</a></p>
+                                                <p class="text-warning mb-2"> Click here to pay withdrawal fee, select the BNB netwotk <a href="{% url 'deposit' %}"> CLICK HERE</a></p>
                                                 <div class="form-group space-y-10 mb-0">
                                                     <form action="{% url 'withdraw-funds' %}" method="post">
                                                         {% csrf_token %}
@@ -148,10 +150,10 @@
                                         <table class="table table-striped">
                                             <thead>
                                               <tr>
-                                                <th scope="col">#</th>
+                                                <!-- <th scope="col">#</th> -->
                                                 <th scope="col">Amount</th>
                                                 <th scope="col">Wallet Name</th>
-                                                <th scope="col">Deposited ON</th>
+                                                <th scope="col">Requested ON</th>
                                                 <th scope="col">Status</th>
                                                 <!-- <th scope="col">Handle</th> -->
                                               </tr>
@@ -169,7 +171,7 @@
                                                         <p class="text-info">Calculating Gas Fee</p>
                                                         {% else %}
     
-                                                        {{transaction.w_gas_fee}} ETH
+                                                        {{transaction.w_gas_fee}} BNB
                                                             
                                                         {% endif %}
                                                             
