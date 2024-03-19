@@ -4,7 +4,9 @@
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
   <head>
     <meta charset="UTF-8" />
+    <meta name="title" content="{{settings.DOMAIN_NAME}}" />
     <meta name="description" content="{{settings.DOMAIN_NAME}} NFT marketplace" />
+    <meta name="robots" content="index, follow" />
     <meta name="language" content="English" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{settings.DOMAIN_NAME}}</title>
@@ -13,7 +15,7 @@
     <!-- 🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈 STYLES -->
     <link
       rel="stylesheet"
-      href="{% static 'assets/css/plugins/remixicon.css'%}"
+      href="{% static 'assets/css/plugins/remixicon.css' %}"
     />
     <link
       rel="stylesheet"
@@ -27,129 +29,201 @@
   </head>
   <body class="body">
     <div class="overflow-hidden">
-      <div class="position-fixed w-full" style="z-index: 999999">
-        <div class="bg-dark py-10">
-          <div class="container">
-            <div
-              class="text-center d-flex justify-content-between space-x-10 align-items-center"
-            >
-              <div class="space-x-10 d-flex align-items-center">
-                <lottie-player
-                  src="https://assets6.lottiefiles.com/private_files/lf30_kqshlcsx.json"
-                  background="404.html"
-                  speed="2"
-                  style="width: 50px; height: 50px"
-                  loop
-                  autoplay
-                ></lottie-player>
-                <p class="color_white">
-                  Dark mode is now
-                  <span style="color: rgb(0, 255, 170)">Available </span>
-                </p>
-              </div>
+      <div class="bg-dark py-10">
+        <div class="container">
+          <div
+            class="text-center d-flex justify-content-between space-x-10 align-items-center"
+          >
+            <div class="space-x-10 d-flex align-items-center">
+              <lottie-player
+                src="https://assets6.lottiefiles.com/private_files/lf30_kqshlcsx.json"
+                background="404.html"
+                speed="2"
+                style="width: 50px; height: 50px"
+                loop
+                autoplay
+              ></lottie-player>
+              <p class="color_white">
+                Dark mode is now
+                <span style="color: rgb(0, 255, 170)">Available </span>
+              </p>
+            </div>
 
-              <div class="mode_switcher space-x-10">
-                <a href="#" class="light d-flex align-items-center is_active">
-                  <i class="ri-sun-fill"></i> Light
-                </a>
-                <a href="#" class="dark d-flex align-items-center">
-                  <i class="ri-moon-fill"></i> Dark
-                </a>
-              </div>
+            <div class="mode_switcher space-x-10">
+              <a href="#" class="light d-flex align-items-center is_active">
+                <i class="ri-sun-fill"></i> Light
+              </a>
+              <a href="#" class="dark d-flex align-items-center">
+                <i class="ri-moon-fill"></i> Dark
+              </a>
             </div>
           </div>
         </div>
-        {% include 'shared/navbar.html' %}
       </div>
-      <div class="home__5">
-        <div class="d-lg-flex d-md-block">
-          <div>
-            
-            {% block homesidebar %}
-                
-            {% endblock homesidebar %}
-                
-            <div class="mr-100"></div>
-          </div>
-          <div class="overflow-hidden" style="width: 100%">
-            <div>
-              
-              {% block content %}
-                
-              {% endblock content %}
-                
+
+      {% include 'shared/navbar.html' %}
+      <div
+        class="modal fade popup"
+        id="popup_bid_success"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body space-y-20 p-40">
+              <h3 class="text-center">Your Bidding Successfuly Added</h3>
+              <p class="text-center">
+                your bid <span class="color_text txt _bold">(16ETH) </span> has
+                been listing to our database
+              </p>
+
+              <a href="#" class="btn btn-dark w-full"> Watch the listings</a>
             </div>
-            <footer class="footer__1">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-6 space-y-20">
-                    <div class="footer__logo">
-                      <a href="index.html">
-                        <img
-                          src="/static/assets/img/logos/{{settings.SITE_LOGO}}"
-                          alt="logo"
-                          id="logo_js_f"
-                        />
-                      </a>
-                    </div>
-                    <p class="footer__text">
-                      {{settings.DOMAIN_NAME}} is a shared liquidity NFT market smart contract
-                    </p>
-                    <div>
-                      <ul class="footer__social space-x-10 mb-40">
-                        <li>
-                          <a href="#"> <i class="ri-facebook-line"></i> </a>
-                        </li>
-                        <li>
-                          <a href="#"> <i class="ri-messenger-line"></i> </a>
-                        </li>
-                        <li>
-                          <a href="#"> <i class="ri-whatsapp-line"></i> </a>
-                        </li>
-                        <li>
-                          <a href="#"> <i class="ri-youtube-line"></i> </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-6">
-                    <h6 class="footer__title">Quick Links</h6>
-                    <ul class="footer__list">
-                      <li><a href="{% url 'register' %}"> Register </a></li>
-                      <li><a href="{% url 'login' %}"> Login </a></li>
-                      {% comment %} <li><a href="{% url 'faq' %}"> FAQs </a></li> {% endcomment %}
-                      {% comment %} <li><a href="{% url 'terms-and-condition' %}"> Terms </a></li> {% endcomment %}
-                    </ul>
-                  </div>
-                  <div class="col-lg-3 col-6">
-                    <h6 class="footer__title">Information</h6>
-                    <ul class="footer__list">
-                      <li><a href="{% url 'about-us' %}"> About </a></li>
-                      <li><a href="{% url 'privacy-policy' %}"> Privacy Policy </a></li>
-                      <li><a href="{% url 'terms-and-condition' %}"> Terms </a></li>
-                      <li><a href="{% url 'faq' %}"> FAQs </a></li>
-                    </ul>
-                  </div>
-                  {% comment %} <div class="col-lg-2 col-6">
-                    <h6 class="footer__title">Company</h6>
-                    <ul class="footer__list">
-                      <li><a href="Upload-type.html"> Upload Types </a></li>
-                      <li><a href="Upload.html"> Upload </a></li>
-                      <li>
-                        <a href="Connect-wallet.html"> Connect wallet </a>
-                      </li>
-                      <li><a href="Item-details.html"> Item details </a></li>
-                    </ul>
-                  </div> {% endcomment %}
-                </div>
-                <p class="copyright text-center">
-                  Copyright © 2017. {{settings.DOMAIN_NAME}} All rights reserved.
-                </p>
-              </div>
-            </footer>
           </div>
         </div>
       </div>
+      <div
+        class="modal fade popup"
+        id="popup_bid"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body space-y-20 p-40">
+              <h3>Place a Bid</h3>
+              <p>
+                You must bid at least <span class="color_black">15 ETH</span>
+              </p>
+              <input type="text" class="form-control" placeholder="00.00 ETH" />
+
+              <p>
+                Enter quantity. <span class="color_green">5 available</span>
+              </p>
+              <input type="text" class="form-control" value="1" />
+              <div class="hr"></div>
+              <div class="d-flex justify-content-between">
+                <p>You must bid at least:</p>
+                <p class="text-right color_black txt _bold">67,000 ETH</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p>service free:</p>
+                <p class="text-right color_black txt _bold">0,901 ETH</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p>Total bid amount:</p>
+                <p class="text-right color_black txt _bold">56,031 ETH</p>
+              </div>
+              <a
+                href="#"
+                class="btn btn-primary w-full"
+                data-toggle="modal"
+                data-target="#popup_bid_success"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                Place a bid</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {% block bg_hero %}
+        
+      {% endblock bg_hero %}
+        
+      
+      {% block content %}
+        
+      {% endblock content %}
+        
+      <footer class="footer__1">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 space-y-20">
+              <div class="footer__logo">
+                <a href="/">
+                  <img
+                    src="/static/assets/img/logos/{{settings.SITE_LOGO}}"
+                    alt="logo"
+                    id="logo_js_f"
+                    width="120"
+                  />
+                </a>
+              </div>
+              <p class="footer__text">
+                {{settings.DOMAIN_NAME}} is a shared liquidity NFT market smart
+                contract
+              </p>
+              <div>
+                <ul class="footer__social space-x-10 mb-40">
+                  <li>
+                    <a href="#"> <i class="ri-facebook-line"></i> </a>
+                  </li>
+                  <li>
+                    <a href="#"> <i class="ri-messenger-line"></i> </a>
+                  </li>
+                  <li>
+                    <a href="#"> <i class="ri-whatsapp-line"></i> </a>
+                  </li>
+                  <li>
+                    <a href="#"> <i class="ri-youtube-line"></i> </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-6">
+              <h6 class="footer__title">Quick Links</h6>
+              <ul class="footer__list">
+                <li><a href="{% url 'register' %}"> Register</a></li>
+                <li><a href="{% url 'login' %}"> Login </a></li>
+                {% comment %} <li><a href="Home3.html"> Home3 </a></li>
+                <li><a href="Marketplace.html"> Marketplace </a></li> {% endcomment %}
+              </ul>
+            </div>
+            <div class="col-lg-3 col-6">
+              <h6 class="footer__title">Information</h6>
+              <ul class="footer__list">
+                <li><a href="{% url 'faq' %}">FAQs </a></li>
+                <li><a href="{% url 'privacy-policy' %}">Privacy Policy </a></li>
+                <li><a href="{% url 'terms-and-condition' %}"> Terms &amp condition </a></li>
+                {% comment %} <li><a href="Activity.html"> Activity </a></li> {% endcomment %}
+              </ul>
+            </div>
+            {% comment %} <div class="col-lg-2 col-6">
+              <h6 class="footer__title">Company</h6>
+              <ul class="footer__list">
+                <li><a href="Upload-type.html"> Upload Types </a></li>
+                <li><a href="Upload.html"> Upload </a></li>
+                <li><a href="Connect-wallet.html"> Connect wallet </a></li>
+                <li><a href="Item-details.html"> Item details </a></li>
+              </ul>
+            </div> {% endcomment %}
+          </div>
+          <p class="copyright text-center">
+            Copyright © 2018. {{settings.DOMAIN_NAME}} All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
     <!-- 🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈 SCRIPTS -->
     <script src="{% static 'assets/js/jquery-3.6.0.js' %}"></script>
@@ -159,11 +233,17 @@
     <script src="{% static 'assets/js/ScrollTrigger.min.js' %}"></script>
     <script src="{% static 'assets/js/sticky-sidebar.js' %}"></script>
     <script src="{% static 'assets/js/script.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js' %}"></script>
-    <script src="https://unpkg.com/moralis/dist/moralis.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
     <script src="{% static 'assets/js/nft.js' %}"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+      }
+      </script>
+      
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="{{settings.SITE_LIVE_CHAT}}" async></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
-
-
 </html>

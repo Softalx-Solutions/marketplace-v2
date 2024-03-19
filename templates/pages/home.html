@@ -1,1958 +1,1317 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block bg_hero %}
-<div class="hero__3">
-    <div class="container">
-      <div class="row align-items-center mb-50 md:space-y-20">
-        <div class="col-lg-6">
-          <h1 class="hero__title">
-            <span class="color_brand">Discover</span> rare digital art and
-            collect NFTs
-          </h1>
+{% block hero %}
+<section class="hero-section pt-20 pb-120 position-relative">
+    <div class="gradient-bg"></div>
+    <div class="gradient-bg2"></div>
+    <div class="star-area">
+        <div class="big-star">
+            <img class="w-100" src="{% static 'frontend/assets/img/big-star.png' %}" alt="star">
         </div>
-        <div class="col-lg-6">
-          <p class="hero__text color_black">
-            {{settings.DOMAIN_NAME}} is a shared liquidity NFT market smart
-            contract which is used by multiple websites to provide the users
-            the best possible experience.
-          </p>
+        <div class="small-star">
+            <img class="w-100" src="{% static 'frontend/assets/img/small-star.png' %}" alt="star">
         </div>
-      </div>
-      <div class="wrapper">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="card__item two">
-              <div class="card_body space-y-10">
-                <!-- ???? =============== -->
-                <div class="card_head">
-                  <img src="/static/assets/img/items/item_5.png" alt="" />
-                  <div class="block_timer">
-                    <div
-                      class="d-flex justify-content-center align-items-center"
-                    >
-                      <div class="item">
-                        <div class="number txt hours">46<span></span></div>
-                      </div>
-                      <div class="dots">:</div>
-                      <div class="item">
-                        <div class="number txt minutes">
-                          35<span></span>
-                        </div>
-                      </div>
-                      <div class="dots">:</div>
-                      <div class="item">
-                        <div class="number txt seconds">
-                          03<span></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="details d-flex justify-content-between">
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 80%"
-                        aria-valuenow="80"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- ???? =============== -->
-                <h6 class="card_title">
-                  <a class="color_black" href="{% url 'users' %}">
-                    Colorful Abstract Painting
-                  </a>
-                </h6>
-                <div class="hr"></div>
-                <div class="card_footer justify-content-between">
-                  <a href="javascript:void(0)" class="creators space-x-10">
-                    <div class="avatars -space-x-20">
-                      <img
-                        src="/static/assets/img/avatars/avatar_1.png"
-                        alt="Avatar"
-                        class="avatar avatar-sm"
-                      />
-                      <img
-                        src="/static/assets/img/avatars/avatar_2.png"
-                        alt="Avatar"
-                        class="avatar avatar-sm"
-                      />
-                    </div>
-                    <p class="avatars_name txt_sm">@xander_hall...</p>
-                  </a>
-                  <a href="{% url 'users' %}" class="space-x-3">
-                    <p class="color_green txt_sm">1.54 ETH</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card__item two">
-              <div class="card_body space-y-10">
-                <!-- ???? =============== -->
-                <div class="card_head">
-                  <img src="/static/assets/img/items/item_7.png" alt="" />
-                  <div class="block_timer">
-                    <div
-                      class="d-flex justify-content-center align-items-center"
-                    >
-                      <div class="item">
-                        <div class="number txt hours">23<span></span></div>
-                      </div>
-                      <div class="dots">:</div>
-                      <div class="item">
-                        <div class="number txt minutes">
-                          53<span></span>
-                        </div>
-                      </div>
-                      <div class="dots">:</div>
-                      <div class="item">
-                        <div class="number txt seconds">
-                          23<span></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="details d-flex justify-content-between">
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 80%"
-                        aria-valuenow="80"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- ???? =============== -->
-                <h6 class="card_title">
-                  <a class="color_black" href="{% url 'users' %}">
-                    Spider Eyes Modern Art
-                  </a>
-                </h6>
-                <div class="hr"></div>
-                <div class="card_footer justify-content-between">
-                  <a href="javascript:void(0)" class="creators space-x-10">
-                    <div class="avatars -space-x-20">
-                      <img
-                        src="/static/assets/img/avatars/avatar_4.png"
-                        alt="Avatar"
-                        class="avatar avatar-sm"
-                      />
-                      <img
-                        src="/static/assets/img/avatars/avatar_3.png"
-                        alt="Avatar"
-                        class="avatar avatar-sm"
-                      />
-                    </div>
-                    <p class="avatars_name txt_sm">@nathan_wall...</p>
-                  </a>
-                  <a href="{% url 'users' %}" class="space-x-3">
-                    <p class="color_green txt_sm">0.6 ETH</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card__item five">
-              <div class="card_body space-y-10 space-x-10 d-flex">
-                <!-- ???? =============== -->
-                <div class="card_head">
-                  <img src="/static/assets/img/items/item_6.png" alt="" />
-                  <div class="details d-flex justify-content-between">
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 80%"
-                        aria-valuenow="80"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- ???? =============== -->
-                <div
-                  class="d-flex flex-column justify-content-center w-100 space-y-10"
-                >
-                  <h6>
-                    <a class="color_black" href="{% url 'users' %}">
-                      Colorful Abstract Painting
-                    </a>
-                  </h6>
-                  <div class="hr"></div>
-                  <div class="card_footer d-block space-y-10">
-                    <a href="javascript:void(0)" class="creators space-x-10">
-                      <div class="avatars">
-                        <img
-                          src="/static/assets/img/avatars/avatar_4.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </div>
-                      <p class="avatars_name txt_sm">@krista_bryan...</p>
-                    </a>
-                    <div
-                      class="d-flex align-items-center space-x-10 justify-content-between"
-                    >
-                      <a
-                        class="btn btn-sm btn-primary"
-                        href="{% url 'users' %}"
-                        
-                        
-                        >Place Bid</a
-                      >
-                      <span class="color_green txt_sm text-right"
-                        >4.906 ETH</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card__item five">
-              <div class="card_body space-y-10 space-x-10 d-flex">
-                <!-- ???? =============== -->
-                <div class="card_head">
-                  <img src="/static/assets/img/items/item_5.png" alt="" />
-                  <div class="details d-flex justify-content-between">
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        style="width: 80%"
-                        aria-valuenow="80"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- ???? =============== -->
-                <div
-                  class="d-flex flex-column justify-content-center w-100 space-y-10"
-                >
-                  <h6>
-                    <a class="color_black" href="{% url 'users' %}">
-                      Synthwave Modern Painting
-                    </a>
-                  </h6>
-                  <div class="hr"></div>
-                  <div class="card_footer d-block space-y-10">
-                    <a href="javascript:void(0)" class="creators space-x-10">
-                      <div class="avatars">
-                        <img
-                          src="/static/assets/img/avatars/avatar_6.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </div>
-                      <p class="avatars_name txt_sm">@makinzi_beck...</p>
-                    </a>
-                    <div
-                      class="d-flex align-items-center space-x-10 justify-content-between"
-                    >
-                      <a
-                        class="btn btn-sm btn-primary"
-                        href="{% url 'users' %}"
-                        
-                        
-                        >Place Bid</a
-                      >
-                      <span class="color_green txt_sm text-right"
-                        >3 ETH</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex justify-content-center mb-30">
-              <a href="{% url 'users' %}" class="btn btn-md btn-dark">
-                View all
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-{% endblock bg_hero %}
+    <div class="rotate-award">
+        <img class="w-100" src="{% static 'frontend/assets/img/award.png' %}" alt="award">
+    </div>
+    <div class="container pt-120 pb-15">
+        <div class="row g-6 justify-content-between">
+            <div class="col-lg-5 col-md-6 col-sm-8">
+                <div class="hero-content">
+                    <ul class="d-flex gap-3 fs-2xl fw-semibold heading-font mb-5 list-icon title-anim">
+                        <li>Play</li>
+                        <li>Earn</li>
+                        <li>Enjoy</li>
+                    </ul>
+                    <h1 class="hero-title display-one tcn-1 cursor-scale growUp mb-10">
+                        ULTIMATE
+                        <span class="d-block tcp-1">GAMER’S</span>
+                        HAVEN
+                    </h1>
+                    <a href="https://www.youtube.com/watch?v=G5kzUpWAusI"
+                        class="btn-half-border position-relative d-inline-block py-2 px-6 bgp-1 rounded-pill popupvideo mfp-iframe">Play
+                        Now</a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-2 col-4 order-md-last order-lg-1">
+                <div class="hero-banner-area">
+                    <div class="hero-banner-bg">
+                        <img class="w-100" src="{% static 'frontend/assets/img/bg-1.png' %}" alt="banner">
+                    </div>
+                    <div class="hero-banner-img">
+                        <img class="w-100 hero" src="{% static 'frontend/assets/img/hero.png' %}" alt="banner">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 col-md-6 order-md-1 order-lg-last">
+                <div class="hero-content">
+                    <div class="card-area py-lg-8 py-6 px-lg-6 px-3 rounded-5 tilt mb-10" data-tilt>
+                        <h3 class="tcn-1 dot-icon cursor-scale growDown mb-6 title-anim">
+                            Last Winners
+                        </h3>
+                        <div class="hr-line mb-6"></div>
+                        <div class="card-items d-grid gap-5">
+                            <div class="card-item d-flex align-items-center gap-4">
+                                <div class="card-img-area rounded-circle overflow-hidden">
+                                    <img class="w-100" src="{% static 'frontend/assets/img/avatar1.png' %}" alt="profile">
+                                </div>
+                                <div class="card-info">
+                                    <h4 class="card-title fw-semibold tcn-1 mb-1 cursor-scale growDown2 title-anim">
+                                        Cristofer Dorwart
+                                    </h4>
+                                    <p class="card-text tcs-1 fw-medium">+$220</p>
+                                </div>
+                            </div>
+                            <div class="hr-line"></div>
+                            <div class="card-item d-flex align-items-center gap-4">
+                                <div class="card-img-area rounded-circle overflow-hidden">
+                                    <img class="w-100" src="{% static 'frontend/assets/img/avatar2.png' %}" alt="profile">
+                                </div>
+                                <div class="card-info">
+                                    <h4 class="card-title fw-semibold tcn-1 mb-1 cursor-scale growDown2 title-anim">
+                                        Cristofer Dorwart
+                                    </h4>
+                                    <p class="card-text tcs-1 fw-medium">+$220</p>
+                                </div>
+                            </div>
+                            <div class="hr-line"></div>
+                            <div class="card-item d-flex align-items-center gap-4">
+                                <div class="card-img-area rounded-circle overflow-hidden">
+                                    <img class="w-100" src="{% static 'frontend/assets/img/avatar3.png' %}" alt="profile">
+                                </div>
+                                <div class="card-info">
+                                    <h4 class="card-title fw-semibold tcn-1 mb-1 cursor-scale growDown2 title-anim">
+                                        Cristofer Dorwart
+                                    </h4>
+                                    <p class="card-text tcs-1 fw-medium">+$220</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="active-player-list d-grid justify-content-end gap-2">
+                        <ul class="player-lists d-flex align-items-center">
+                            <li class="rounded-circle overflow-hidden me-n6">
+                                <img src="{% static 'frontend/assets/img/player1.png' %}" alt="player">
+                            </li>
+                            <li class="rounded-circle overflow-hidden me-n6">
+                                <img src="{% static 'frontend/assets/img/player2.png' %}" alt="player">
+                            </li>
+                            <li class="rounded-circle overflow-hidden me-n6">
+                                <img src="{% static 'frontend/assets/img/player3.png' %}" alt="player">
+                            </li>
+                            <li class="rounded-circle overflow-hidden me-n6">
+                                <img src="{% static 'frontend/assets/img/player4.png' %}" alt="player">
+                            </li>
+                            <li class="rounded-circle overflow-hidden me-n6 heading-font fs-xl">
+                                99+
+                            </li>
+                        </ul>
+                        <span class="d-block tcn-1 dot-icon cursor-scale growDown2 fs-xl text-end">Active
+                            Players</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-lines overflow-hidden">
+        <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="lines">
+            <div class="line-vertical"></div>
+            <div class="line-vertical"></div>
+            <div class="line-vertical"></div>
+            <div class="line-vertical"></div>
+            <div class="line-vertical"></div>
+            <div class="line-vertical"></div>
+            <div class="line-vertical"></div>
+            <div class="line-vertical"></div>
+            <div class="line-vertical"></div>
+            <div class="line-vertical"></div>
+        </div>
+    </div>
+</section>
 
+    <!-- 3D swiper section start-->
+    <section class="swiper-3d-section position-relative z-1" id="swiper-3d">
+        <div class="container">
+            <!-- Slider main container -->
+            <div class="swiper swiper-3d-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-1.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">Apex Legends</h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-2.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">
+                                Super Mario Odyssey
+                            </h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-3.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">
+                                Ghost of Tsushima
+                            </h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-4.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">
+                                Copa Punto Gamer - A
+                            </h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-5.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">
+                                Ghost of Tsushima
+                            </h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-6.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">
+                                Super Mario Odyssey
+                            </h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-7.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">Apex Legends</h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-1.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">Apex Legends</h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-2.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">
+                                Super Mario Odyssey
+                            </h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-3.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">
+                                Ghost of Tsushima
+                            </h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-4.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">
+                                Copa Punto Gamer - A
+                            </h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-5.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">
+                                Ghost of Tsushima
+                            </h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-6.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">
+                                Super Mario Odyssey
+                            </h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-3d d-grid justify-content-center p-3">
+                            <div class="img-area w-100 mb-8 position-relative">
+                                <span
+                                    class="card-date position-absolute top-0 end-0 py-2 px-3 mt-4 me-5 tcn-1 d-flex align-items-center gap-1 fs-sm">
+                                    <i class="ti ti-calendar-due"></i> 15.02.2022</span>
+                                <img class="w-100" src="{% static 'frontend/assets/img/slide-3d-7.png' %}" alt="game">
+                                <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                    <span class="dot-icon alt-icon ps-3">Playing</span>
+                                </span>
+                            </div>
+                            <h5 class="card-title text-center tcn-1 mb-4 title-anim">Apex Legends</h5>
+                            <div class="d-center">
+                                <div class="card-info d-center gap-3 py-1 px-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                        <span class="tcn-1 fs-xs">75</span>
+                                    </div>
+                                    <div class="v-line"></div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                        <span class="tcn-1 fs-xs">$49.97</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-btn-area d-center gap-6">
+                <div class="swiper-btn swiper-3d-button-prev box-style">
+                    <i class="ti ti-chevron-left fs-xl"></i>
+                </div>
+                <div class="swiper-btn swiper-3d-button-next box-style">
+                    <i class="ti ti-chevron-right fs-xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 3D swiper section end-->
+{% endblock hero %}
+    
 
 {% block content %}
-<div class="section__artists mt-100">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 space-y-30">
-          <div
-            class="section_head d-flex justify-content-between align-items-center"
-          >
-            <h2 class="section__title">Hot Sellers</h2>
-            <!-- <div class="dropdown">
-              <button
-                class="btn btn-white btn-sm dropdown-toggle"
-                type="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Recent Active
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% url 'users' %}">Action</a>
-                <a class="dropdown-item" href="{% url 'users' %}">Another action</a>
-                <a class="dropdown-item" href="{% url 'users' %}">Something else here</a>
-              </div>
-            </div> -->
-          </div>
-          <div class="box">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="space-y-10">
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_1.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">1</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @xander_hall...
-                          </p>
-                        </a>
-                        <span class="price color_green">13.02 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_2.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">2</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @hamza_pitts...
-                          </p>
-                        </a>
-                        <span class="price color_green">38.23 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_3.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">3</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @nathan_walls...
-                          </p>
-                        </a>
-                        <span class="price color_green">11.34 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_4.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">4</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @kelton_collier...
-                          </p>
-                        </a>
-                        <span class="price color_green">23.24 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="space-y-10">
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_12.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">5</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @cade_glover...
-                          </p>
-                        </a>
-                        <span class="price color_green">12.45 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_6.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">6</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @teagan_poole...
-                          </p>
-                        </a>
-                        <span class="price color_green">7.99 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_7.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">7</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @austin_rivera...
-                          </p>
-                        </a>
-                        <span class="price color_green">12.34 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_8.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">8</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @jeremy_shah...
-                          </p>
-                        </a>
-                        <span class="price color_green">18.82 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <!-- top player section start  -->
+        <section class="top-player-section pt-120 pb-120" id="top-player">
+            <!-- sword animation -->
+            <div class="sword-area">
+                <img class="w-100" src="{% static 'frontend/assets/img/sword.png' %}" alt="sword">
             </div>
-          </div>
-        </div>
-        <div class="col-lg-6 space-y-30">
-          <div
-            class="section_head d-flex justify-content-between align-items-center"
-          >
-            <h3 class="section__title">Hot Buyers</h3>
-            <!-- <div class="dropdown">
-              <button
-                class="btn btn-white btn-sm dropdown-toggle"
-                type="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Recent Active
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% url 'users' %}">Action</a>
-                <a class="dropdown-item" href="{% url 'users' %}">Another action</a>
-                <a class="dropdown-item" href="{% url 'users' %}">Something else here</a>
-              </div>
-            </div> -->
-          </div>
-          <div class="box">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="space-y-10">
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_9.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">1</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @joel_reese...
-                          </p>
-                        </a>
-                        <span class="price color_green">12.22 ETH</span>
-                      </div>
+            <div class="red-ball end-0"></div>
+            <div class="container">
+                <div class="row justify-content-between mb-15">
+                    <div class="col-sm-6">
+                        <h2 class="display-four tcn-1 cursor-scale growUp title-anim">Top Player</h2>
                     </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_10.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">2</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @anton_wright...
-                          </p>
-                        </a>
-                        <span class="price color_green">6.03 ETH</span>
-                      </div>
+                    <div class="col-sm-6 d-none d-sm-block">
+                        <div class="d-flex justify-content-end align-items-center gap-6">
+                            <div class="swiper-btn top-player-prev box-style">
+                                <i class="ti ti-chevron-left fs-xl"></i>
+                            </div>
+                            <div class="swiper-btn top-player-next box-style">
+                                <i class="ti ti-chevron-right fs-xl"></i>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_11.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">3</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @eli_tyler...
-                          </p>
-                        </a>
-                        <span class="price color_green">16.73 ETH</span>
-                      </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="swiper swiper-top-player">
+                            <div class="swiper-wrapper my-1">
+                                <div class="swiper-slide">
+                                    <div class="player-card d-grid gap-6 p-6 card-tilt" data-tilt>
+                                        <div class="player-info-area d-between w-100">
+                                            <div class="player-info d-flex align-items-center gap-4">
+                                                <div class="player-img position-relative">
+                                                    <img class="w-100 rounded-circle" src="{% static 'frontend/assets/img/top-player1.png' %}"
+                                                        alt="player">
+                                                    <span
+                                                        class="player-status position-absolute end-0 bottom-0 tcn-1 fs-xs d-center">1</span>
+                                                </div>
+                                                <div>
+                                                    <h5 class="player-name tcn-1 mb-1 title-anim">Jane Cooper</h5>
+                                                    <span class="tcn-6 fs-sm">Duelist</span>
+                                                </div>
+                                            </div>
+                                            <form action="#">
+                                                <button class="follow-btn box-style">
+                                                    <i class="ti ti-user-plus fs-xl"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <div class="player-score-details d-flex align-items-center flex-wrap gap-3">
+                                            <div class="score">
+                                                <h6 class="score-title tcn-6 mb-2">Score</h6>
+                                                <ul class="d-flex align-items-center gap-1 tcp-2">
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-half-filled"></i></li>
+                                                    <li><i class="ti ti-star"></i></li>
+                                                </ul>
+                                            </div>
+                                            <div class="rank">
+                                                <h6 class="rank-title tcn-6 mb-2">Rank</h6>
+                                                <span class="tcn-1 fs-sm">
+                                                    <i class="ti ti-diamond"></i> Diamond</span>
+                                            </div>
+                                            <div class="region">
+                                                <h6 class="region-title tcn-6 mb-2">Region</h6>
+                                                <span class="tcn-1 fs-sm text-uppercase"> EUW</span>
+                                            </div>
+                                            <div class="team">
+                                                <h6 class="team-title tcn-6 mb-2">Team</h6>
+                                                <span class="tcs-1 fs-sm text-uppercase"> fire</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="player-card d-grid gap-6 p-6 card-tilt" data-tilt>
+                                        <div class="player-info-area d-between w-100">
+                                            <div class="player-info d-flex align-items-center gap-4">
+                                                <div class="player-img position-relative">
+                                                    <img class="w-100 rounded-circle" src="{% static 'frontend/assets/img/top-player2.png' %}"
+                                                        alt="player">
+                                                    <span
+                                                        class="player-status position-absolute end-0 bottom-0 tcn-1 fs-xs d-center">2</span>
+                                                </div>
+                                                <div>
+                                                    <h5 class="player-name tcn-1 mb-1 title-anim">
+                                                        Savannah Nguyen
+                                                    </h5>
+                                                    <span class="tcn-6 fs-sm">Duelist</span>
+                                                </div>
+                                            </div>
+                                            <form action="#">
+                                                <button class="follow-btn box-style">
+                                                    <i class="ti ti-user-plus fs-xl"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <div class="player-score-details d-flex align-items-center flex-wrap gap-3">
+                                            <div class="score">
+                                                <h6 class="score-title tcn-6 mb-2">Score</h6>
+                                                <ul class="d-flex align-items-center gap-1 tcp-2">
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-half-filled"></i></li>
+                                                    <li><i class="ti ti-star"></i></li>
+                                                </ul>
+                                            </div>
+                                            <div class="rank">
+                                                <h6 class="rank-title tcn-6 mb-2">Rank</h6>
+                                                <span class="tcn-1 fs-sm">
+                                                    <i class="ti ti-diamond"></i> Diamond</span>
+                                            </div>
+                                            <div class="region">
+                                                <h6 class="region-title tcn-6 mb-2">Region</h6>
+                                                <span class="tcn-1 fs-sm text-uppercase"> EUW</span>
+                                            </div>
+                                            <div class="team">
+                                                <h6 class="team-title tcn-6 mb-2">Team</h6>
+                                                <span class="tcs-1 fs-sm text-uppercase"> lft</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="player-card d-grid gap-6 p-6 card-tilt" data-tilt>
+                                        <div class="player-info-area d-between w-100">
+                                            <div class="player-info d-flex align-items-center gap-4">
+                                                <div class="player-img position-relative">
+                                                    <img class="w-100 rounded-circle" src="{% static 'frontend/assets/img/top-player3.png' %}"
+                                                        alt="player">
+                                                    <span
+                                                        class="player-status position-absolute end-0 bottom-0 tcn-1 fs-xs d-center">3</span>
+                                                </div>
+                                                <div>
+                                                    <h5 class="player-name tcn-1 mb-1 title-anim">Guy Hawkins</h5>
+                                                    <span class="tcn-6 fs-sm">Duelist</span>
+                                                </div>
+                                            </div>
+                                            <form action="#">
+                                                <button class="follow-btn box-style">
+                                                    <i class="ti ti-user-plus fs-xl"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <div class="player-score-details d-flex align-items-center flex-wrap gap-3">
+                                            <div class="score">
+                                                <h6 class="score-title tcn-6 mb-2">Score</h6>
+                                                <ul class="d-flex align-items-center gap-1 tcp-2">
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-half-filled"></i></li>
+                                                    <li><i class="ti ti-star"></i></li>
+                                                </ul>
+                                            </div>
+                                            <div class="rank">
+                                                <h6 class="rank-title tcn-6 mb-2">Rank</h6>
+                                                <span class="tcn-1 fs-sm">
+                                                    <i class="ti ti-diamond"></i> Diamond</span>
+                                            </div>
+                                            <div class="region">
+                                                <h6 class="region-title tcn-6 mb-2">Region</h6>
+                                                <span class="tcn-1 fs-sm text-uppercase"> EUW</span>
+                                            </div>
+                                            <div class="team">
+                                                <h6 class="team-title tcn-6 mb-2">Team</h6>
+                                                <span class="tcs-1 fs-sm text-uppercase">liqud</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="player-card d-grid gap-6 p-6 card-tilt" data-tilt>
+                                        <div class="player-info-area d-between w-100">
+                                            <div class="player-info d-flex align-items-center gap-4">
+                                                <div class="player-img position-relative">
+                                                    <img class="w-100 rounded-circle" src="{% static 'frontend/assets/img/top-player1.png' %}"
+                                                        alt="player">
+                                                    <span
+                                                        class="player-status position-absolute end-0 bottom-0 tcn-1 fs-xs d-center">1</span>
+                                                </div>
+                                                <div>
+                                                    <h5 class="player-name tcn-1 mb-1 title-anim">Jane Cooper</h5>
+                                                    <span class="tcn-6 fs-sm">Duelist</span>
+                                                </div>
+                                            </div>
+                                            <form action="#">
+                                                <button class="follow-btn box-style">
+                                                    <i class="ti ti-user-plus fs-xl"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <div class="player-score-details d-flex align-items-center flex-wrap gap-3">
+                                            <div class="score">
+                                                <h6 class="score-title tcn-6 mb-2">Score</h6>
+                                                <ul class="d-flex align-items-center gap-1 tcp-2">
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-half-filled"></i></li>
+                                                    <li><i class="ti ti-star"></i></li>
+                                                </ul>
+                                            </div>
+                                            <div class="rank">
+                                                <h6 class="rank-title tcn-6 mb-2">Rank</h6>
+                                                <span class="tcn-1 fs-sm">
+                                                    <i class="ti ti-diamond"></i> Diamond</span>
+                                            </div>
+                                            <div class="region">
+                                                <h6 class="region-title tcn-6 mb-2">Region</h6>
+                                                <span class="tcn-1 fs-sm text-uppercase"> EUW</span>
+                                            </div>
+                                            <div class="team">
+                                                <h6 class="team-title tcn-6 mb-2">Team</h6>
+                                                <span class="tcs-1 fs-sm text-uppercase"> fire</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="player-card d-grid gap-6 p-6 card-tilt" data-tilt>
+                                        <div class="player-info-area d-between w-100">
+                                            <div class="player-info d-flex align-items-center gap-4">
+                                                <div class="player-img position-relative">
+                                                    <img class="w-100 rounded-circle" src="{% static 'frontend/assets/img/top-player2.png' %}"
+                                                        alt="player">
+                                                    <span
+                                                        class="player-status position-absolute end-0 bottom-0 tcn-1 fs-xs d-center">2</span>
+                                                </div>
+                                                <div>
+                                                    <h5 class="player-name tcn-1 mb-1 title-anim">
+                                                        Savannah Nguyen
+                                                    </h5>
+                                                    <span class="tcn-6 fs-sm">Duelist</span>
+                                                </div>
+                                            </div>
+                                            <form action="#">
+                                                <button class="follow-btn box-style">
+                                                    <i class="ti ti-user-plus fs-xl"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <div class="player-score-details d-flex align-items-center flex-wrap gap-3">
+                                            <div class="score">
+                                                <h6 class="score-title tcn-6 mb-2">Score</h6>
+                                                <ul class="d-flex align-items-center gap-1 tcp-2">
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-half-filled"></i></li>
+                                                    <li><i class="ti ti-star"></i></li>
+                                                </ul>
+                                            </div>
+                                            <div class="rank">
+                                                <h6 class="rank-title tcn-6 mb-2">Rank</h6>
+                                                <span class="tcn-1 fs-sm">
+                                                    <i class="ti ti-diamond"></i> Diamond</span>
+                                            </div>
+                                            <div class="region">
+                                                <h6 class="region-title tcn-6 mb-2">Region</h6>
+                                                <span class="tcn-1 fs-sm text-uppercase"> EUW</span>
+                                            </div>
+                                            <div class="team">
+                                                <h6 class="team-title tcn-6 mb-2">Team</h6>
+                                                <span class="tcs-1 fs-sm text-uppercase"> lft</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="player-card d-grid gap-6 p-6 card-tilt" data-tilt>
+                                        <div class="player-info-area d-between w-100">
+                                            <div class="player-info d-flex align-items-center gap-4">
+                                                <div class="player-img position-relative">
+                                                    <img class="w-100 rounded-circle" src="{% static 'frontend/assets/img/top-player3.png' %}"
+                                                        alt="player">
+                                                    <span
+                                                        class="player-status position-absolute end-0 bottom-0 tcn-1 fs-xs d-center">3</span>
+                                                </div>
+                                                <div>
+                                                    <h5 class="player-name tcn-1 mb-1 title-anim">Guy Hawkins</h5>
+                                                    <span class="tcn-6 fs-sm">Duelist</span>
+                                                </div>
+                                            </div>
+                                            <form action="#">
+                                                <button class="follow-btn box-style">
+                                                    <i class="ti ti-user-plus fs-xl"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <div class="player-score-details d-flex align-items-center flex-wrap gap-3">
+                                            <div class="score">
+                                                <h6 class="score-title tcn-6 mb-2">Score</h6>
+                                                <ul class="d-flex align-items-center gap-1 tcp-2">
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-filled"></i></li>
+                                                    <li><i class="ti ti-star-half-filled"></i></li>
+                                                    <li><i class="ti ti-star"></i></li>
+                                                </ul>
+                                            </div>
+                                            <div class="rank">
+                                                <h6 class="rank-title tcn-6 mb-2">Rank</h6>
+                                                <span class="tcn-1 fs-sm">
+                                                    <i class="ti ti-diamond"></i> Diamond</span>
+                                            </div>
+                                            <div class="region">
+                                                <h6 class="region-title tcn-6 mb-2">Region</h6>
+                                                <span class="tcn-1 fs-sm text-uppercase"> EUW</span>
+                                            </div>
+                                            <div class="team">
+                                                <h6 class="team-title tcn-6 mb-2">Team</h6>
+                                                <span class="tcs-1 fs-sm text-uppercase">liqud</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_12.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">4</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @alonzo_knight...
-                          </p>
-                        </a>
-                        <span class="price color_green">7.24 ETH</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="space-y-10">
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_13.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">5</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @cannon_stark...
-                          </p>
-                        </a>
-                        <span class="price color_green">12.03 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_14.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">6</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @kolten_hart...
-                          </p>
-                        </a>
-                        <span class="price color_green">7.65 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_15.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">7</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @ethan_cain...
-                          </p>
-                        </a>
-                        <span class="price color_green">12.63 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="creator_item space-x-10">
-                    <div class="avatars space-x-10">
-                      <div class="media">
-                        <a href="javascript:void(0)">
-                          <img
-                            src="/static/assets/img/avatars/avatar_4.png"
-                            alt="Avatar"
-                            class="avatar avatar-md"
-                          />
-                        </a>
-                        <div class="has_number">8</div>
-                      </div>
-                      <div>
-                        <a href="javascript:void(0)">
-                          <p class="avatars_name color_black">
-                            @waylon_ford...
-                          </p>
-                        </a>
-                        <span class="price color_green">23.42 ETH</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="modal fade popup"
-    id="popup_bid_success"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-body space-y-20 p-40">
-          <h3 class="text-center">Your Bidding Successfuly Added</h3>
-          <p class="text-center">
-            your bid <span class="color_text txt _bold">(16ETH) </span> has
-            been listing to our database
-          </p>
-
-          <a href="{% url 'users' %}" class="btn btn-dark w-full"> Watch the listings</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="modal fade popup"
-    id="popup_bid"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-body space-y-20 p-40">
-          <h3>Place a Bid</h3>
-          <p>
-            You must bid at least <span class="color_black">15 ETH</span>
-          </p>
-          <input type="text" class="form-control" placeholder="00.00 ETH" />
-
-          <p>
-            Enter quantity. <span class="color_green">5 available</span>
-          </p>
-          <input type="text" class="form-control" value="1" />
-          <div class="hr"></div>
-          <div class="d-flex justify-content-between">
-            <p>You must bid at least:</p>
-            <p class="text-right color_black txt _bold">67,000 ETH</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p>service free:</p>
-            <p class="text-right color_black txt _bold">0,901 ETH</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p>Total bid amount:</p>
-            <p class="text-right color_black txt _bold">56,031 ETH</p>
-          </div>
-          <a
-            href="{% url 'users' %}"
-            class="btn btn-primary w-full"
-            
-            data-target="#popup_bid_success"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            Place a bid</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="modal fade popup"
-    id="popup_history"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-body space-y-20 p-40">
-          <h4>History</h4>
-          <div class="creator_item creator_card space-x-10">
-            <div class="avatars space-x-10">
-              <div class="media">
-                <div class="badge">
-                  <img src="/static/assets/img/icons/Badge.svg" alt="" />
-                </div>
-                <a href="javascript:void(0)">
-                  <img
-                    src="/static/assets/img/avatars/avatar_1.png"
-                    alt="Avatar"
-                    class="avatar avatar-md"
-                  />
-                </a>
-              </div>
-              <div>
-                <p class="color_black">
-                  Bid accepted <span class="color_brand">1 ETH</span> by
-                  <a class="color_black txt _bold" href="javascript:void(0)"
-                    >ayoub</a
-                  >
-                </p>
-                <span class="date color_text">28/06/2021, 12:08</span>
-              </div>
-            </div>
-          </div>
-          <div class="creator_item creator_card space-x-10">
-            <div class="avatars space-x-10">
-              <div class="media">
-                <div class="badge">
-                  <img src="/static/assets/img/icons/Badge.svg" alt="" />
-                </div>
-                <a href="javascript:void(0)">
-                  <img
-                    src="/static/assets/img/avatars/avatar_2.png"
-                    alt="Avatar"
-                    class="avatar avatar-md"
-                  />
-                </a>
-              </div>
-              <div>
-                <p class="color_black">
-                  Bid accepted <span class="color_brand">3 ETH</span> by
-                  <a class="color_black txt _bold" href="javascript:void(0)"
-                    >monir</a
-                  >
-                </p>
-                <span class="date color_text">22/05/2021, 12:08</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section mt-100">
-    <div class="container">
-      <div class="section__head">
-        <div
-          class="d-flex justify-content-between sm-column align-items-center mb-20"
-        >
-          <h2 class="section__title">Recently Listed</h2>
-          <a href="{% url 'users' %}" class="btn btn-dark btn-sm">
-            View All</a
-          >
-        </div>
-        <!-- <div class="d-flex">
-          <span
-            class="color_text txt_sm d-none d-sm-block mr-10"
-            style="min-width: max-content"
-          >
-            FILTER BY:
-          </span>
-          <ul class="menu_categories">
-            <li class="d-flex switch_item">
-              <input type="checkbox" id="switch1" checked="" /><label
-                for="switch1"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-10"> Has list price </span>
-            </li>
-            <li class="d-flex switch_item">
-              <input type="checkbox" id="switch2" /><label
-                for="switch2"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-10"> Has open offer </span>
-            </li>
-            <li class="d-flex space-x-10 switch_item">
-              <input type="checkbox" id="switch3" /><label
-                for="switch3"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-10"> Has sold </span>
-            </li>
-          </ul>
-        </div> -->
-      </div>
-      <div class="row">
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="card__item four">
-            <div class="card_body space-y-10">
-              <!-- =============== -->
-              <div class="creators space-x-10">
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_1.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@mickel_fenn</p>
-                  </a>
-                </div>
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_2.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@danil_pan</p>
-                  </a>
-                </div>
-              </div>
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_1.png" alt="" />
-                </a>
-
-                <a href="{% url 'users' %}" class="likes space-x-3">
-                  <i class="ri-heart-3-fill"></i>
-                  <span class="txt_sm">1.2k</span>
-                </a>
-              </div>
-              <!-- =============== -->
-              <h6 class="card_title">
-                <a class="color_black" href="{% url 'users' %}">
-                  Colorful Abstract Painting
-                </a>
-              </h6>
-
-              <div class="card_footer d-block space-y-10">
-                <div class="card_footer justify-content-between">
-                  <div class="creators">
-                    <p class="txt_sm">4 in stock</p>
-                  </div>
-                  <a href="{% url 'users' %}" class="">
-                    <p class="txt_sm">
-                      Price:
-                      <span class="color_green txt_sm">2.45 ETH</span>
-                    </p>
-                  </a>
-                </div>
-                <div class="hr"></div>
-                <div
-                  class="d-flex align-items-center space-x-10 justify-content-between"
-                >
-                  <div class="d-flex align-items-center space-x-10">
-                    <i class="ri-history-line"></i>
-                    <a
-                      href="{% url 'users' %}"
-                      
-                      data-target="#popup_history"
-                    >
-                      <p class="color_text txt_sm" style="width: auto">
-                        View History
-                      </p>
-                    </a>
-                  </div>
-                  <a
-                    class="btn btn-sm btn-primary"
-                    href="{% url 'users' %}"
-                    
-                    
-                    >Place Bid</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="card__item four">
-            <div class="card_body space-y-10">
-              <!-- =============== -->
-              <div class="creators space-x-10">
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_3.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@mazanov_sky</p>
-                  </a>
-                </div>
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_4.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@mucky_art</p>
-                  </a>
-                </div>
-              </div>
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_2.png" alt="" />
-                </a>
-
-                <a href="{% url 'users' %}" class="likes space-x-3">
-                  <i class="ri-heart-3-fill"></i>
-                  <span class="txt_sm">13.2k</span>
-                </a>
-              </div>
-              <!-- =============== -->
-              <h6 class="card_title">
-                <a class="color_black" href="{% url 'users' %}">
-                  Colorful Abstract Painting
-                </a>
-              </h6>
-
-              <div class="card_footer d-block space-y-10">
-                <div class="card_footer justify-content-between">
-                  <div class="creators">
-                    <p class="txt_sm">12 in stock</p>
-                  </div>
-                  <a href="{% url 'users' %}" class="">
-                    <p class="txt_sm">
-                      Price:
-                      <span class="color_green txt_sm">2.55 ETH</span>
-                    </p>
-                  </a>
-                </div>
-                <div class="hr"></div>
-                <div
-                  class="d-flex align-items-center space-x-10 justify-content-between"
-                >
-                  <div class="d-flex align-items-center space-x-10">
-                    <i class="ri-history-line"></i>
-                    <a
-                      href="{% url 'users' %}"
-                      
-                      data-target="#popup_history"
-                    >
-                      <p class="color_text txt_sm" style="width: auto">
-                        View History
-                      </p>
-                    </a>
-                  </div>
-                  <a
-                    class="btn btn-sm btn-primary"
-                    href="{% url 'users' %}"
-                    
-                    
-                    >Place Bid</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="card__item four">
-            <div class="card_body space-y-10">
-              <!-- =============== -->
-              <div class="creators space-x-10">
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_5.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@jimmy_dom</p>
-                  </a>
-                </div>
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_6.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@kristian_fel</p>
-                  </a>
-                </div>
-              </div>
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_3.png" alt="" />
-                </a>
-
-                <a href="{% url 'users' %}" class="likes space-x-3">
-                  <i class="ri-heart-3-fill"></i>
-                  <span class="txt_sm">1.2k</span>
-                </a>
-              </div>
-              <!-- =============== -->
-              <h6 class="card_title">
-                <a class="color_black" href="{% url 'users' %}">
-                  Colorful Abstract Painting
-                </a>
-              </h6>
-
-              <div class="card_footer d-block space-y-10">
-                <div class="card_footer justify-content-between">
-                  <div class="creators">
-                    <p class="txt_sm">6 in stock</p>
-                  </div>
-                  <a href="{% url 'users' %}" class="">
-                    <p class="txt_sm">
-                      Price:
-                      <span class="color_green txt_sm">2.45 ETH</span>
-                    </p>
-                  </a>
-                </div>
-                <div class="hr"></div>
-                <div
-                  class="d-flex align-items-center space-x-10 justify-content-between"
-                >
-                  <div class="d-flex align-items-center space-x-10">
-                    <i class="ri-history-line"></i>
-                    <a
-                      href="{% url 'users' %}"
-                      
-                      data-target="#popup_history"
-                    >
-                      <p class="color_text txt_sm" style="width: auto">
-                        View History
-                      </p>
-                    </a>
-                  </div>
-                  <a
-                    class="btn btn-sm btn-primary"
-                    href="{% url 'users' %}"
-                    
-                    
-                    >Place Bid</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-          <div class="card__item four">
-            <div class="card_body space-y-10">
-              <!-- =============== -->
-              <div class="creators space-x-10">
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_1.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@Alvin_nov</p>
-                  </a>
-                </div>
-                <div class="avatars space-x-3">
-                  <a href="javascript:void(0)">
-                    <img
-                      src="/static/assets/img/avatars/avatar_7.png"
-                      alt="Avatar"
-                      class="avatar avatar-sm"
-                    />
-                  </a>
-                  <a href="javascript:void(0)">
-                    <p class="avatars_name txt_xs">@mucky_art</p>
-                  </a>
-                </div>
-              </div>
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_4.png" alt="" />
-                </a>
-
-                <a href="{% url 'users' %}" class="likes space-x-3">
-                  <i class="ri-heart-3-fill"></i>
-                  <span class="txt_sm">4.1k</span>
-                </a>
-              </div>
-              <!-- =============== -->
-              <h6 class="card_title">
-                <a class="color_black" href="{% url 'users' %}">
-                  Colorful Abstract Painting
-                </a>
-              </h6>
-
-              <div class="card_footer d-block space-y-10">
-                <div class="card_footer justify-content-between">
-                  <div class="creators">
-                    <p class="txt_sm">34 in stock</p>
-                  </div>
-                  <a href="{% url 'users' %}" class="">
-                    <p class="txt_sm">
-                      Price:
-                      <span class="color_green txt_sm">0.55 ETH</span>
-                    </p>
-                  </a>
-                </div>
-                <div class="hr"></div>
-                <div
-                  class="d-flex align-items-center space-x-10 justify-content-between"
-                >
-                  <div class="d-flex align-items-center space-x-10">
-                    <i class="ri-history-line"></i>
-                    <a
-                      href="{% url 'users' %}"
-                      
-                      data-target="#popup_history"
-                    >
-                      <p class="color_text txt_sm" style="width: auto">
-                        View History
-                      </p>
-                    </a>
-                  </div>
-                  <a
-                    class="btn btn-sm btn-primary"
-                    href="{% url 'users' %}"
-                    
-                    
-                    >Place Bid</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="modal fade popup"
-    id="popup_bid_success"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-body space-y-20 p-40">
-          <h3 class="text-center">Your Bidding Successfuly Added</h3>
-          <p class="text-center">
-            your bid <span class="color_text txt _bold">(16ETH) </span> has
-            been listing to our database
-          </p>
-
-          <a href="{% url 'users' %}" class="btn btn-dark w-full"> Watch the listings</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="modal fade popup"
-    id="popup_bid"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-body space-y-20 p-40">
-          <h3>Place a Bid</h3>
-          <p>
-            You must bid at least <span class="color_black">15 ETH</span>
-          </p>
-          <input type="text" class="form-control" placeholder="00.00 ETH" />
-
-          <p>
-            Enter quantity. <span class="color_green">5 available</span>
-          </p>
-          <input type="text" class="form-control" value="1" />
-          <div class="hr"></div>
-          <div class="d-flex justify-content-between">
-            <p>You must bid at least:</p>
-            <p class="text-right color_black txt _bold">67,000 ETH</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p>service free:</p>
-            <p class="text-right color_black txt _bold">0,901 ETH</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p>Total bid amount:</p>
-            <p class="text-right color_black txt _bold">56,031 ETH</p>
-          </div>
-          <a
-            href="{% url 'users' %}"
-            class="btn btn-primary w-full"
-            
-            data-target="#popup_bid_success"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            Place a bid</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mt-100">
-    <div class="container">
-      <div class="section__head">
-        <div
-          class="d-flex flex-md-wrap justify-content-between align-items-center mb-20"
-        >
-          <h2 class="section__title">Top artworks</h2>
-          <!-- <div class="dropdown">
-            <button
-              class="btn btn-dark btn-sm dropdown-toggle"
-              type="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Recent Active
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="{% url 'users' %}">Action</a>
-              <a class="dropdown-item" href="{% url 'users' %}">Another action</a>
-              <a class="dropdown-item" href="{% url 'users' %}">Something else here</a>
-            </div>
-          </div> -->
-        </div>
-        <!-- <div class="d-flex align-items-center">
-          <span
-            class="color_text txt_sm d-none d-sm-block mr-10"
-            style="min-width: max-content"
-          >
-            FILTER BY:
-          </span>
-          <ul class="menu_categories">
-            <li class="d-flex switch_item">
-              <input type="checkbox" id="switch5" /><label
-                for="switch5"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-20"> Has list price </span>
-            </li>
-            <li class="d-flex switch_item">
-              <input type="checkbox" id="switch6" checked /><label
-                for="switch6"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-20"> Has open offer </span>
-            </li>
-            <li class="d-flex switch_item">
-              <input type="checkbox" id="switch7" /><label
-                for="switch7"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-20"> Owned by creator </span>
-            </li>
-            <li class="d-flex switch_item">
-              <input type="checkbox" id="switch8" /><label
-                for="switch8"
-                class="ml-0"
-                >Toggle</label
-              >
-              <span class="ml-20"> Has sold </span>
-            </li>
-          </ul>
-        </div> -->
-      </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="card__item three">
-            <div class="card_body space-y-10">
-              <!-- =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img
-                    src="/static/assets/img/items/item_4.png"
-                    alt="..."
-                  />
-                </a>
-
-                <a href="{% url 'users' %}" class="likes space-x-3">
-                  <i class="ri-heart-3-fill"></i>
-                  <span class="txt_sm">23.1k</span>
-                </a>
-                <div class="action">
-                  <a
-                    href="{% url 'users' %}"
-                    class="btn btn-primary btn_card"
-                    
-                    
-                  >
-                    <i class="ri-pie-chart-line color_white"></i>
-                    Place Your Bid
-                  </a>
-                </div>
-              </div>
-              <!-- =============== -->
-              <h6 class="card_title">
-                <a class="color_black" href="{% url 'users' %}">
-                  Colorful Abstract Painting
-                </a>
-              </h6>
-
-              <div class="card_footer d-block space-y-10">
-                <div class="d-flex justify-content-between">
-                  <div class="creators space-x-10">
-                    <div class="avatars -space-x-20">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_3.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_2.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@makinzi_jamy...</p>
-                    </a>
-                  </div>
-                  <a href="{% url 'users' %}" class="space-x-3">
-                    <span class="color_green txt_sm">0.001 ETH</span>
-                  </a>
-                </div>
-                <div class="hr"></div>
-                <a href="{% url 'users' %}" class="d-flex align-items-center space-x-10">
-                  <i class="ri-vip-crown-line"></i>
-                  <p class="color_text txt_sm" style="width: auto">
-                    Highest bid
-                  </p>
-                  <span class="color_black txt_sm">0.0022 ETH</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card__item five">
-            <div class="card_body space-y-10 space-x-10 d-flex">
-              <!-- ???? =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_1.png" alt="" />
-                </a>
-
-                <div class="details d-flex justify-content-between">
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <!-- ???? =============== -->
-              <div
-                class="d-flex flex-column justify-content-center w-100 space-y-10"
-              >
-                <h6 class="card_title">Colorful Abstract Painting</h6>
-                <div class="hr"></div>
-                <div class="card_footer d-block space-y-10">
-                  <div class="creators space-x-10">
-                    <div class="avatars">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_4.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@krista_bryan...</p>
-                    </a>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between space-x-3"
-                  >
-                    <a
-                      class="btn btn-sm btn-primary"
-                      href="{% url 'users' %}"
-                      
-                      
-                      >Place Bid</a
-                    >
-                    <span class="color_green txt_sm text-right"
-                      >4.906 ETH</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__item five">
-            <div class="card_body space-y-10 space-x-10 d-flex">
-              <!-- ???? =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_2.png" alt="" />
-                </a>
-
-                <div class="details d-flex justify-content-between">
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <!-- ???? =============== -->
-              <div
-                class="d-flex flex-column justify-content-center w-100 space-y-10"
-              >
-                <h6 class="card_title">Synthwave Modern Painting</h6>
-                <div class="hr"></div>
-                <div class="card_footer d-block space-y-10">
-                  <div class="creators space-x-10">
-                    <div class="avatars">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_6.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@makinzi_beck...</p>
-                    </a>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between space-x-3"
-                  >
-                    <a
-                      class="btn btn-sm btn-primary"
-                      href="{% url 'users' %}"
-                      
-                      
-                      >Place Bid</a
-                    >
-                    <span class="color_green txt_sm text-right"
-                      >3.003 ETH</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__item five">
-            <div class="card_body space-y-10 space-x-10 d-flex">
-              <!-- ???? =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_3.png" alt="" />
-                </a>
-
-                <div class="details d-flex justify-content-between">
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <!-- ???? =============== -->
-              <div
-                class="d-flex flex-column justify-content-center w-100 space-y-10"
-              >
-                <h6 class="card_title">Synthwave Modern Painting</h6>
-                <div class="hr"></div>
-                <div class="card_footer d-block space-y-10">
-                  <div class="creators space-x-10">
-                    <div class="avatars">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_3.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@alonzo_knight...</p>
-                    </a>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between space-x-3"
-                  >
-                    <a
-                      class="btn btn-sm btn-primary"
-                      href="{% url 'users' %}"
-                      
-                      
-                      >Place Bid</a
-                    >
-                    <span class="color_green txt_sm text-right"
-                      >5.044 ETH</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card__item five">
-            <div class="card_body space-y-10 space-x-10 d-flex">
-              <!-- ???? =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_5.png" alt="" />
-                </a>
-
-                <div class="details d-flex justify-content-between">
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <!-- ???? =============== -->
-              <div
-                class="d-flex flex-column justify-content-center w-100 space-y-10"
-              >
-                <h6 class="card_title">Colorful Abstract Painting</h6>
-                <div class="hr"></div>
-                <div class="card_footer d-block space-y-10">
-                  <div class="creators space-x-10">
-                    <div class="avatars">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_1.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@cannon_stark...</p>
-                    </a>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between space-x-3"
-                  >
-                    <a
-                      class="btn btn-sm btn-primary"
-                      href="{% url 'users' %}"
-                      
-                      
-                      >Place Bid</a
-                    >
-                    <span class="color_green txt_sm text-right"
-                      >2.937 ETH</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__item five">
-            <div class="card_body space-y-10 space-x-10 d-flex">
-              <!-- ???? =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_6.png" alt="" />
-                </a>
-
-                <div class="details d-flex justify-content-between">
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <!-- ???? =============== -->
-              <div
-                class="d-flex flex-column justify-content-center w-100 space-y-10"
-              >
-                <h6 class="card_title">Synthwave Modern Painting</h6>
-                <div class="hr"></div>
-                <div class="card_footer d-block space-y-10">
-                  <div class="creators space-x-10">
-                    <div class="avatars">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_8.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@jimena_stark...</p>
-                    </a>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between space-x-3"
-                  >
-                    <a
-                      class="btn btn-sm btn-primary"
-                      href="{% url 'users' %}"
-                      
-                      
-                      >Place Bid</a
-                    >
-                    <span class="color_green txt_sm text-right"
-                      >7.004 ETH</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card__item five">
-            <div class="card_body space-y-10 space-x-10 d-flex">
-              <!-- ???? =============== -->
-              <div class="card_head">
-                <a href="{% url 'users' %}">
-                  <img src="/static/assets/img/items/item_7.png" alt="" />
-                </a>
-
-                <div class="details d-flex justify-content-between">
-                  <div class="progress">
-                    <div
-                      class="progress-bar"
-                      role="progressbar"
-                      style="width: 80%"
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <!-- ???? =============== -->
-              <div
-                class="d-flex flex-column justify-content-center w-100 space-y-10"
-              >
-                <h6 class="card_title">Synthwave Modern Painting</h6>
-                <div class="hr"></div>
-                <div class="card_footer d-block space-y-10">
-                  <div class="creators space-x-10">
-                    <div class="avatars">
-                      <a href="javascript:void(0)">
-                        <img
-                          src="/static/assets/img/avatars/avatar_5.png"
-                          alt="Avatar"
-                          class="avatar avatar-sm"
-                        />
-                      </a>
-                    </div>
-                    <a href="javascript:void(0)">
-                      <p class="avatars_name txt_sm">@eli_tyle...</p>
-                    </a>
-                  </div>
-                  <div
-                    class="d-flex align-items-center justify-content-between space-x-3"
-                  >
-                    <a
-                      class="btn btn-sm btn-primary"
-                      href="{% url 'users' %}"
-                      
-                      
-                      >Place Bid</a
-                    >
-                    <span class="color_green txt_sm text-right"
-                      >1.2043 ETH</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="call2action is__light">
-    <div class="container">
-      <div
-        class="row justify-content-between align-items-center sm:space-y-20"
-      >
-        <div class="col-md-6">
-          <div class="space-y-20">
-            <h1>Start your own collection today</h1>
-            <p class="color_text section__text">
-              {{settings.DOMAIN_NAME}} is a shared liquidity NFT market
-              smart contract which is used by multiple websites to provide
-              the users the best possible experience.
-            </p>
-            <a href="{% url 'create-collection' %}" class="btn btn-primary"
-              >Start Collecting</a
-            >
-          </div>
-        </div>
-        <div class="col-md-auto">
-          <img
-            class="img-fluid img__logo"
-            src="/static/assets/img/logos/Logo_illustrstion_white.png"
-            alt="..."
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="community">
-      <div class="section__head space-y-20">
-        <h3 class="section__title text-center">Global community</h3>
-        <p class="section__text text-center">
-          Learn more about {{settings.DOMAIN_NAME}}, chat with the team,
-          other people in the community, and express your opinion on the
-          future development of {{settings.DOMAIN_NAME}}.
-        </p>
-      </div>
-
-      <div class="community__items">
-        <div class="row justify-content-center mb-20_reset">
-          <div class="col-md-3">
-            <div class="item space-y-10">
-              <div class="logo">
-                <img
-                  src="/static/assets/img/icons/github.svg"
-                  alt="logo_community"
-                />
-              </div>
-              <h5 class="text-center">Github</h5>
-              <p class="text-center">
-                Understand the progress of our code and project
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="item space-y-10">
-              <div class="logo is_twitter">
-                <img
-                  src="/static/assets/img/icons/twitter.svg"
-                  alt="logo_community"
-                />
-              </div>
-              <h5 class="text-center">Twitter</h5>
-              <p class="text-center">
-                Understand the progress of our code and project
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="item space-y-10">
-              <div class="logo is_discord">
-                <img
-                  src="/static/assets/img/icons/discord.svg"
-                  alt="logo_community"
-                />
-              </div>
-              <h5 class="text-center">Discord</h5>
-              <p class="text-center">
-                Understand the progress of our code and project
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-{% endblock content %}
+        </section>
+        <!-- top player section end -->
     
+        <!-- tournament section start -->
+        <section class="tournament-section pb-120" id="tournament-hero">
+            <!-- Diamond animation -->
+            <div class="diamond-area">
+                <img class="w-100" src="{% static 'frontend/assets/img/diamond.png' %}" alt="diamond">
+            </div>
+            <!-- game console animation -->
+            <div class="game-console-area">
+                <img class="w-100" src="{% static 'frontend/assets/img/game-console2.png' %}" alt="game-console">
+            </div>
+            <div class="red-ball top-50"></div>
+            <div class="tournament-wrapper">
+                <div class="tournament-wrapper-border">
+                    <div class="container pt-120 pb-120">
+                        <div class="row justify-content-between align-items-center gy-sm-0 gy-4 mb-15">
+                            <div class="col-md-6 col-sm-8">
+                                <h2 class="display-four tcn-1 cursor-scale growUp title-anim">Tournaments</h2>
+                            </div>
+                            <div class="col-md-6 col-sm-4 text-sm-end">
+                                <a href="tournaments.html"
+                                    class="btn-half-border position-relative d-inline-block py-2 px-6 bgp-1 rounded-pill">View
+                                    More</a>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between align-items-center g-6">
+                            <div class="col-xl-4 col-md-6">
+                                <div class="tournament-card p-xl-4 p-3 bgn-4">
+                                    <div class="tournament-img mb-8 position-relative">
+                                        <div class="img-area overflow-hidden">
+                                            <img class="w-100" src="{% static 'frontend/assets/img/tournament1.png' %}" alt="tournament">
+                                        </div>
+                                        <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                            <span class="dot-icon alt-icon ps-3">Playing</span>
+                                        </span>
+                                    </div>
+                                    <div class="tournament-content px-xl-4 px-sm-2">
+                                        <div class="tournament-info mb-5">
+                                            <a href="tournaments-details.html" class="d-block">
+                                                <h4 class="tournament-title tcn-1 mb-1 cursor-scale growDown title-anim">
+                                                    Azariaria's Battlegrounds
+                                                </h4>
+                                            </a>
+                                            <span class="tcn-6 fs-sm">Torneo Individual</span>
+                                        </div>
+                                        <div class="hr-line line3"></div>
+                                        <div class="card-info d-flex align-items-center gap-3 flex-wrap my-5">
+                                            <div class="price-money bgn-3 d-flex align-items-center gap-3 py-2 px-3 h-100">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                                    <span class="tcn-1 fs-sm">75</span>
+                                                </div>
+                                                <div class="v-line"></div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                                    <span class="tcn-1 fs-sm">$49.97</span>
+                                                </div>
+                                            </div>
+                                            <div class="ticket-fee bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+                                                <i class="ti ti-ticket fs-base tcp-2"></i>
+                                                <span class="tcn-1 fs-sm">Free Entry</span>
+                                            </div>
+                                            <div class="date-time bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+                                                <i class="ti ti-calendar fs-base tcn-1"></i>
+                                                <span class="tcn-1 fs-sm">OCT 07, 5:10 AM</span>
+                                            </div>
+                                        </div>
+                                        <div class="hr-line line3"></div>
+                                        <div class="card-more-info d-between mt-6">
+                                            <div class="teams-info d-between gap-xl-5 gap-3">
+                                                <div class="teams d-flex align-items-center gap-1">
+                                                    <i class="ti ti-users fs-base"></i>
+                                                    <span class="tcn-6 fs-sm">12/12 Teams</span>
+                                                </div>
+                                                <div class="player d-flex align-items-center gap-1">
+                                                    <i class="ti ti-user fs-base"></i>
+                                                    <span class="tcn-6 fs-sm">128 Players</span>
+                                                </div>
+                                            </div>
+                                            <a href="tournaments-details.html" class="btn2">
+                                                <i class="ti ti-arrow-right fs-2xl"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="tournament-card p-xl-4 p-3 bgn-4">
+                                    <div class="tournament-img mb-8 position-relative">
+                                        <div class="img-area overflow-hidden">
+                                            <img class="w-100" src="{% static 'frontend/assets/img/tournament2.png' %}" alt="tournament">
+                                        </div>
+                                        <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                            <span class="dot-icon alt-icon ps-3">Playing</span>
+                                        </span>
+                                    </div>
+                                    <div class="tournament-content px-xl-4 px-sm-2">
+                                        <div class="tournament-info mb-5">
+                                            <a href="tournaments-details.html" class="d-block">
+                                                <h4 class="tournament-title tcn-1 mb-1 cursor-scale growDown title-anim">
+                                                    Superliga Weekly
+                                                </h4>
+                                            </a>
+                                            <span class="tcn-6 fs-sm">Torneo Individual</span>
+                                        </div>
+                                        <div class="hr-line line3"></div>
+                                        <div class="card-info d-flex align-items-center gap-3 flex-wrap my-5">
+                                            <div class="price-money bgn-3 d-flex align-items-center gap-3 py-2 px-3 h-100">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                                    <span class="tcn-1 fs-sm">75</span>
+                                                </div>
+                                                <div class="v-line"></div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                                    <span class="tcn-1 fs-sm">$49.97</span>
+                                                </div>
+                                            </div>
+                                            <div class="ticket-fee bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+                                                <i class="ti ti-ticket fs-base tcp-2"></i>
+                                                <span class="tcn-1 fs-sm">Free Entry</span>
+                                            </div>
+                                            <div class="date-time bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+                                                <i class="ti ti-calendar fs-base tcn-1"></i>
+                                                <span class="tcn-1 fs-sm">OCT 07, 5:10 AM</span>
+                                            </div>
+                                        </div>
+                                        <div class="hr-line line3"></div>
+                                        <div class="card-more-info d-between mt-6">
+                                            <div class="teams-info d-between gap-xl-5 gap-3">
+                                                <div class="teams d-flex align-items-center gap-1">
+                                                    <i class="ti ti-users fs-base"></i>
+                                                    <span class="tcn-6 fs-sm">12/12 Teams</span>
+                                                </div>
+                                                <div class="player d-flex align-items-center gap-1">
+                                                    <i class="ti ti-user fs-base"></i>
+                                                    <span class="tcn-6 fs-sm">128 Players</span>
+                                                </div>
+                                            </div>
+                                            <a href="tournaments-details.html" class="btn2">
+                                                <i class="ti ti-arrow-right fs-2xl"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="tournament-card p-xl-4 p-3 bgn-4">
+                                    <div class="tournament-img mb-8 position-relative">
+                                        <div class="img-area overflow-hidden">
+                                            <img class="w-100" src="{% static 'frontend/assets/img/tournament3.png' %}" alt="tournament">
+                                        </div>
+                                        <span class="card-status position-absolute start-0 py-2 px-6 tcn-1 fs-sm">
+                                            <span class="dot-icon alt-icon ps-3">Playing</span>
+                                        </span>
+                                    </div>
+                                    <div class="tournament-content px-xl-4 px-sm-2">
+                                        <div class="tournament-info mb-5">
+                                            <a href="tournaments-details.html" class="d-block">
+                                                <h4 class="tournament-title tcn-1 mb-1 cursor-scale growDown title-anim">
+                                                    Liga
+                                                    Triunfo</h4>
+                                            </a>
+                                            <span class="tcn-6 fs-sm">Torneo Individual</span>
+                                        </div>
+                                        <div class="hr-line line3"></div>
+                                        <div class="card-info d-flex align-items-center gap-3 flex-wrap my-5">
+                                            <div class="price-money bgn-3 d-flex align-items-center gap-3 py-2 px-3 h-100">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img class="w-100" src="{% static 'frontend/assets/img/bitcoin.png' %}" alt="bitcoin">
+                                                    <span class="tcn-1 fs-sm">75</span>
+                                                </div>
+                                                <div class="v-line"></div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img class="w-100" src="{% static 'frontend/assets/img/tether.png' %}" alt="tether">
+                                                    <span class="tcn-1 fs-sm">$49.97</span>
+                                                </div>
+                                            </div>
+                                            <div class="ticket-fee bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+                                                <i class="ti ti-ticket fs-base tcp-2"></i>
+                                                <span class="tcn-1 fs-sm">Free Entry</span>
+                                            </div>
+                                            <div class="date-time bgn-3 d-flex align-items-center gap-1 py-2 px-3 h-100">
+                                                <i class="ti ti-calendar fs-base tcn-1"></i>
+                                                <span class="tcn-1 fs-sm">OCT 07, 5:10 AM</span>
+                                            </div>
+                                        </div>
+                                        <div class="hr-line line3"></div>
+                                        <div class="card-more-info d-between mt-6">
+                                            <div class="teams-info d-between gap-xl-5 gap-3">
+                                                <div class="teams d-flex align-items-center gap-1">
+                                                    <i class="ti ti-users fs-base"></i>
+                                                    <span class="tcn-6 fs-sm">12/12 Teams</span>
+                                                </div>
+                                                <div class="player d-flex align-items-center gap-1">
+                                                    <i class="ti ti-user fs-base"></i>
+                                                    <span class="tcn-6 fs-sm">128 Players</span>
+                                                </div>
+                                            </div>
+                                            <a href="tournaments-details.html" class="btn2">
+                                                <i class="ti ti-arrow-right fs-2xl"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- tournament section end -->
+    
+        <!-- game section start  -->
+        <section class="game-section">
+            <div class="red-ball bottom-0 end-0"></div>
+            <div class="container">
+                <div class="row justify-content-between align-items-center mb-15">
+                    <div class="col-6">
+                        <h2 class="display-four tcn-1 cursor-scale growUp title-anim">Games</h2>
+                    </div>
+                    <div class="col-6 text-end">
+                        <a href="game.html"
+                            class="btn-half-border position-relative d-inline-block py-2 px-6 bgp-1 rounded-pill">View
+                            More</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="swiper game-swiper">
+                            <div class="swiper-wrapper mb-lg-15 mb-10">
+                                <div class="swiper-slide">
+                                    <div class="game-card-wrapper mx-auto">
+                                        <div class="game-card mb-5 p-2">
+                                            <div class="game-card-border"></div>
+                                            <div class="game-card-border-overlay"></div>
+                                            <div class="game-img alt">
+                                                <img class="w-100 h-100" src="{% static 'frontend/assets/img/game-x4.png' %}" alt="game">
+                                            </div>
+                                            <div class="game-link d-center">
+                                                <a href="game.html" class="btn2">
+                                                    <i class="ti ti-arrow-right fs-2xl"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a href="game.html">
+                                            <h3 class="game-title mb-0 tcn-1 cursor-scale growDown2">AAG Axie Cup</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="game-card-wrapper mx-auto">
+                                        <div class="game-card mb-5 p-2">
+                                            <div class="game-card-border"></div>
+                                            <div class="game-card-border-overlay"></div>
+                                            <div class="game-img alt">
+                                                <img class="w-100 h-100" src="{% static 'frontend/assets/img/game3.png' %}" alt="game">
+                                            </div>
+                                            <div class="game-link d-center">
+                                                <a href="game.html" class="btn2">
+                                                    <i class="ti ti-arrow-right fs-2xl"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a href="game.html">
+                                            <h3 class="game-title mb-0 tcn-1 cursor-scale growDown2">Axie Origin</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="game-card-wrapper mx-auto">
+                                        <div class="game-card mb-5 p-2">
+                                            <div class="game-card-border"></div>
+                                            <div class="game-card-border-overlay"></div>
+                                            <div class="game-img alt">
+                                                <img class="w-100 h-100" src="{% static 'frontend/assets/img/game4.png' %}" alt="game">
+                                            </div>
+                                            <div class="game-link d-center">
+                                                <a href="game.html" class="btn2">
+                                                    <i class="ti ti-arrow-right fs-2xl"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a href="game.html">
+                                            <h3 class="game-title mb-0 tcn-1 cursor-scale growDown2">Free Fire</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="game-card-wrapper mx-auto">
+                                        <div class="game-card mb-5 p-2">
+                                            <div class="game-card-border"></div>
+                                            <div class="game-card-border-overlay"></div>
+                                            <div class="game-img alt">
+                                                <img class="w-100 h-100" src="{% static 'frontend/assets/img/game2.png' %}" alt="game">
+                                            </div>
+                                            <div class="game-link d-center">
+                                                <a href="game.html" class="btn2">
+                                                    <i class="ti ti-arrow-right fs-2xl"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <a href="game.html">
+                                            <h3 class="game-title mb-0 tcn-1 cursor-scale growDown2">Fortnite</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center d-center">
+                                <div class="game-swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- game section end  -->
+    
+        <!-- next level gaming section start -->
+        <section class="next-level-gaming-section pt-120 pb-120" id="next-level-gaming">
+            <div class="red-ball bottom-50"></div>
+            <div class="container">
+                <div class="row justify-content-between mb-15">
+                    <div class="col-lg-6 col-sm-10">
+                        <h2 class="display-four tcn-1 cursor-scale growUp title-anim"><span class="d-block">Gaming To
+                            </span> The Next Level</h2>
+                    </div>
+                </div>
+                <div class="row g-6">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="next-level-game-card d-grid gap-5 py-lg-10 py-sm-6 py-4 px-xl-9 px-sm-5 px-3">
+                            <div class="card-icon">
+                                <i class="ti ti-12-hours fs-2xl tcn-1"></i>
+                            </div>
+                            <h4 class="card-title tcn-1 cursor-scale growDown2 title-anim">Industry Best Support</h4>
+                            <p class="card-text tcs-6">Get a reply in under 90 seconds from our friendly, in-house staff.
+                                24/7.</p>
+                            <div class="pt-3">
+                                <a href="game.html" class="card-link d-inline-flex align-items-center w-auto">Play Now<i
+                                        class="ti ti-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="next-level-game-card d-grid gap-5 py-lg-10 py-sm-6 py-4 px-xl-9 px-sm-5 px-3">
+                            <div class="card-icon">
+                                <i class="ti ti-tools fs-2xl tcn-1"></i>
+                            </div>
+                            <h4 class="card-title tcn-1 cursor-scale growDown2 title-anim">Play To Earn</h4>
+                            <p class="card-text tcs-6">Earn our TXT tokens with every bet you make. TXT tokens can be
+                                profits.</p>
+                            <div class="pt-3">
+                                <a href="game.html" class="card-link d-inline-flex align-items-center w-auto">Play Now<i
+                                        class="ti ti-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="next-level-game-card d-grid gap-5 py-lg-10 py-sm-6 py-4 px-xl-9 px-sm-5 px-3">
+                            <div class="card-icon">
+                                <i class="ti ti-coins fs-2xl tcn-1"></i>
+                            </div>
+                            <h4 class="card-title tcn-1 cursor-scale growDown2 title-anim">Instant Payouts</h4>
+                            <p class="card-text tcs-6">Withdraw easily with instant payouts on over 99.4% withdrawals.</p>
+                            <div class="pt-3">
+                                <a href="game.html" class="card-link d-inline-flex align-items-center w-auto">Play Now<i
+                                        class="ti ti-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="next-level-game-card d-grid gap-5 py-lg-10 py-sm-6 py-4 px-xl-9 px-sm-5 px-3">
+                            <div class="card-icon">
+                                <i class="ti ti-free-rights fs-2xl tcn-1"></i>
+                            </div>
+                            <h4 class="card-title tcn-1 cursor-scale growDown2 title-anim">Free Withdrawals</h4>
+                            <p class="card-text tcs-6">Withdraw easily with instant payouts on over 99.4% withdrawals.</p>
+                            <div class="pt-3">
+                                <a href="game.html" class="card-link d-inline-flex align-items-center w-auto">Play Now<i
+                                        class="ti ti-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="next-level-game-card d-grid gap-5 py-lg-10 py-sm-6 py-4 px-xl-9 px-sm-5 px-3">
+                            <div class="card-icon">
+                                <i class="ti ti-scale fs-2xl tcn-1"></i>
+                            </div>
+                            <h4 class="card-title tcn-1 cursor-scale growDown2 title-anim">Prove-able Fairness</h4>
+                            <p class="card-text tcs-6">Get a reply in under 90 seconds from our friendly, in-house staff.
+                                24/7.</p>
+                            <div class="pt-3">
+                                <a href="game.html" class="card-link d-inline-flex align-items-center w-auto">Play Now<i
+                                        class="ti ti-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="next-level-game-card d-grid gap-5 py-lg-10 py-sm-6 py-4 px-xl-9 px-sm-5 px-3">
+                            <div class="card-icon">
+                                <i class="ti ti-license fs-2xl tcn-1"></i>
+                            </div>
+                            <h4 class="card-title tcn-1 cursor-scale growDown2 title-anim">Fully Licensed</h4>
+                            <p class="card-text tcs-6">Get a reply in under 90 seconds from our friendly, in-house staff.
+                                24/7.</p>
+                            <div class="pt-3">
+                                <a href="game.html" class="card-link d-inline-flex align-items-center w-auto">Play Now<i
+                                        class="ti ti-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- next level gaming section end -->
+{% endblock content %}
     
