@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+
+{% block bg_hero %}
+<div class="hero_privacy">
+    <div class="container">
+        <div class="d-flex jusitify-content-center align-items-center space-x-10">
+            <h1 class="text-left">{{settings.DOMAIN_NAME}} was founded with a very simple mission - to make NFTs accessible to everyone.</h1>
+            <!-- <i class="ri-file-text-fill privacy__icon"></i> -->
+        </div>
+    </div>
+</div>
+{% endblock bg_hero %}
+    
+
+{% block content %}
+
+<div class="privacy__page">
+    <div class="container">
+        <div class="box space-y-30" style="padding: 60px 30px;">
+            <div class="space-y-20">
+                <h3>What information do we collect?</h3>
+                <p>
+                    {{settings.DOMAIN_NAME}} teams up with top artists and brands to create collections of limited edition, high quality NFTs, exclusively available on our platform.
+                    <a href="{% url 'register' %}">Apply to create with us here</a>
+                    <br>
+                    When registering on our site, you may be asked to enter your name and e-mail address. You
+                    may, however, visit our site without registering. Your e-mail address will be verified by an
+                    email containing a unique link. If that link is visited, we know that you control the e-mail
+                    address.
+                    <br>
+                    When registered and posting, we record the IP address that the post originated from. We also
+                    may retain server logs which include the IP address of every request to our server.
+                </p>
+            </div>
+            <div class="space-y-20">
+                <h3>What’s Different About {{settings.DOMAIN_NAME}}?</h3>
+                <p>
+                    There are many things that make {{settings.DOMAIN_NAME}} unlike other marketplaces, but one of the most fundamental differences is that we are a custodial platform.
+                    <br>
+                    This means that NFTs on our platform are stored in a secured wallet, powered by Gemini’s state-of-the-art custody technology.
+                </p>
+            </div>
+            <div class="space-y-20">
+                <h3>How Our Drops Work:?</h3>
+                <p>
+                    {{settings.DOMAIN_NAME}} offers a diverse range of art and collectible NFTs which are available as Curated Drops (hand selected by {{settings.DOMAIN_NAME}}, and dropped on platform) and Verified Drops.
+
+                    <br>
+                    <strong class="text-dark">Curated Drops:</strong>NFTs from our Curated Drops are sold directly by the creator. You can buy them here before they sell out - or purchase them from other users on the secondary marketplace.
+                    <br>
+                    <strong class="text-dark">Verified Drops:</strong>NFTs from Verified Drops are not curated by the Nifty Gateway team, but we have verified them to be created by the person or team who claimed to create it, and to meet our legal and basic smart contract.
+
+                </p>
+            </div>
+            <!-- <div class="space-y-20">
+                <h3>Do we use cookies?</h3>
+                <p>
+                    Yes. Cookies are small files that a site or its service provider transfers to your
+                    computer’s hard drive through your Web browser (if you allow). These cookies enable the site
+                    to recognize your browser and, if you have a registered account, associate it with your
+                    registered account.
+                    <br>
+                    We use cookies to understand and save your preferences for future visits and compile
+                    aggregate data about site traffic and site interaction so that we can offer better site
+                    experiences and tools in the future. We may contract with third-party service providers to
+                    assist us in better understanding our site visitors. These service providers are not
+                    permitted to use the information collected on our behalf except to help us conduct and
+                    improve our business.
+                </p>
+            </div>
+            <div class="space-y-20">
+                <h3>Do we disclose any information to outside parties?</h3>
+                <p>
+                    We do not sell, trade, or otherwise transfer to outside parties your personally identifiable
+                    information. This does not include trusted third parties who assist us in operating our
+                    site, conducting our business, or servicing you, so long as those parties agree to keep this
+                    information confidential. We may also release your information when we believe release is
+                    appropriate to comply with the law, enforce our site policies, or protect ours or others
+                    rights, property, or safety. However, non-personally identifiable visitor information may be
+                    provided to other parties for marketing, advertising, or other uses.
+                </p>
+            </div> -->
+        </div>
+    </div>
+</div>
+{% endblock content %}
+    

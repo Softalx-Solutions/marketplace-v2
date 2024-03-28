@@ -172,6 +172,8 @@ cloudinary.config(
 TEMPLATE_CONTEXT_PROCESSORS = [
     'django_settings_export.settings_export',
 ]
+FAVI_LOGO= os.environ['FAVI_LOGO']
+FRONT_LOGO= os.environ['FRONT_LOGO']
 SITE_LOGO = os.environ['SITE_LOGO']
 SITE_LOGO_DARK = os.environ['SITE_LOGO_DARK']
 DOMAIN_NAME = os.environ['DOMAIN_NAME']
@@ -181,6 +183,8 @@ SITE_ADDRESS = os.environ['SITE_ADDRESS']
 SITE_LIVE_CHAT = os.environ['SITE_LIVE_CHAT']
 
 SETTINGS_EXPORT = [
+    'FAVI_LOGO',
+    'FRONT_LOGO',
     'SITE_LOGO',
     'SITE_LOGO_DARK',
     'DOMAIN_NAME',
