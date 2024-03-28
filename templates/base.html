@@ -39,9 +39,9 @@
                             <span></span>
                             <span></span>
                         </button>
-                        <a class="navbar-brand d-flex align-items-center gap-4" href="index.html">
+                        <a class="navbar-brand d-flex align-items-center gap-4" href="/">
                             <img class="w-100 logo1" src="/static/frontend/assets/img/{{settings.FAVI_LOGO}}" alt="favicon">
-                            <img class="w-100 logo2" src="/static/frontend/assets/img/{{settings.FRONT_LOGO}}" alt="logo">
+                            {% comment %} <img class="w-100 logo2" src="/static/frontend/assets/img/{{settings.FRONT_LOGO}}" alt="logo"> {% endcomment %}
                         </a>
                     </div>
                     <div class="navbar-toggle-item w-100 position-lg-relative">
@@ -99,6 +99,8 @@
                         </ul>
                     </div>
                 </nav>
+                
+                {% if request.user.is_authenticated %}
                 <div class="header-btn-area d-flex align-items-center gap-sm-6 gap-3">
                     <button
                         class="btn-rounded-cus wallet-btn border-0 d-flex align-items-center gap-3 p-xl-2 p-0 pe-xl-6 rounded-5 position-relative">
@@ -107,107 +109,37 @@
                         </span>
                         <span class="text-nowrap d-none d-xl-block">Connect Wallet</span>
                     </button>
-                    <button class="ntf-btn box-style fs-2xl">
-                        <i class="ti ti-bell-filled"></i>
-                    </button>
+                    
                     <div class="header-profile pointer">
                         <div class="profile-wrapper d-flex align-items-center gap-3">
                             <div class="img-area overflow-hidden">
-                                <img class="w-100" src="{% static 'frontend/assets/img/profile.png' %}" alt="profile">
+                                
+                                {% if request.user.profile_pic %}
+                                <img class="w-100" src="{{request.user.profile_pic.url}}" alt="profile">
+                                {% else %}
+                                <img class="w-100" src="{% static 'frontend/assets/img/profile.peng' %}" alt="picture">
+                                    
+                                {% endif %}
+                                    
                             </div>
-                            <span class="user-name d-none d-xxl-block text-nowrap">David Malan</span>
+                            <span class="user-name d-none d-xxl-block text-nowrap">{{request.user.username}}</span>
                             <i class="ti ti-chevron-down d-none d-xxl-block"></i>
                         </div>
                     </div>
                 </div>
+                {% else %}
+                <a href="{% url 'login' %}" class="account-item">Login</a>
+                {% comment %} <a href="{% url 'register' %}" class="account-item">Register</a> {% endcomment %}
+                {% endif %}
+                    
             </div>
         </div>
     </header>
     <!-- header-section end -->
 
-    <!-- notification area start -->
-    <div class="notification-area p-4" data-lenis-prevent>
-        <div class="notification-card d-grid gap-4" data-tilt>
-            <a href="#">
-                <div class="card-item d-flex align-items-center gap-4">
-                    <div class="card-img-area">
-                        <img class="w-100 rounded-circle" src="{% static 'frontend/assets/img/avatar1.png' %}" alt="profile">
-                    </div>
-                    <div class="card-info">
-                        <span class="card-title d-block tcn-1"> Cristofer Dorwart</span>
-                        <span class="card-text d-block tcn-1 fs-sm">Winners The Last Game</span>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card-item d-flex align-items-center gap-4">
-                    <div class="card-img-area">
-                        <img class="w-100 rounded-circle" src="{% static 'frontend/assets/img/avatar2.png' %}" alt="profile">
-                    </div>
-                    <div class="card-info">
-                        <span class="card-title d-block tcn-1"> Piter Maio </span>
-                        <span class="card-text d-block tcn-1 fs-sm">Accept your challenge</span>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card-item d-flex align-items-center gap-4">
-                    <div class="card-info">
-                        <span class="card-title d-block tcn-1"> Copa Punto Gamer </span>
-                        <span class="card-text d-block tcn-1 fs-sm">Tournament start</span>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card-item d-flex align-items-center gap-4">
-                    <div class="card-info">
-                        <span class="card-title d-block tcn-1"> Daily Bonus </span>
-                        <span class="card-text d-block tcn-1 fs-sm">Tournament start</span>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card-item d-flex align-items-center gap-4">
-                    <div class="card-img-area">
-                        <img class="w-100 rounded-circle" src="{% static 'frontend/assets/img/avatar1.png' %}" alt="profile">
-                    </div>
-                    <div class="card-info">
-                        <span class="card-title d-block tcn-1"> Cristofer Dorwart</span>
-                        <span class="card-text d-block tcn-1 fs-sm">Winners The Last Game</span>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card-item d-flex align-items-center gap-4">
-                    <div class="card-img-area">
-                        <img class="w-100 rounded-circle" src="{% static 'frontend/assets/img/avatar2.png' %}" alt="profile">
-                    </div>
-                    <div class="card-info">
-                        <span class="card-title d-block tcn-1"> Piter Maio </span>
-                        <span class="card-text d-block tcn-1 fs-sm">Accept your challenge</span>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card-item d-flex align-items-center gap-4">
-                    <div class="card-info">
-                        <span class="card-title d-block tcn-1"> Copa Punto Gamer </span>
-                        <span class="card-text d-block tcn-1 fs-sm">Tournament start</span>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card-item d-flex align-items-center gap-4">
-                    <div class="card-info">
-                        <span class="card-title d-block tcn-1"> Daily Bonus </span>
-                        <span class="card-text d-block tcn-1 fs-sm">Tournament start</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <!-- notification area end -->
-
+    
+    {% if request.user.is_authenticated %}
+        
     <!-- connect your Wallet section start -->
     <div class="connect-wallet-section position-fixed top-0 start-0 w-100 vh-100">
         <div class="connect-wallet-overlay position-absolute top-0 start-0 w-100 h-100"></div>
@@ -249,26 +181,31 @@
         <div class="account-items d-grid gap-1" data-tilt>
             <div class="user-level-area p-3">
                 <div class="user-info d-between">
-                    <span class="user-name fs-five">David Malan</span>
-                    <div class="badge d-flex align-items-center">
+                    <span class="user-name fs-five">{{request.user.username}}</span>
+                    {% comment %} <div class="badge d-flex align-items-center">
                         <i class="ti ti-medal fs-three fs-normal tcp-2"></i>
                         <i class="ti ti-medal fs-three fs-normal tcp-2"></i>
                         <i class="ti ti-medal fs-three fs-normal tcp-2"></i>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
-                <div class="user-level">
+                {% comment %} <div class="user-level">
                     <span class="level-title tcn-6">Level</span>
                     <div class="level-bar my-1">
                         <div class="level-progress" style="width: 30%;"></div>
                     </div>
-                </div>
+                </div> {% endcomment %}
             </div>
-            <a href="profile.html" class="account-item">View Profile</a>
-            <a href="chat.html" class="account-item">Message</a>
-            <button class="bttn account-item">Logout</button>
+            <a href="{% url 'users' %}" class="account-item">View Profile</a>
+            {% comment %} <a href="chat.html" class="account-item">Message</a> {% endcomment %}
+            <a href="{% url 'logout' %}" class="account-item">Logout</a>
+            {% comment %} <button class="bttn account-item">Logout</button> {% endcomment %}
         </div>
     </div>
     <!-- user account details popup end  -->
+    {% else %}
+    
+
+    {% endif %}
 
     <!-- Hero Section start  -->
     
