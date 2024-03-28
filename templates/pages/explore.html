@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="tournament-content px-xxl-4">
                                         <div class="tournament-info mb-5">
-                                            <a href="{% url 'explore-detail' nft.slug %}" class="d-block">
+                                            <a href="{% url 'explore-detail' nft.id %}" class="d-block">
                                                 <h4 class="tournament-title tcn-1 mb-1 cursor-scale growDown title-anim"> 
                                                     {{nft.name|capfirst}}
                                                     </a>
@@ -103,7 +103,7 @@
                                                     <span class="tcn-6 fs-sm">128 Players</span>
                                                 </div> -->
                                             </div>
-                                            <a href="{% url 'explore-detail' nft.slug %}" class="btn2">
+                                            <a href="{% url 'explore-detail' nft.id %}" class="btn2">
                                                 <i class="ti ti-arrow-right fs-2xl"></i>
                                             </a>
                                         </div>
