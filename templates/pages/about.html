@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="terms-condition pb-120 pt-120 mt-lg-0 mt-sm-15 mt-10">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="terms-condition-wrapper p-lg-15 p-md-10 p-sm-8 p-4 bgn-4 rounded">
+                    <h1 class="text-left mb-4">{{settings.DOMAIN_NAME}} was founded with a very simple mission - to make NFTs accessible to everyone.</h1>
+
+                    
+                    <div class="space-y-20">
+                        <h4>What’s Different About {{settings.DOMAIN_NAME}}?</h4>
+                        <p>
+                            There are many things that make {{settings.DOMAIN_NAME}} unlike other marketplaces, but one of the most fundamental differences is that we are a custodial platform.
+                            <br>
+                            This means that NFTs on our platform are stored in a secured wallet, powered by Gemini’s state-of-the-art custody technology.
+                        </p>
+                    </div>
+
+                    <div class="space-y-20 mt-4">
+                        <h3>How Our Drops Work:?</h3>
+                        <p>
+                            {{settings.DOMAIN_NAME}} offers a diverse range of art and collectible NFTs which are available as Curated Drops (hand selected by {{settings.DOMAIN_NAME}}, and dropped on platform) and Verified Drops.
+        
+                            <br>
+                            <strong class="text-primary">Curated Drops:</strong>NFTs from our Curated Drops are sold directly by the creator. You can buy them here before they sell out - or purchase them from other users on the secondary marketplace.
+                            <br>
+                            <strong class="text-primary">Verified Drops:</strong>NFTs from Verified Drops are not curated by the Nifty Gateway team, but we have verified them to be created by the person or team who claimed to create it, and to meet our legal and basic smart contract.
+        
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+{% endblock content %}
+    
