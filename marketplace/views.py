@@ -8,18 +8,49 @@ from django.contrib import messages
 from django.shortcuts import redirect
 from .models import *
 from accounts.models import MoreDetails, User
+from django.core.paginator import Paginator
 
 # Create your views here.
 
 """Explore NFTs"""
+
 class ExploreNft(TemplateView):
     template_name = 'pages/explore.html'
-    def get(self, request):
-        all_nfts = CreateNftModel.objects.filter(Q(list_for_sale=True) and Q(minted=True)).order_by('created')
-        context = {
-            'all_nfts':all_nfts,
-        }
-        return render(request, self.template_name, context)
+    paginate_by = 10  # Number of items per page
+
+    def get_queryset(self):
+        """
+        Get the queryset for fetching NFTs.
+        """
+        return CreateNftModel.objects.filter(list_for_sale=True, minted=True).select_related('creator').order_by('created')
+
+    def get_context_data(self, **kwargs):
+        """
+        Get the context data for the template.
+        """
+        context = super().get_context_data(**kwargs)
+        queryset = self.get_queryset()
+        paginator = Paginator(queryset, 10)
+        page_number = self.request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        context['all_nfts'] = page_obj
+        return context
+
+    def get(self, request, *args, **kwargs):
+        """
+        Handle GET request.
+        """
+        return render(request, self.template_name, self.get_context_data())
+
+# class ExploreNft(TemplateView):
+#     template_name = 'pages/explore.html'
+#     def get(self, request):
+#         all_nfts = CreateNftModel.objects.filter(Q(list_for_sale=True) and Q(minted=True)).order_by('created')
+#         context = {
+#             'all_nfts':all_nfts,
+#         }
+#         return render(request, self.template_name, context)
+
     
     
 """Product Details"""

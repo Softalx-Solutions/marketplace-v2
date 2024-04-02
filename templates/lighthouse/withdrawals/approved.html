@@ -47,7 +47,7 @@
                         </thead>
                         <tbody>
                             
-                            {% for withdraw in withdrawals %}
+                            {% for withdraw in withdrawal_list %}
                                 
                             <tr>
                                 <td>{{withdraw.id}}</td>
@@ -101,6 +101,26 @@
                            
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-center mt-4">
+                        {% if withdrawal_list.has_other_pages %}
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                {% if withdrawal_list.has_previous %}
+                                <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                                <li class="page-item"><a class="page-link" href="?page={{ withdrawal_list.previous_page_number }}">Previous</a></li>
+                              {% endif %}
+                            <!-- <span class="current"> -->
+                                <!-- Page {{ withdrawal_list.number }} of {{ withdrawal_list.paginator.num_pages }}. -->
+                                <!-- <li class="page-item"><a class="page-link" href="#">{{ withdrawal_list.number }} of {{ withdrawal_list.paginator.num_pages }}</a></li> -->
+                            <!-- </span> -->
+                              {% if withdrawal_list.has_next %}
+                              <li class="page-item"><a class="page-link" href="?page={{ withdrawal_list.next_page_number }}">Next</a></li>
+                              <li class="page-item"><a class="page-link" href="?page={{ withdrawal_list.paginator.num_pages }}">Last</a></li>
+                              {% endif %}
+                            </ul>
+                        </nav>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>

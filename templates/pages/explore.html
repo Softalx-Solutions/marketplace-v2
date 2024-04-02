@@ -306,6 +306,26 @@
             
         </div>
     </div>
+    <div class="d-flex justify-content-center mt-4">
+        {% if all_nfts.has_other_pages %}
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {% if all_nfts.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ all_nfts.previous_page_number }}">Previous</a></li>
+              {% endif %}
+            <!-- <span class="current"> -->
+                <!-- Page {{ all_nfts.number }} of {{ all_nfts.paginator.num_pages }}. -->
+                <!-- <li class="page-item"><a class="page-link" href="#">{{ all_nfts.number }} of {{ all_nfts.paginator.num_pages }}</a></li> -->
+            <!-- </span> -->
+              {% if all_nfts.has_next %}
+              <li class="page-item"><a class="page-link" href="?page={{ all_nfts.next_page_number }}">Next</a></li>
+              <li class="page-item"><a class="page-link" href="?page={{ all_nfts.paginator.num_pages }}">Last</a></li>
+              {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
     <!-- <div class="section mt-100">
         <div class="section__head">
             <h2 class="section__title mb-20"> Collections</h2>
