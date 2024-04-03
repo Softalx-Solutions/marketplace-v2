@@ -38,7 +38,7 @@
                     <div class="tabitem active">
                         <div class="row justify-content-md-start justify-content-center g-6">
                             
-                            {% for nft in all_nfts %}
+                            {% for nft in nfts_list %}
                             <div class="col-xl-4 col-md-6 col-sm-10">
                                 <div class="tournament-card p-xl-4 p-3 pb-xl-8 bgn-4">
                                     <div class="tournament-img mb-8 position-relative">
@@ -112,6 +112,27 @@
                             </div>
                             
                             {% endfor %}
+
+                            <div class="d-flex justify-content-center mt-4">
+                                {% if nfts_list.has_other_pages %}
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        {% if nfts_list.has_previous %}
+                                        <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                                        <li class="page-item"><a class="page-link" href="?page={{ nfts_list.previous_page_number }}">Previous</a></li>
+                                      {% endif %}
+                                    <!-- <span class="current"> -->
+                                        <!-- Page {{ nfts_list.number }} of {{ nfts_list.paginator.num_pages }}. -->
+                                        <!-- <li class="page-item"><a class="page-link" href="#">{{ nfts_list.number }} of {{ nfts_list.paginator.num_pages }}</a></li> -->
+                                    <!-- </span> -->
+                                      {% if nfts_list.has_next %}
+                                      <li class="page-item"><a class="page-link" href="?page={{ nfts_list.next_page_number }}">Next</a></li>
+                                      <li class="page-item"><a class="page-link" href="?page={{ nfts_list.paginator.num_pages }}">Last</a></li>
+                                      {% endif %}
+                                    </ul>
+                                </nav>
+                                {% endif %}
+                            </div>
                                 
                             
                         </div>
