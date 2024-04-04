@@ -204,7 +204,7 @@ class AllNft(TemplateView):
     template_name = 'lighthouse/nft/all.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            nfts = CreateNftModel.objects.all().order_by('name')
+            nfts = CreateNftModel.objects.all().select_related('creator').order_by('name')
             p = Paginator(nfts, 20)
             # page_request_var = 'page'
             page = request.GET.get('page')
@@ -270,7 +270,7 @@ class UnmintedNft(TemplateView):
     template_name = 'lighthouse/nft/unminted.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            unminted = CreateNftModel.objects.filter(minted=False).order_by('-created')
+            unminted = CreateNftModel.objects.filter(minted=False).select_related('creator').order_by('-created')
             p = Paginator(unminted, 20)
             # page_request_var = 'page'
             page = request.GET.get('page')
@@ -304,7 +304,7 @@ class ApprovedDeposits(TemplateView):
     template_name = 'lighthouse/deposits/approved.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            deposits = UserTransactions.objects.filter(t_type='deposit', t_status='approved').order_by('-created')
+            deposits = UserTransactions.objects.filter(t_type='deposit', t_status='approved').select_related('user').order_by('-created')
             p = Paginator(deposits, 20)
             # page_request_var = 'page'
             page = request.GET.get('page')
@@ -318,7 +318,7 @@ class PendingDeposits(TemplateView):
     template_name = 'lighthouse/deposits/pending.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            deposits = UserTransactions.objects.filter(t_type='deposit', t_status='pending').order_by('-created')
+            deposits = UserTransactions.objects.filter(t_type='deposit', t_status='pending').select_related('user').order_by('-created')
             p = Paginator(deposits, 20)
             # page_request_var = 'page'
             page = request.GET.get('page')
@@ -331,7 +331,7 @@ class DeclinedDeposits(TemplateView):
     template_name = 'lighthouse/deposits/declined.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            deposits = UserTransactions.objects.filter(t_type='deposit', t_status='declined').order_by('-created')
+            deposits = UserTransactions.objects.filter(t_type='deposit', t_status='declined').select_related('user').order_by('-created')
             p = Paginator(deposits, 20)
             # page_request_var = 'page'
             page = request.GET.get('page')
@@ -395,7 +395,7 @@ class ApprovedWithdrawals(TemplateView):
     template_name = 'lighthouse/withdrawals/approved.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            withdrawals = UserTransactions.objects.filter(t_type='withdrawal', t_status='approved').order_by('-created')
+            withdrawals = UserTransactions.objects.filter(t_type='withdrawal', t_status='approved').select_related('user').order_by('-created')
             p = Paginator(withdrawals, 15)
             # page_request_var = 'page'
             page = request.GET.get('page')
@@ -410,7 +410,7 @@ class PendingWithdrawals(TemplateView):
     template_name = 'lighthouse/withdrawals/pending.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            withdrawals = UserTransactions.objects.filter(t_type='withdrawal', t_status='pending').order_by('-created')
+            withdrawals = UserTransactions.objects.filter(t_type='withdrawal', t_status='pending').select_related('user').order_by('-created')
             p = Paginator(withdrawals, 15)
             # page_request_var = 'page'
             page = request.GET.get('page')
@@ -424,7 +424,7 @@ class DeclinedWithdrawals(TemplateView):
     template_name = 'lighthouse/withdrawals/declined.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            withdrawals = UserTransactions.objects.filter(t_type='withdrawal', t_status='declined').order_by('-created')
+            withdrawals = UserTransactions.objects.filter(t_type='withdrawal', t_status='declined').select_related('user').order_by('-created')
             p = Paginator(withdrawals, 15)
             # page_request_var = 'page'
             page = request.GET.get('page')
