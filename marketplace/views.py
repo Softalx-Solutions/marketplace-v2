@@ -8,6 +8,7 @@ from django.contrib import messages
 from django.shortcuts import redirect
 from .models import *
 from accounts.models import MoreDetails, User
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -15,9 +16,14 @@ from accounts.models import MoreDetails, User
 class ExploreNft(TemplateView):
     template_name = 'pages/explore.html'
     def get(self, request):
-        all_nfts = CreateNftModel.objects.filter(Q(list_for_sale=True) and Q(minted=True)).order_by('created')
+        all_nfts = CreateNftModel.objects.filter(list_for_sale=True, minted=True).select_related('creator').order_by('created')
+        p = Paginator(all_nfts, 15)
+        # page_request_var = 'page'
+        page = request.GET.get('page')
+        nfts_list = p.get_page(page)
         context = {
             'all_nfts':all_nfts,
+            'nfts_list':nfts_list,
         }
         return render(request, self.template_name, context)
     

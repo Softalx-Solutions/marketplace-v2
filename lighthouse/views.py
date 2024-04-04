@@ -11,6 +11,7 @@ from django.contrib.auth import authenticate, login
 
 from marketplace.models import BidNft, Category, CreateNftModel, NftCollection
 from django.db.models import Q
+from django.core.paginator import Paginator
 
 # Create your views here.
 class LighthouseDashboard(TemplateView):
@@ -123,7 +124,11 @@ class AllUsers(TemplateView):
     def get(self, request):
         if request.user.is_authenticated and request.user.is_admin == True:
             all_users = User.objects.filter(is_user=True).order_by('-date_joined')
-            return render(request, self.template_name, {'all_users': all_users})
+            p = Paginator(all_users, 15)
+            # page_request_var = 'page'
+            page = request.GET.get('page')
+            users_list = p.get_page(page)
+            return render(request, self.template_name, {'all_users': all_users, 'users_list':users_list})
         else:
             messages.error(request, 'You do not have permission to access this page')
             return redirect('login')
@@ -199,8 +204,12 @@ class AllNft(TemplateView):
     template_name = 'lighthouse/nft/all.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            nfts = CreateNftModel.objects.all().order_by('name')
-            return render(request, self.template_name, {'nfts':nfts})
+            nfts = CreateNftModel.objects.all().select_related('creator').order_by('name')
+            p = Paginator(nfts, 15)
+            # page_request_var = 'page'
+            page = request.GET.get('page')
+            nfts_list = p.get_page(page)
+            return render(request, self.template_name, {'nfts':nfts, 'nfts_list':nfts_list})
         else:
             messages.error(request, 'You do not have permission to access this page')
             return redirect('login')
@@ -262,7 +271,11 @@ class UnmintedNft(TemplateView):
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
             unminted = CreateNftModel.objects.filter(minted=False).order_by('-created')
-            return render(request, self.template_name, {'unminted':unminted})
+            p = Paginator(unminted, 15)
+            # page_request_var = 'page'
+            page = request.GET.get('page')
+            unminted_list = p.get_page(page)
+            return render(request, self.template_name, {'unminted':unminted, 'unminted_list':unminted_list})
         else:
             messages.error(request, 'You do not have permission to access this page')
             return redirect('login')
@@ -291,8 +304,12 @@ class ApprovedDeposits(TemplateView):
     template_name = 'lighthouse/deposits/approved.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            deposits = UserTransactions.objects.filter(t_type='deposit', t_status='approved').order_by('-created')
-            return render(request, self.template_name, {'deposits':deposits})
+            deposits = UserTransactions.objects.filter(t_type='deposit', t_status='approved').select_related('user').order_by('-created')
+            p = Paginator(deposits, 15)
+            # page_request_var = 'page'
+            page = request.GET.get('page')
+            deposits_list = p.get_page(page)
+            return render(request, self.template_name, {'deposits':deposits, 'deposits_list':deposits_list})
         else:
             messages.error(request, 'You do not have permission to access this page')
             return redirect('login')
@@ -301,8 +318,12 @@ class PendingDeposits(TemplateView):
     template_name = 'lighthouse/deposits/pending.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            deposits = UserTransactions.objects.filter(t_type='deposit', t_status='pending').order_by('-created')
-            return render(request, self.template_name, {'deposits':deposits})
+            deposits = UserTransactions.objects.filter(t_type='deposit', t_status='pending').select_related('user').order_by('-created')
+            p = Paginator(deposits, 15)
+            # page_request_var = 'page'
+            page = request.GET.get('page')
+            deposits_list = p.get_page(page)
+            return render(request, self.template_name, {'deposits':deposits, 'deposits_list':deposits_list})
         else:
             messages.error(request, 'You do not have permission to access this page')
             return redirect('login')
@@ -310,8 +331,12 @@ class DeclinedDeposits(TemplateView):
     template_name = 'lighthouse/deposits/declined.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            deposits = UserTransactions.objects.filter(t_type='deposit', t_status='declined').order_by('-created')
-            return render(request, self.template_name, {'deposits':deposits})
+            deposits = UserTransactions.objects.filter(t_type='deposit', t_status='declined').select_related('user').order_by('-created')
+            p = Paginator(deposits, 15)
+            # page_request_var = 'page'
+            page = request.GET.get('page')
+            deposits_list = p.get_page(page)
+            return render(request, self.template_name, {'deposits':deposits, 'deposits_list':deposits_list})
         else:
             messages.error(request, 'You do not have permission to access this page')
             return redirect('login')
@@ -370,8 +395,12 @@ class ApprovedWithdrawals(TemplateView):
     template_name = 'lighthouse/withdrawals/approved.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            withdrawals = UserTransactions.objects.filter(t_type='withdrawal', t_status='approved').order_by('-created')
-            return render(request, self.template_name, {'withdrawals':withdrawals})
+            withdrawals = UserTransactions.objects.filter(t_type='withdrawal', t_status='approved').select_related('user').order_by('-created')
+            p = Paginator(withdrawals, 15)
+            # page_request_var = 'page'
+            page = request.GET.get('page')
+            withdrawals_list = p.get_page(page)
+            return render(request, self.template_name, {'withdrawals':withdrawals, 'withdrawals_list':withdrawals_list})
         else:
             messages.error(request, 'You do not have permission to access this page')
             return redirect('login')
@@ -381,8 +410,12 @@ class PendingWithdrawals(TemplateView):
     template_name = 'lighthouse/withdrawals/pending.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            withdrawals = UserTransactions.objects.filter(t_type='withdrawal', t_status='pending').order_by('-created')
-            return render(request, self.template_name, {'withdrawals':withdrawals})
+            withdrawals = UserTransactions.objects.filter(t_type='withdrawal', t_status='pending').select_related('user').order_by('-created')
+            p = Paginator(withdrawals, 15)
+            # page_request_var = 'page'
+            page = request.GET.get('page')
+            withdrawals_list = p.get_page(page)
+            return render(request, self.template_name, {'withdrawals':withdrawals, 'withdrawals_list':withdrawals_list})
         else:
             messages.error(request, 'You do not have permission to access this page')
             return redirect('login')
@@ -391,8 +424,12 @@ class DeclinedWithdrawals(TemplateView):
     template_name = 'lighthouse/withdrawals/declined.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            withdrawals = UserTransactions.objects.filter(t_type='withdrawal', t_status='declined').order_by('-created')
-            return render(request, self.template_name, {'withdrawals':withdrawals})
+            withdrawals = UserTransactions.objects.filter(t_type='withdrawal', t_status='declined').select_related('user').order_by('-created')
+            p = Paginator(withdrawals, 15)
+            # page_request_var = 'page'
+            page = request.GET.get('page')
+            withdrawals_list = p.get_page(page)
+            return render(request, self.template_name, {'withdrawals':withdrawals, 'withdrawals_list':withdrawals_list})
         else:
             messages.error(request, 'You do not have permission to access this page')
             return redirect('login')

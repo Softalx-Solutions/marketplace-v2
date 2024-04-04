@@ -47,7 +47,7 @@
                         </thead>
                         <tbody>
                             
-                            {% for deposit in deposits %}
+                            {% for deposit in deposits_list %}
                                 
                             <tr>
                                 <td>{{deposit.id}}</td>
@@ -101,6 +101,26 @@
                            
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-center mt-4">
+                        {% if deposits_list.has_other_pages %}
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                {% if deposits_list.has_previous %}
+                                <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                                <li class="page-item"><a class="page-link" href="?page={{ deposits_list.previous_page_number }}">Previous</a></li>
+                              {% endif %}
+                            <!-- <span class="current"> -->
+                                <!-- Page {{ deposits_list.number }} of {{ deposits_list.paginator.num_pages }}. -->
+                                <!-- <li class="page-item"><a class="page-link" href="#">{{ deposits_list.number }} of {{ deposits_list.paginator.num_pages }}</a></li> -->
+                            <!-- </span> -->
+                              {% if deposits_list.has_next %}
+                              <li class="page-item"><a class="page-link" href="?page={{ deposits_list.next_page_number }}">Next</a></li>
+                              <li class="page-item"><a class="page-link" href="?page={{ deposits_list.paginator.num_pages }}">Last</a></li>
+                              {% endif %}
+                            </ul>
+                        </nav>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
