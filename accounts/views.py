@@ -94,8 +94,8 @@ class RegisterView(View):
             })
             user.email_user(subject, message)
 
-            # messages.success(request, ('Please Confirm your email to complete registration. Note: check spam if mail is not on inbox'))
-            messages.success(request, ('Account created successfully, Login'))
+            messages.success(request, ('Please Confirm your email to complete registration. Note: check spam if mail is not on inbox'))
+            # messages.success(request, ('Account created successfully, Login'))
 
             return redirect('login')
 
