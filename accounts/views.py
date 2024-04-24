@@ -73,7 +73,7 @@ class RegisterView(View):
         form = self.form_class()
         return render(request, self.template_name, {'form': form})
     
-    @transaction.atomic
+    # @transaction.atomic
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST)
         if form.is_valid():
@@ -94,8 +94,8 @@ class RegisterView(View):
             })
             user.email_user(subject, message)
 
-            messages.success(request, ('Please Confirm your email to complete registration. Note: check spam if mail is not on inbox'))
-            # messages.success(request, ('Account created successfully, Login'))
+            # messages.success(request, ('Please Confirm your email to complete registration. Note: check spam if mail is not on inbox'))
+            messages.success(request, ('Account created successfully, Login'))
 
             return redirect('login')
 
