@@ -225,6 +225,13 @@ if DEBUG:
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     MEDIA_URL = '/media/'
 else:
+    STATIC_URL = '/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/') 
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+    )
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    MEDIA_URL = '/media/'
     # AWS CONFIG
     AWS_ACCESS_KEY_ID=os.environ['AWS_ACCESS_KEY_ID']
     AWS_SECRET_ACCESS_KEY=os.environ['AWS_SECRET_ACCESS_KEY']
@@ -246,6 +253,8 @@ else:
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
+    
+    # COLLECTFAST_CACHE = 'collectfast'
 
 
 
