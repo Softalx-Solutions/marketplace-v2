@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'crispy_forms',
     'storages',
+    'maintenance_mode',
 
 ]
 
@@ -174,6 +175,7 @@ SITE_EMAIL = os.environ['SITE_EMAIL']
 SITE_NUMBER = os.environ['SITE_NUMBER']
 SITE_ADDRESS = os.environ['SITE_ADDRESS']
 SITE_LIVE_CHAT = os.environ['SITE_LIVE_CHAT']
+MAINTENANCE_TEXT = os.environ['MAINTENANCE_TEXT']
 
 SETTINGS_EXPORT = [
     'FAVI_LOGO',
@@ -185,6 +187,7 @@ SETTINGS_EXPORT = [
     'SITE_NUMBER',
     'SITE_ADDRESS',
     'SITE_LIVE_CHAT',
+    'MAINTENANCE_TEXT',
 ]
 
 MESSAGE_TAGS = {
@@ -207,6 +210,8 @@ EMAIL_PORT = os.environ['EMAIL_PORT']
 SEND_EMAIL_NAME = os.environ['SEND_EMAIL_NAME']
 EMAIL_USE_SSL = os.environ['EMAIL_USE_SSL']
 
+# if True the maintenance-mode will be activated
+MAINTENANCE_MODE = None
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = '127.0.0.1'
