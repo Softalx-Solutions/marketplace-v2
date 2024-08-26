@@ -16,7 +16,7 @@ from django.core.paginator import Paginator
 class ExploreNft(TemplateView):
     template_name = 'pages/explore.html'
     def get(self, request):
-        all_nfts = CreateNftModel.objects.filter(list_for_sale=True, minted=True).select_related('creator').order_by('created')
+        all_nfts = CreateNftModel.objects.filter(list_for_sale=True, minted=True).select_related('creator').order_by('created').iterator()
         p = Paginator(all_nfts, 15)
         # page_request_var = 'page'
         page = request.GET.get('page')
@@ -33,7 +33,7 @@ class ExploreNftPageDetail(TemplateView):
     template_name = 'pages/explore-detail.html'
     def get(self, request, slug):
         nft = get_object_or_404(CreateNftModel, slug=slug)
-        bids = BidNft.objects.filter(bid_item_id=nft.id)
+        bids = BidNft.objects.filter(bid_item_id=nft.id).iterator()
         context = {
             'nft':nft,
             'bids':bids,
@@ -69,7 +69,7 @@ class PlaceBid(TemplateView):
     def post(self, request, id):
         nft = get_object_or_404(CreateNftModel, id=id)
         # get_bid = get_object_or_404(BidNft, bid_item=nft)
-        get_bid = BidNft.objects.filter(bid_item=nft)
+        get_bid = BidNft.objects.filter(bid_item=nft).iterator()
         amount = request.POST['bid_amount']
         
         if amount:
@@ -109,9 +109,9 @@ class SearchNft(ListView):
                 Q(creator__username__icontains=q) |
                 Q(purchased_by__username__icontains=q),
                 minted=True  
-            )
+            ).iterator()
             all_users = User.objects.filter(Q(username__icontains=q),
-                                            is_user=True)
+                                            is_user=True).iterator()
             context = {
                 'all_nfts':all_nfts,
                 'all_users':all_users,
@@ -145,7 +145,7 @@ class SearchNft(ListView):
 class ExploreUsers(TemplateView):
     template_name = 'pages/explore-users.html'
     def get(self, request):
-        all_users = User.objects.filter(is_user=True)
+        all_users = User.objects.filter(is_user=True).iterator()
         # get_total = CreateNftModel.objects.filter(user=all_users)
         context = {
             'all_users':all_users,
@@ -158,9 +158,9 @@ class ExploreUsersDetailView(TemplateView):
     def get(self, request, username):
         user = get_object_or_404(User, username=username)
         details = get_object_or_404(MoreDetails, user_details=user)
-        sales = CreateNftModel.objects.filter(creator=user, list_for_sale=True, status='BUY', minted=True)
-        created = CreateNftModel.objects.filter(creator=user)
-        purchased = CreateNftModel.objects.filter(purchased_by=user)
+        sales = CreateNftModel.objects.filter(creator=user, list_for_sale=True, status='BUY', minted=True).iterator()
+        created = CreateNftModel.objects.filter(creator=user).iterator()
+        purchased = CreateNftModel.objects.filter(purchased_by=user).iterator()
         context = {
             'user':user,
             'sales':sales,
