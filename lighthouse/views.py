@@ -21,8 +21,8 @@ class LighthouseDashboard(TemplateView):
             total_users = User.objects.filter(is_user=True).count()
             total_nfts = CreateNftModel.objects.all().count()
             total_collections = NftCollection.objects.all().count()
-            users = User.objects.all().order_by('-date_joined')[:5]
-            all_nfts = CreateNftModel.objects.all().order_by('-created')[:5]
+            users = User.objects.all().order_by('-date_joined')[:5].iterator()
+            all_nfts = CreateNftModel.objects.all().order_by('-created')[:5].iterator()
             context = {
                 'total_users':total_users,
                 'total_nfts':total_nfts,
@@ -40,7 +40,7 @@ class Categories(TemplateView):
     template_name = 'lighthouse/category/all.html'
     def get(self, request, *args):
         if request.user.is_authenticated and request.user.is_admin == True:
-            categories = Category.objects.all()
+            categories = Category.objects.all().iterator()
             form = CategoryForm()
             return render(request, self.template_name, {'categories': categories, 'form': form})
         else:
@@ -89,7 +89,7 @@ class EditCategory(TemplateView):
 class AllCollections(TemplateView):
     template_name = 'lighthouse/collections/all.html'
     def get(self, request):
-        collections = NftCollection.objects.all()
+        collections = NftCollection.objects.all().iterator()
         context ={
             'collections':collections,
         }
@@ -171,7 +171,7 @@ class AllWalletUsers(TemplateView):
     template_name = 'lighthouse/users/wallets.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            wallets = UserWallet.objects.all().order_by('user_wallet__username')
+            wallets = UserWallet.objects.all().order_by('user_wallet__username').iterator()
             return render(request, self.template_name, {'wallets':wallets})
         else:
             messages.error(request, 'You do not have permission to access this page')
@@ -494,7 +494,7 @@ class AddPaymentMethod(TemplateView):
     def get(self, request):
         if request.user.is_authenticated and request.user.is_admin == True:
             form = AddPaymentMethodForm()
-            payments = PaymentMethod.objects.all().order_by('coin_name')
+            payments = PaymentMethod.objects.all().order_by('coin_name').iterator()
             return render(request, self.template_name, {'form':form, 'payments':payments})
         else:
             messages.error(request, 'You do not have permission to access this page')
@@ -547,7 +547,7 @@ class ComposeEmail(TemplateView):
     template_name = 'lighthouse/email/send.html'
     def get(self, request):
         form = SendEmailForm
-        users = User.objects.filter(is_user=True).order_by('username')
+        users = User.objects.filter(is_user=True).order_by('username').iterator()
         return render(request, self.template_name, {'users': users, 'form':form})
     
     def post(self, request):
@@ -586,7 +586,7 @@ class ComposeEmail(TemplateView):
 class EmailHistory(TemplateView):
     template_name = 'lighthouse/email/history.html'
     def get(self, request):
-        all_emails = SendEmailUser.objects.all().order_by('-created')
+        all_emails = SendEmailUser.objects.all().order_by('-created').iterator()
         return render(request, self.template_name, {'all_emails':all_emails})
     
 class ViewEmailHistory(TemplateView):
@@ -639,7 +639,7 @@ class SearchUsers(TemplateView):
     template_name = 'lighthouse/users/search.html'
     def get(self, request):
         q = request.GET.get('q')
-        all_users = User.objects.filter(Q(username__icontains=q)| Q(email__icontains=q))
+        all_users = User.objects.filter(Q(username__icontains=q)| Q(email__icontains=q)).iterator()
         return render(request, self.template_name, {'all_users':all_users, 'q':q})
     
     
@@ -647,21 +647,21 @@ class SearchWallets(TemplateView):
     template_name = 'lighthouse/users/search-wallet.html'
     def get(self, request, *args, **kwargs):
         q = request.GET.get('q')
-        wallets = UserWallet.objects.filter(Q(user_wallet__username__icontains=q)| Q(wallet_name__icontains=q)| Q(wallet_address__icontains=q))
+        wallets = UserWallet.objects.filter(Q(user_wallet__username__icontains=q)| Q(wallet_name__icontains=q)| Q(wallet_address__icontains=q)).iterator()
         return render(request, self.template_name, {'wallets':wallets, 'q':q})
     
 class AdminSearchNfts(TemplateView):
     template_name = 'lighthouse/nft/search.html'
     def get(self, request):
         q = request.GET.get('q')
-        nfts = CreateNftModel.objects.filter(Q(name__icontains=q)| Q(creator__username__icontains=q)| Q(order_id__icontains=q))
+        nfts = CreateNftModel.objects.filter(Q(name__icontains=q)| Q(creator__username__icontains=q)| Q(order_id__icontains=q)).iterator()
         return render(request, self.template_name, {'nfts':nfts, 'q':q})
     
     
 class AllBids(TemplateView):
     template_name = 'lighthouse/bids/all.html'
     def get(self, request):
-        bids = BidNft.objects.all().order_by('-id')
+        bids = BidNft.objects.all().order_by('-id').iterator()
         return render(request, self.template_name, {'bids':bids})
     
 class EditBids(TemplateView):

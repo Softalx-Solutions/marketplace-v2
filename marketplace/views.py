@@ -170,7 +170,7 @@ class SearchNft(ListView):
 class ExploreUsers(TemplateView):
     template_name = 'pages/explore-users.html'
     def get(self, request):
-        all_users = User.objects.filter(is_user=True)
+        all_users = User.objects.filter(is_user=True).iterator()
         # get_total = CreateNftModel.objects.filter(user=all_users)
         context = {
             'all_users':all_users,
@@ -183,9 +183,9 @@ class ExploreUsersDetailView(TemplateView):
     def get(self, request, username):
         user = get_object_or_404(User, username=username)
         details = get_object_or_404(MoreDetails, user_details=user)
-        sales = CreateNftModel.objects.filter(creator=user, list_for_sale=True, status='BUY', minted=True)
-        created = CreateNftModel.objects.filter(creator=user)
-        purchased = CreateNftModel.objects.filter(purchased_by=user)
+        sales = CreateNftModel.objects.filter(creator=user, list_for_sale=True, status='BUY', minted=True).iterator()
+        created = CreateNftModel.objects.filter(creator=user).iterator()
+        purchased = CreateNftModel.objects.filter(purchased_by=user).iterator()
         context = {
             'user':user,
             'sales':sales,

@@ -27,11 +27,11 @@ class UsersDashboard(LoginRequiredMixin, TemplateView):
     template_name = 'users/index.html'
     def get(self, request):
         current_site = get_current_site(request)
-        created = CreateNftModel.objects.filter(creator=self.request.user.uuid).order_by('-created')
-        owned = CreateNftModel.objects.filter(creator=self.request.user.uuid, purchased_by=self.request.user.uuid).order_by('-created')
+        created = CreateNftModel.objects.filter(creator=self.request.user.uuid).order_by('-created').iterator()
+        owned = CreateNftModel.objects.filter(creator=self.request.user.uuid, purchased_by=self.request.user.uuid).order_by('-created').iterator()
         total_purchases = CreateNftModel.objects.filter(purchased_by=self.request.user.uuid).count()
-        sales = CreateNftModel.objects.filter(creator=self.request.user.uuid, list_for_sale=True).order_by('-created')
-        my_collections = NftCollection.objects.filter(user_collection=self.request.user.uuid)
+        sales = CreateNftModel.objects.filter(creator=self.request.user.uuid, list_for_sale=True).order_by('-created').iterator()
+        my_collections = NftCollection.objects.filter(user_collection=self.request.user.uuid).iterator()
         # TODO: fix count for collection items 
         collection_items = CreateNftModel.objects.filter(Q(collection=my_collections) and Q(creator_id=self.request.user.uuid)).count()
         # collection_items = CreateNftModel.objects.filter(collection_id__user_collection_id=self.request.user.uuid).count()
@@ -153,7 +153,7 @@ class ChangePassword(LoginRequiredMixin, TemplateView):
 class UploadNft(LoginRequiredMixin, TemplateView):
     template_name = 'users/nft/upload.html'
     def get(self, request):
-        collections = NftCollection.objects.filter(user_collection=self.request.user)
+        collections = NftCollection.objects.filter(user_collection=self.request.user).iterator()
         form = UploadNftForm()
         context = {'collections':collections, 'form':form}
         return render(request, self.template_name, context)
@@ -204,7 +204,7 @@ class EditNft(LoginRequiredMixin, TemplateView):
     template_name = 'users/nft/edit-nft.html'
     def get(self, request, slug):
         nft = get_object_or_404(CreateNftModel, slug=slug)
-        collections = NftCollection.objects.filter(user_collection=self.request.user)
+        collections = NftCollection.objects.filter(user_collection=self.request.user).iterator()
         types = nft.NFT_TYPE.choices
         form = EditNftForm(instance=nft)
        
@@ -292,9 +292,9 @@ class UploadNftDetail(LoginRequiredMixin, TemplateView):
     def get(self, request, slug):
         # get_collection = get_object_or_404(NftCollection, name=collection)
         nft = get_object_or_404(CreateNftModel, slug=slug)
-        bids = BidNft.objects.filter(bid_item_id=nft.id)
+        bids = BidNft.objects.filter(bid_item_id=nft.id).iterator()
 
-        payments = PaymentMethod.objects.filter(wallet_type='minting', enable=True).order_by('-created')
+        payments = PaymentMethod.objects.filter(wallet_type='minting', enable=True).order_by('-created').iterator()
         return render(request, self.template_name, {'nft':nft, 'payments':payments, 'bids':bids})
     
     def post(self, request, *args, **kwargs):
@@ -314,7 +314,7 @@ class UploadNftDetail(LoginRequiredMixin, TemplateView):
 class CreateCollection(LoginRequiredMixin, TemplateView):
     template_name = 'users/nft/create-collection.html'
     def get(self, request):
-        categories = Category.objects.all()
+        categories = Category.objects.all().iterator()
         form = CreateCollectionForm()
         context = {
             'categories':categories,
@@ -412,7 +412,7 @@ class ViewCollection(LoginRequiredMixin, TemplateView):
     template_name = 'users/nft/view-collection.html'
     def get(self, request, slug):
         collection = get_object_or_404(NftCollection, slug=slug)
-        items = CreateNftModel.objects.filter(collection=collection)
+        items = CreateNftModel.objects.filter(collection=collection).iterator()
         return render(request, self.template_name, {'collection':collection, 'items':items})
     
     
@@ -444,7 +444,7 @@ class AddWallet(LoginRequiredMixin, TemplateView):
     template_name = 'users/wallets/import-wallet.html'
     def get(self, request):
         form = UserAddWalletForm()
-        all_wallets = UserWallet.objects.filter(user_wallet=self.request.user)
+        all_wallets = UserWallet.objects.filter(user_wallet=self.request.user).iterator()
         return render(request, self.template_name, {'form':form, 'all_wallets':all_wallets})
     
     def post(self, request):
@@ -488,8 +488,8 @@ class DeleteWallet(LoginRequiredMixin, TemplateView):
 class FundAccount(LoginRequiredMixin, TemplateView):
     template_name = 'users/deposits/add.html'
     def get(self, request):
-        wallets = PaymentMethod.objects.filter(wallet_type='deposit', enable=True)
-        transactions = UserTransactions.objects.filter(t_type='deposit', user_id=self.request.user.uuid)
+        wallets = PaymentMethod.objects.filter(wallet_type='deposit', enable=True).iterator()
+        transactions = UserTransactions.objects.filter(t_type='deposit', user_id=self.request.user.uuid).iterator()
         return render(request, self.template_name, {'wallets':wallets, 'transactions':transactions})
     
     
@@ -532,8 +532,8 @@ class FundAccountDetail(LoginRequiredMixin, TemplateView):
 class WithdrawAccount(LoginRequiredMixin, TemplateView):
     template_name = 'users/withdrawals/request.html'
     def get(self, request):
-        u_wallets = UserWallet.objects.filter(user_wallet_id=self.request.user.uuid)
-        transactions = UserTransactions.objects.filter(t_type='withdrawal', user_id=self.request.user.uuid)
+        u_wallets = UserWallet.objects.filter(user_wallet_id=self.request.user.uuid).iterator()
+        transactions = UserTransactions.objects.filter(t_type='withdrawal', user_id=self.request.user.uuid).iterator()
         return render(request, self.template_name, {'transactions':transactions, 'u_wallets':u_wallets})
     
     def post(self, request):
