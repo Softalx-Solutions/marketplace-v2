@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block bg_hero %}
 <div class="hero_marketplace bg_white">
     <div class="container">
@@ -179,10 +179,10 @@
                             <div class="avatars space-x-10">
                                 <div class="media">
                                     <div class="badge">
-                                        <img src="/static/assets/img/icons/Badge.svg" alt="">
+                                        <img src="{% static 'assets/img/icons/Badge.svg' %}" alt="">
                                     </div>
                                     <a href="Profile.html">
-                                        <img src="/static/assets/img/avatars/avatar_1.png" alt="Avatar"
+                                        <img src="{% static 'assets/img/avatars/avatar_1.png' %}" alt="Avatar"
                                             class="avatar avatar-md">
                                     </a>
                                 </div>
@@ -198,10 +198,10 @@
                             <div class="avatars space-x-10">
                                 <div class="media">
                                     <div class="badge">
-                                        <img src="/static/assets/img/icons/Badge.svg" alt="">
+                                        <img src="{% static 'assets/img/icons/Badge.svg' %}" alt="">
                                     </div>
                                     <a href="Profile.html">
-                                        <img src="/static/assets/img/avatars/avatar_2.png" alt="Avatar"
+                                        <img src="{% static 'assets/img/avatars/avatar_2.png' %}" alt="Avatar"
                                             class="avatar avatar-md">
                                     </a>
                                 </div>
@@ -229,10 +229,10 @@
                                 <a href="{% url 'explore-detail' nft.slug %}">
                                     
                                     {% if nft.creator.profile_pic %}
-                                    <img src="{{nft.creator.profile_pic.url}}" alt="Avatar"
+                                    <img src="{% static '{{nft.creator.profile_pic.url}}' %}" alt="Avatar"
                                         class="avatar avatar-sm">
                                     {% else %}
-                                    <img src="/static/assets/img/avatars/avatar_1.png" alt="Avatar"
+                                    <img src="{% static 'assets/img/avatars/avatar_1.png' %}" alt="Avatar"
                                         class="avatar avatar-sm">
                                         
                                     {% endif %}
@@ -249,14 +249,14 @@
                                 
                                 {% if nft.upload_nft %}
                                 {% if nft.nft_type == 'art' %}
-                                <img src="{{nft.upload_nft.url}}" alt="">
+                                <img src="{% static '{{nft.upload_nft.url}}' %}" alt="">
                                 {% else %}
-                                <img src="/static/assets/img/items/item_4.png" alt="">
+                                <img src="{% static 'assets/img/items/item_4.png' %}" alt="">
                                     
                                 {% endif %}
 
                                 {% else %}
-                                <img src="/static/assets/img/items/item_7.png" alt="">
+                                <img src="{% static 'assets/img/items/item_7.png' %}" alt="">
                                 {% endif %}
                                     
                                     
@@ -384,11 +384,11 @@
                         <div class="collections_item">
                             <div class="images-box space-y-10">
                                 <div class="top_imgs">
-                                    <img src="/static/assets/img/items/item_9.png" alt="">
-                                    <img src="/static/assets/img/items/item_10.png" alt="">
-                                    <img src="/static/assets/img/items/item_11.png" alt="">
+                                    <img src="{% static 'assets/img/items/item_9.png' %}" alt="">
+                                    <img src="{% static 'assets/img/items/item_10.png' %}" alt="">
+                                    <img src="{% static 'assets/img/items/item_11.png' %}" alt="">
                                 </div>
-                                <img src="/static/assets/img/items/item_12.png" alt="">
+                                <img src="{% static 'assets/img/items/item_12.png' %}" alt="">
                             </div>
                         </div>
                     </a>
@@ -403,7 +403,7 @@
                         <span class="color_text txt_md"> 5 items · Created by</span>
                         <div class="avatars space-x-5">
                             <a href="Profile.html">
-                                <img src="/static/assets/img/avatars/avatar_2.png" alt="Avatar"
+                                <img src="{% static 'assets/img/avatars/avatar_2.png' %}" alt="Avatar"
                                     class="avatar avatar-sm">
                             </a>
                         </div>
@@ -419,11 +419,11 @@
                         <div class="collections_item">
                             <div class="images-box space-y-10">
                                 <div class="top_imgs">
-                                    <img src="/static/assets/img/items/item_13.png" alt="">
-                                    <img src="/static/assets/img/items/item_14.png" alt="">
-                                    <img src="/static/assets/img/items/item_15.png" alt="">
+                                    <img src="{% static 'assets/img/items/item_13.png' %}" alt="">
+                                    <img src="{% static 'assets/img/items/item_14.png' %}" alt="">
+                                    <img src="{% static 'assets/img/items/item_15.png' %}" alt="">
                                 </div>
-                                <img src="/static/assets/img/items/item_16.png" alt="">
+                                <img src="{% static 'assets/img/items/item_16.png' %}" alt="">
                             </div>
                         </div>
                     </a>
@@ -438,7 +438,7 @@
                         <span class="color_text txt_md"> 7 items · Created by</span>
                         <div class="avatars space-x-5">
                             <a href="Profile.html">
-                                <img src="/static/assets/img/avatars/avatar_3.png" alt="Avatar"
+                                <img src="{% static 'assets/img/avatars/avatar_3.png' %}" alt="Avatar"
                                     class="avatar avatar-sm">
                             </a>
                         </div>
@@ -454,11 +454,11 @@
                         <div class="collections_item">
                             <div class="images-box space-y-10">
                                 <div class="top_imgs">
-                                    <img src="/static/assets/img/items/item_17.png" alt="">
-                                    <img src="/static/assets/img/items/item_18.png" alt="">
-                                    <img src="/static/assets/img/items/item_19.png" alt="">
+                                    <img src="{% static 'assets/img/items/item_17.png' %}" alt="">
+                                    <img src="{% static 'assets/img/items/item_18.png' %}" alt="">
+                                    <img src="{% static 'assets/img/items/item_19.png' %}" alt="">
                                 </div>
-                                <img src="/static/assets/img/items/item_20.png" alt="">
+                                <img src="{% static 'assets/img/items/item_20.png' %}" alt="">
                             </div>
                         </div>
                     </a>
@@ -473,7 +473,7 @@
                         <span class="color_text txt_md"> 2 items · Created by</span>
                         <div class="avatars space-x-5">
                             <a href="Profile.html">
-                                <img src="/static/assets/img/avatars/avatar_1.png" alt="Avatar"
+                                <img src="{% static 'assets/img/avatars/avatar_1.png' %}" alt="Avatar"
                                     class="avatar avatar-sm">
                             </a>
                         </div>

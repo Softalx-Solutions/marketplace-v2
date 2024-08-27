@@ -6,9 +6,9 @@
         <div class="cover">
             
             {% if user.cover_photo %}
-            <img src="{{user.cover_photo.url}}" alt="">
+            <img src="{% static '{{user.cover_photo.url}}' %}" alt="">
             {% else %}
-            <img src="/static/assets/img/bg/prrofile.png" alt="">
+            <img src="{% static 'assets/img/bg/prrofile.png' %}" alt="">
             {% endif %}
                 
         </div>
@@ -21,9 +21,9 @@
                             <div class="avatar_wrap">
                                 
                                 {% if user.profile_pic %}
-                                <img class="avatar avatar-lg" src="{{user.profile_pic.url}}" alt="avatar">
+                                <img class="avatar avatar-lg" src="{% static '{{user.profile_pic.url}}' %}" alt="avatar">
                                 {% else %}
-                                <img class="avatar avatar-lg" src="/static/assets/img/avatars/avatar_4.png" alt="avatar">
+                                <img class="avatar avatar-lg" src="{% static 'assets/img/avatars/avatar_4.png' %}" alt="avatar">
                                     
                                 {% endif %}
                                     
@@ -148,21 +148,21 @@
                                                     {% if nft.upload_nft %}
                                 
                                                     {% if nft.nft_type == 'art' %}
-                                                    <img src="{{nft.upload_nft.url}}" alt="">
+                                                    <img src="{% static '{{nft.upload_nft.url}}' %}" alt="">
                                                     {% elif nft.nft_type == 'video' %}
                                                     <img src="{% static 'assets/img/items/item_3.png' %}">
                                                     {% elif nft.nft_type == 'music' %}
                                                     <img src="{% static 'assets/img/items/item_3.png' %}" alt="">
                                                     {% elif nft.nft_type == 'trading-cards/collectible' %}
-                                                    <img src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                                                    <img src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                                                     {% elif nft.nft_type == 'text' %}
-                                                    <img src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                                                    <img src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                                                     {% elif nft.nft_type == 'memes' %}
-                                                    <img src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                                                    <img src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                                                     {% elif nft.nft_type == 'domain-name' %}
-                                                    <img src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                                                    <img src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                                                     {% elif nft.nft_type == 'virtual-style' %}
-                                                    <img src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                                                    <img src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                                                     {% elif nft.nft_type == 'pdf' %}
                                                     <img src="{% static 'assets/img/items/item_3.png' %}" alt="">
                                                     {% else %}
@@ -170,7 +170,7 @@
                                                     {% endif %}
 
                                                     {% else %}
-                                                    <img src="/static/assets/img/items/item_1.png" alt="">
+                                                    <img src="{% static 'assets/img/items/item_1.png' %}" alt="">
                                                     {% endif %}
                                                     <!-- <a href="#" class="likes
                                                         space-x-3">
@@ -204,11 +204,11 @@
                                                             <!-- <div class="avatars
                                                                 -space-x-20">
                                                                 <a href="Profile.html">
-                                                                    <img src="/static/assets/img/avatars/avatar_1.png" alt="Avatar" class="avatar
+                                                                    <img src="{% static 'assets/img/avatars/avatar_1.png' %}" alt="Avatar" class="avatar
                                                                         avatar-sm">
                                                                 </a>
                                                                 <a href="Profile.html">
-                                                                    <img src="/static/assets/img/avatars/avatar_2.png" alt="Avatar" class="avatar
+                                                                    <img src="{% static 'assets/img/avatars/avatar_2.png' %}" alt="Avatar" class="avatar
                                                                         avatar-sm">
                                                                 </a>
                                                             </div> -->
@@ -267,21 +267,21 @@
                                                     {% if nft.upload_nft %}
                                 
                                                     {% if nft.nft_type == 'art' %}
-                                                    <img src="{{nft.upload_nft.url}}" alt="">
+                                                    <img src="{% static '{{nft.upload_nft.url}}' %}" alt="">
                                                     {% elif nft.nft_type == 'video' %}
                                                     <img src="{% static 'assets/img/items/item_3.png' %}">
                                                     {% elif nft.nft_type == 'music' %}
                                                     <img src="{% static 'assets/img/items/item_3.png' %}" alt="">
                                                     {% elif nft.nft_type == 'trading-cards/collectible' %}
-                                                    <img src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                                                    <img src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                                                     {% elif nft.nft_type == 'text' %}
-                                                    <img src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                                                    <img src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                                                     {% elif nft.nft_type == 'memes' %}
-                                                    <img src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                                                    <img src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                                                     {% elif nft.nft_type == 'domain-name' %}
-                                                    <img src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                                                    <img src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                                                     {% elif nft.nft_type == 'virtual-style' %}
-                                                    <img src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                                                    <img src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                                                     {% elif nft.nft_type == 'pdf' %}
                                                     <img src="{% static 'assets/img/items/item_3.png' %}" alt="">
                                                     {% else %}
@@ -289,7 +289,7 @@
                                                     {% endif %}
 
                                                     {% else %}
-                                                    <img src="/static/assets/img/items/item_1.png" alt="">
+                                                    <img src="{% static 'assets/img/items/item_1.png' %}" alt="">
                                                     {% endif %}
                                                     <!-- <a href="#" class="likes
                                                         space-x-3">
@@ -323,11 +323,11 @@
                                                             <!-- <div class="avatars
                                                                 -space-x-20">
                                                                 <a href="Profile.html">
-                                                                    <img src="/static/assets/img/avatars/avatar_1.png" alt="Avatar" class="avatar
+                                                                    <img src="{% static 'assets/img/avatars/avatar_1.png' %}" alt="Avatar" class="avatar
                                                                         avatar-sm">
                                                                 </a>
                                                                 <a href="Profile.html">
-                                                                    <img src="/static/assets/img/avatars/avatar_2.png" alt="Avatar" class="avatar
+                                                                    <img src="{% static 'assets/img/avatars/avatar_2.png' %}" alt="Avatar" class="avatar
                                                                         avatar-sm">
                                                                 </a>
                                                             </div> -->

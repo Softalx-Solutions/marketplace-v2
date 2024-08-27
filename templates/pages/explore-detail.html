@@ -16,21 +16,21 @@
                 {% if nft.upload_nft %}
                         
                 {% if nft.nft_type == 'art' %}
-                <img class="item_img" src="{{nft.upload_nft.url}}" alt="">
+                <img class="item_img" src="{% static '{{nft.upload_nft.url}}' %}" alt="">
                 {% elif nft.nft_type == 'video' %}
-                <video controls src="{{nft.upload_nft.url}}" width="620" poster="{{nft.upload_nft.url}}"></video>
+                <video controls src="{% static '{{nft.upload_nft.url}}' %}" width="620" poster="{{nft.upload_nft.url}}"></video>
                 {% elif nft.nft_type == 'music' %}
-                <audio src="{{nft.upload_nft.url}}" controls></audio>
+                <audio src="{% static '{{nft.upload_nft.url}}' %}" controls></audio>
                 {% elif nft.nft_type == 'trading-cards/collectible' %}
-                <img class="item_img" src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                <img class="item_img" src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                 {% elif nft.nft_type == 'text' %}
-                <img class="item_img" src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                <img class="item_img" src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                 {% elif nft.nft_type == 'memes' %}
-                <img class="item_img" src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                <img class="item_img" src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                 {% elif nft.nft_type == 'domain-name' %}
-                <img class="item_img" src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                <img class="item_img" src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                 {% elif nft.nft_type == 'virtual-style' %}
-                <img class="item_img" src="{{nft.upload_nft.url}}" alt="Nft_Profile">
+                <img class="item_img" src="{% static '{{nft.upload_nft.url}}' %}" alt="Nft_Profile">
                 {% elif nft.nft_type == 'pdf' %}
                 <img class="item_img" src="{% static 'assets/img/items/item_2.png' %}" alt="">
                 {% else %}
@@ -151,12 +151,12 @@
                                         
                                         {% if nft.creator.profile_pic %}
                                         <a href="javascript:void(0)">
-                                            <img src="{{request.user.profile_pic.url}}" alt="Avatar" class="avatar
+                                            <img src="{% static '{{request.user.profile_pic.url}}' %}" alt="Avatar" class="avatar
                                                 avatar-sm">
                                         </a>
                                         {% else %}
                                         <a href="javascript:void(0)">
-                                            <img src="/static/assets/img/avatars/avatar_3.png" alt="Avatar" class="avatar
+                                            <img src="{% static 'assets/img/avatars/avatar_3.png' %}" alt="Avatar" class="avatar
                                                 avatar-sm">
                                         </a>
                                             
@@ -178,16 +178,16 @@
                                         
                                         
                                         <div class="badge">
-                                            <img class="badge" src="/static/assets/img/icons/Badge.svg" alt="">
+                                            <img class="badge" src="{% static 'assets/img/icons/Badge.svg' %}" alt="">
                                         </div>
                                         {% if nft.purchased_by.profile_pic %}
                                         <a href="javascript:void(0)">
-                                            <img src="{{nft.nft.purchased_by.profile_pic.url}}" alt="Avatar" class="avatar
+                                            <img src="{% static '{{nft.nft.purchased_by.profile_pic.url}}' %}" alt="Avatar" class="avatar
                                                 avatar-sm">
                                         </a>
                                         {% else %}
                                         <a href="javascript:void(0)">
-                                            <img src="/static/assets/img/avatars/avatar_2.png" alt="Avatar" class="avatar
+                                            <img src="{% static 'assets/img/avatars/avatar_2.png' %}" alt="Avatar" class="avatar
                                                 avatar-sm">
                                         </a>
                                             

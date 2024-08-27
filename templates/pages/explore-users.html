@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block slider %}
 <div class="rn-breadcrumb-inner ptb--30">
     <div class="container">
@@ -45,17 +45,17 @@
                     <div class="card-thumbnail">
                         
                         {% if user.profile_pic %}
-                        <a href="{% url 'explore-users-detail' user.username %}"><img src="{{user.profile_pic.url}}" alt="NFT_user"></a>
+                        <a href="{% url 'explore-users-detail' user.username %}"><img src="{% static '{{user.profile_pic.url}}' %}" alt="NFT_user"></a>
                         {% else %}
-                        <a href="{% url 'explore-users-detail' user.username %}"><img src="/static/assets/images/client/client-1.png" alt="NFT_user"></a>
+                        <a href="{% url 'explore-users-detail' user.username %}"><img src="{% static 'assets/images/client/client-1.png' %}" alt="NFT_user"></a>
                         {% endif %}
                             
                     </div>
                     <div class="product-share-wrapper">
                         <!-- <div class="profile-share">
-                            <a href="author.html" class="avatar" data-tooltip="Jone lee"><img src="/static/assets/images/client/client-1.png" alt="Nft_Profile"></a>
-                            <a href="author.html" class="avatar" data-tooltip="Jone lee"><img src="/static/assets/images/client/client-2.png" alt="Nft_Profile"></a>
-                            <a href="author.html" class="avatar" data-tooltip="Jone lee"><img src="/static/assets/images/client/client-3.png" alt="Nft_Profile"></a>
+                            <a href="author.html" class="avatar" data-tooltip="Jone lee"><img src="{% static 'assets/images/client/client-1.png' %}" alt="Nft_Profile"></a>
+                            <a href="author.html" class="avatar" data-tooltip="Jone lee"><img src="{% static 'assets/images/client/client-2.png' %}" alt="Nft_Profile"></a>
+                            <a href="author.html" class="avatar" data-tooltip="Jone lee"><img src="{% static 'assets/images/client/client-3.png' %}" alt="Nft_Profile"></a>
                             <a class="more-author-text" href="#">9+ Place Bit.</a>
                         </div>
                         <div class="share-btn share-btn-activation dropdown">
