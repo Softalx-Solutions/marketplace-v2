@@ -18,11 +18,11 @@ class LighthouseDashboard(TemplateView):
     template_name = 'lighthouse/dashboard.html'
     def get(self, request, *args):
         if request.user.is_authenticated and request.user.is_admin == True:
-            total_users = User.objects.filter(is_user=True).iterator().count()
-            total_nfts = CreateNftModel.objects.all().iterator().count()
-            total_collections = NftCollection.objects.all().iterator().count()
-            users = User.objects.all().order_by('-date_joined')[:5].iterator()
-            all_nfts = CreateNftModel.objects.all().order_by('-created')[:5].iterator()
+            total_users = User.objects.filter(is_user=True).count()
+            total_nfts = CreateNftModel.objects.all().count()
+            total_collections = NftCollection.objects.all().count()
+            users = User.objects.all().order_by('-date_joined')[:5]
+            all_nfts = CreateNftModel.objects.all().order_by('-created')[:5]
             context = {
                 'total_users':total_users,
                 'total_nfts':total_nfts,
@@ -123,7 +123,7 @@ class AllUsers(TemplateView):
     template_name = 'lighthouse/users/all.html'
     def get(self, request):
         if request.user.is_authenticated and request.user.is_admin == True:
-            all_users = User.objects.filter(is_user=True).order_by('-date_joined').iterator()
+            all_users = User.objects.filter(is_user=True).order_by('-date_joined')
             p = Paginator(all_users, 15)
             # page_request_var = 'page'
             page = request.GET.get('page')
@@ -172,7 +172,7 @@ class AllWalletUsers(TemplateView):
     template_name = 'lighthouse/users/wallets.html'
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated and request.user.is_admin == True:
-            wallets = UserWallet.objects.all().order_by('user_wallet__username').iterator()
+            wallets = UserWallet.objects.all().order_by('user_wallet__username')
             return render(request, self.template_name, {'wallets':wallets})
         else:
             messages.error(request, 'You do not have permission to access this page')
