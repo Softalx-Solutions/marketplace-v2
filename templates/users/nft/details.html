@@ -41,7 +41,7 @@
                                 <div class="dropdown__popup">
                                     <ul class="space-y-10">
                                         <li>
-                                            <a href="{% url 'edit-nft' nft.slug %}" class="space-x-10
+                                            <a href="{% url 'edit-nft' nft.id %}" class="space-x-10
                                                 d-flex">
                                                 <!-- <i class="ri-flag-line"></i> -->
                                                 <span> Edit
@@ -49,7 +49,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{% url 'delete-nft' nft.slug %}" class="space-x-10
+                                            <a href="{% url 'delete-nft' nft.id %}" class="space-x-10
                                                 d-flex" >
                                                 <!-- <i class="ri-flag-line"></i> -->
                                                 <span> Delete
